@@ -24,7 +24,7 @@ pycairo>=1.25.1;python_version>="3.8"
 websocket-client>=1.6.4;python_version>="3.8"
 
 # System monitoring
-psutil>=6.0.0
+psutil>=7.2.2
 
 # Image processing
 Pillow>=10.0.0
