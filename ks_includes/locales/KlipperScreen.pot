@@ -786,3 +786,86 @@ msgstr ""
 
 msgid "mm³/s"
 msgstr ""
+
+msgid "AI Detection"
+msgstr ""
+
+msgid "AI Detection Error"
+msgstr ""
+
+msgid "AI Status"
+msgstr ""
+
+msgid "AI detection failed"
+msgstr ""
+
+msgid "Checking..."
+msgstr ""
+
+msgid "Confidence"
+msgstr ""
+
+msgid "Defect"
+msgstr ""
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "First Layer"
+msgstr ""
+
+msgid "First Layer Detection"
+msgstr ""
+
+msgid "Foreign Object"
+msgstr ""
+
+msgid "Foreign Object Detection"
+msgstr ""
+
+msgid "General Detection"
+msgstr ""
+
+msgid "Latest Detection Result"
+msgstr ""
+
+msgid "No detection results yet"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Nozzle Blob Detection"
+msgstr ""
+
+msgid "Offline"
+msgstr ""
+
+msgid "Online"
+msgstr ""
+
+msgid "Pause Count"
+msgstr ""
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr ""
+
+msgid "Pause Print on Defect"
+msgstr ""
+
+msgid "Spaghetti"
+msgstr ""
+
+msgid "Spaghetti Detection"
+msgstr ""
+
+msgid "Warp Edge"
+msgstr ""
+
+msgid "Warp Edge Detection"
+msgstr ""

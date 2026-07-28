@@ -1546,3 +1546,86 @@ msgstr "鏡像列印"
 
 msgid "Filament Autofeed"
 msgstr "自動進料"
+
+msgid "AI Detection"
+msgstr "AI檢測"
+
+msgid "AI Status"
+msgstr "AI狀態"
+
+msgid "AI Detection Error"
+msgstr "AI偵測錯誤"
+
+msgid "AI detection failed"
+msgstr "AI偵測失敗"
+
+msgid "Checking..."
+msgstr "檢查中..."
+
+msgid "Confidence"
+msgstr "置信度"
+
+msgid "Defect"
+msgstr "缺陷"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "檢測到缺陷：%s"
+
+msgid "Enabled"
+msgstr "啟用"
+
+msgid "First Layer"
+msgstr "首層"
+
+msgid "First Layer Detection"
+msgstr "首層檢測"
+
+msgid "Foreign Object"
+msgstr "異物"
+
+msgid "Foreign Object Detection"
+msgstr "異物檢測"
+
+msgid "General Detection"
+msgstr "通用檢測"
+
+msgid "Latest Detection Result"
+msgstr "最新檢測結果"
+
+msgid "No detection results yet"
+msgstr "暫無檢測結果"
+
+msgid "Normal"
+msgstr "正常"
+
+msgid "Nozzle Blob Detection"
+msgstr "噴嘴積料檢測"
+
+msgid "Offline"
+msgstr "離線"
+
+msgid "Online"
+msgstr "在線"
+
+msgid "Pause Count"
+msgstr "暫停計數"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "暫停計數：%(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "檢測到缺陷時暫停列印"
+
+msgid "Spaghetti"
+msgstr "義大利麵"
+
+msgid "Spaghetti Detection"
+msgstr "義大利麵檢測"
+
+msgid "Warp Edge"
+msgstr "翹邊"
+
+msgid "Warp Edge Detection"
+msgstr "翹邊檢測"

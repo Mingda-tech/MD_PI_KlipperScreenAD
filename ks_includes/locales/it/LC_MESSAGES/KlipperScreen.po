@@ -1540,3 +1540,86 @@ msgstr "Stampa speculare"
 
 msgid "Filament Autofeed"
 msgstr "Alimentazione automatica filamento"
+
+msgid "AI Detection"
+msgstr "Rilevamento AI"
+
+msgid "AI Status"
+msgstr "Stato AI"
+
+msgid "AI Detection Error"
+msgstr "Errore di rilevamento IA"
+
+msgid "AI detection failed"
+msgstr "Rilevamento IA non riuscito"
+
+msgid "Checking..."
+msgstr "Verifica in corso..."
+
+msgid "Confidence"
+msgstr "Confidenza"
+
+msgid "Defect"
+msgstr "Difetto"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Difetto rilevato: %s"
+
+msgid "Enabled"
+msgstr "Abilitato"
+
+msgid "First Layer"
+msgstr "Primo strato"
+
+msgid "First Layer Detection"
+msgstr "Rilevamento del primo strato"
+
+msgid "Foreign Object"
+msgstr "Oggetto estraneo"
+
+msgid "Foreign Object Detection"
+msgstr "Rilevamento oggetto estraneo"
+
+msgid "General Detection"
+msgstr "Rilevamento generale"
+
+msgid "Latest Detection Result"
+msgstr "Ultimo risultato di rilevamento"
+
+msgid "No detection results yet"
+msgstr "Nessun risultato di rilevamento disponibile"
+
+msgid "Normal"
+msgstr "Normale"
+
+msgid "Nozzle Blob Detection"
+msgstr "Rilevamento accumulo sull'ugello"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Pause Count"
+msgstr "Conteggio pause"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Conteggio pause: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Metti in pausa la stampa in caso di difetto"
+
+msgid "Spaghetti"
+msgstr "Spaghetti"
+
+msgid "Spaghetti Detection"
+msgstr "Rilevamento spaghetti"
+
+msgid "Warp Edge"
+msgstr "Bordo sollevato"
+
+msgid "Warp Edge Detection"
+msgstr "Rilevamento bordo sollevato"

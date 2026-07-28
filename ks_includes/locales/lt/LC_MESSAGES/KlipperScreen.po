@@ -1389,3 +1389,86 @@ msgstr "Automatinis gijos tiekimas"
 
 msgid "Preheat"
 msgstr "Priekišilumos"
+
+msgid "AI Detection"
+msgstr "AI aptikimas"
+
+msgid "AI Status"
+msgstr "AI būsena"
+
+msgid "AI Detection Error"
+msgstr "DI aptikimo klaida"
+
+msgid "AI detection failed"
+msgstr "DI aptikimas nepavyko"
+
+msgid "Checking..."
+msgstr "Tikrinama..."
+
+msgid "Confidence"
+msgstr "Patikimumas"
+
+msgid "Defect"
+msgstr "Defektas"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Aptiktas defektas: %s"
+
+msgid "Enabled"
+msgstr "Įjungta"
+
+msgid "First Layer"
+msgstr "Pirmasis sluoksnis"
+
+msgid "First Layer Detection"
+msgstr "Pirmojo sluoksnio aptikimas"
+
+msgid "Foreign Object"
+msgstr "Pašalinis objektas"
+
+msgid "Foreign Object Detection"
+msgstr "Pašalinio objekto aptikimas"
+
+msgid "General Detection"
+msgstr "Bendras aptikimas"
+
+msgid "Latest Detection Result"
+msgstr "Paskutinis aptikimo rezultatas"
+
+msgid "No detection results yet"
+msgstr "Aptikimo rezultatų dar nėra"
+
+msgid "Normal"
+msgstr "Normalu"
+
+msgid "Nozzle Blob Detection"
+msgstr "Antgalio gumulo aptikimas"
+
+msgid "Offline"
+msgstr "Atsijungta"
+
+msgid "Online"
+msgstr "Prisijungta"
+
+msgid "Pause Count"
+msgstr "Pauzių skaičius"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Pauzių skaičius: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Pristabdyti spausdinimą aptikus defektą"
+
+msgid "Spaghetti"
+msgstr "Spagečiai"
+
+msgid "Spaghetti Detection"
+msgstr "Spagečių aptikimas"
+
+msgid "Warp Edge"
+msgstr "Užsirietęs kraštas"
+
+msgid "Warp Edge Detection"
+msgstr "Užsirietusio krašto aptikimas"

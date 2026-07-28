@@ -1632,3 +1632,86 @@ msgstr "Samodejno podajanje filamenta"
 
 msgid "Preheat"
 msgstr "Predgrevanje"
+
+msgid "AI Detection"
+msgstr "Zaznavanje AI"
+
+msgid "AI Status"
+msgstr "Stanje AI"
+
+msgid "AI Detection Error"
+msgstr "Napaka zaznavanja z UI"
+
+msgid "AI detection failed"
+msgstr "Zaznavanje z UI ni uspelo"
+
+msgid "Checking..."
+msgstr "Preverjanje..."
+
+msgid "Confidence"
+msgstr "Zanesljivost"
+
+msgid "Defect"
+msgstr "Napaka"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Zaznana napaka: %s"
+
+msgid "Enabled"
+msgstr "Omogočeno"
+
+msgid "First Layer"
+msgstr "Prva plast"
+
+msgid "First Layer Detection"
+msgstr "Zaznavanje prve plasti"
+
+msgid "Foreign Object"
+msgstr "Tuj predmet"
+
+msgid "Foreign Object Detection"
+msgstr "Zaznavanje tujega predmeta"
+
+msgid "General Detection"
+msgstr "Splošno zaznavanje"
+
+msgid "Latest Detection Result"
+msgstr "Zadnji rezultat zaznavanja"
+
+msgid "No detection results yet"
+msgstr "Še ni rezultatov zaznavanja"
+
+msgid "Normal"
+msgstr "Običajno"
+
+msgid "Nozzle Blob Detection"
+msgstr "Zaznavanje kepe na šobi"
+
+msgid "Offline"
+msgstr "Brez povezave"
+
+msgid "Online"
+msgstr "Povezano"
+
+msgid "Pause Count"
+msgstr "Število premorov"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Število premorov: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Začasno ustavi tisk ob napaki"
+
+msgid "Spaghetti"
+msgstr "Spaghetti"
+
+msgid "Spaghetti Detection"
+msgstr "Zaznavanje spaghetti"
+
+msgid "Warp Edge"
+msgstr "Zvihan rob"
+
+msgid "Warp Edge Detection"
+msgstr "Zaznavanje zvihanega roba"

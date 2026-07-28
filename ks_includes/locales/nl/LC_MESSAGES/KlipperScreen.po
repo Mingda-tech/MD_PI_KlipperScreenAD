@@ -1412,3 +1412,86 @@ msgstr "Automatische filamenttoevoer"
 
 msgid "Preheat"
 msgstr "Voorverwarmen"
+
+msgid "AI Detection"
+msgstr "AI-detectie"
+
+msgid "AI Status"
+msgstr "AI-status"
+
+msgid "AI Detection Error"
+msgstr "Fout bij AI-detectie"
+
+msgid "AI detection failed"
+msgstr "AI-detectie mislukt"
+
+msgid "Checking..."
+msgstr "Controleren..."
+
+msgid "Confidence"
+msgstr "Betrouwbaarheid"
+
+msgid "Defect"
+msgstr "Defect"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Defect gedetecteerd: %s"
+
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+msgid "First Layer"
+msgstr "Eerste laag"
+
+msgid "First Layer Detection"
+msgstr "Detectie van eerste laag"
+
+msgid "Foreign Object"
+msgstr "Vreemd voorwerp"
+
+msgid "Foreign Object Detection"
+msgstr "Detectie van vreemd voorwerp"
+
+msgid "General Detection"
+msgstr "Algemene detectie"
+
+msgid "Latest Detection Result"
+msgstr "Laatste detectieresultaat"
+
+msgid "No detection results yet"
+msgstr "Nog geen detectieresultaten"
+
+msgid "Normal"
+msgstr "Normaal"
+
+msgid "Nozzle Blob Detection"
+msgstr "Detectie van klont aan spuitmond"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Pause Count"
+msgstr "Aantal pauzes"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Aantal pauzes: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Print pauzeren bij defect"
+
+msgid "Spaghetti"
+msgstr "Spaghetti"
+
+msgid "Spaghetti Detection"
+msgstr "Spaghetti-detectie"
+
+msgid "Warp Edge"
+msgstr "Opkrullende rand"
+
+msgid "Warp Edge Detection"
+msgstr "Detectie van opkrullende rand"

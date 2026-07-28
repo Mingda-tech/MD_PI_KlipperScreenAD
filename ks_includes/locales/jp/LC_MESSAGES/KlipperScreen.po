@@ -1405,3 +1405,86 @@ msgstr "ミラー印刷"
 
 msgid "Filament Autofeed"
 msgstr "フィラメント自動供給"
+
+msgid "AI Detection"
+msgstr "AI検出"
+
+msgid "AI Status"
+msgstr "AI状態"
+
+msgid "AI Detection Error"
+msgstr "AI検出エラー"
+
+msgid "AI detection failed"
+msgstr "AI検出に失敗しました"
+
+msgid "Checking..."
+msgstr "確認中..."
+
+msgid "Confidence"
+msgstr "信頼度"
+
+msgid "Defect"
+msgstr "欠陥"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "欠陥を検出: %s"
+
+msgid "Enabled"
+msgstr "有効"
+
+msgid "First Layer"
+msgstr "1層目"
+
+msgid "First Layer Detection"
+msgstr "1層目検出"
+
+msgid "Foreign Object"
+msgstr "異物"
+
+msgid "Foreign Object Detection"
+msgstr "異物検出"
+
+msgid "General Detection"
+msgstr "汎用検出"
+
+msgid "Latest Detection Result"
+msgstr "最新の検出結果"
+
+msgid "No detection results yet"
+msgstr "検出結果はまだありません"
+
+msgid "Normal"
+msgstr "正常"
+
+msgid "Nozzle Blob Detection"
+msgstr "ノズル付着物検出"
+
+msgid "Offline"
+msgstr "オフライン"
+
+msgid "Online"
+msgstr "オンライン"
+
+msgid "Pause Count"
+msgstr "一時停止回数"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "一時停止回数: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "欠陥検出時に印刷を一時停止"
+
+msgid "Spaghetti"
+msgstr "スパゲッティ"
+
+msgid "Spaghetti Detection"
+msgstr "スパゲッティ検出"
+
+msgid "Warp Edge"
+msgstr "反り縁"
+
+msgid "Warp Edge Detection"
+msgstr "反り縁検出"

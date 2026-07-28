@@ -42,7 +42,7 @@ class Panel(ScreenPanel):
                 from ks_includes.wifi import WifiManager
             self.wifi = WifiManager(self.wireless_interfaces[0])
 
-        self.test_items = ["Nozzle Heating", "Nozzle Cooling Fan", "Hotend Cooling Fan", "Auto Leveling", "Camera", "WiFi"]
+        self.test_items = ["Nozzle Heating", "Hot Bed Heating", "Nozzle Cooling Fan", "Hotend Cooling Fan", "Auto Leveling", "Camera", "WiFi"]
         self.steps = [x for x in range(len(self.test_items))]
 
         grid = self._gtk.HomogeneousGrid()
@@ -74,15 +74,23 @@ class Panel(ScreenPanel):
 
         self.is_check = True
         self.tool_target = 50
+        self.bed_target = 40
         self.fan_speed = 35
         self.fans = self._printer.get_fans()
         self.start_time = time.monotonic()
-        self.time_out = 60     #seconds
+        self.time_out = 90     #seconds
         #Nozzle Heating
         for extruder in self._printer.get_tools():
             temp = self._printer.get_dev_stat(extruder, "temperature")
             if temp < self.tool_target:
                 self._screen._ws.klippy.set_tool_temp(self._printer.get_tool_number(extruder), self.tool_target)
+
+        # Hot Bed Heating
+        if "heater_bed" in self._printer.get_heaters():
+            temp = self._printer.get_dev_stat("heater_bed", "temperature")
+            if temp < self.bed_target:
+                self.bed_target = temp + 3
+                self._screen._ws.klippy.set_bed_temp(self.bed_target)
 
         #Nozzle Cooling Fan
         for fan in self.fans:
@@ -118,7 +126,11 @@ class Panel(ScreenPanel):
                     if temp < self.tool_target:
                         is_ok = False
                         break
-            elif step == 1:  # Nozzle Cooling Fan
+            elif step == 1:  # Hot Bed Heating
+                if "heater_bed" in self._printer.get_heaters():
+                    temp = self._printer.get_dev_stat("heater_bed", "temperature")
+                    is_ok = temp >= self.bed_target
+            elif step == 2:  # Nozzle Cooling Fan
                 for fan in self.fans:
                     is_ok = True
                     if fan == "fan":
@@ -126,7 +138,7 @@ class Panel(ScreenPanel):
                         if speed < self.fan_speed-5:
                             is_ok = False
                             break
-            elif step == 2:  # Hotend Cooling Fan
+            elif step == 3:  # Hotend Cooling Fan
                 for fan in self.fans:
                     is_ok = True
                     if 'hotend' in fan.lower():
@@ -134,19 +146,19 @@ class Panel(ScreenPanel):
                         if speed < self.fan_speed-5:
                             is_ok = False
                             break
-            elif step == 3:  # Auto Leveling
+            elif step == 4:  # Auto Leveling
                 is_ok = False
                 bm = self._printer.get_stat("bed_mesh")
                 if bm is not None and self._printer.get_stat("bed_mesh", "profile_name") != '':
                     is_ok = True
                                             
-            elif step == 4:  # Camera
+            elif step == 5:  # Camera
                 for i, cam in enumerate(self._printer.cameras):
                     is_ok = os.path.exists(f"/dev/video{2*i}")
                     if not cam["enabled"]:
                         is_ok = False
                         break
-            elif step == 5:  # WiFi
+            elif step == 6:  # WiFi
                 is_ok = False
                 connected_ssid = self.wifi.get_connected_ssid()
                 if connected_ssid is not None:

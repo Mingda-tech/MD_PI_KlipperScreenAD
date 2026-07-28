@@ -1600,3 +1600,86 @@ msgstr "הדפסת מראה"
 
 msgid "Filament Autofeed"
 msgstr "הזנת חוט אוטומטית"
+
+msgid "AI Detection"
+msgstr "זיהוי AI"
+
+msgid "AI Status"
+msgstr "מצב AI"
+
+msgid "AI Detection Error"
+msgstr "שגיאת זיהוי בינה מלאכותית"
+
+msgid "AI detection failed"
+msgstr "זיהוי הבינה המלאכותית נכשל"
+
+msgid "Checking..."
+msgstr "בודק..."
+
+msgid "Confidence"
+msgstr "רמת ביטחון"
+
+msgid "Defect"
+msgstr "פגם"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "פגם זוהה: %s"
+
+msgid "Enabled"
+msgstr "מופעל"
+
+msgid "First Layer"
+msgstr "שכבה ראשונה"
+
+msgid "First Layer Detection"
+msgstr "זיהוי שכבה ראשונה"
+
+msgid "Foreign Object"
+msgstr "עצם זר"
+
+msgid "Foreign Object Detection"
+msgstr "זיהוי עצם זר"
+
+msgid "General Detection"
+msgstr "זיהוי כללי"
+
+msgid "Latest Detection Result"
+msgstr "תוצאת הזיהוי האחרונה"
+
+msgid "No detection results yet"
+msgstr "עדיין אין תוצאות זיהוי"
+
+msgid "Normal"
+msgstr "תקין"
+
+msgid "Nozzle Blob Detection"
+msgstr "זיהוי גוש על הדיזה"
+
+msgid "Offline"
+msgstr "לא מקוון"
+
+msgid "Online"
+msgstr "מקוון"
+
+msgid "Pause Count"
+msgstr "ספירת השהיות"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "ספירת השהיות: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "השהה הדפסה בעת זיהוי פגם"
+
+msgid "Spaghetti"
+msgstr "ספגטי"
+
+msgid "Spaghetti Detection"
+msgstr "זיהוי ספגטי"
+
+msgid "Warp Edge"
+msgstr "קצה מורם"
+
+msgid "Warp Edge Detection"
+msgstr "זיהוי קצה מורם"

@@ -1566,3 +1566,86 @@ msgstr "镜像打印"
 
 msgid "Filament Autofeed"
 msgstr "自动进料"
+
+msgid "AI Detection"
+msgstr "AI检测"
+
+msgid "AI Detection Error"
+msgstr "AI检测错误"
+
+msgid "AI Status"
+msgstr "AI状态"
+
+msgid "AI detection failed"
+msgstr "AI检测失败"
+
+msgid "Checking..."
+msgstr "检查中..."
+
+msgid "Confidence"
+msgstr "置信度"
+
+msgid "Defect"
+msgstr "缺陷"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "检测到缺陷：%s"
+
+msgid "Enabled"
+msgstr "启用"
+
+msgid "First Layer"
+msgstr "首层"
+
+msgid "First Layer Detection"
+msgstr "首层检测"
+
+msgid "Foreign Object"
+msgstr "异物"
+
+msgid "Foreign Object Detection"
+msgstr "异物检测"
+
+msgid "General Detection"
+msgstr "通用检测"
+
+msgid "Latest Detection Result"
+msgstr "最新检测结果"
+
+msgid "No detection results yet"
+msgstr "暂无检测结果"
+
+msgid "Normal"
+msgstr "正常"
+
+msgid "Nozzle Blob Detection"
+msgstr "裹头检测"
+
+msgid "Offline"
+msgstr "离线"
+
+msgid "Online"
+msgstr "在线"
+
+msgid "Pause Count"
+msgstr "暂停计数"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "暂停计数：%(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "检测到缺陷时暂停打印"
+
+msgid "Spaghetti"
+msgstr "意大利面"
+
+msgid "Spaghetti Detection"
+msgstr "意大利面检测"
+
+msgid "Warp Edge"
+msgstr "翘边"
+
+msgid "Warp Edge Detection"
+msgstr "翘边检测"

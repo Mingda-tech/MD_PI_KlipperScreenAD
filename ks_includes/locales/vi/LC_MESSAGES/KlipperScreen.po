@@ -1616,3 +1616,86 @@ msgstr "Tự động nạp sợi nhựa"
 
 msgid "Preheat"
 msgstr "Nung nóng"
+
+msgid "AI Detection"
+msgstr "Phát hiện AI"
+
+msgid "AI Status"
+msgstr "Trạng thái AI"
+
+msgid "AI Detection Error"
+msgstr "Lỗi phát hiện AI"
+
+msgid "AI detection failed"
+msgstr "Phát hiện AI thất bại"
+
+msgid "Checking..."
+msgstr "Đang kiểm tra..."
+
+msgid "Confidence"
+msgstr "Độ tin cậy"
+
+msgid "Defect"
+msgstr "Lỗi"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Đã phát hiện lỗi: %s"
+
+msgid "Enabled"
+msgstr "Đã bật"
+
+msgid "First Layer"
+msgstr "Lớp đầu tiên"
+
+msgid "First Layer Detection"
+msgstr "Phát hiện lớp đầu tiên"
+
+msgid "Foreign Object"
+msgstr "Vật thể lạ"
+
+msgid "Foreign Object Detection"
+msgstr "Phát hiện vật thể lạ"
+
+msgid "General Detection"
+msgstr "Phát hiện tổng quát"
+
+msgid "Latest Detection Result"
+msgstr "Kết quả phát hiện gần nhất"
+
+msgid "No detection results yet"
+msgstr "Chưa có kết quả phát hiện"
+
+msgid "Normal"
+msgstr "Bình thường"
+
+msgid "Nozzle Blob Detection"
+msgstr "Phát hiện nhựa bám đầu phun"
+
+msgid "Offline"
+msgstr "Ngoại tuyến"
+
+msgid "Online"
+msgstr "Trực tuyến"
+
+msgid "Pause Count"
+msgstr "Số lần tạm dừng"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Số lần tạm dừng: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Tạm dừng in khi phát hiện lỗi"
+
+msgid "Spaghetti"
+msgstr "Spaghetti"
+
+msgid "Spaghetti Detection"
+msgstr "Phát hiện spaghetti"
+
+msgid "Warp Edge"
+msgstr "Cong mép"
+
+msgid "Warp Edge Detection"
+msgstr "Phát hiện cong mép"

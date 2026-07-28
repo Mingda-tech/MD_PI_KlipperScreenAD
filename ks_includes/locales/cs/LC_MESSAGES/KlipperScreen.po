@@ -1311,3 +1311,86 @@ msgstr "Automatické podávání filamentu"
 
 msgid "Preheat"
 msgstr "Předehřátí"
+
+msgid "AI Detection"
+msgstr "AI detekce"
+
+msgid "AI Status"
+msgstr "Stav AI"
+
+msgid "AI Detection Error"
+msgstr "Chyba detekce AI"
+
+msgid "AI detection failed"
+msgstr "Detekce AI selhala"
+
+msgid "Checking..."
+msgstr "Kontrola..."
+
+msgid "Confidence"
+msgstr "Spolehlivost"
+
+msgid "Defect"
+msgstr "Vada"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Zjištěna vada: %s"
+
+msgid "Enabled"
+msgstr "Povoleno"
+
+msgid "First Layer"
+msgstr "První vrstva"
+
+msgid "First Layer Detection"
+msgstr "Detekce první vrstvy"
+
+msgid "Foreign Object"
+msgstr "Cizí objekt"
+
+msgid "Foreign Object Detection"
+msgstr "Detekce cizího objektu"
+
+msgid "General Detection"
+msgstr "Obecná detekce"
+
+msgid "Latest Detection Result"
+msgstr "Poslední výsledek detekce"
+
+msgid "No detection results yet"
+msgstr "Zatím žádné výsledky detekce"
+
+msgid "Normal"
+msgstr "Normální"
+
+msgid "Nozzle Blob Detection"
+msgstr "Detekce nánosu na trysce"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Pause Count"
+msgstr "Počet pozastavení"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Počet pozastavení: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Pozastavit tisk při zjištění vady"
+
+msgid "Spaghetti"
+msgstr "Spaghetti"
+
+msgid "Spaghetti Detection"
+msgstr "Detekce spaghetti"
+
+msgid "Warp Edge"
+msgstr "Zkroucená hrana"
+
+msgid "Warp Edge Detection"
+msgstr "Detekce zkroucené hrany"

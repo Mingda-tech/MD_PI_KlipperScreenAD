@@ -1461,3 +1461,86 @@ msgstr "Automatisk filamentmatning"
 
 msgid "Preheat"
 msgstr "Förvarma"
+
+msgid "AI Detection"
+msgstr "AI-detektering"
+
+msgid "AI Status"
+msgstr "AI-status"
+
+msgid "AI Detection Error"
+msgstr "Fel vid AI-detektering"
+
+msgid "AI detection failed"
+msgstr "AI-detekteringen misslyckades"
+
+msgid "Checking..."
+msgstr "Kontrollerar..."
+
+msgid "Confidence"
+msgstr "Konfidens"
+
+msgid "Defect"
+msgstr "Defekt"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Defekt upptäckt: %s"
+
+msgid "Enabled"
+msgstr "Aktiverad"
+
+msgid "First Layer"
+msgstr "Första lager"
+
+msgid "First Layer Detection"
+msgstr "Detektering av första lager"
+
+msgid "Foreign Object"
+msgstr "Främmande objekt"
+
+msgid "Foreign Object Detection"
+msgstr "Detektering av främmande objekt"
+
+msgid "General Detection"
+msgstr "Allmän detektering"
+
+msgid "Latest Detection Result"
+msgstr "Senaste detekteringsresultat"
+
+msgid "No detection results yet"
+msgstr "Inga detekteringsresultat ännu"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Nozzle Blob Detection"
+msgstr "Detektering av klump på munstycket"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Pause Count"
+msgstr "Antal pauser"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Antal pauser: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Pausa utskrift vid defekt"
+
+msgid "Spaghetti"
+msgstr "Spaghetti"
+
+msgid "Spaghetti Detection"
+msgstr "Spaghetti-detektering"
+
+msgid "Warp Edge"
+msgstr "Uppkrullad kant"
+
+msgid "Warp Edge Detection"
+msgstr "Detektering av uppkrullad kant"

@@ -1554,3 +1554,86 @@ msgstr "Spiegeldruck"
 
 msgid "Filament Autofeed"
 msgstr "Automatische Filamentzuführung"
+
+msgid "AI Detection"
+msgstr "KI-Erkennung"
+
+msgid "AI Status"
+msgstr "KI-Status"
+
+msgid "AI Detection Error"
+msgstr "Fehler bei der KI-Erkennung"
+
+msgid "AI detection failed"
+msgstr "KI-Erkennung fehlgeschlagen"
+
+msgid "Checking..."
+msgstr "Wird geprüft..."
+
+msgid "Confidence"
+msgstr "Konfidenz"
+
+msgid "Defect"
+msgstr "Fehler"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Fehler erkannt: %s"
+
+msgid "Enabled"
+msgstr "Aktiviert"
+
+msgid "First Layer"
+msgstr "Erste Schicht"
+
+msgid "First Layer Detection"
+msgstr "Erkennung der ersten Schicht"
+
+msgid "Foreign Object"
+msgstr "Fremdkörper"
+
+msgid "Foreign Object Detection"
+msgstr "Fremdkörpererkennung"
+
+msgid "General Detection"
+msgstr "Allgemeine Erkennung"
+
+msgid "Latest Detection Result"
+msgstr "Letztes Erkennungsergebnis"
+
+msgid "No detection results yet"
+msgstr "Noch keine Erkennungsergebnisse"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Nozzle Blob Detection"
+msgstr "Erkennung von Düsenklumpen"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Pause Count"
+msgstr "Pausenzähler"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Pausenzähler: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Druck bei Fehler pausieren"
+
+msgid "Spaghetti"
+msgstr "Spaghetti"
+
+msgid "Spaghetti Detection"
+msgstr "Spaghetti-Erkennung"
+
+msgid "Warp Edge"
+msgstr "Kantenwölbung"
+
+msgid "Warp Edge Detection"
+msgstr "Erkennung von Kantenwölbung"

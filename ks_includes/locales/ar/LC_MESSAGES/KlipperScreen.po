@@ -1435,3 +1435,86 @@ msgstr "التغذية التلقائية للخيط"
 
 msgid "Preheat"
 msgstr "التسخين المسبق"
+
+msgid "AI Detection"
+msgstr "كشف الذكاء الاصطناعي"
+
+msgid "AI Status"
+msgstr "حالة الذكاء الاصطناعي"
+
+msgid "AI Detection Error"
+msgstr "خطأ في اكتشاف الذكاء الاصطناعي"
+
+msgid "AI detection failed"
+msgstr "فشل اكتشاف الذكاء الاصطناعي"
+
+msgid "Checking..."
+msgstr "جارٍ التحقق..."
+
+msgid "Confidence"
+msgstr "مستوى الثقة"
+
+msgid "Defect"
+msgstr "عيب"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "تم اكتشاف عيب: %s"
+
+msgid "Enabled"
+msgstr "مفعل"
+
+msgid "First Layer"
+msgstr "الطبقة الأولى"
+
+msgid "First Layer Detection"
+msgstr "كشف الطبقة الأولى"
+
+msgid "Foreign Object"
+msgstr "جسم غريب"
+
+msgid "Foreign Object Detection"
+msgstr "كشف جسم غريب"
+
+msgid "General Detection"
+msgstr "كشف عام"
+
+msgid "Latest Detection Result"
+msgstr "آخر نتيجة كشف"
+
+msgid "No detection results yet"
+msgstr "لا توجد نتائج كشف بعد"
+
+msgid "Normal"
+msgstr "طبيعي"
+
+msgid "Nozzle Blob Detection"
+msgstr "كشف تكتل الفوهة"
+
+msgid "Offline"
+msgstr "غير متصل"
+
+msgid "Online"
+msgstr "متصل"
+
+msgid "Pause Count"
+msgstr "عدد مرات الإيقاف المؤقت"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "عدد مرات الإيقاف المؤقت: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "إيقاف الطباعة مؤقتًا عند اكتشاف عيب"
+
+msgid "Spaghetti"
+msgstr "سباغيتي"
+
+msgid "Spaghetti Detection"
+msgstr "كشف السباغيتي"
+
+msgid "Warp Edge"
+msgstr "حافة ملتوية"
+
+msgid "Warp Edge Detection"
+msgstr "كشف الحافة الملتوية"

@@ -1498,3 +1498,86 @@ msgstr "Автоподача філаменту"
 
 msgid "Preheat"
 msgstr "Передігрів"
+
+msgid "AI Detection"
+msgstr "AI-виявлення"
+
+msgid "AI Status"
+msgstr "Стан AI"
+
+msgid "AI Detection Error"
+msgstr "Помилка ШІ-виявлення"
+
+msgid "AI detection failed"
+msgstr "ШІ-виявлення не вдалося"
+
+msgid "Checking..."
+msgstr "Перевірка..."
+
+msgid "Confidence"
+msgstr "Достовірність"
+
+msgid "Defect"
+msgstr "Дефект"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Виявлено дефект: %s"
+
+msgid "Enabled"
+msgstr "Увімкнено"
+
+msgid "First Layer"
+msgstr "Перший шар"
+
+msgid "First Layer Detection"
+msgstr "Виявлення першого шару"
+
+msgid "Foreign Object"
+msgstr "Сторонній об'єкт"
+
+msgid "Foreign Object Detection"
+msgstr "Виявлення стороннього об'єкта"
+
+msgid "General Detection"
+msgstr "Загальне виявлення"
+
+msgid "Latest Detection Result"
+msgstr "Останній результат виявлення"
+
+msgid "No detection results yet"
+msgstr "Результатів виявлення ще немає"
+
+msgid "Normal"
+msgstr "Нормально"
+
+msgid "Nozzle Blob Detection"
+msgstr "Виявлення налипання на соплі"
+
+msgid "Offline"
+msgstr "Офлайн"
+
+msgid "Online"
+msgstr "Онлайн"
+
+msgid "Pause Count"
+msgstr "Кількість пауз"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Кількість пауз: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Призупиняти друк при дефекті"
+
+msgid "Spaghetti"
+msgstr "Спагеті"
+
+msgid "Spaghetti Detection"
+msgstr "Виявлення спагеті"
+
+msgid "Warp Edge"
+msgstr "Піднятий край"
+
+msgid "Warp Edge Detection"
+msgstr "Виявлення піднятого краю"

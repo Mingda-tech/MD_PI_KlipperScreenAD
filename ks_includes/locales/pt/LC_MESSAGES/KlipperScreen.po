@@ -1431,3 +1431,86 @@ msgstr "Alimentação automática de filamento"
 
 msgid "Preheat"
 msgstr "Pré-aquecimento"
+
+msgid "AI Detection"
+msgstr "Deteção por IA"
+
+msgid "AI Status"
+msgstr "Estado da IA"
+
+msgid "AI Detection Error"
+msgstr "Erro de deteção por IA"
+
+msgid "AI detection failed"
+msgstr "A deteção por IA falhou"
+
+msgid "Checking..."
+msgstr "A verificar..."
+
+msgid "Confidence"
+msgstr "Confiança"
+
+msgid "Defect"
+msgstr "Defeito"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Defeito detetado: %s"
+
+msgid "Enabled"
+msgstr "Ativado"
+
+msgid "First Layer"
+msgstr "Primeira camada"
+
+msgid "First Layer Detection"
+msgstr "Deteção da primeira camada"
+
+msgid "Foreign Object"
+msgstr "Objeto estranho"
+
+msgid "Foreign Object Detection"
+msgstr "Deteção de objeto estranho"
+
+msgid "General Detection"
+msgstr "Deteção geral"
+
+msgid "Latest Detection Result"
+msgstr "Último resultado de deteção"
+
+msgid "No detection results yet"
+msgstr "Ainda não existem resultados de deteção"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Nozzle Blob Detection"
+msgstr "Deteção de acúmulo no bico"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Pause Count"
+msgstr "Contagem de pausas"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Contagem de pausas: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Pausar impressão em caso de defeito"
+
+msgid "Spaghetti"
+msgstr "Esparguete"
+
+msgid "Spaghetti Detection"
+msgstr "Deteção de esparguete"
+
+msgid "Warp Edge"
+msgstr "Bordo levantado"
+
+msgid "Warp Edge Detection"
+msgstr "Deteção de bordo levantado"

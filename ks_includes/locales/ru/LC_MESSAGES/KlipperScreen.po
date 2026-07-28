@@ -1576,3 +1576,86 @@ msgstr "Зеркальная печать"
 
 msgid "Filament Autofeed"
 msgstr "Автоподача филамента"
+
+msgid "AI Detection"
+msgstr "AI-обнаружение"
+
+msgid "AI Status"
+msgstr "Статус AI"
+
+msgid "AI Detection Error"
+msgstr "Ошибка ИИ-обнаружения"
+
+msgid "AI detection failed"
+msgstr "ИИ-обнаружение не удалось"
+
+msgid "Checking..."
+msgstr "Проверка..."
+
+msgid "Confidence"
+msgstr "Достоверность"
+
+msgid "Defect"
+msgstr "Дефект"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Обнаружен дефект: %s"
+
+msgid "Enabled"
+msgstr "Включено"
+
+msgid "First Layer"
+msgstr "Первый слой"
+
+msgid "First Layer Detection"
+msgstr "Обнаружение первого слоя"
+
+msgid "Foreign Object"
+msgstr "Посторонний объект"
+
+msgid "Foreign Object Detection"
+msgstr "Обнаружение постороннего объекта"
+
+msgid "General Detection"
+msgstr "Общее обнаружение"
+
+msgid "Latest Detection Result"
+msgstr "Последний результат обнаружения"
+
+msgid "No detection results yet"
+msgstr "Пока нет результатов обнаружения"
+
+msgid "Normal"
+msgstr "Нормально"
+
+msgid "Nozzle Blob Detection"
+msgstr "Обнаружение налипания на сопле"
+
+msgid "Offline"
+msgstr "Не в сети"
+
+msgid "Online"
+msgstr "В сети"
+
+msgid "Pause Count"
+msgstr "Количество пауз"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Количество пауз: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Приостанавливать печать при дефекте"
+
+msgid "Spaghetti"
+msgstr "Спагетти"
+
+msgid "Spaghetti Detection"
+msgstr "Обнаружение спагетти"
+
+msgid "Warp Edge"
+msgstr "Задранный край"
+
+msgid "Warp Edge Detection"
+msgstr "Обнаружение задранного края"

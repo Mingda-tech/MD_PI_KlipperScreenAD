@@ -1410,3 +1410,86 @@ msgstr "Automatyczne podawanie filamentu"
 
 msgid "Preheat"
 msgstr "Podgrzanie"
+
+msgid "AI Detection"
+msgstr "Wykrywanie AI"
+
+msgid "AI Status"
+msgstr "Stan AI"
+
+msgid "AI Detection Error"
+msgstr "Błąd wykrywania AI"
+
+msgid "AI detection failed"
+msgstr "Wykrywanie AI nie powiodło się"
+
+msgid "Checking..."
+msgstr "Sprawdzanie..."
+
+msgid "Confidence"
+msgstr "Pewność"
+
+msgid "Defect"
+msgstr "Defekt"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Wykryto defekt: %s"
+
+msgid "Enabled"
+msgstr "Włączone"
+
+msgid "First Layer"
+msgstr "Pierwsza warstwa"
+
+msgid "First Layer Detection"
+msgstr "Wykrywanie pierwszej warstwy"
+
+msgid "Foreign Object"
+msgstr "Ciało obce"
+
+msgid "Foreign Object Detection"
+msgstr "Wykrywanie ciała obcego"
+
+msgid "General Detection"
+msgstr "Wykrywanie ogólne"
+
+msgid "Latest Detection Result"
+msgstr "Ostatni wynik wykrywania"
+
+msgid "No detection results yet"
+msgstr "Brak wyników wykrywania"
+
+msgid "Normal"
+msgstr "Normalny"
+
+msgid "Nozzle Blob Detection"
+msgstr "Wykrywanie grudki na dyszy"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Pause Count"
+msgstr "Liczba pauz"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Liczba pauz: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Wstrzymaj druk przy wykryciu defektu"
+
+msgid "Spaghetti"
+msgstr "Spaghetti"
+
+msgid "Spaghetti Detection"
+msgstr "Wykrywanie spaghetti"
+
+msgid "Warp Edge"
+msgstr "Podwinięta krawędź"
+
+msgid "Warp Edge Detection"
+msgstr "Wykrywanie podwiniętej krawędzi"

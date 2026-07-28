@@ -1378,3 +1378,86 @@ msgstr "Automatikus szálbevezetés"
 
 msgid "Preheat"
 msgstr "Előmelegítés"
+
+msgid "AI Detection"
+msgstr "AI-észlelés"
+
+msgid "AI Status"
+msgstr "AI állapot"
+
+msgid "AI Detection Error"
+msgstr "AI-észlelési hiba"
+
+msgid "AI detection failed"
+msgstr "Az AI-észlelés sikertelen"
+
+msgid "Checking..."
+msgstr "Ellenőrzés..."
+
+msgid "Confidence"
+msgstr "Megbízhatóság"
+
+msgid "Defect"
+msgstr "Hiba"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Hiba észlelve: %s"
+
+msgid "Enabled"
+msgstr "Engedélyezve"
+
+msgid "First Layer"
+msgstr "Első réteg"
+
+msgid "First Layer Detection"
+msgstr "Első réteg észlelése"
+
+msgid "Foreign Object"
+msgstr "Idegen tárgy"
+
+msgid "Foreign Object Detection"
+msgstr "Idegen tárgy észlelése"
+
+msgid "General Detection"
+msgstr "Általános észlelés"
+
+msgid "Latest Detection Result"
+msgstr "Legutóbbi észlelési eredmény"
+
+msgid "No detection results yet"
+msgstr "Még nincs észlelési eredmény"
+
+msgid "Normal"
+msgstr "Normál"
+
+msgid "Nozzle Blob Detection"
+msgstr "Fúvókalerakódás észlelése"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Online"
+msgstr "Online"
+
+msgid "Pause Count"
+msgstr "Szüneteltetések száma"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Szüneteltetések száma: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Nyomtatás szüneteltetése hiba esetén"
+
+msgid "Spaghetti"
+msgstr "Spagetti"
+
+msgid "Spaghetti Detection"
+msgstr "Spagetti észlelése"
+
+msgid "Warp Edge"
+msgstr "Felgörbült szél"
+
+msgid "Warp Edge Detection"
+msgstr "Felgörbült szél észlelése"

@@ -1556,3 +1556,86 @@ msgstr "Automaatne filamendi etteanne"
 
 msgid "Preheat"
 msgstr "Eelsoojendamine"
+
+msgid "AI Detection"
+msgstr "AI tuvastus"
+
+msgid "AI Status"
+msgstr "AI olek"
+
+msgid "AI Detection Error"
+msgstr "AI-tuvastuse viga"
+
+msgid "AI detection failed"
+msgstr "AI-tuvastus nurjus"
+
+msgid "Checking..."
+msgstr "Kontrollin..."
+
+msgid "Confidence"
+msgstr "Usaldusväärsus"
+
+msgid "Defect"
+msgstr "Defekt"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Defekt tuvastatud: %s"
+
+msgid "Enabled"
+msgstr "Lubatud"
+
+msgid "First Layer"
+msgstr "Esimene kiht"
+
+msgid "First Layer Detection"
+msgstr "Esimese kihi tuvastus"
+
+msgid "Foreign Object"
+msgstr "Võõrkeha"
+
+msgid "Foreign Object Detection"
+msgstr "Võõrkeha tuvastus"
+
+msgid "General Detection"
+msgstr "Üldine tuvastus"
+
+msgid "Latest Detection Result"
+msgstr "Viimane tuvastustulemus"
+
+msgid "No detection results yet"
+msgstr "Tuvastustulemusi veel pole"
+
+msgid "Normal"
+msgstr "Normaalne"
+
+msgid "Nozzle Blob Detection"
+msgstr "Düüsi klombi tuvastamine"
+
+msgid "Offline"
+msgstr "Võrguühenduseta"
+
+msgid "Online"
+msgstr "Võrgus"
+
+msgid "Pause Count"
+msgstr "Pauside arv"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Pauside arv: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Peata printimine defekti korral"
+
+msgid "Spaghetti"
+msgstr "Spaghetti"
+
+msgid "Spaghetti Detection"
+msgstr "Spaghetti tuvastus"
+
+msgid "Warp Edge"
+msgstr "Kõverdunud serv"
+
+msgid "Warp Edge Detection"
+msgstr "Kõverdunud serva tuvastus"

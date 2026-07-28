@@ -1490,3 +1490,86 @@ msgstr "Otomatik Filament Besleme"
 
 msgid "Preheat"
 msgstr "Ön Isıtma"
+
+msgid "AI Detection"
+msgstr "AI algılama"
+
+msgid "AI Status"
+msgstr "AI durumu"
+
+msgid "AI Detection Error"
+msgstr "AI algılama hatası"
+
+msgid "AI detection failed"
+msgstr "AI algılama başarısız oldu"
+
+msgid "Checking..."
+msgstr "Kontrol ediliyor..."
+
+msgid "Confidence"
+msgstr "Güven"
+
+msgid "Defect"
+msgstr "Kusur"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Kusur tespit edildi: %s"
+
+msgid "Enabled"
+msgstr "Etkin"
+
+msgid "First Layer"
+msgstr "İlk katman"
+
+msgid "First Layer Detection"
+msgstr "İlk katman algılama"
+
+msgid "Foreign Object"
+msgstr "Yabancı nesne"
+
+msgid "Foreign Object Detection"
+msgstr "Yabancı nesne algılama"
+
+msgid "General Detection"
+msgstr "Genel algılama"
+
+msgid "Latest Detection Result"
+msgstr "Son algılama sonucu"
+
+msgid "No detection results yet"
+msgstr "Henüz algılama sonucu yok"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Nozzle Blob Detection"
+msgstr "Nozulda birikinti algılama"
+
+msgid "Offline"
+msgstr "Çevrimdışı"
+
+msgid "Online"
+msgstr "Çevrimiçi"
+
+msgid "Pause Count"
+msgstr "Duraklatma sayısı"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Duraklatma sayısı: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Kusur olduğunda baskıyı duraklat"
+
+msgid "Spaghetti"
+msgstr "Spagetti"
+
+msgid "Spaghetti Detection"
+msgstr "Spagetti algılama"
+
+msgid "Warp Edge"
+msgstr "Kalkmış kenar"
+
+msgid "Warp Edge Detection"
+msgstr "Kalkmış kenar algılama"

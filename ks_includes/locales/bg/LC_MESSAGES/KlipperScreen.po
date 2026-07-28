@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Language: bg\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "AI Detection"
+msgstr "AI откриване"
+
+msgid "AI Status"
+msgstr "Състояние на AI"
+
+msgid "AI Detection Error"
+msgstr "Грешка при AI откриването"
+
+msgid "AI detection failed"
+msgstr "AI откриването е неуспешно"
+
+msgid "Checking..."
+msgstr "Проверка..."
+
+msgid "Confidence"
+msgstr "Увереност"
+
+msgid "Defect"
+msgstr "Дефект"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "Открит дефект: %s"
+
+msgid "Enabled"
+msgstr "Активирано"
+
+msgid "First Layer"
+msgstr "Първи слой"
+
+msgid "First Layer Detection"
+msgstr "Откриване на първи слой"
+
+msgid "Foreign Object"
+msgstr "Чужд обект"
+
+msgid "Foreign Object Detection"
+msgstr "Откриване на чужд обект"
+
+msgid "General Detection"
+msgstr "Общо откриване"
+
+msgid "Latest Detection Result"
+msgstr "Последен резултат от откриване"
+
+msgid "No detection results yet"
+msgstr "Все още няма резултати от откриване"
+
+msgid "Normal"
+msgstr "Нормално"
+
+msgid "Nozzle Blob Detection"
+msgstr "Откриване на натрупване на дюзата"
+
+msgid "Offline"
+msgstr "Офлайн"
+
+msgid "Online"
+msgstr "Онлайн"
+
+msgid "Pause Count"
+msgstr "Брой паузи"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "Брой паузи: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "Пауза на печата при дефект"
+
+msgid "Spaghetti"
+msgstr "Спагети"
+
+msgid "Spaghetti Detection"
+msgstr "Откриване на спагети"
+
+msgid "Warp Edge"
+msgstr "Изкривен ръб"
+
+msgid "Warp Edge Detection"
+msgstr "Откриване на изкривен ръб"

@@ -1474,3 +1474,86 @@ msgstr "필라멘트 자동 공급"
 
 msgid "Preheat"
 msgstr "예열"
+
+msgid "AI Detection"
+msgstr "AI 감지"
+
+msgid "AI Status"
+msgstr "AI 상태"
+
+msgid "AI Detection Error"
+msgstr "AI 감지 오류"
+
+msgid "AI detection failed"
+msgstr "AI 감지에 실패했습니다"
+
+msgid "Checking..."
+msgstr "확인 중..."
+
+msgid "Confidence"
+msgstr "신뢰도"
+
+msgid "Defect"
+msgstr "결함"
+
+#, python-format
+msgid "Defect detected: %s"
+msgstr "결함 감지: %s"
+
+msgid "Enabled"
+msgstr "사용"
+
+msgid "First Layer"
+msgstr "첫 레이어"
+
+msgid "First Layer Detection"
+msgstr "첫 레이어 감지"
+
+msgid "Foreign Object"
+msgstr "이물질"
+
+msgid "Foreign Object Detection"
+msgstr "이물질 감지"
+
+msgid "General Detection"
+msgstr "일반 감지"
+
+msgid "Latest Detection Result"
+msgstr "최근 감지 결과"
+
+msgid "No detection results yet"
+msgstr "아직 감지 결과가 없습니다"
+
+msgid "Normal"
+msgstr "정상"
+
+msgid "Nozzle Blob Detection"
+msgstr "노즐 뭉침 감지"
+
+msgid "Offline"
+msgstr "오프라인"
+
+msgid "Online"
+msgstr "온라인"
+
+msgid "Pause Count"
+msgstr "일시 정지 횟수"
+
+#, python-format
+msgid "Pause Count: %(count)d/%(required)d"
+msgstr "일시 정지 횟수: %(count)d/%(required)d"
+
+msgid "Pause Print on Defect"
+msgstr "결함 발생 시 출력 일시정지"
+
+msgid "Spaghetti"
+msgstr "스파게티"
+
+msgid "Spaghetti Detection"
+msgstr "스파게티 감지"
+
+msgid "Warp Edge"
+msgstr "들뜬 가장자리"
+
+msgid "Warp Edge Detection"
+msgstr "들뜬 가장자리 감지"
