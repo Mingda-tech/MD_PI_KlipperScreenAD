@@ -1,10 +1,18 @@
 import logging
 import gi
-import os
 
 gi.require_version("Gtk", "3.0")
 from math import pi
-from gi.repository import Gtk, Pango
+from gi.repository import Gtk
+from ks_includes.multi_material import (
+    SWITCH_DATA_OBJECT,
+    get_active_channel,
+    get_channel_count,
+    get_filament_mask,
+    get_saved_variables,
+    is_channel_loaded,
+    parse_material_records,
+)
 from ks_includes.screen_panel import ScreenPanel
 
 class Panel(ScreenPanel):
@@ -13,56 +21,35 @@ class Panel(ScreenPanel):
 
         logging.info("Init Feed")
 
-        self._screen.feed_filament_allinfo = []
-
-        self.max_filament = 4
-        self.params_num_limit = 5
-        # self.default_color = [0.0,0.0,0.0,0.0]
-        # self.filament_color = {}
-        # self.filament_name = ["filament_0", "filament_1", "filament_2", "filament_3", "filament_4"]
-        try:
-            feed_filament_info_var = self._screen.klippy_config.get("Variables", "feed_filament_info", fallback="MINGDA,PLA+,180,240,0000FF00/MINGDA,PLA,191,241,FF000000/MINGDA,PLA_CF,180,240,FF00FF00/MINGDA,PLA,191,241,FFFFFF00")
-            if isinstance(feed_filament_info_var, list):
-                feed_filament_info_var = "/".join(feed_filament_info_var[:4])
-        except Exception as e:
-            logging.error(f"Error getting feed_filament_info: {e}")
-            feed_filament_info_var = "MINGDA,PLA,191,241,FFFFFF00/MINGDA,PLA,191,241,00FF0000/MINGDA,PETG,221,261,00000000/MINGDA,PLA,191,241,00808000/MINGDA,PETG,221,261,FFFF0000"
-        feed_filament_info_temp = []
-        feed_filament_info_num = 0
+        self.max_filament = get_channel_count(self._printer)
+        feed_filament_info_var = get_saved_variables(self._printer).get("feed_filament_info")
+        if feed_filament_info_var is None and self._screen.klippy_config is not None:
+            feed_filament_info_var = self._screen.klippy_config.get(
+                "Variables", "feed_filament_info", fallback=""
+            )
+        self._screen.feed_filament_allinfo = parse_material_records(
+            feed_filament_info_var,
+            self.max_filament,
+        )
         self.da_size = self._gtk.img_scale * 2
         logging.info("%s"%(feed_filament_info_var))
-        for str0 in feed_filament_info_var.split("'"):
-            if (0 >= len(str0)):
-                continue
-            for str1 in str0.split("/"):
-                if feed_filament_info_num >= 5:
-                    break
-                feed_filament_info_temp.append([])
-                for str2 in str1.split(","):
-                    if len(str2):
-                        feed_filament_info_temp[feed_filament_info_num].append(str2)
-                    else:
-                        feed_filament_info_temp[feed_filament_info_num].append(None)
-                params_num = len(feed_filament_info_temp[feed_filament_info_num])
-                if params_num < self.params_num_limit:
-                    for params_num_i in range(params_num, self.params_num_limit):
-                        feed_filament_info_temp[feed_filament_info_num].append(None)
-                
-                feed_filament_info_num += 1
-            
-        self.filament_name = []
-        for i in range(feed_filament_info_num):
-            self._screen.feed_filament_allinfo.append({
-                'name': feed_filament_info_temp[i][0]+" "+feed_filament_info_temp[i][1] if (feed_filament_info_temp[i][0] is not None) and (feed_filament_info_temp[i][1] is not None) and (feed_filament_info_temp[i][0]!="None") and (feed_filament_info_temp[i][1]!="None") else None,
-                'vendor': feed_filament_info_temp[i][0] if (feed_filament_info_temp[i][0] is not None) and (feed_filament_info_temp[i][0]!="None") else None,
-                'type': feed_filament_info_temp[i][1] if (feed_filament_info_temp[i][1] is not None) and (feed_filament_info_temp[i][1]!="None") else None,
-                'min_temp': feed_filament_info_temp[i][2] if (feed_filament_info_temp[i][2] is not None) and (feed_filament_info_temp[i][2]!="None") else None,
-                'max_temp': feed_filament_info_temp[i][3] if (feed_filament_info_temp[i][3] is not None) and (feed_filament_info_temp[i][3]!="None") else None,
-                'color': feed_filament_info_temp[i][4] if (feed_filament_info_temp[i][4] is not None) and (feed_filament_info_temp[i][4]!="None") else None,
-            })
-            self.filament_name.append(f"filament_{i}")
-        self.select_filament = self._screen.feed_filament_index = 1
-        self.filament_index = 4321
+
+        self.filament_name = [
+            f"filament_{channel}"
+            for channel in range(1, self.max_filament + 1)
+        ]
+        self.filament_index = get_filament_mask(self._printer)
+        active_channel = get_active_channel(self._printer, default=0)
+        first_loaded = next(
+            (
+                channel for channel in range(1, self.max_filament + 1)
+                if is_channel_loaded(self.filament_index, channel)
+            ),
+            1,
+        )
+        self.select_filament = self._screen.feed_filament_index = (
+            active_channel if active_channel > 0 else first_loaded
+        )
         self.filament_device_info = {}
 
         logging.info(f"feed_filament:{self._screen.feed_filament_index}==>{self._screen.feed_filament_allinfo}")
@@ -108,8 +95,32 @@ class Panel(ScreenPanel):
 
     def activate(self):
         logging.info("feed_filament_box active")
+        self.filament_index = get_filament_mask(self._printer, self.filament_index)
         for d in self.filament_name:
             self.update_device(d)
+            self.update_channel_presence(d)
+
+    def process_update(self, action, data):
+        if action != "notify_status_update" or SWITCH_DATA_OBJECT not in data:
+            return
+        if "filament_index" in data[SWITCH_DATA_OBJECT]:
+            self.filament_index = int(data[SWITCH_DATA_OBJECT]["filament_index"])
+            for device in self.filament_name:
+                self.update_channel_presence(device)
+
+    def update_channel_presence(self, device):
+        if device not in self.filament_device_info:
+            return
+        channel = self.filament_device_info[device]["index"]
+        button = self.filament_device_info[device]["button"]
+        context = button.get_style_context()
+        context.remove_class("filament_sensor_detected")
+        context.remove_class("filament_sensor_empty")
+        loaded = is_channel_loaded(self.filament_index, channel)
+        if loaded is True:
+            context.add_class("filament_sensor_detected")
+        elif loaded is False:
+            context.add_class("filament_sensor_empty")
 
     def edit_event(self, widget, event):
         if self.select_filament is not None:
@@ -122,7 +133,7 @@ class Panel(ScreenPanel):
     def load_event(self, widget, event):
         if self.select_filament is not None:
             logging.info(f"load filament_{self.select_filament}")
-        the_str = "ACTIVE_FIALMENT S=%d" % (ScreenPanel.feed_filament_index)
+        the_str = "ACTIVE_FIALMENT S=%d" % self._screen.feed_filament_index
         # self._screen._ws.klippy.gcode_script(the_str)
         logging.info(the_str)
 
@@ -140,7 +151,8 @@ class Panel(ScreenPanel):
             if int(self.select_filament) != int(self.filament_device_info[device]["index"]):
                 self.filament_device_info[device]["button"].get_style_context().add_class("button_active")
                 if self.select_filament is not None:
-                    self.filament_device_info[f"filament_{self.select_filament}"]["button"].get_style_context().remove_class("button_active")
+                    previous = self.filament_device_info[f"filament_{self.select_filament}"]["button"]
+                    previous.get_style_context().remove_class("button_active")
                 else:
                     self.right_buttons['edit'].set_sensitive(True)
                     self.labels['filament_box'].show_all()
@@ -155,14 +167,21 @@ class Panel(ScreenPanel):
         logging.info(f"update device:{device}")
         device_index = device[9:] if device[9:] else None
         filament_msg = self._screen.feed_filament_allinfo[int(device_index)]
-        if (filament_msg['name'] is None):
-            return False
-        label_text = "  %s: %s-%s (°C)" % ( filament_msg['name'] if filament_msg['name'] is not None else "?",
-                                            filament_msg['min_temp'] if filament_msg['min_temp'] is not None else "?",
-                                            filament_msg['max_temp'] if filament_msg['max_temp'] is not None else "?")
-        if filament_msg['color'] is not None:
-            color = [int(filament_msg['color'][0:2], 16)/255, int(filament_msg['color'][2:4], 16)/255, int(filament_msg['color'][4:6], 16)/255, 0.0]
-        else:
+        tool_name = f"T{int(device_index) - 1}"
+        label_text = "  %s  %s: %s-%s (°C)" % (
+            tool_name,
+            filament_msg['name'] if filament_msg['name'] is not None else "-",
+            filament_msg['min_temp'] if filament_msg['min_temp'] is not None else "?",
+            filament_msg['max_temp'] if filament_msg['max_temp'] is not None else "?",
+        )
+        try:
+            color = [
+                int(filament_msg['color'][0:2], 16) / 255,
+                int(filament_msg['color'][2:4], 16) / 255,
+                int(filament_msg['color'][4:6], 16) / 255,
+                0.0,
+            ]
+        except (TypeError, ValueError):
             color = [0,0,0,0]
         logging.info(f"l={label_text}, c={color}")
         if device in self.filament_device_info:
@@ -190,14 +209,11 @@ class Panel(ScreenPanel):
         name = self._gtk.Button(image, self.prettify(devname), None, self.bts, Gtk.PositionType.LEFT, 1)
         name.set_alignment(0, .5)
         name.get_style_context().add_class(class_name)
-        if (device_index == "0") or (device_index in str(self.filament_index)):
-            name.connect('button-release-event', self.select_filament_event, device)
-            if int(self.select_filament) == int(device_index):
-                name.get_style_context().add_class("button_active")
-            else:
-                name.get_style_context().remove_class("button_active")
+        name.connect('button-release-event', self.select_filament_event, device)
+        if int(self.select_filament) == int(device_index):
+            name.get_style_context().add_class("button_active")
         else:
-            name.set_sensitive(False)
+            name.get_style_context().remove_class("button_active")
 
         color_area = Gtk.DrawingArea(width_request=self.da_size, height_request=self.da_size)
         color_box = Gtk.Box()
@@ -217,8 +233,9 @@ class Panel(ScreenPanel):
         }
         color_area.connect("draw", self.on_draw, self.filament_device_info[device]['color'])
         color_area.queue_draw()
-        pos = self.filament_name.index(device) + 1
+        pos = self.filament_name.index(device)
         self.labels['filament_box'].attach(device_box, 0, pos, 1, 1)
+        self.update_channel_presence(device)
         self.labels['filament_box'].show_all()
 
     def create_left_panel(self):
@@ -231,8 +248,6 @@ class Panel(ScreenPanel):
         self.left_panel.add(scroll)
 
         for d in self.filament_name:
-            if d == "filament_0":
-                continue
             self.add_device(d)
 
         return self.left_panel
@@ -244,8 +259,6 @@ class Panel(ScreenPanel):
         
         if self.select_filament is None:
             self.right_buttons['edit'].set_sensitive(False)
-        elif self.filament_index == 0:
-            self.right_buttons['exit'].set_sensitive(False)
         self.right_buttons['none'].set_sensitive(False)
 
         self.right_buttons['edit'].connect('button-release-event', self.edit_event)

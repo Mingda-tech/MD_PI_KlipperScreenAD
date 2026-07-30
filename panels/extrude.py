@@ -5,6 +5,13 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Pango
 from ks_includes.KlippyGcodes import KlippyGcodes
+from ks_includes.multi_material import (
+    SWITCH_DATA_OBJECT,
+    get_active_channel,
+    get_channel_count,
+    get_material_record,
+    parse_material_records,
+)
 from ks_includes.screen_panel import ScreenPanel
 
 
@@ -13,21 +20,17 @@ class Panel(ScreenPanel):
     def __init__(self, screen, title):
         super().__init__(screen, title)
         self.current_extruder = self._printer.get_stat("toolhead", "extruder")
-        # 添加错误处理和默认值
-        try:
-            self.current_tool = self._screen.klippy_config.getint("Variables", "feed_system_active_tool", fallback=1)
-        except (AttributeError, KeyError):
-            self.current_tool = 1  # 如果获取失败则默认使用T0
-            logging.info("Unable to get feed_system_active_tool, defaulting to T0")
+        self.channel_count = get_channel_count(self._printer)
+        self.current_tool = get_active_channel(self._printer, default=0)
         self.multi_material_enabled = True if self.current_tool > 0 else False
-        self.previous_tool = self.current_tool
+        self.previous_tool = self.current_tool if self.current_tool > 0 else 1
 
-        # 通过检查可用命令来确定支持的工具号
-        self.available_tools = []
-        available_commands = self._printer.available_commands
-        for i in range(10):  # 检查T0到T9
-            if f"T{i}" in available_commands:
-                self.available_tools.append(i)
+        # Tool commands are zero-based (T0..T9); feeder channels are one-based.
+        available_commands = self._printer.available_commands or {}
+        self.available_tools = [
+            tool for tool in range(self.channel_count)
+            if f"T{tool}" in available_commands
+        ]
         
         if not self.available_tools and "extruder" in self._printer.get_tools():
             self.available_tools.append(0)
@@ -85,19 +88,18 @@ class Panel(ScreenPanel):
         self._apply_multi_material_text_limit()
 
         extgrid = self._gtk.HomogeneousGrid()
-        limit = 5
-        i = 0
-        for tool_num in self.available_tools:
+        tool_columns = 3 if self.channel_count <= 6 else 5
+        for position, tool_num in enumerate(self.available_tools):
             extruder = f"extruder{tool_num}"
             self.labels[extruder] = self._gtk.Button(f"filament-{tool_num}", f"T{tool_num}")
             self.labels[extruder].connect("clicked", self.change_extruder, tool_num + 1)
-        
-            if i < limit:
-                extgrid.attach(self.labels[extruder], i, 0, 1, 1)
-                i += 1
-        
-        if i < (limit - 2) and self._printer.spoolman:
-            extgrid.attach(self.buttons['spoolman'], i + 2, 0, 1, 1)
+            extgrid.attach(
+                self.labels[extruder],
+                position % tool_columns,
+                position // tool_columns,
+                1,
+                1,
+            )
         
         distgrid = Gtk.Grid()
         for j, i in enumerate(self.distances):
@@ -151,8 +153,6 @@ class Panel(ScreenPanel):
             sensors.set_halign(Gtk.Align.CENTER)
             sensors.set_valign(Gtk.Align.CENTER)
             for s, x in enumerate(filament_sensors):
-                if s > limit:
-                    break
                 name = x[23:].strip()
                 self.labels[x] = {
                     'label': Gtk.Label(self.prettify(name)),
@@ -168,7 +168,7 @@ class Panel(ScreenPanel):
                 self.labels[x]['box'].pack_start(self.labels[x]['label'], True, True, 10)
                 self.labels[x]['box'].pack_start(self.labels[x]['switch'], False, False, 0)
                 self.labels[x]['box'].get_style_context().add_class("filament_sensor")
-                sensors.attach(self.labels[x]['box'], s, 0, 1, 1)
+                sensors.attach(self.labels[x]['box'], s % 5, s // 5, 1, 1)
 
         grid = Gtk.Grid()
         grid.set_column_homogeneous(True)
@@ -195,17 +195,74 @@ class Panel(ScreenPanel):
             grid.attach(sensors, 0, 4, 4, 1)
 
                 # 更新所有按钮状态
-        for t_num in self.available_tools:
-            extruder = f"extruder{t_num}"
-                # T0时禁用所有按钮
-            self.labels[extruder].get_style_context().remove_class("button_active")
-            if self.current_tool > 0:
-                self.labels[extruder].set_sensitive(True)
-                if t_num == self.current_tool - 1:
-                    self.labels[extruder].get_style_context().add_class("button_active")
-            else:
-                self.labels[extruder].set_sensitive(False)
+        self._update_tool_buttons()
         self.content.add(grid)
+
+    def _update_tool_buttons(self):
+        allow_selection = self.multi_material_enabled and self._printer.state != "printing"
+        for tool_num in self.available_tools:
+            button = self.labels.get(f"extruder{tool_num}")
+            if button is None:
+                continue
+            button.get_style_context().remove_class("button_active")
+            button.set_sensitive(allow_selection)
+            if self.current_tool == tool_num + 1:
+                button.get_style_context().add_class("button_active")
+
+    def _set_active_tool(self, active_tool):
+        try:
+            active_tool = int(active_tool)
+        except (TypeError, ValueError):
+            return
+        if not 0 <= active_tool <= self.channel_count:
+            logging.warning("Ignoring invalid active feeder channel: %s", active_tool)
+            return
+
+        if self.current_tool > 0 and active_tool != self.current_tool:
+            self.previous_tool = self.current_tool
+        self.current_tool = active_tool
+        self.multi_material_enabled = active_tool > 0
+        self._update_multi_material_icon(self.multi_material_enabled)
+        self.buttons['spoolman'].set_sensitive(self.multi_material_enabled)
+        self._update_tool_buttons()
+
+    def _get_saved_material_records(self):
+        raw_value = None
+        save_variables = self._printer.get_stat("save_variables", "variables")
+        if isinstance(save_variables, dict):
+            raw_value = save_variables.get("feed_filament_info")
+        if raw_value is None and self._screen.klippy_config is not None:
+            raw_value = self._screen.klippy_config.get(
+                "Variables", "feed_filament_info", fallback=""
+            )
+        return parse_material_records(raw_value, self.channel_count)
+
+    def _get_extrusion_temperatures(self):
+        profile = get_material_record(
+            self._printer,
+            self.current_tool,
+            self._get_saved_material_records(),
+        )
+        try:
+            minimum = float(profile["min_temp"])
+        except (TypeError, ValueError):
+            minimum = 190
+        try:
+            target = float(profile["max_temp"])
+        except (TypeError, ValueError):
+            target = 240
+
+        extruder_config = self._printer.get_config_section(self.current_extruder)
+        if isinstance(extruder_config, dict):
+            try:
+                minimum = max(minimum, float(extruder_config.get("min_extrude_temp", minimum)))
+            except (TypeError, ValueError):
+                pass
+            try:
+                target = min(target, float(extruder_config.get("max_temp", target + 1)) - 1)
+            except (TypeError, ValueError):
+                pass
+        return round(minimum), round(max(minimum, target))
 
     def _apply_multi_material_text_limit(self):
         """为横屏模式下的multi_material按钮设置文本限制"""
@@ -236,21 +293,15 @@ class Panel(ScreenPanel):
             self.buttons[button].set_sensitive(enable)
 
     def activate(self):
+        self._set_active_tool(get_active_channel(self._printer, default=self.current_tool))
         if self._printer.state == "printing":
             self.enable_buttons(False)
+            for tool_num in self.available_tools:
+                self.labels[f"extruder{tool_num}"].set_sensitive(False)
 
     def deactivate(self):
-        # 保存当前工具号和多耗材箱状态到文件
-        try:
-            if self._screen._ws.connected:
-                # 使用 SAVE_VARIABLE 命令保存变量
-                save_cmd = (
-                    f'SAVE_VARIABLE VARIABLE=feed_system_active_tool VALUE={self.current_tool}\n'
-                )
-                self._screen._ws.klippy.gcode_script(save_cmd)
-
-        except Exception as e:
-            logging.error(f"Error saving variables: {e}")
+        # Firmware persists the channel only after a successful switch.
+        pass
 
     def process_update(self, action, data):
         if action != "notify_status_update":
@@ -266,39 +317,12 @@ class Panel(ScreenPanel):
                     lines=2,
                 )
 
-        # 检查并更新当前料管
-        try:
-            if 'save_variables' in data:
-                logging.info(f"Extrude panel received save_variables: {data['save_variables']}")
-                if 'variables' in data['save_variables']:
-                    logging.info(f"Variables content: {data['save_variables']['variables']}")
-                    active_tool = data['save_variables']['variables'].get('feed_system_active_tool')
-                    if active_tool is not None and active_tool != self.current_tool:
-                        logging.info(f"Current tool: {self.current_tool}, New tool: {active_tool}")
-                        
-                        # 更新按钮状态
-                        for t_num in self.available_tools:
-                            extruder = f"extruder{t_num}"
-                            self.labels[extruder].get_style_context().remove_class("button_active")
-                            if active_tool > 0:
-                                self.labels[extruder].set_sensitive(True)
-                                if t_num == active_tool - 1:
-                                    self.labels[extruder].get_style_context().add_class("button_active")
-                                    logging.info(f"Setting {extruder} as active")
-                            else:
-                                self.labels[extruder].set_sensitive(False)
-                        
-                        # 更新当前工具号
-                        self.current_tool = active_tool
-                        
-                        # 更新多材料盒状态
-                        self.multi_material_enabled = active_tool > 0
-                        # 使用新方法更新图标
-                        self._update_multi_material_icon(self.multi_material_enabled)
-                        self.buttons['spoolman'].set_sensitive(self.multi_material_enabled)
-                        
-        except Exception as e:
-            logging.exception(f"Error updating active feed system: {e}")
+        if SWITCH_DATA_OBJECT in data:
+            self._set_active_tool(data[SWITCH_DATA_OBJECT].get("active_tools"))
+        if "save_variables" in data:
+            variables = data["save_variables"].get("variables", {})
+            if "feed_system_active_tool" in variables:
+                self._set_active_tool(variables["feed_system_active_tool"])
 
         for x in self._printer.get_filament_sensors():
             if x in data:
@@ -323,24 +347,13 @@ class Panel(ScreenPanel):
         self.distance = distance
 
     def change_extruder(self, widget, tool_num):
-        logging.info(f"Changing feed_system_active_tool to {tool_num}")
-        
-        # 更新所有按钮状态
-        for t_num in self.available_tools:
-            extruder = f"extruder{t_num}"
-                # T0时禁用所有按钮
-            self.labels[extruder].get_style_context().remove_class("button_active")
-            if tool_num > 0:
-                self.labels[extruder].set_sensitive(True)
-                if t_num == tool_num - 1:
-                    self.labels[extruder].get_style_context().add_class("button_active")
-            else:
-                self.labels[extruder].set_sensitive(False)
-        
-        self.current_tool = tool_num
-        if tool_num > 0:
+        if 0 < tool_num <= self.channel_count:
+            logging.info("Requesting feeder channel %s", tool_num)
+            if self.current_tool > 0:
+                self.previous_tool = self.current_tool
             self._screen._send_action(widget, "printer.gcode.script",
-                                {"script": f"T{tool_num - 1}"})
+                                      {"script": f"T{tool_num - 1}"})
+
     def change_speed(self, widget, speed):
         logging.info(f"### Speed {speed}")
         self.labels[f"speed{self.speed}"].get_style_context().remove_class("distbutton_active")
@@ -349,10 +362,12 @@ class Panel(ScreenPanel):
 
     def extrude(self, widget, direction):
         temp = self._printer.get_dev_stat(self.current_extruder, "temperature")
-        if temp < 190:
-            script = {"script": "M104 S240"}
+        minimum_temp, target_temp = self._get_extrusion_temperatures()
+        if temp is None or temp < minimum_temp:
+            script = {"script": f"M104 S{target_temp}"}
             self._screen._confirm_send_action(None,
-                                              _("The nozzle temperature is too low, Are you sure you want to heat it?"),
+                                              _("The nozzle temperature is too low, Are you sure you want to heat it?")
+                                              + f"\n\n{target_temp} °C",
                                               "printer.gcode.script", script, save_button=False)
         else:
             self._screen._ws.klippy.gcode_script(KlippyGcodes.EXTRUDE_REL)
@@ -432,27 +447,17 @@ class Panel(ScreenPanel):
             self._gtk.remove_dialog(widget)
             
         if self.multi_material_enabled:
-            # 处理禁用多色耗材箱的响应
             if response == Gtk.ResponseType.OK:
-                self.multi_material_enabled = False
-                self.previous_tool = self.current_tool
-                self.current_tool = 0
-                logging.info("Multi-material box disabled")
+                if self.current_tool > 0:
+                    self.previous_tool = self.current_tool
+                logging.info("Requesting external filament mode")
                 self._screen._ws.klippy.gcode_script("ACTIVE_FIALMENT S=0")
-
-                # 更新按钮图标
-                # 使用新方法更新图标
-                self._update_multi_material_icon(False)
-                self.change_extruder(None, self.current_tool)
         else:
-            # 处理启用多色耗材箱的响应
             if response == Gtk.ResponseType.YES:
-                self.multi_material_enabled = True
-                self.current_tool = 1 if self.current_tool == 0 else self.current_tool
-                logging.info("Multi-material box enabled")
-                # self._screen._ws.klippy.gcode_script(f"ACTIVE_FIALMENT S={self.current_tool}")
-
-                # 更新按钮图标
-                # 使用新方法更新图标
-                self._update_multi_material_icon(True)
-                self.change_extruder(None, self.current_tool)
+                target_tool = (
+                    self.previous_tool
+                    if 0 < self.previous_tool <= self.channel_count
+                    else 1
+                )
+                logging.info("Requesting multi-material channel %s", target_tool)
+                self.change_extruder(None, target_tool)

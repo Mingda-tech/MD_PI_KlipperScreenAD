@@ -25,6 +25,7 @@ from ks_includes.KlippyRest import KlippyRest
 from ks_includes.files import KlippyFiles
 from ks_includes.KlippyGtk import KlippyGtk
 from ks_includes.printer import Printer
+from ks_includes.multi_material import SWITCH_DATA_OBJECT
 from ks_includes.widgets.keyboard import Keyboard
 from ks_includes.config import KlipperScreenConfig
 from panels.base_panel import BasePanel
@@ -408,6 +409,8 @@ class KlipperScreen(Gtk.Window):
                 "save_variables": ["variables"],
             }
         }
+        if self.printer.config_section_exists(SWITCH_DATA_OBJECT):
+            requested_updates["objects"][SWITCH_DATA_OBJECT] = None
         for extruder in self.printer.get_tools():
             requested_updates['objects'][extruder] = [
                 "target", "temperature", "pressure_advance", "smooth_time", "power"]
@@ -1878,6 +1881,8 @@ class KlipperScreen(Gtk.Window):
                        + self.printer.get_output_pins()
                        + self.printer.get_leds()
                        )
+        if self.printer.config_section_exists(SWITCH_DATA_OBJECT):
+            extra_items.append(SWITCH_DATA_OBJECT)
 
         data = self.apiclient.send_request("printer/objects/query?" + "&".join(PRINTER_BASE_STATUS_OBJECTS +
                                                                                extra_items))
