@@ -1649,3 +1649,72 @@ msgstr "翘边"
 
 msgid "Warp Edge Detection"
 msgstr "翘边检测"
+
+msgid "Device QR Code"
+msgstr "设备二维码"
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. 联网功能可能会将您的设备序列号、设备状态、网络信息、日志以及您启用的摄像头图像发送给 Mingda 及其服务提供商，用于设备配对、远程访问、安全防护、故障诊断、更新和客户支持。"
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. 如果您启用摄像头或远程查看功能，即表示您确认自己有权在设备所在场所采集和分享图像，并将遵守适用的隐私和监控法律。"
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. 远程控制可能会启动、暂停、停止或修改打印任务，并可能影响设备运动、温度和材料使用。仅应在打印机及周边环境安全时使用该功能。"
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. 在线功能依赖互联网、云服务和第三方服务，可能出现中断、延迟、地区限制或不可用的情况。在适用法律允许的最大范围内，相关服务按“现状”和“可用”基础提供。"
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. 您应妥善保护您的账号、密码、令牌和配对二维码，并及时安装更新。点击“同意”后，本机会在本地保存您的选择；如果您不同意，联网功能将保持不可用。"
+
+msgid "Agree"
+msgstr "同意"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Checking network connection..."
+msgstr "正在检查网络连接..."
+
+msgid "Failed to generate the QR code image."
+msgstr "无法生成二维码图片。"
+
+msgid "Failed to save the terms acceptance state."
+msgstr "无法保存条款同意状态。"
+
+msgid "Invalid QR code service response."
+msgstr "二维码服务返回数据无效。"
+
+msgid "Last updated"
+msgstr "最近刷新时间"
+
+msgid "No network connection detected."
+msgstr "未检测到网络连接。"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "启用联网功能前，请先阅读并同意以下内容："
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "二维码已过期，请点击“刷新”重新加载。"
+
+msgid "QR code is ready. Scan to continue."
+msgstr "二维码已就绪，请扫码继续。"
+
+msgid "QR code service is unreachable."
+msgstr "二维码服务不可达。"
+
+msgid "Requesting device QR code..."
+msgstr "正在请求设备二维码..."
+
+msgid "Terms of Use"
+msgstr "使用条款"
+
+msgid "Unable to read the device serial number."
+msgstr "无法读取设备序列号。"
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "无法自动刷新，当前二维码即将过期。"
+
+msgid "Waiting for terms acceptance."
+msgstr "等待同意条款。"

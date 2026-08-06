@@ -1659,3 +1659,72 @@ msgstr "Задранный край"
 
 msgid "Warp Edge Detection"
 msgstr "Обнаружение задранного края"
+
+msgid "Device QR Code"
+msgstr "QR-код устройства"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Перед включением подключенных функций, пожалуйста, прочитайте и примите следующее:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "Срок действия QR-кода истек. Нажмите «Обновить», чтобы загрузить новый."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Не удалось обновить автоматически. Срок действия текущего QR-кода скоро истечет."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Подключенные функции могут отправлять серийный номер вашего устройства, состояние устройства, сетевые данные, журналы и любые включенные изображения с камеры в Mingda и ее поставщикам услуг для сопряжения, удаленного доступа, обеспечения безопасности, диагностики, обновлений и поддержки."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Если вы включаете камеру или удаленный просмотр, вы подтверждаете, что имеете право снимать и передавать изображения в месте установки устройства и будете соблюдать применимые законы о конфиденциальности и наблюдении."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. Удаленное управление может запускать, приостанавливать, останавливать или изменять задание печати и может влиять на движение, температуру и расход материала. Используйте его только тогда, когда принтер и окружающая зона безопасны."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Онлайн-функции зависят от Интернета, облака и сторонних сервисов и могут быть прерваны, задержаны, ограничены по региону или недоступны. Сервис предоставляется по мере доступности в максимальной степени, разрешенной законом."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Вы должны защищать свою учетную запись, пароль, токены и QR-код сопряжения и своевременно устанавливать обновления. Нажимая Agree, это устройство сохранит ваш выбор локально; если вы не согласны, подключенные функции останутся недоступными."
+
+msgid "Agree"
+msgstr "Согласен"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Checking network connection..."
+msgstr "Проверка сетевого подключения..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Не удалось создать изображение QR-кода."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Не удалось сохранить согласие с условиями."
+
+msgid "Invalid QR code service response."
+msgstr "Недопустимый ответ службы QR-кодов."
+
+msgid "Last updated"
+msgstr "Последнее обновление"
+
+msgid "No network connection detected."
+msgstr "Сетевое подключение не обнаружено."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "QR-код готов. Отсканируйте его, чтобы продолжить."
+
+msgid "QR code service is unreachable."
+msgstr "Служба QR-кодов недоступна."
+
+msgid "Requesting device QR code..."
+msgstr "Запрос QR-кода устройства..."
+
+msgid "Terms of Use"
+msgstr "Условия использования"
+
+msgid "Unable to read the device serial number."
+msgstr "Не удалось прочитать серийный номер устройства."
+
+msgid "Waiting for terms acceptance."
+msgstr "Ожидание согласия с условиями."

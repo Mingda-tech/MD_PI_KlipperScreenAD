@@ -1715,3 +1715,72 @@ msgstr "Zvihan rob"
 
 msgid "Warp Edge Detection"
 msgstr "Zaznavanje zvihanega roba"
+
+msgid "Device QR Code"
+msgstr "QR-koda naprave"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Pred omogočanjem povezanih funkcij preberite in sprejmite naslednje:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "Koda QR je potekla. Tapnite Osveži, da naložite novo."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Samodejno osveževanje ni uspelo. Trenutna koda QR bo kmalu potekla."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Povezane funkcije lahko pošljejo serijsko številko vaše naprave, stanje naprave, omrežne podatke, dnevnike in vse omogočene slike kamere družbi Mingda in njenim ponudnikom storitev za seznanjanje, oddaljeni dostop, varnost, diagnostiko, posodobitve in podporo."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Če omogočite kamero ali oddaljeni ogled, potrjujete, da ste pooblaščeni za zajemanje in deljenje slik na lokaciji naprave ter da boste upoštevali veljavne zakone o zasebnosti in nadzoru."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. Oddaljeno upravljanje lahko zažene, začasno ustavi, ustavi ali spremeni tiskalno opravilo ter lahko vpliva na gibanje, temperaturo in porabo materiala. Uporabljajte ga samo, ko sta tiskalnik in okolica varna."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Spletne funkcije so odvisne od interneta, oblaka in storitev tretjih oseb ter so lahko prekinjene, zakasnjene, regionalno omejene ali nedosegljive. Storitev je zagotovljena glede na razpoložljivost v največjem obsegu, ki ga dovoljuje zakon."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Zaščititi morate svoj račun, geslo, žetone in QR-kodo za seznanjanje ter nemudoma namestiti posodobitve. Če tapnete Agree, bo ta naprava vašo izbiro shranila lokalno; če se ne strinjate, bodo povezane funkcije ostale nedostopne."
+
+msgid "Agree"
+msgstr "Strinjam se"
+
+msgid "Back"
+msgstr "Nazaj"
+
+msgid "Checking network connection..."
+msgstr "Preverjanje omrežne povezave..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Slike kode QR ni bilo mogoče ustvariti."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Sprejetja pogojev ni bilo mogoče shraniti."
+
+msgid "Invalid QR code service response."
+msgstr "Neveljaven odgovor storitve za kodo QR."
+
+msgid "Last updated"
+msgstr "Nazadnje posodobljeno"
+
+msgid "No network connection detected."
+msgstr "Omrežna povezava ni bila zaznana."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "Koda QR je pripravljena. Za nadaljevanje jo optično preberite."
+
+msgid "QR code service is unreachable."
+msgstr "Storitev za kodo QR ni dosegljiva."
+
+msgid "Requesting device QR code..."
+msgstr "Pridobivanje kode QR naprave..."
+
+msgid "Terms of Use"
+msgstr "Pogoji uporabe"
+
+msgid "Unable to read the device serial number."
+msgstr "Serijske številke naprave ni bilo mogoče prebrati."
+
+msgid "Waiting for terms acceptance."
+msgstr "Čakanje na sprejetje pogojev."

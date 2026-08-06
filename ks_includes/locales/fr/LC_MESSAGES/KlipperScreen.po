@@ -993,9 +993,6 @@ msgstr "Préchauffer"
 #~ msgid "Network Info"
 #~ msgstr "Information réseau "
 
-#~ msgid "Back"
-#~ msgstr "Retour"
-
 #~ msgid "Extrusion"
 #~ msgstr "Extrusion"
 
@@ -1682,3 +1679,72 @@ msgstr "Bord gondolé"
 
 msgid "Warp Edge Detection"
 msgstr "Détection de bord gondolé"
+
+msgid "Device QR Code"
+msgstr "Code QR de l'appareil"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Veuillez lire et accepter ce qui suit avant d'activer les fonctionnalités connectées :"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "Le code QR a expiré. Appuyez sur Actualiser pour en charger un nouveau."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "L'actualisation automatique a échoué. Le code QR actuel expirera bientôt."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Les fonctionnalités connectées peuvent envoyer le numéro de série de votre appareil, l'état de l'appareil, les informations réseau, les journaux et toute image de caméra activée à Mingda et à ses prestataires de services à des fins d'appairage, d'accès à distance, de sécurité, de diagnostic, de mises à jour et d'assistance."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Si vous activez la caméra ou l'affichage à distance, vous confirmez être autorisé à capturer et à partager des images à l'emplacement de l'appareil et vous engagez à respecter les lois applicables en matière de confidentialité et de surveillance."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. Le contrôle à distance peut démarrer, mettre en pause, arrêter ou modifier un travail d'impression et peut affecter les mouvements, la température et l'utilisation des matériaux. Utilisez-le uniquement lorsque l'imprimante et la zone environnante sont sûres."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Les fonctionnalités en ligne dépendent d'Internet, du cloud et de services tiers et peuvent être interrompues, retardées, limitées selon la région ou indisponibles. Le service est fourni selon sa disponibilité dans toute la mesure permise par la loi."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Vous devez protéger votre compte, votre mot de passe, vos jetons et le code QR d'appairage et installer rapidement les mises à jour. En appuyant sur Accepter, cet appareil enregistrera votre choix localement ; si vous n'êtes pas d'accord, les fonctionnalités connectées resteront indisponibles."
+
+msgid "Agree"
+msgstr "Accepter"
+
+msgid "Back"
+msgstr "Retour"
+
+msgid "Checking network connection..."
+msgstr "Vérification de la connexion réseau..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Impossible de générer l’image du code QR."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Impossible d’enregistrer l’acceptation des conditions."
+
+msgid "Invalid QR code service response."
+msgstr "Réponse non valide du service de code QR."
+
+msgid "Last updated"
+msgstr "Dernière mise à jour"
+
+msgid "No network connection detected."
+msgstr "Aucune connexion réseau détectée."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "Le code QR est prêt. Scannez-le pour continuer."
+
+msgid "QR code service is unreachable."
+msgstr "Le service de code QR est inaccessible."
+
+msgid "Requesting device QR code..."
+msgstr "Demande du code QR de l’appareil..."
+
+msgid "Terms of Use"
+msgstr "Conditions d’utilisation"
+
+msgid "Unable to read the device serial number."
+msgstr "Impossible de lire le numéro de série de l’appareil."
+
+msgid "Waiting for terms acceptance."
+msgstr "En attente de l’acceptation des conditions."

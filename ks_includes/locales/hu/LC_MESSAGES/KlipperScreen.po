@@ -1461,3 +1461,72 @@ msgstr "Felgörbült szél"
 
 msgid "Warp Edge Detection"
 msgstr "Felgörbült szél észlelése"
+
+msgid "Device QR Code"
+msgstr "Eszköz QR-kódja"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "A csatlakoztatott funkciók engedélyezése előtt kérjük, olvassa el és fogadja el az alábbiakat:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "A QR-kód lejárt. Koppintson a Frissítés gombra egy új betöltéséhez."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Az automatikus frissítés nem sikerült. Az aktuális QR-kód hamarosan lejár."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. A csatlakoztatott funkciók elküldhetik az eszköz sorozatszámát, állapotát, hálózati adatait, naplóit és az összes engedélyezett kameraképet a Mingda és szolgáltatói részére párosítás, távoli hozzáférés, biztonság, diagnosztika, frissítések és támogatás céljából."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Ha engedélyezi a kamerát vagy a távoli megtekintést, megerősíti, hogy jogosult képeket rögzíteni és megosztani az eszköz helyszínén, és hogy betartja az alkalmazandó adatvédelmi és megfigyelési jogszabályokat."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. A távoli vezérlés elindíthat, szüneteltethet, leállíthat vagy módosíthat egy nyomtatási feladatot, és hatással lehet a mozgásra, a hőmérsékletre és az anyagfelhasználásra. Csak akkor használja, ha a nyomtató és környezete biztonságos."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Az online funkciók az internettől, a felhőtől és harmadik felek szolgáltatásaitól függenek, és megszakadhatnak, késhetnek, régióhoz kötötten korlátozottak vagy elérhetetlenek lehetnek. A szolgáltatás a jog által megengedett legteljesebb mértékben rendelkezésre állás alapján nyújtott."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Védenie kell fiókját, jelszavát, tokenjeit és a párosító QR-kódot, és haladéktalanul telepítenie kell a frissítéseket. Az Agree megérintésével ez az eszköz helyben tárolja a választását; ha nem fogadja el, a csatlakoztatott funkciók nem lesznek elérhetők."
+
+msgid "Agree"
+msgstr "Elfogadom"
+
+msgid "Back"
+msgstr "Vissza"
+
+msgid "Checking network connection..."
+msgstr "Hálózati kapcsolat ellenőrzése..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Nem sikerült létrehozni a QR-kód képét."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Nem sikerült menteni a feltételek elfogadását."
+
+msgid "Invalid QR code service response."
+msgstr "Érvénytelen válasz a QR-kód szolgáltatástól."
+
+msgid "Last updated"
+msgstr "Legutóbb frissítve"
+
+msgid "No network connection detected."
+msgstr "Nem észlelhető hálózati kapcsolat."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "A QR-kód elkészült. A folytatáshoz olvassa be."
+
+msgid "QR code service is unreachable."
+msgstr "A QR-kód szolgáltatás nem érhető el."
+
+msgid "Requesting device QR code..."
+msgstr "Az eszköz QR-kódjának lekérése..."
+
+msgid "Terms of Use"
+msgstr "Felhasználási feltételek"
+
+msgid "Unable to read the device serial number."
+msgstr "Nem olvasható az eszköz sorozatszáma."
+
+msgid "Waiting for terms acceptance."
+msgstr "Várakozás a feltételek elfogadására."

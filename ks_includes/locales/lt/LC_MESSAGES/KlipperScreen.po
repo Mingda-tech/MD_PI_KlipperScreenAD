@@ -1472,3 +1472,72 @@ msgstr "Užsirietęs kraštas"
 
 msgid "Warp Edge Detection"
 msgstr "Užsirietusio krašto aptikimas"
+
+msgid "Device QR Code"
+msgstr "Įrenginio QR kodas"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Prieš įjungdami prijungtas funkcijas, perskaitykite ir sutikite su toliau pateikta informacija:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "QR kodo galiojimas baigėsi. Palieskite Atnaujinti, kad įkeltumėte naują."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Nepavyko automatiškai atnaujinti. Dabartinio QR kodo galiojimas netrukus baigsis."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Prijungtos funkcijos gali siųsti jūsų įrenginio serijos numerį, įrenginio būseną, tinklo informaciją, žurnalus ir visus įjungtus kameros vaizdus Mingda ir jos paslaugų teikėjams susiejimo, nuotolinės prieigos, saugumo, diagnostikos, atnaujinimų ir palaikymo tikslais."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Jei įjungiate kamerą arba nuotolinę peržiūrą, patvirtinate, kad turite teisę fiksuoti ir bendrinti vaizdus įrenginio vietoje ir laikysitės taikomų privatumo ir stebėjimo įstatymų."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. Nuotolinis valdymas gali pradėti, pristabdyti, sustabdyti arba pakeisti spausdinimo užduotį ir gali paveikti judėjimą, temperatūrą bei medžiagos naudojimą. Naudokite jį tik tada, kai spausdintuvas ir aplinka yra saugūs."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Internetinės funkcijos priklauso nuo interneto, debesijos ir trečiųjų šalių paslaugų ir gali būti nutrauktos, uždelstos, regioniškai apribotos arba nepasiekiamos. Paslauga teikiama pagal prieinamumą tiek, kiek leidžia įstatymai."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Turite saugoti savo paskyrą, slaptažodį, žetonus ir susiejimo QR kodą ir nedelsdami įdiegti naujinimus. Paspaudus Agree, šis įrenginys vietoje išsaugos jūsų pasirinkimą; jei nesutinkate, prijungtos funkcijos liks neprieinamos."
+
+msgid "Agree"
+msgstr "Sutinku"
+
+msgid "Back"
+msgstr "Atgal"
+
+msgid "Checking network connection..."
+msgstr "Tikrinamas tinklo ryšys..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Nepavyko sugeneruoti QR kodo vaizdo."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Nepavyko išsaugoti sutikimo su sąlygomis būsenos."
+
+msgid "Invalid QR code service response."
+msgstr "Netinkamas QR kodo paslaugos atsakymas."
+
+msgid "Last updated"
+msgstr "Paskutinį kartą atnaujinta"
+
+msgid "No network connection detected."
+msgstr "Tinklo ryšys neaptiktas."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "QR kodas paruoštas. Nuskaitykite, kad tęstumėte."
+
+msgid "QR code service is unreachable."
+msgstr "QR kodo paslauga nepasiekiama."
+
+msgid "Requesting device QR code..."
+msgstr "Gaunamas įrenginio QR kodas..."
+
+msgid "Terms of Use"
+msgstr "Naudojimo sąlygos"
+
+msgid "Unable to read the device serial number."
+msgstr "Nepavyko nuskaityti įrenginio serijos numerio."
+
+msgid "Waiting for terms acceptance."
+msgstr "Laukiama sutikimo su sąlygomis."

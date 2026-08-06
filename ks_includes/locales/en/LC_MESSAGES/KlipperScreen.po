@@ -1453,3 +1453,72 @@ msgstr "Warp Edge"
 
 msgid "Warp Edge Detection"
 msgstr "Warp Edge Detection"
+
+msgid "Device QR Code"
+msgstr "Device QR Code"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Please read and agree before enabling connected features:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "QR code expired. Tap Refresh to load a new one."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Unable to refresh automatically. The current QR code will expire soon."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+
+msgid "Agree"
+msgstr "Agree"
+
+msgid "Back"
+msgstr "Back"
+
+msgid "Checking network connection..."
+msgstr "Checking network connection..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Failed to generate the QR code image."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Failed to save the terms acceptance state."
+
+msgid "Invalid QR code service response."
+msgstr "Invalid QR code service response."
+
+msgid "Last updated"
+msgstr "Last updated"
+
+msgid "No network connection detected."
+msgstr "No network connection detected."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "QR code is ready. Scan to continue."
+
+msgid "QR code service is unreachable."
+msgstr "QR code service is unreachable."
+
+msgid "Requesting device QR code..."
+msgstr "Requesting device QR code..."
+
+msgid "Terms of Use"
+msgstr "Terms of Use"
+
+msgid "Unable to read the device serial number."
+msgstr "Unable to read the device serial number."
+
+msgid "Waiting for terms acceptance."
+msgstr "Waiting for terms acceptance."

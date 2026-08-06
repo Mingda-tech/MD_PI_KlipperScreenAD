@@ -87,3 +87,72 @@ msgstr "Изкривен ръб"
 
 msgid "Warp Edge Detection"
 msgstr "Откриване на изкривен ръб"
+
+msgid "Device QR Code"
+msgstr "QR код на устройството"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Моля, прочетете и приемете следното, преди да активирате свързаните функции:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "QR кодът е изтекъл. Натиснете „Обновяване“, за да заредите нов."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Автоматичното опресняване не бе успешно. Текущият QR код скоро ще изтече."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Свързаните функции могат да изпращат серийния номер на вашето устройство, състоянието на устройството, мрежовите данни, логовете и всички активирани изображения от камера към Mingda и нейните доставчици на услуги за сдвояване, отдалечен достъп, сигурност, диагностика, актуализации и поддръжка."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Ако активирате камерата или отдалечения преглед, потвърждавате, че имате право да заснемате и споделяте изображения на мястото на устройството и че ще спазвате приложимите закони за поверителност и наблюдение."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. Отдалеченото управление може да стартира, паузира, спира или променя задача за печат и може да повлияе на движението, температурата и използването на материал. Използвайте го само когато принтерът и околното пространство са безопасни."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Онлайн функциите зависят от интернет, облака и услугите на трети страни и може да бъдат прекъсвани, забавяни, ограничени по региони или недостъпни. Услугата се предоставя според наличността в максималната степен, разрешена от закона."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Трябва да защитавате своя акаунт, парола, токени и QR кода за сдвояване и своевременно да инсталирате актуализации. С натискане на Съгласен това устройство ще съхрани избора ви локално; ако не сте съгласни, свързаните функции ще останат недостъпни."
+
+msgid "Agree"
+msgstr "Съгласен съм"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Checking network connection..."
+msgstr "Проверка на мрежовата връзка..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Неуспешно генериране на изображението на QR кода."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Неуспешно запазване на състоянието за приемане на условията."
+
+msgid "Invalid QR code service response."
+msgstr "Невалиден отговор от услугата за QR код."
+
+msgid "Last updated"
+msgstr "Последно актуализирано"
+
+msgid "No network connection detected."
+msgstr "Не е открита мрежова връзка."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "QR кодът е готов. Сканирайте, за да продължите."
+
+msgid "QR code service is unreachable."
+msgstr "Услугата за QR код е недостъпна."
+
+msgid "Requesting device QR code..."
+msgstr "Заявяване на QR код за устройството..."
+
+msgid "Terms of Use"
+msgstr "Условия за ползване"
+
+msgid "Unable to read the device serial number."
+msgstr "Серийният номер на устройството не може да бъде прочетен."
+
+msgid "Waiting for terms acceptance."
+msgstr "Изчаква се приемане на условията."

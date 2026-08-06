@@ -1662,3 +1662,72 @@ msgstr "Borde levantado"
 
 msgid "Warp Edge Detection"
 msgstr "Detección de borde levantado"
+
+msgid "Device QR Code"
+msgstr "Código QR del dispositivo"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Lea y acepte lo siguiente antes de habilitar las funciones conectadas:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "El código QR ha caducado. Toque Actualizar para cargar uno nuevo."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "No se pudo actualizar automáticamente. El código QR actual caducará pronto."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Las funciones conectadas pueden enviar el número de serie de su dispositivo, el estado del dispositivo, los datos de red, los registros y cualquier imagen de cámara habilitada a Mingda y a sus proveedores de servicios para el emparejamiento, el acceso remoto, la seguridad, el diagnóstico, las actualizaciones y el soporte."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Si habilita la cámara o la visualización remota, confirma que está autorizado a capturar y compartir imágenes en la ubicación del dispositivo y que cumplirá con las leyes aplicables de privacidad y vigilancia."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. El control remoto puede iniciar, pausar, detener o cambiar un trabajo de impresión y puede afectar al movimiento, la temperatura y el uso del material. Úselo solo cuando la impresora y el área circundante sean seguras."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Las funciones en línea dependen de Internet, de la nube y de servicios de terceros, y pueden interrumpirse, retrasarse, limitarse por región o no estar disponibles. El servicio se proporciona según disponibilidad en la máxima medida permitida por la ley."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Debe proteger su cuenta, contraseña, tokens y código QR de emparejamiento e instalar las actualizaciones con prontitud. Al tocar Aceptar, este dispositivo almacenará su elección localmente; si no está de acuerdo, las funciones conectadas seguirán sin estar disponibles."
+
+msgid "Agree"
+msgstr "Aceptar"
+
+msgid "Back"
+msgstr "Atrás"
+
+msgid "Checking network connection..."
+msgstr "Comprobando la conexión de red..."
+
+msgid "Failed to generate the QR code image."
+msgstr "No se pudo generar la imagen del código QR."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "No se pudo guardar la aceptación de los términos."
+
+msgid "Invalid QR code service response."
+msgstr "Respuesta no válida del servicio de códigos QR."
+
+msgid "Last updated"
+msgstr "Última actualización"
+
+msgid "No network connection detected."
+msgstr "No se detectó ninguna conexión de red."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "El código QR está listo. Escanéelo para continuar."
+
+msgid "QR code service is unreachable."
+msgstr "No se puede acceder al servicio de códigos QR."
+
+msgid "Requesting device QR code..."
+msgstr "Solicitando el código QR del dispositivo..."
+
+msgid "Terms of Use"
+msgstr "Términos de uso"
+
+msgid "Unable to read the device serial number."
+msgstr "No se pudo leer el número de serie del dispositivo."
+
+msgid "Waiting for terms acceptance."
+msgstr "Esperando la aceptación de los términos."

@@ -1704,3 +1704,72 @@ msgstr "Borda empenada"
 
 msgid "Warp Edge Detection"
 msgstr "Detecção de borda empenada"
+
+msgid "Device QR Code"
+msgstr "Código QR do dispositivo"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Leia e aceite o seguinte antes de ativar os recursos conectados:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "O código QR expirou. Toque em Atualizar para carregar um novo."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Não foi possível atualizar automaticamente. O código QR atual vai expirar em breve."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Os recursos conectados podem enviar o número de série do seu dispositivo, o status do dispositivo, detalhes de rede, logs e quaisquer imagens de câmera habilitadas para a Mingda e seus prestadores de serviço para pareamento, acesso remoto, segurança, diagnóstico, atualizações e suporte."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Se você habilitar a câmera ou a visualização remota, confirma que está autorizado a capturar e compartilhar imagens no local do dispositivo e que cumprirá as leis aplicáveis de privacidade e vigilância."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. O controle remoto pode iniciar, pausar, parar ou alterar um trabalho de impressão e pode afetar o movimento, a temperatura e o uso de material. Use-o somente quando a impressora e a área ao redor estiverem seguras."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Os recursos online dependem da Internet, da nuvem e de serviços de terceiros e podem ser interrompidos, atrasados, limitados por região ou ficar indisponíveis. O serviço é fornecido conforme disponibilidade, na máxima extensão permitida por lei."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Você deve proteger sua conta, senha, tokens e código QR de pareamento e instalar as atualizações prontamente. Ao tocar em Agree, este dispositivo armazenará sua escolha localmente; se você não concordar, os recursos conectados permanecerão indisponíveis."
+
+msgid "Agree"
+msgstr "Aceitar"
+
+msgid "Back"
+msgstr "Voltar"
+
+msgid "Checking network connection..."
+msgstr "Verificando a conexão de rede..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Não foi possível gerar a imagem do código QR."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Não foi possível salvar a aceitação dos termos."
+
+msgid "Invalid QR code service response."
+msgstr "Resposta inválida do serviço de código QR."
+
+msgid "Last updated"
+msgstr "Última atualização"
+
+msgid "No network connection detected."
+msgstr "Nenhuma conexão de rede foi detectada."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "O código QR está pronto. Escaneie para continuar."
+
+msgid "QR code service is unreachable."
+msgstr "Não foi possível acessar o serviço de código QR."
+
+msgid "Requesting device QR code..."
+msgstr "Solicitando o código QR do dispositivo..."
+
+msgid "Terms of Use"
+msgstr "Termos de Uso"
+
+msgid "Unable to read the device serial number."
+msgstr "Não foi possível ler o número de série do dispositivo."
+
+msgid "Waiting for terms acceptance."
+msgstr "Aguardando a aceitação dos termos."

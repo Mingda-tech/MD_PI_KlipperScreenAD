@@ -1557,3 +1557,72 @@ msgstr "들뜬 가장자리"
 
 msgid "Warp Edge Detection"
 msgstr "들뜬 가장자리 감지"
+
+msgid "Device QR Code"
+msgstr "장치 QR 코드"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "연결 기능을 활성화하기 전에 아래 내용을 읽고 동의해 주십시오."
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "QR 코드가 만료되었습니다. 새 코드를 불러오려면 새로고침을 누르세요."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "자동 새로고침에 실패했습니다. 현재 QR 코드는 곧 만료됩니다."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. 연결 기능은 페어링, 원격 액세스, 보안, 진단, 업데이트 및 지원을 위해 장치 일련번호, 장치 상태, 네트워크 정보, 로그 및 활성화된 카메라 이미지를 Mingda 및 해당 서비스 제공업체에 전송할 수 있습니다."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. 카메라 또는 원격 보기를 활성화하는 경우, 장치 위치에서 이미지를 촬영하고 공유할 권한이 있으며 적용되는 개인정보 및 감시 관련 법률을 준수함을 확인하는 것입니다."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. 원격 제어는 인쇄 작업을 시작, 일시 중지, 중지 또는 변경할 수 있으며 움직임, 온도 및 재료 사용에 영향을 줄 수 있습니다. 프린터와 주변 환경이 안전한 경우에만 사용하십시오."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. 온라인 기능은 인터넷, 클라우드 및 제3자 서비스에 의존하며 중단되거나 지연되거나 지역 제한이 있거나 사용할 수 없을 수 있습니다. 서비스는 법이 허용하는 최대 범위 내에서 제공 가능한 상태로 제공됩니다."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. 계정, 비밀번호, 토큰 및 페어링 QR 코드를 보호하고 업데이트를 즉시 설치해야 합니다. Agree를 탭하면 이 장치가 귀하의 선택을 로컬에 저장합니다. 동의하지 않으면 연결 기능은 계속 사용할 수 없습니다."
+
+msgid "Agree"
+msgstr "동의"
+
+msgid "Back"
+msgstr "뒤로"
+
+msgid "Checking network connection..."
+msgstr "네트워크 연결 확인 중..."
+
+msgid "Failed to generate the QR code image."
+msgstr "QR 코드 이미지를 생성하지 못했습니다."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "약관 동의 상태를 저장하지 못했습니다."
+
+msgid "Invalid QR code service response."
+msgstr "QR 코드 서비스 응답이 올바르지 않습니다."
+
+msgid "Last updated"
+msgstr "마지막 업데이트"
+
+msgid "No network connection detected."
+msgstr "네트워크 연결이 감지되지 않았습니다."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "QR 코드가 준비되었습니다. 계속하려면 스캔하세요."
+
+msgid "QR code service is unreachable."
+msgstr "QR 코드 서비스에 연결할 수 없습니다."
+
+msgid "Requesting device QR code..."
+msgstr "장치 QR 코드 요청 중..."
+
+msgid "Terms of Use"
+msgstr "이용 약관"
+
+msgid "Unable to read the device serial number."
+msgstr "장치 일련번호를 읽을 수 없습니다."
+
+msgid "Waiting for terms acceptance."
+msgstr "약관 동의를 기다리는 중입니다."

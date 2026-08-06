@@ -299,18 +299,21 @@ class KlipperScreen(Gtk.Window):
         self.is_show_manual = True
         
     def load_klipper_config(self):
+        self.klippy_config = None
+        self.klippy_config_path = None
         try:
             variables = self.printer.get_config_section("save_variables")
-            
+
             if "filename" in variables:
-                self.klippy_config_path = os.path.expanduser(variables['filename'])
+                self.klippy_config_path = os.path.expanduser(str(variables['filename']).strip().strip('"'))
             if self.klippy_config_path is not None:
                 self.klippy_config = configparser.ConfigParser()
-                self.klippy_config.read(self.klippy_config_path)
+                if os.path.exists(self.klippy_config_path):
+                    self.klippy_config.read(self.klippy_config_path)
                 if not self.klippy_config.has_section("Variables"):
-                    self.klippy_config = None
+                    self.klippy_config.add_section("Variables")
         except KeyError as Kerror:
-            msg = f"Error reading config: {self.config_path}\n{Kerror}"
+            msg = f"Error reading save_variables config:\n{Kerror}"
             logging.exception(msg)
         except ValueError as Verror:
             msg = f"Invalid Value in the config:\n{Verror}"
@@ -318,6 +321,38 @@ class KlipperScreen(Gtk.Window):
         except Exception as e:
             msg = f"Unknown error with the config:\n{e}"
             logging.exception(msg)
+
+    def _ensure_save_variables_loaded(self):
+        if self.klippy_config_path is None or self.klippy_config is None:
+            self.load_klipper_config()
+        if self.klippy_config_path is None or self.klippy_config is None:
+            logging.error("save_variables is not configured")
+            return None
+        if not self.klippy_config.has_section("Variables"):
+            self.klippy_config.add_section("Variables")
+        return self.klippy_config["Variables"]
+
+    def get_save_variable(self, option, fallback=None):
+        variables = self._ensure_save_variables_loaded()
+        if variables is None:
+            return fallback
+        return variables.get(option, fallback)
+
+    def set_save_variable(self, option, value):
+        variables = self._ensure_save_variables_loaded()
+        if variables is None:
+            return False
+        variables[option] = str(value)
+        try:
+            parent_dir = os.path.dirname(self.klippy_config_path)
+            if parent_dir and not os.path.exists(parent_dir):
+                os.makedirs(parent_dir, exist_ok=True)
+            with open(self.klippy_config_path, 'w') as file:
+                self.klippy_config.write(file)
+            return True
+        except Exception as e:
+            logging.error(f"Error writing configuration file in {self.klippy_config_path}:\n{e}")
+            return False
 
     def initial_connection(self):
         self.printers = self._config.get_printers()

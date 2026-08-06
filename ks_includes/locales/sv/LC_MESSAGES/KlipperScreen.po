@@ -1544,3 +1544,72 @@ msgstr "Uppkrullad kant"
 
 msgid "Warp Edge Detection"
 msgstr "Detektering av uppkrullad kant"
+
+msgid "Device QR Code"
+msgstr "Enhetens QR-kod"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Läs och godkänn följande innan du aktiverar anslutna funktioner:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "QR-koden har gått ut. Tryck på Uppdatera för att läsa in en ny."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Automatisk uppdatering misslyckades. Den aktuella QR-koden går snart ut."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Anslutna funktioner kan skicka enhetens serienummer, enhetsstatus, nätverksuppgifter, loggar och alla aktiverade kamerabilder till Mingda och dess tjänsteleverantörer för parkoppling, fjärråtkomst, säkerhet, diagnostik, uppdateringar och support."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Om du aktiverar kamera eller fjärrvisning bekräftar du att du har rätt att spela in och dela bilder på enhetens plats och att du kommer att följa tillämpliga lagar om integritet och övervakning."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. Fjärrstyrning kan starta, pausa, stoppa eller ändra ett utskriftsjobb och kan påverka rörelse, temperatur och materialanvändning. Använd det endast när skrivaren och området runt omkring är säkra."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Onlinefunktioner är beroende av internet, molntjänster och tredjepartstjänster och kan avbrytas, fördröjas, vara regionsbegränsade eller otillgängliga. Tjänsten tillhandahålls i befintligt skick efter tillgänglighet i den maximala omfattning som lagen tillåter."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Du måste skydda ditt konto, lösenord, tokens och parkopplings-QR-kod och installera uppdateringar utan dröjsmål. Genom att trycka på Agree lagrar denna enhet ditt val lokalt; om du inte samtycker förblir de anslutna funktionerna otillgängliga."
+
+msgid "Agree"
+msgstr "Godkänn"
+
+msgid "Back"
+msgstr "Tillbaka"
+
+msgid "Checking network connection..."
+msgstr "Kontrollerar nätverksanslutningen..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Det gick inte att skapa QR-kodsbilden."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Det gick inte att spara godkännandet av villkoren."
+
+msgid "Invalid QR code service response."
+msgstr "Ogiltigt svar från QR-kodstjänsten."
+
+msgid "Last updated"
+msgstr "Senast uppdaterad"
+
+msgid "No network connection detected."
+msgstr "Ingen nätverksanslutning hittades."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "QR-koden är klar. Skanna för att fortsätta."
+
+msgid "QR code service is unreachable."
+msgstr "QR-kodstjänsten kan inte nås."
+
+msgid "Requesting device QR code..."
+msgstr "Begär enhetens QR-kod..."
+
+msgid "Terms of Use"
+msgstr "Användarvillkor"
+
+msgid "Unable to read the device serial number."
+msgstr "Det gick inte att läsa enhetens serienummer."
+
+msgid "Waiting for terms acceptance."
+msgstr "Väntar på godkännande av villkoren."

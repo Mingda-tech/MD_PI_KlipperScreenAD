@@ -1488,3 +1488,72 @@ msgstr "反り縁"
 
 msgid "Warp Edge Detection"
 msgstr "反り縁検出"
+
+msgid "Device QR Code"
+msgstr "デバイスのQRコード"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "接続機能を有効にする前に、以下をお読みいただき、同意してください。"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "QRコードの有効期限が切れました。新しいコードを読み込むには「更新」をタップしてください。"
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "自動更新に失敗しました。現在のQRコードはまもなく期限切れになります。"
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. 接続機能は、ペアリング、リモートアクセス、セキュリティ、診断、更新、およびサポートのために、デバイスのシリアル番号、デバイス状態、ネットワーク情報、ログ、および有効化されたカメラ画像を Mingda およびそのサービス提供者に送信する場合があります。"
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. カメラまたはリモート表示を有効にする場合、デバイス設置場所で画像を取得および共有する権限を有し、適用されるプライバシー法および監視関連法令を遵守することを確認するものとします。"
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. リモート操作により、印刷ジョブの開始、一時停止、停止、変更が行われる場合があり、動作、温度、材料使用量に影響することがあります。プリンターと周囲が安全な場合にのみ使用してください。"
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. オンライン機能は、インターネット、クラウド、および第三者サービスに依存しており、中断、遅延、地域制限、または利用不可となる場合があります。本サービスは、法令で認められる最大限の範囲で、利用可能な状態で提供されます。"
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. アカウント、パスワード、トークン、およびペアリング用 QR コードを適切に保護し、速やかに更新をインストールする必要があります。Agree をタップすると、このデバイスは選択内容をローカルに保存します。同意しない場合、接続機能は利用できません。"
+
+msgid "Agree"
+msgstr "同意する"
+
+msgid "Back"
+msgstr "戻る"
+
+msgid "Checking network connection..."
+msgstr "ネットワーク接続を確認しています..."
+
+msgid "Failed to generate the QR code image."
+msgstr "QRコード画像を生成できませんでした。"
+
+msgid "Failed to save the terms acceptance state."
+msgstr "利用規約への同意状態を保存できませんでした。"
+
+msgid "Invalid QR code service response."
+msgstr "QRコードサービスからの応答が無効です。"
+
+msgid "Last updated"
+msgstr "最終更新"
+
+msgid "No network connection detected."
+msgstr "ネットワーク接続が検出されませんでした。"
+
+msgid "QR code is ready. Scan to continue."
+msgstr "QRコードの準備ができました。スキャンして続行してください。"
+
+msgid "QR code service is unreachable."
+msgstr "QRコードサービスに接続できません。"
+
+msgid "Requesting device QR code..."
+msgstr "デバイスのQRコードを取得しています..."
+
+msgid "Terms of Use"
+msgstr "利用規約"
+
+msgid "Unable to read the device serial number."
+msgstr "デバイスのシリアル番号を読み取れませんでした。"
+
+msgid "Waiting for terms acceptance."
+msgstr "利用規約への同意を待っています。"

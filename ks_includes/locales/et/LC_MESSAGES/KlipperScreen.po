@@ -1639,3 +1639,72 @@ msgstr "Kõverdunud serv"
 
 msgid "Warp Edge Detection"
 msgstr "Kõverdunud serva tuvastus"
+
+msgid "Device QR Code"
+msgstr "Seadme QR-kood"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Enne ühendatud funktsioonide lubamist lugege palun läbi ja nõustuge järgmisega:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "QR-kood on aegunud. Uue laadimiseks puudutage nuppu Värskenda."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Automaatne värskendamine ebaõnnestus. Praegune QR-kood aegub peagi."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Ühendatud funktsioonid võivad saata teie seadme seerianumbri, seadme oleku, võrguandmed, logid ja kõik lubatud kaamerapildid Mingdale ja tema teenusepakkujatele sidumiseks, kaugjuurdepääsuks, turvalisuseks, diagnostikaks, uuendusteks ja toeks."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Kui lubate kaamera või kaugvaate, kinnitate, et teil on õigus seadme asukohas pilte jäädvustada ja jagada ning järgite kehtivaid privaatsus- ja jälgimisseadusi."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. Kaugjuhtimine võib alustada, peatada, lõpetada või muuta printimistööd ning mõjutada liikumist, temperatuuri ja materjalikulu. Kasutage seda ainult siis, kui printer ja ümbritsev ala on ohutud."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Veebifunktsioonid sõltuvad internetist, pilvest ja kolmandate osapoolte teenustest ning võivad olla katkestatud, viibega, piirkondlikult piiratud või kättesaamatud. Teenust osutatakse saadavuse alusel maksimaalses seadusega lubatud ulatuses."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Te peate kaitsma oma kontot, parooli, tokeneid ja sidumise QR-koodi ning paigaldama uuendused viivitamata. Nõustun puudutamisel salvestab see seade teie valiku lokaalselt; kui te ei nõustu, jäävad ühendatud funktsioonid kättesaamatuks."
+
+msgid "Agree"
+msgstr "Nõustun"
+
+msgid "Back"
+msgstr "Tagasi"
+
+msgid "Checking network connection..."
+msgstr "Võrguühenduse kontrollimine..."
+
+msgid "Failed to generate the QR code image."
+msgstr "QR-koodi pildi loomine nurjus."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Tingimustega nõustumise oleku salvestamine nurjus."
+
+msgid "Invalid QR code service response."
+msgstr "QR-koodi teenuse vastus on vigane."
+
+msgid "Last updated"
+msgstr "Viimati värskendatud"
+
+msgid "No network connection detected."
+msgstr "Võrguühendust ei tuvastatud."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "QR-kood on valmis. Jätkamiseks skannige."
+
+msgid "QR code service is unreachable."
+msgstr "QR-koodi teenus pole kättesaadav."
+
+msgid "Requesting device QR code..."
+msgstr "Seadme QR-koodi taotlemine..."
+
+msgid "Terms of Use"
+msgstr "Kasutustingimused"
+
+msgid "Unable to read the device serial number."
+msgstr "Seadme seerianumbrit ei õnnestunud lugeda."
+
+msgid "Waiting for terms acceptance."
+msgstr "Tingimustega nõustumise ootel."

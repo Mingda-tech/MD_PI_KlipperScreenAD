@@ -1629,3 +1629,72 @@ msgstr "翹邊"
 
 msgid "Warp Edge Detection"
 msgstr "翹邊檢測"
+
+msgid "Device QR Code"
+msgstr "設備二維碼"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "啟用聯網功能前，請先閱讀並同意以下內容："
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "QR Code 已過期，請點擊「重新整理」載入新的 QR Code。"
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "無法自動重新整理，目前的 QR Code 即將過期。"
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. 聯網功能可能會將您的裝置序號、裝置狀態、網路資訊、日誌，以及您啟用的攝影機影像傳送給 Mingda 及其服務提供商，用於配對、遠端存取、安全防護、診斷、更新與支援。"
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. 如果您啟用攝影機或遠端查看功能，即表示您確認自己有權在裝置所在場所擷取和分享影像，並將遵守適用的隱私與監控法律。"
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. 遠端控制可能會啟動、暫停、停止或變更列印工作，並可能影響裝置運動、溫度及材料使用。僅應在印表機及周邊環境安全時使用此功能。"
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. 線上功能依賴網際網路、雲端與第三方服務，可能出現中斷、延遲、地區限制或不可用的情況。在適用法律允許的最大範圍內，相關服務按現況與可用狀態提供。"
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. 您應妥善保護您的帳號、密碼、權杖與配對 QR Code，並及時安裝更新。點選 Agree 後，本機會在本地儲存您的選擇；如果您不同意，聯網功能將保持不可用。"
+
+msgid "Agree"
+msgstr "同意"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Checking network connection..."
+msgstr "正在檢查網路連線..."
+
+msgid "Failed to generate the QR code image."
+msgstr "無法產生 QR Code 圖片。"
+
+msgid "Failed to save the terms acceptance state."
+msgstr "無法儲存條款同意狀態。"
+
+msgid "Invalid QR code service response."
+msgstr "QR Code 服務回應無效。"
+
+msgid "Last updated"
+msgstr "最近更新時間"
+
+msgid "No network connection detected."
+msgstr "未偵測到網路連線。"
+
+msgid "QR code is ready. Scan to continue."
+msgstr "QR Code 已準備完成，請掃描以繼續。"
+
+msgid "QR code service is unreachable."
+msgstr "無法連線至 QR Code 服務。"
+
+msgid "Requesting device QR code..."
+msgstr "正在取得裝置 QR Code..."
+
+msgid "Terms of Use"
+msgstr "使用條款"
+
+msgid "Unable to read the device serial number."
+msgstr "無法讀取裝置序號。"
+
+msgid "Waiting for terms acceptance."
+msgstr "正在等待同意條款。"

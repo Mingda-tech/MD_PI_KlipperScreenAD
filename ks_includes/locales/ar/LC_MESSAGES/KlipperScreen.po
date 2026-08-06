@@ -1518,3 +1518,72 @@ msgstr "حافة ملتوية"
 
 msgid "Warp Edge Detection"
 msgstr "كشف الحافة الملتوية"
+
+msgid "Device QR Code"
+msgstr "رمز QR للجهاز"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "يرجى قراءة ما يلي والموافقة عليه قبل تمكين الميزات المتصلة:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "انتهت صلاحية رمز QR. اضغط على تحديث لتحميل رمز جديد."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "تعذر التحديث تلقائيًا. سينتهي رمز QR الحالي قريبًا."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. قد ترسل الميزات المتصلة الرقم التسلسلي لجهازك وحالة الجهاز وتفاصيل الشبكة والسجلات وأي صور كاميرا مفعلة إلى Mingda ومقدمي خدماتها لأغراض الإقران والوصول عن بُعد والأمان والتشخيصات والتحديثات والدعم."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. إذا قمت بتمكين الكاميرا أو العرض عن بُعد، فأنت تؤكد أن لديك تفويضًا لالتقاط الصور ومشاركتها في موقع الجهاز وأنك ستلتزم بقوانين الخصوصية والمراقبة المعمول بها."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. قد يؤدي التحكم عن بُعد إلى بدء مهمة طباعة أو إيقافها مؤقتًا أو إيقافها أو تغييرها، وقد يؤثر في الحركة ودرجة الحرارة واستهلاك المواد. استخدمه فقط عندما تكون الطابعة والمنطقة المحيطة آمنتين."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. تعتمد الميزات عبر الإنترنت على الإنترنت والخدمات السحابية وخدمات الجهات الخارجية، وقد تتعرض للانقطاع أو التأخير أو القيود الإقليمية أو عدم التوفر. تُقدَّم الخدمة على أساس التوفر وذلك إلى أقصى حد يسمح به القانون."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. يجب عليك حماية حسابك وكلمة المرور والرموز المميزة ورمز QR الخاص بالإقران وتثبيت التحديثات على الفور. بالنقر على موافق، سيخزن هذا الجهاز اختيارك محليًا؛ وإذا لم توافق، فستظل الميزات المتصلة غير متاحة."
+
+msgid "Agree"
+msgstr "موافق"
+
+msgid "Back"
+msgstr "رجوع"
+
+msgid "Checking network connection..."
+msgstr "جارٍ التحقق من اتصال الشبكة..."
+
+msgid "Failed to generate the QR code image."
+msgstr "تعذر إنشاء صورة رمز QR."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "تعذر حفظ حالة الموافقة على الشروط."
+
+msgid "Invalid QR code service response."
+msgstr "استجابة خدمة رمز QR غير صالحة."
+
+msgid "Last updated"
+msgstr "آخر تحديث"
+
+msgid "No network connection detected."
+msgstr "لم يتم اكتشاف اتصال بالشبكة."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "رمز QR جاهز. امسحه ضوئيًا للمتابعة."
+
+msgid "QR code service is unreachable."
+msgstr "يتعذر الوصول إلى خدمة رمز QR."
+
+msgid "Requesting device QR code..."
+msgstr "جارٍ طلب رمز QR للجهاز..."
+
+msgid "Terms of Use"
+msgstr "شروط الاستخدام"
+
+msgid "Unable to read the device serial number."
+msgstr "تعذرت قراءة الرقم التسلسلي للجهاز."
+
+msgid "Waiting for terms acceptance."
+msgstr "في انتظار الموافقة على الشروط."

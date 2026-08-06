@@ -1495,3 +1495,72 @@ msgstr "Opkrullende rand"
 
 msgid "Warp Edge Detection"
 msgstr "Detectie van opkrullende rand"
+
+msgid "Device QR Code"
+msgstr "QR-code van het apparaat"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Lees en accepteer het volgende voordat u verbonden functies inschakelt:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "De QR-code is verlopen. Tik op Vernieuwen om een nieuwe te laden."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Automatisch vernieuwen is mislukt. De huidige QR-code verloopt binnenkort."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Verbonden functies kunnen het serienummer van uw apparaat, de apparaatstatus, netwerkgegevens, logboeken en alle ingeschakelde camerabeelden naar Mingda en haar dienstverleners verzenden voor koppeling, externe toegang, beveiliging, diagnose, updates en ondersteuning."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Als u de camera of weergave op afstand inschakelt, bevestigt u dat u bevoegd bent om beelden op de locatie van het apparaat vast te leggen en te delen en dat u de toepasselijke privacy- en toezichtswetgeving zult naleven."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. Afstandsbediening kan een printtaak starten, pauzeren, stoppen of wijzigen en kan invloed hebben op beweging, temperatuur en materiaalgebruik. Gebruik dit alleen wanneer de printer en de omgeving veilig zijn."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Online functies zijn afhankelijk van internet-, cloud- en diensten van derden en kunnen worden onderbroken, vertraagd, regionaal beperkt of niet beschikbaar zijn. De dienst wordt geleverd op basis van beschikbaarheid voor zover wettelijk toegestaan."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. U moet uw account, wachtwoord, tokens en koppelings-QR-code beschermen en updates tijdig installeren. Door op Agree te tikken, slaat dit apparaat uw keuze lokaal op; als u niet akkoord gaat, blijven verbonden functies niet beschikbaar."
+
+msgid "Agree"
+msgstr "Akkoord"
+
+msgid "Back"
+msgstr "Terug"
+
+msgid "Checking network connection..."
+msgstr "Netwerkverbinding controleren..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Kan de QR-codeafbeelding niet genereren."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Kan de acceptatiestatus van de voorwaarden niet opslaan."
+
+msgid "Invalid QR code service response."
+msgstr "Ongeldig antwoord van de QR-codeservice."
+
+msgid "Last updated"
+msgstr "Laatst bijgewerkt"
+
+msgid "No network connection detected."
+msgstr "Geen netwerkverbinding gedetecteerd."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "De QR-code is gereed. Scan om door te gaan."
+
+msgid "QR code service is unreachable."
+msgstr "De QR-codeservice is niet bereikbaar."
+
+msgid "Requesting device QR code..."
+msgstr "QR-code van apparaat aanvragen..."
+
+msgid "Terms of Use"
+msgstr "Gebruiksvoorwaarden"
+
+msgid "Unable to read the device serial number."
+msgstr "Kan het serienummer van het apparaat niet lezen."
+
+msgid "Waiting for terms acceptance."
+msgstr "Wachten op acceptatie van de voorwaarden."

@@ -1699,3 +1699,72 @@ msgstr "Cong mép"
 
 msgid "Warp Edge Detection"
 msgstr "Phát hiện cong mép"
+
+msgid "Device QR Code"
+msgstr "Mã QR thiết bị"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Vui lòng đọc và đồng ý với các nội dung sau trước khi bật các tính năng kết nối:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "Mã QR đã hết hạn. Nhấn Làm mới để tải mã mới."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Không thể tự động làm mới. Mã QR hiện tại sẽ sớm hết hạn."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Các tính năng kết nối có thể gửi số sê-ri thiết bị, trạng thái thiết bị, thông tin mạng, nhật ký và mọi hình ảnh camera đã bật tới Mingda và các nhà cung cấp dịch vụ của họ để ghép đôi, truy cập từ xa, bảo mật, chẩn đoán, cập nhật và hỗ trợ."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Nếu bạn bật camera hoặc chế độ xem từ xa, bạn xác nhận rằng mình được phép chụp và chia sẻ hình ảnh tại vị trí đặt thiết bị và sẽ tuân thủ các luật hiện hành về quyền riêng tư và giám sát."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. Điều khiển từ xa có thể bắt đầu, tạm dừng, dừng hoặc thay đổi một tác vụ in và có thể ảnh hưởng đến chuyển động, nhiệt độ và việc sử dụng vật liệu. Chỉ sử dụng khi máy in và khu vực xung quanh an toàn."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Các tính năng trực tuyến phụ thuộc vào Internet, đám mây và các dịch vụ của bên thứ ba và có thể bị gián đoạn, chậm trễ, giới hạn theo khu vực hoặc không khả dụng. Dịch vụ được cung cấp trên cơ sở sẵn có trong phạm vi tối đa mà pháp luật cho phép."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Bạn phải bảo vệ tài khoản, mật khẩu, token và mã QR ghép đôi của mình và cài đặt cập nhật kịp thời. Khi nhấn Agree, thiết bị này sẽ lưu lựa chọn của bạn cục bộ; nếu bạn không đồng ý, các tính năng kết nối sẽ vẫn không khả dụng."
+
+msgid "Agree"
+msgstr "Đồng ý"
+
+msgid "Back"
+msgstr "Quay lại"
+
+msgid "Checking network connection..."
+msgstr "Đang kiểm tra kết nối mạng..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Không thể tạo hình ảnh mã QR."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Không thể lưu trạng thái chấp nhận điều khoản."
+
+msgid "Invalid QR code service response."
+msgstr "Phản hồi từ dịch vụ mã QR không hợp lệ."
+
+msgid "Last updated"
+msgstr "Cập nhật lần cuối"
+
+msgid "No network connection detected."
+msgstr "Không phát hiện kết nối mạng."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "Mã QR đã sẵn sàng. Hãy quét để tiếp tục."
+
+msgid "QR code service is unreachable."
+msgstr "Không thể kết nối đến dịch vụ mã QR."
+
+msgid "Requesting device QR code..."
+msgstr "Đang yêu cầu mã QR của thiết bị..."
+
+msgid "Terms of Use"
+msgstr "Điều khoản sử dụng"
+
+msgid "Unable to read the device serial number."
+msgstr "Không thể đọc số sê-ri của thiết bị."
+
+msgid "Waiting for terms acceptance."
+msgstr "Đang chờ chấp nhận điều khoản."

@@ -1394,3 +1394,72 @@ msgstr "Zkroucená hrana"
 
 msgid "Warp Edge Detection"
 msgstr "Detekce zkroucené hrany"
+
+msgid "Device QR Code"
+msgstr "QR kód zařízení"
+
+msgid "Please read and agree before enabling connected features:"
+msgstr "Před povolením připojených funkcí si prosím přečtěte a odsouhlaste následující:"
+
+msgid "QR code expired. Tap Refresh to load a new one."
+msgstr "Platnost QR kódu vypršela. Klepnutím na Obnovit načtěte nový."
+
+msgid "Unable to refresh automatically. The current QR code will expire soon."
+msgstr "Automatické obnovení se nezdařilo. Platnost aktuálního QR kódu brzy vyprší."
+
+msgid "1. Connected features may send your device serial number, device status, network details, logs, and any enabled camera images to Mingda and its service providers for pairing, remote access, security, diagnostics, updates, and support."
+msgstr "1. Připojené funkce mohou odesílat sériové číslo zařízení, stav zařízení, údaje o síti, protokoly a všechny povolené snímky z kamery společnosti Mingda a jejím poskytovatelům služeb za účelem párování, vzdáleného přístupu, zabezpečení, diagnostiky, aktualizací a podpory."
+
+msgid "2. If you enable camera or remote viewing, you confirm that you are authorized to capture and share images at the device location and will comply with applicable privacy and surveillance laws."
+msgstr "2. Pokud povolíte kameru nebo vzdálené zobrazení, potvrzujete, že jste oprávněni pořizovat a sdílet snímky v místě zařízení a že budete dodržovat příslušné zákony o ochraně soukromí a dohledu."
+
+msgid "3. Remote control may start, pause, stop, or change a print job and may affect motion, temperature, and material use. Use it only when the printer and surrounding area are safe."
+msgstr "3. Vzdálené ovládání může spustit, pozastavit, zastavit nebo změnit tiskovou úlohu a může ovlivnit pohyb, teplotu a spotřebu materiálu. Používejte jej pouze tehdy, když jsou tiskárna a okolí bezpečné."
+
+msgid "4. Online features depend on Internet, cloud, and third-party services and may be interrupted, delayed, region-limited, or unavailable. The service is provided on an as available basis to the maximum extent permitted by law."
+msgstr "4. Online funkce závisí na internetu, cloudu a službách třetích stran a mohou být přerušeny, zpožděny, regionálně omezeny nebo nedostupné. Služba je poskytována podle dostupnosti v maximálním rozsahu povoleném zákonem."
+
+msgid "5. You must protect your account, password, tokens, and pairing QR code and install updates promptly. By tapping Agree, this device will store your choice locally; if you do not agree, connected features will remain unavailable."
+msgstr "5. Musíte chránit svůj účet, heslo, tokeny a párovací QR kód a bezodkladně instalovat aktualizace. Klepnutím na Souhlasím uloží toto zařízení vaši volbu lokálně; pokud nesouhlasíte, připojené funkce zůstanou nedostupné."
+
+msgid "Agree"
+msgstr "Souhlasím"
+
+msgid "Back"
+msgstr "Zpět"
+
+msgid "Checking network connection..."
+msgstr "Kontrola síťového připojení..."
+
+msgid "Failed to generate the QR code image."
+msgstr "Nepodařilo se vygenerovat obrázek QR kódu."
+
+msgid "Failed to save the terms acceptance state."
+msgstr "Nepodařilo se uložit stav souhlasu s podmínkami."
+
+msgid "Invalid QR code service response."
+msgstr "Neplatná odpověď služby QR kódu."
+
+msgid "Last updated"
+msgstr "Naposledy aktualizováno"
+
+msgid "No network connection detected."
+msgstr "Nebylo zjištěno síťové připojení."
+
+msgid "QR code is ready. Scan to continue."
+msgstr "QR kód je připraven. Pokračujte naskenováním."
+
+msgid "QR code service is unreachable."
+msgstr "Služba QR kódu je nedostupná."
+
+msgid "Requesting device QR code..."
+msgstr "Načítání QR kódu zařízení..."
+
+msgid "Terms of Use"
+msgstr "Podmínky použití"
+
+msgid "Unable to read the device serial number."
+msgstr "Nelze přečíst sériové číslo zařízení."
+
+msgid "Waiting for terms acceptance."
+msgstr "Čeká se na souhlas s podmínkami."
