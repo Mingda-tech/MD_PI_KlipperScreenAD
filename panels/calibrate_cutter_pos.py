@@ -27,6 +27,8 @@ class Panel(ScreenPanel):
         self.pos['x'] = 0
         self.pos['y'] = 0
         self.pos['z'] = 0
+        self.cutter_x_position = None
+        self.cutter_retreat_x = None
         self.settings = {}
         self.menu = ['move_menu']
         self.buttons = {
@@ -269,10 +271,13 @@ class Panel(ScreenPanel):
             x_position = self._screen.klippy_config.getfloat("Variables", "cutter_xpos")
             y_position = self._screen.klippy_config.getfloat("Variables", "cutter_ypos")
             z_position = self._screen.klippy_config.getfloat("Variables", "cutter_zpos")
-        except:
+        except (AttributeError, KeyError, TypeError, ValueError):
             self._screen.show_popup_message(_("Couldn't get the calibration cutter position."))
             logging.error("Couldn't get the calibration cutter position.")
             return
+
+        self.cutter_x_position = x_position
+        self.cutter_retreat_x = x_position - 20
     
         logging.info(f"Moving to X:{x_position} Y:{y_position}")
         script = [
@@ -308,31 +313,49 @@ class Panel(ScreenPanel):
             
     def _handle_save_action(self, widget, response):
         if response == Gtk.ResponseType.APPLY:
-            # 执行切刀测试
-            self._screen._send_action(
-                None,
-                "printer.gcode.script",
-                {"script": "_CUT_FILAMENT"}
-            )
+            self.test_cutter()
         elif response == Gtk.ResponseType.OK:
-            # 保存并重启
             self.save_config()
         
         # 关闭对话框
         if widget:
             self._gtk.remove_dialog(widget)
 
+    def test_cutter(self):
+        if self.cutter_x_position is None or self.cutter_retreat_x is None:
+            self._screen.show_popup_message(_("Couldn't get the calibration cutter position."))
+            return
+
+        was_absolute = self._printer.get_stat("gcode_move", "absolute_coordinates")
+        script = [
+            KlippyGcodes.MOVE_ABSOLUTE,
+            f"G1 X{self.cutter_retreat_x:.2f} F3000",
+            "M400",
+            f"G1 X{self.cutter_x_position:.2f} F1200",
+            "M400",
+            f"G1 X{self.cutter_retreat_x:.2f} F3000",
+        ]
+        if not was_absolute:
+            script.append(KlippyGcodes.MOVE_RELATIVE)
+
+        self._screen._send_action(
+            None,
+            "printer.gcode.script",
+            {"script": "\n".join(script)}
+        )
+
     def save_config(self):        
         try:
-            # 打印值和类型信息进行调试
+            if self.cutter_retreat_x is None:
+                raise ValueError("Cutter calibration has not been started")
+
             logging.info(f"X position: {self.pos['x']}")
             logging.info(f"Y position: {self.pos['y']}")
             logging.info(f"Z position: {self.pos['z']}")
             
             save_cmd = (
-                "G91\n"                    # 设置相对坐标
-                "G1 X-20 F3000\n"         # X轴左移20mm
-                "G90\n"                    # 恢复绝对坐标
+                f"{KlippyGcodes.MOVE_ABSOLUTE}\n"
+                f"G1 X{self.cutter_retreat_x:.2f} F3000\n"
                 f'SAVE_VARIABLE VARIABLE=cutter_ypos VALUE={self.pos["y"]:.2f}\n'
                 f'SAVE_VARIABLE VARIABLE=cutter_zpos VALUE={self.pos["z"]:.2f}\n'
                 'SAVE_CONFIG'
@@ -342,4 +365,3 @@ class Panel(ScreenPanel):
         except Exception as e:
             logging.error(f"Error saving variables: {e}")
             self._screen.show_popup_message(_("Error writing configuration"))
-                  
