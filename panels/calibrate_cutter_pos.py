@@ -279,11 +279,14 @@ class Panel(ScreenPanel):
         self.cutter_x_position = x_position
         self.cutter_retreat_x = x_position - 20
     
-        logging.info(f"Moving to X:{x_position} Y:{y_position}")
+        logging.info(
+            f"Moving to cutter calibration retreat position "
+            f"X:{self.cutter_retreat_x} Y:{y_position} Z:{z_position}"
+        )
         script = [
             f"{KlippyGcodes.MOVE_ABSOLUTE}",
             f"G1 Z{z_position} F600\n",
-            f"G1 X{x_position} Y{y_position} F6000\n",
+            f"G1 X{self.cutter_retreat_x} Y{y_position} F6000\n",
         ]
         self._screen._send_action(widget, "printer.gcode.script", {"script": "\n".join(script)})  
         self.buttons['save'].set_sensitive(True)    
