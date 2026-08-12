@@ -495,7 +495,6 @@ msgid "Package will be updated"
 
 msgstr "Pakket word ge-update"
 
-
 msgid "Part Fan"
 msgstr "Part Ventilator"
 
@@ -768,14 +767,12 @@ msgid "commit"
 
 msgstr "commit"
 
-
 msgid "dBm"
 msgstr "dBm"
 
 msgid "hour"
 
 msgstr "uur"
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr "Macro's die 'rename_existing' gebruiken zijn verborgen"
@@ -786,7 +783,6 @@ msgstr "macro's die beginnen met '_' zijn verborgen"
 msgid "minute"
 
 msgstr "minuut"
-
 
 msgid "mm"
 msgstr "mm"
@@ -1564,3 +1560,171 @@ msgstr "Kan het serienummer van het apparaat niet lezen."
 
 msgid "Waiting for terms acceptance."
 msgstr "Wachten op acceptatie van de voorwaarden."
+
+msgid "Watching"
+msgstr "Toezicht"
+
+msgid "Not Watching"
+msgstr "Niet monitoren"
+
+msgid "Default Settings"
+msgstr "Standaardinstellingen"
+
+msgid "Sensitivity"
+msgstr "Gevoeligheid"
+
+msgid "Low"
+msgstr "Laag"
+
+msgid "High"
+msgstr "Hoog"
+
+msgid "Action"
+msgstr "Actie"
+
+msgid "Notify Only"
+msgstr "Alleen op de hoogte stellen"
+
+msgid "Auto Pause"
+msgstr "Automatische pauze"
+
+msgid "Follow Default"
+msgstr "Volg standaard"
+
+msgid "Detection Types"
+msgstr "Detectietypen"
+
+msgid "Configure"
+msgstr "Configureer"
+
+msgid "No detection types are available for this printer"
+msgstr "Er zijn geen detectietypen beschikbaar voor deze printer"
+
+msgid "Safe mode"
+msgstr "Veilige modus"
+
+msgid "Applied"
+msgstr "Toegepast"
+
+msgid "Synced"
+msgstr "Gesynchroniseerd"
+
+msgid "Applied locally"
+msgstr "Lokaal toegepast"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Lokaal toegepast, wachtend op cloudsynchronisatie"
+
+msgid "Applying on this printer"
+msgstr "Toepassen op deze printer"
+
+msgid "Waiting for cloud sync"
+msgstr "Wachten op cloudsynchronisatie"
+
+msgid "Syncing with cloud"
+msgstr "Synchroniseren met de cloud"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Lokaal toegepast, waarbij cloudinstellingen worden samengevoegd"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Lokaal toegepast, conflicteren cloudinstellingen"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Lokaal toegepast, cloudsynchronisatie mislukt"
+
+msgid "Sync failed"
+msgstr "Synchronisatie mislukt"
+
+msgid "Unsaved changes"
+msgstr "Niet-opgeslagen wijzigingen"
+
+msgid "Reloading current settings"
+msgstr "Huidige instellingen opnieuw laden"
+
+msgid "Settings could not be applied"
+msgstr "Instellingen kunnen niet worden toegepast"
+
+msgid "Settings unavailable"
+msgstr "Instellingen niet beschikbaar"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Elders veranderde het beleid. De nieuwste instellingen worden opnieuw geladen."
+
+msgid "Disabled by user"
+msgstr "Uitgeschakeld door gebruiker"
+
+msgid "Unsupported printer model"
+msgstr "Niet-ondersteund printermodel"
+
+msgid "AI Agent unavailable"
+msgstr "AI-agent niet beschikbaar"
+
+msgid "NPU unavailable"
+msgstr "NPU niet beschikbaar"
+
+msgid "No camera"
+msgstr "Geen camera"
+
+msgid "Camera unavailable"
+msgstr "Camera niet beschikbaar"
+
+msgid "Printer is not printing"
+msgstr "Printer drukt niet af"
+
+msgid "Waiting for the first AI detection"
+msgstr "Wachten op de eerste AI-detectie"
+
+msgid "AI detection results are delayed"
+msgstr "AI-detectieresultaten zijn vertraagd"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Camera-opname of AI-inferentie mislukt"
+
+msgid "Camera snapshot is stale"
+msgstr "Cameramomentopname is verouderd"
+
+msgid "Print session is unavailable"
+msgstr "Afdruksessie is niet beschikbaar"
+
+msgid "Print state is unavailable"
+msgstr "Afdrukstatus is niet beschikbaar"
+
+msgid "AI model version mismatch"
+msgstr "Versie van AI-model komt niet overeen"
+
+msgid "Muted for this print"
+msgstr "Gedempt voor deze afdruk"
+
+msgid "All detection types are disabled"
+msgstr "Alle detectietypen zijn uitgeschakeld"
+
+msgid "No valid AI policy"
+msgstr "Geen geldig AI-beleid"
+
+msgid "AI configuration is being prepared"
+msgstr "AI-configuratie wordt voorbereid"
+
+msgid "Policy verification failed"
+msgstr "Beleidsverificatie mislukt"
+
+msgid "Nozzle Blob"
+msgstr "Klontje op het mondstuk"
+
+msgid "First Layer Extrusion"
+msgstr "Extrusieprobleem van de eerste laag"
+
+msgid "Warp or Detachment"
+msgstr "Vervorming of onthechting"
+
+msgid "Off"
+msgstr "Uit"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "Voor de controle op vreemde voorwerpen voorafgaand aan het afdrukken blokkeert Critical het afdrukken alleen wanneer Auto Pause is geselecteerd."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Veilige modus is actief. De controle vóór het afdrukken geeft alleen een melding en blokkeert het afdrukken niet."
+
+msgid "AI Platform V3 is required"
+msgstr "AI Platform V3 is vereist"

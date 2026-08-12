@@ -45,7 +45,7 @@ msgid "All"
 msgstr ""
 
 msgid "Apply"
-msgstr ""
+msgstr "Anvend"
 
 #, python-format
 msgid "Apply %s%.3f offset to Endstop?"
@@ -485,7 +485,6 @@ msgid "Package will be updated"
 
 msgstr "Pakken vil blive opdateret"
 
-
 msgid "Part Fan"
 msgstr ""
 
@@ -758,14 +757,12 @@ msgid "commit"
 
 msgstr "ændring"
 
-
 msgid "dBm"
 msgstr "dBm"
 
 msgid "hour"
 
 msgstr "time"
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr ""
@@ -775,7 +772,6 @@ msgstr ""
 
 msgid "minute"
 msgstr "minut"
-
 
 msgid "mm"
 msgstr "mm"
@@ -859,9 +855,6 @@ msgstr "Fortsæt"
 
 #~ msgid "Delete"
 #~ msgstr "Slet"
-
-#~ msgid "Off"
-#~ msgstr "Sluk"
 
 #~ msgid "View Mesh"
 #~ msgstr "Vis mesh"
@@ -1566,3 +1559,171 @@ msgstr "Enhedens serienummer kunne ikke læses."
 
 msgid "Waiting for terms acceptance."
 msgstr "Venter på accept af vilkårene."
+
+msgid "Watching"
+msgstr "Overvågning"
+
+msgid "Not Watching"
+msgstr "Ikke overvågning"
+
+msgid "Default Settings"
+msgstr "Standardindstillinger"
+
+msgid "Sensitivity"
+msgstr "Følsomhed"
+
+msgid "Low"
+msgstr "Lav"
+
+msgid "High"
+msgstr "Høj"
+
+msgid "Action"
+msgstr "Handling"
+
+msgid "Notify Only"
+msgstr "Giv kun besked"
+
+msgid "Auto Pause"
+msgstr "Auto Pause"
+
+msgid "Follow Default"
+msgstr "Følg standard"
+
+msgid "Detection Types"
+msgstr "Detektionstyper"
+
+msgid "Configure"
+msgstr "Konfigurer"
+
+msgid "No detection types are available for this printer"
+msgstr "Ingen registreringstyper er tilgængelige for denne printer"
+
+msgid "Safe mode"
+msgstr "Sikker tilstand"
+
+msgid "Applied"
+msgstr "Anvendt"
+
+msgid "Synced"
+msgstr "Synkroniseret"
+
+msgid "Applied locally"
+msgstr "Anvendes lokalt"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Anvendt lokalt, venter på skysynkronisering"
+
+msgid "Applying on this printer"
+msgstr "Ansøger på denne printer"
+
+msgid "Waiting for cloud sync"
+msgstr "Venter på skysynkronisering"
+
+msgid "Syncing with cloud"
+msgstr "Synkroniserer med skyen"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Anvendt lokalt, fletning af skyindstillinger"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Anvendt lokalt, skyindstillinger er i konflikt"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Anvendt lokalt, skysynkronisering mislykkedes"
+
+msgid "Sync failed"
+msgstr "Synkronisering mislykkedes"
+
+msgid "Unsaved changes"
+msgstr "Ikke-gemte ændringer"
+
+msgid "Reloading current settings"
+msgstr "Genindlæser aktuelle indstillinger"
+
+msgid "Settings could not be applied"
+msgstr "Indstillinger kunne ikke anvendes"
+
+msgid "Settings unavailable"
+msgstr "Indstillinger er ikke tilgængelige"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Politik ændret andetsteds. De seneste indstillinger genindlæses."
+
+msgid "Disabled by user"
+msgstr "Deaktiveret af bruger"
+
+msgid "Unsupported printer model"
+msgstr "Ikke-understøttet printermodel"
+
+msgid "AI Agent unavailable"
+msgstr "AI-agent er ikke tilgængelig"
+
+msgid "NPU unavailable"
+msgstr "NPU er ikke tilgængelig"
+
+msgid "No camera"
+msgstr "Intet kamera"
+
+msgid "Camera unavailable"
+msgstr "Kameraet er ikke tilgængeligt"
+
+msgid "Printer is not printing"
+msgstr "Printeren udskriver ikke"
+
+msgid "Waiting for the first AI detection"
+msgstr "Venter på den første AI-detektion"
+
+msgid "AI detection results are delayed"
+msgstr "AI-detektionsresultater er forsinkede"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Kameraoptagelse eller AI-inferens mislykkedes"
+
+msgid "Camera snapshot is stale"
+msgstr "Kameraets snapshot er forældet"
+
+msgid "Print session is unavailable"
+msgstr "Udskriftssession er ikke tilgængelig"
+
+msgid "Print state is unavailable"
+msgstr "Udskrivningstilstand er ikke tilgængelig"
+
+msgid "AI model version mismatch"
+msgstr "AI-modelversionen stemmer ikke overens"
+
+msgid "Muted for this print"
+msgstr "Slået fra for dette tryk"
+
+msgid "All detection types are disabled"
+msgstr "Alle detekteringstyper er deaktiveret"
+
+msgid "No valid AI policy"
+msgstr "Ingen gyldig AI-politik"
+
+msgid "AI configuration is being prepared"
+msgstr "AI-konfiguration er ved at blive forberedt"
+
+msgid "Policy verification failed"
+msgstr "Politikbekræftelse mislykkedes"
+
+msgid "Nozzle Blob"
+msgstr "Klat på dysen"
+
+msgid "First Layer Extrusion"
+msgstr "Første lags ekstruderingsproblem"
+
+msgid "Warp or Detachment"
+msgstr "Vridning eller løsrivelse"
+
+msgid "Off"
+msgstr "Fra"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "Til tjek af fremmedobjekt før udskrivning blokerer Kritisk kun udskrivning, når Auto Pause er valgt."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Sikker tilstand er aktiv. Pre-print-kontrollen giver kun besked og blokerer ikke for udskrivning."
+
+msgid "AI Platform V3 is required"
+msgstr "AI Platform V3 er påkrævet"

@@ -496,7 +496,6 @@ msgid "Package will be updated"
 
 msgstr "Paquete será actualizado"
 
-
 msgid "Part Fan"
 msgstr "Ventilador de parte"
 
@@ -769,14 +768,12 @@ msgid "commit"
 
 msgstr "cambio"
 
-
 msgid "dBm"
 msgstr "dBm"
 
 msgid "hour"
 
 msgstr "hora"
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr "los macros que usan 'rename_existing' están ocultos"
@@ -787,7 +784,6 @@ msgstr "los macros con nombre comenzando en '_' están ocultos"
 msgid "minute"
 
 msgstr "minuto"
-
 
 msgid "mm"
 msgstr "mm"
@@ -877,9 +873,6 @@ msgstr "Continuar"
 
 #~ msgid "Delete"
 #~ msgstr "Borrar"
-
-#~ msgid "Off"
-#~ msgstr "Apagar"
 
 #~ msgid "View Mesh"
 #~ msgstr "Ver Malla"
@@ -1731,3 +1724,171 @@ msgstr "No se pudo leer el número de serie del dispositivo."
 
 msgid "Waiting for terms acceptance."
 msgstr "Esperando la aceptación de los términos."
+
+msgid "Watching"
+msgstr "Monitoreo"
+
+msgid "Not Watching"
+msgstr "No monitorear"
+
+msgid "Default Settings"
+msgstr "Configuración predeterminada"
+
+msgid "Sensitivity"
+msgstr "Sensibilidad"
+
+msgid "Low"
+msgstr "Bajo"
+
+msgid "High"
+msgstr "Alto"
+
+msgid "Action"
+msgstr "acción"
+
+msgid "Notify Only"
+msgstr "Notificar sólo"
+
+msgid "Auto Pause"
+msgstr "Pausa automática"
+
+msgid "Follow Default"
+msgstr "Seguir predeterminado"
+
+msgid "Detection Types"
+msgstr "Tipos de detección"
+
+msgid "Configure"
+msgstr "Configurar"
+
+msgid "No detection types are available for this printer"
+msgstr "No hay tipos de detección disponibles para esta impresora"
+
+msgid "Safe mode"
+msgstr "Modo seguro"
+
+msgid "Applied"
+msgstr "Aplicado"
+
+msgid "Synced"
+msgstr "Sincronizado"
+
+msgid "Applied locally"
+msgstr "Aplicado localmente"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Aplicado localmente, esperando sincronización en la nube"
+
+msgid "Applying on this printer"
+msgstr "Aplicar en esta impresora"
+
+msgid "Waiting for cloud sync"
+msgstr "Esperando sincronización en la nube"
+
+msgid "Syncing with cloud"
+msgstr "Sincronización con la nube"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Aplicado localmente, fusionando configuraciones de nube"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Aplicado localmente, la configuración de la nube entra en conflicto"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Aplicado localmente, la sincronización en la nube falló"
+
+msgid "Sync failed"
+msgstr "Error de sincronización"
+
+msgid "Unsaved changes"
+msgstr "Cambios no guardados"
+
+msgid "Reloading current settings"
+msgstr "Recargar la configuración actual"
+
+msgid "Settings could not be applied"
+msgstr "No se pudo aplicar la configuración"
+
+msgid "Settings unavailable"
+msgstr "Configuraciones no disponibles"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "La política cambió en otros lugares. Se recargarán las últimas configuraciones."
+
+msgid "Disabled by user"
+msgstr "Inhabilitado por el usuario"
+
+msgid "Unsupported printer model"
+msgstr "Modelo de impresora no compatible"
+
+msgid "AI Agent unavailable"
+msgstr "Agente de IA no disponible"
+
+msgid "NPU unavailable"
+msgstr "NPU no disponible"
+
+msgid "No camera"
+msgstr "Sin cámara"
+
+msgid "Camera unavailable"
+msgstr "Cámara no disponible"
+
+msgid "Printer is not printing"
+msgstr "La impresora no imprime"
+
+msgid "Waiting for the first AI detection"
+msgstr "Esperando la primera detección de IA"
+
+msgid "AI detection results are delayed"
+msgstr "Los resultados de la detección de IA se retrasan"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Falló la captura de la cámara o la inferencia de IA"
+
+msgid "Camera snapshot is stale"
+msgstr "La instantánea de la cámara está obsoleta"
+
+msgid "Print session is unavailable"
+msgstr "La sesión de impresión no está disponible"
+
+msgid "Print state is unavailable"
+msgstr "El estado de impresión no está disponible"
+
+msgid "AI model version mismatch"
+msgstr "La versión del modelo de IA no coincide"
+
+msgid "Muted for this print"
+msgstr "Silenciado para esta impresión"
+
+msgid "All detection types are disabled"
+msgstr "Todos los tipos de detección están deshabilitados"
+
+msgid "No valid AI policy"
+msgstr "No hay una política de IA válida"
+
+msgid "AI configuration is being prepared"
+msgstr "Se está preparando la configuración de la IA"
+
+msgid "Policy verification failed"
+msgstr "Error en la verificación de la política"
+
+msgid "Nozzle Blob"
+msgstr "Gota en la boquilla"
+
+msgid "First Layer Extrusion"
+msgstr "Problema de extrusión de la primera capa"
+
+msgid "Warp or Detachment"
+msgstr "Deformación o desprendimiento"
+
+msgid "Off"
+msgstr "Apagado"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "Para la verificación de objetos extraños previa a la impresión, Crítico bloquea la impresión solo cuando se selecciona Pausa automática."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "El modo seguro está activo. La verificación previa a la impresión solo notificará y no bloqueará la impresión."
+
+msgid "AI Platform V3 is required"
+msgstr "Se requiere AI Platform V3"

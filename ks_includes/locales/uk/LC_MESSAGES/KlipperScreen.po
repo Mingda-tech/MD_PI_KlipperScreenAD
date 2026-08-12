@@ -352,7 +352,6 @@ msgstr "Інвертувати Z"
 msgid "It may take more than 5 minutes depending on the heater power."
 msgstr "Залежно від потужності обігрівача це може зайняти більше 5 хвилин."
 
-
 msgid "Firmware has disconnected"
 msgstr "Фірма-версія від’єднана"
 
@@ -496,8 +495,6 @@ msgstr "PSK для"
 msgid "Package will be updated"
 
 msgstr "Пакет буде оновлено"
-
-
 
 msgid "Part Fan"
 msgstr "Охолодження моделі"
@@ -781,16 +778,12 @@ msgid "commit"
 
 msgstr "коментар"
 
-
-
 msgid "dBm"
 msgstr "dBm"
 
 msgid "hour"
 
 msgstr "година"
-
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr "макроси, які використовують 'rename_existing', приховані"
@@ -801,8 +794,6 @@ msgstr "макроси з назвою, що починається на '_', п
 msgid "minute"
 
 msgstr "хвилина"
-
-
 
 msgid "mm"
 msgstr "мм"
@@ -889,9 +880,6 @@ msgstr "Продовжити"
 
 #~ msgid "Delete"
 #~ msgstr "Видалити"
-
-#~ msgid "Off"
-#~ msgstr "Вимк"
 
 #~ msgid "View Mesh"
 #~ msgstr "Показати сітку"
@@ -1650,3 +1638,171 @@ msgstr "Не вдалося прочитати серійний номер пр�
 
 msgid "Waiting for terms acceptance."
 msgstr "Очікування згоди з умовами."
+
+msgid "Watching"
+msgstr "Моніторинг"
+
+msgid "Not Watching"
+msgstr "Не моніторинг"
+
+msgid "Default Settings"
+msgstr "Налаштування за замовчуванням"
+
+msgid "Sensitivity"
+msgstr "Чутливість"
+
+msgid "Low"
+msgstr "Низький"
+
+msgid "High"
+msgstr "Високий"
+
+msgid "Action"
+msgstr "Дія"
+
+msgid "Notify Only"
+msgstr "Лише сповіщати"
+
+msgid "Auto Pause"
+msgstr "Автоматична пауза"
+
+msgid "Follow Default"
+msgstr "Слідкуйте за замовчуванням"
+
+msgid "Detection Types"
+msgstr "Типи виявлення"
+
+msgid "Configure"
+msgstr "Налаштувати"
+
+msgid "No detection types are available for this printer"
+msgstr "Для цього принтера недоступні типи виявлення"
+
+msgid "Safe mode"
+msgstr "Безпечний режим"
+
+msgid "Applied"
+msgstr "Прикладний"
+
+msgid "Synced"
+msgstr "Синхронізовано"
+
+msgid "Applied locally"
+msgstr "Застосовується місцево"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Застосовується локально, очікується синхронізація з хмарою"
+
+msgid "Applying on this printer"
+msgstr "Подача заявки на цей принтер"
+
+msgid "Waiting for cloud sync"
+msgstr "Очікування хмарної синхронізації"
+
+msgid "Syncing with cloud"
+msgstr "Синхронізація з хмарою"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Застосовується локально, об’єднуючи налаштування хмари"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Застосовується локально, конфлікт налаштувань хмари"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Застосовано локально, не вдалося синхронізувати хмару"
+
+msgid "Sync failed"
+msgstr "Помилка синхронізації"
+
+msgid "Unsaved changes"
+msgstr "Незбережені зміни"
+
+msgid "Reloading current settings"
+msgstr "Перезавантаження поточних налаштувань"
+
+msgid "Settings could not be applied"
+msgstr "Не вдалося застосувати налаштування"
+
+msgid "Settings unavailable"
+msgstr "Налаштування недоступні"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Політика змінена в іншому місці. Останні налаштування буде перезавантажено."
+
+msgid "Disabled by user"
+msgstr "Вимкнено користувачем"
+
+msgid "Unsupported printer model"
+msgstr "Непідтримувана модель принтера"
+
+msgid "AI Agent unavailable"
+msgstr "Агент ШІ недоступний"
+
+msgid "NPU unavailable"
+msgstr "NPU недоступний"
+
+msgid "No camera"
+msgstr "Без камери"
+
+msgid "Camera unavailable"
+msgstr "Камера недоступна"
+
+msgid "Printer is not printing"
+msgstr "Принтер не друкує"
+
+msgid "Waiting for the first AI detection"
+msgstr "Очікування першого виявлення ШІ"
+
+msgid "AI detection results are delayed"
+msgstr "Результати виявлення ШІ затримуються"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Помилка зйомки камерою або штучного інтелекту"
+
+msgid "Camera snapshot is stale"
+msgstr "Знімок камери несвіжий"
+
+msgid "Print session is unavailable"
+msgstr "Сеанс друку недоступний"
+
+msgid "Print state is unavailable"
+msgstr "Стан друку недоступний"
+
+msgid "AI model version mismatch"
+msgstr "Невідповідність версії моделі AI"
+
+msgid "Muted for this print"
+msgstr "Вимкнуто для цього друку"
+
+msgid "All detection types are disabled"
+msgstr "Усі типи виявлення вимкнено"
+
+msgid "No valid AI policy"
+msgstr "Немає дійсної політики AI"
+
+msgid "AI configuration is being prepared"
+msgstr "Конфігурація ШІ готується"
+
+msgid "Policy verification failed"
+msgstr "Помилка перевірки політики"
+
+msgid "Nozzle Blob"
+msgstr "Ляпка на насадці"
+
+msgid "First Layer Extrusion"
+msgstr "Проблема екструзії першого шару"
+
+msgid "Warp or Detachment"
+msgstr "Викривлення або відшарування"
+
+msgid "Off"
+msgstr "Вимкнено"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "Для перевірки перед друком на наявність сторонніх предметів критично блокує друк, лише якщо вибрано автоматичну паузу."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Безпечний режим активний. Перевірка перед друком надсилатиме лише повідомлення та не блокуватиме друк."
+
+msgid "AI Platform V3 is required"
+msgstr "Потрібна платформа AI Platform V3"

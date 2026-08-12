@@ -869,9 +869,6 @@ msgstr "继续"
 #~ msgid "Delete"
 #~ msgstr "删除"
 
-#~ msgid "Off"
-#~ msgstr "关闭"
-
 #~ msgid "View Mesh"
 #~ msgstr "查看热床网格"
 
@@ -1222,7 +1219,7 @@ msgstr "进料忙"
 
 msgid "Please exit the filament from the nozzle first"
 msgstr "请先从喷嘴退出耗材"
- 
+
 msgid "motor_%s press"
 msgstr "电机%s按下"
 
@@ -1718,3 +1715,183 @@ msgstr "无法自动刷新，当前二维码即将过期。"
 
 msgid "Waiting for terms acceptance."
 msgstr "等待同意条款。"
+
+msgid "Watching"
+msgstr "监测中"
+
+msgid "Not Watching"
+msgstr "未监测"
+
+msgid "Default Settings"
+msgstr "默认设置"
+
+msgid "Sensitivity"
+msgstr "灵敏度"
+
+msgid "Low"
+msgstr "低"
+
+msgid "High"
+msgstr "高"
+
+msgid "Action"
+msgstr "处理方式"
+
+msgid "Notify Only"
+msgstr "仅通知"
+
+msgid "Auto Pause"
+msgstr "自动暂停"
+
+msgid "Follow Default"
+msgstr "跟随默认"
+
+msgid "Detection Types"
+msgstr "检测项目"
+
+msgid "Configure"
+msgstr "设置"
+
+msgid "No detection types are available for this printer"
+msgstr "当前打印机暂无可用检测项目"
+
+msgid "Safe mode"
+msgstr "安全降级"
+
+msgid "Applied"
+msgstr "已生效"
+
+msgid "Synced"
+msgstr "已同步"
+
+msgid "Applied locally"
+msgstr "本机已生效"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "本机已生效，等待云端同步"
+
+msgid "Applying on this printer"
+msgstr "正在打印机上应用"
+
+msgid "Waiting for cloud sync"
+msgstr "等待云端同步"
+
+msgid "Syncing with cloud"
+msgstr "正在同步云端"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "本机已生效，正在合并云端设置"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "本机已生效，云端设置存在冲突"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "本机已生效，云同步失败"
+
+msgid "Sync failed"
+msgstr "同步失败"
+
+msgid "Unsaved changes"
+msgstr "有未保存的更改"
+
+msgid "Reloading current settings"
+msgstr "正在重新加载当前设置"
+
+msgid "Settings could not be applied"
+msgstr "设置未能在本机生效"
+
+msgid "Settings unavailable"
+msgstr "设置暂不可用"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "设置已在其他终端更新，将重新加载最新设置。"
+
+msgid "Disabled by user"
+msgstr "用户已关闭"
+
+msgid "Unsupported printer model"
+msgstr "不支持的打印机型号"
+
+msgid "AI Agent unavailable"
+msgstr "AI Agent 不可用"
+
+msgid "NPU unavailable"
+msgstr "NPU 不可用"
+
+msgid "No camera"
+msgstr "未检测到摄像头"
+
+msgid "Camera unavailable"
+msgstr "摄像头不可用"
+
+msgid "Printer is not printing"
+msgstr "打印机未在打印"
+
+msgid "Waiting for the first AI detection"
+msgstr "正在等待首次 AI 检测"
+
+msgid "AI detection results are delayed"
+msgstr "AI 检测结果已延迟"
+
+msgid "Camera capture or AI inference failed"
+msgstr "摄像头取帧或 AI 推理失败"
+
+msgid "Camera snapshot is stale"
+msgstr "摄像头画面未更新"
+
+msgid "Print session is unavailable"
+msgstr "打印任务信息不可用"
+
+msgid "Print state is unavailable"
+msgstr "打印状态不可用"
+
+msgid "AI model version mismatch"
+msgstr "AI 模型版本不匹配"
+
+msgid "Muted for this print"
+msgstr "本次打印已静音"
+
+msgid "All detection types are disabled"
+msgstr "所有检测项目均已关闭"
+
+msgid "No valid AI policy"
+msgstr "AI 配置尚未就绪"
+
+msgid "AI configuration is being prepared"
+msgstr "正在准备 AI 配置"
+
+msgid "Policy verification failed"
+msgstr "策略校验失败"
+
+msgid "Nozzle Blob"
+msgstr "裹头"
+
+msgid "First Layer Extrusion"
+msgstr "首层挤出异常"
+
+msgid "Warp or Detachment"
+msgstr "翘边或脱落"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "预打印异物检查中，仅当选择“自动暂停”时，严重风险才会阻止开始打印。"
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "当前处于安全降级模式，预检只通知，不会阻止开印"
+
+msgid "AI Platform V3 is required"
+msgstr "需要 AI Platform V3"
+
+msgid "AI pre-print check is unavailable. Printing will continue."
+msgstr "AI 打印前检查不可用，将继续打印。"
+
+msgid "AI pre-print check found a warning. Printing will continue."
+msgstr "AI 打印前检查发现警告，将继续打印。"
+
+msgid "AI found a critical foreign object, but notify-only mode allows printing."
+msgstr "AI 发现严重异物，但当前为仅通知模式，将继续打印。"
+
+msgid "AI found a critical foreign object. Print start was blocked."
+msgstr "AI 发现严重异物，已阻止开始打印。"
+
+msgid "Off"
+msgstr "关闭"

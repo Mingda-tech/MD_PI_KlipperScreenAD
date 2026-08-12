@@ -45,7 +45,7 @@ msgid "All"
 msgstr ""
 
 msgid "Apply"
-msgstr ""
+msgstr "Apply"
 
 #, python-format
 msgid "Apply %s%.3f offset to Endstop?"
@@ -143,7 +143,7 @@ msgid "Clear"
 msgstr ""
 
 msgid "Close"
-msgstr ""
+msgstr "Close"
 
 msgid "Complete"
 msgstr ""
@@ -193,7 +193,7 @@ msgid "Elapsed:"
 msgstr ""
 
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 msgid "Estimated Time Method"
 msgstr ""
@@ -428,7 +428,7 @@ msgid "Measure Y"
 msgstr ""
 
 msgid "Medium"
-msgstr ""
+msgstr "Medium"
 
 msgid "Menu"
 msgstr ""
@@ -484,7 +484,6 @@ msgstr ""
 msgid "Package will be updated"
 
 msgstr ""
-
 
 msgid "Part Fan"
 msgstr ""
@@ -607,7 +606,7 @@ msgid "Save configuration?"
 msgstr ""
 
 msgid "Saved"
-msgstr ""
+msgstr "Saved"
 
 #, python-format
 msgid "Saved offset: %s"
@@ -632,7 +631,7 @@ msgid "Set Temp"
 msgstr ""
 
 msgid "Settings"
-msgstr ""
+msgstr "Settings"
 
 msgid "Show"
 msgstr ""
@@ -1522,3 +1521,171 @@ msgstr "Unable to read the device serial number."
 
 msgid "Waiting for terms acceptance."
 msgstr "Waiting for terms acceptance."
+
+msgid "Watching"
+msgstr "Watching"
+
+msgid "Not Watching"
+msgstr "Not Watching"
+
+msgid "Default Settings"
+msgstr "Default Settings"
+
+msgid "Sensitivity"
+msgstr "Sensitivity"
+
+msgid "Low"
+msgstr "Low"
+
+msgid "High"
+msgstr "High"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "Notify Only"
+msgstr "Notify Only"
+
+msgid "Auto Pause"
+msgstr "Auto Pause"
+
+msgid "Follow Default"
+msgstr "Follow Default"
+
+msgid "Detection Types"
+msgstr "Detection Types"
+
+msgid "Configure"
+msgstr "Configure"
+
+msgid "No detection types are available for this printer"
+msgstr "No detection types are available for this printer"
+
+msgid "Safe mode"
+msgstr "Safe mode"
+
+msgid "Applied"
+msgstr "Applied"
+
+msgid "Synced"
+msgstr "Synced"
+
+msgid "Applied locally"
+msgstr "Applied locally"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Applied locally, waiting for cloud sync"
+
+msgid "Applying on this printer"
+msgstr "Applying on this printer"
+
+msgid "Waiting for cloud sync"
+msgstr "Waiting for cloud sync"
+
+msgid "Syncing with cloud"
+msgstr "Syncing with cloud"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Applied locally, merging cloud settings"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Applied locally, cloud settings conflict"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Applied locally, cloud sync failed"
+
+msgid "Sync failed"
+msgstr "Sync failed"
+
+msgid "Unsaved changes"
+msgstr "Unsaved changes"
+
+msgid "Reloading current settings"
+msgstr "Reloading current settings"
+
+msgid "Settings could not be applied"
+msgstr "Settings could not be applied"
+
+msgid "Settings unavailable"
+msgstr "Settings unavailable"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Policy changed elsewhere. Latest settings will be reloaded."
+
+msgid "Disabled by user"
+msgstr "Disabled by user"
+
+msgid "Unsupported printer model"
+msgstr "Unsupported printer model"
+
+msgid "AI Agent unavailable"
+msgstr "AI Agent unavailable"
+
+msgid "NPU unavailable"
+msgstr "NPU unavailable"
+
+msgid "No camera"
+msgstr "No camera"
+
+msgid "Camera unavailable"
+msgstr "Camera unavailable"
+
+msgid "Printer is not printing"
+msgstr "Printer is not printing"
+
+msgid "Waiting for the first AI detection"
+msgstr "Waiting for the first AI detection"
+
+msgid "AI detection results are delayed"
+msgstr "AI detection results are delayed"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Camera capture or AI inference failed"
+
+msgid "Camera snapshot is stale"
+msgstr "Camera snapshot is stale"
+
+msgid "Print session is unavailable"
+msgstr "Print session is unavailable"
+
+msgid "Print state is unavailable"
+msgstr "Print state is unavailable"
+
+msgid "AI model version mismatch"
+msgstr "AI model version mismatch"
+
+msgid "Muted for this print"
+msgstr "Muted for this print"
+
+msgid "All detection types are disabled"
+msgstr "All detection types are disabled"
+
+msgid "No valid AI policy"
+msgstr "No valid AI policy"
+
+msgid "AI configuration is being prepared"
+msgstr "AI configuration is being prepared"
+
+msgid "Policy verification failed"
+msgstr "Policy verification failed"
+
+msgid "Nozzle Blob"
+msgstr "Nozzle Blob"
+
+msgid "First Layer Extrusion"
+msgstr "First Layer Extrusion"
+
+msgid "Warp or Detachment"
+msgstr "Warp or Detachment"
+
+msgid "Off"
+msgstr "Off"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Safe mode is active. The pre-print check will notify only and will not block printing."
+
+msgid "AI Platform V3 is required"
+msgstr "AI Platform V3 is required"

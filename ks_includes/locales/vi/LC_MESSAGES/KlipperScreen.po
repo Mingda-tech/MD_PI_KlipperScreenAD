@@ -1768,3 +1768,171 @@ msgstr "Không thể đọc số sê-ri của thiết bị."
 
 msgid "Waiting for terms acceptance."
 msgstr "Đang chờ chấp nhận điều khoản."
+
+msgid "Watching"
+msgstr "Giám sát"
+
+msgid "Not Watching"
+msgstr "Không giám sát"
+
+msgid "Default Settings"
+msgstr "Cài đặt mặc định"
+
+msgid "Sensitivity"
+msgstr "Độ nhạy"
+
+msgid "Low"
+msgstr "Thấp"
+
+msgid "High"
+msgstr "Cao"
+
+msgid "Action"
+msgstr "hành động"
+
+msgid "Notify Only"
+msgstr "Chỉ thông báo"
+
+msgid "Auto Pause"
+msgstr "Tự động tạm dừng"
+
+msgid "Follow Default"
+msgstr "Theo mặc định"
+
+msgid "Detection Types"
+msgstr "Các loại phát hiện"
+
+msgid "Configure"
+msgstr "Cấu hình"
+
+msgid "No detection types are available for this printer"
+msgstr "Không có loại phát hiện nào cho máy in này"
+
+msgid "Safe mode"
+msgstr "Chế độ an toàn"
+
+msgid "Applied"
+msgstr "Đã áp dụng"
+
+msgid "Synced"
+msgstr "Đã đồng bộ hóa"
+
+msgid "Applied locally"
+msgstr "Áp dụng tại địa phương"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Áp dụng cục bộ, chờ đồng bộ hóa trên đám mây"
+
+msgid "Applying on this printer"
+msgstr "Áp dụng trên máy in này"
+
+msgid "Waiting for cloud sync"
+msgstr "Đang chờ đồng bộ hóa trên đám mây"
+
+msgid "Syncing with cloud"
+msgstr "Đồng bộ hóa với đám mây"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Áp dụng cục bộ, hợp nhất cài đặt đám mây"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Áp dụng cục bộ, xung đột cài đặt đám mây"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Đã áp dụng cục bộ, đồng bộ hóa trên đám mây không thành công"
+
+msgid "Sync failed"
+msgstr "Đồng bộ hóa không thành công"
+
+msgid "Unsaved changes"
+msgstr "Những thay đổi chưa được lưu"
+
+msgid "Reloading current settings"
+msgstr "Đang tải lại cài đặt hiện tại"
+
+msgid "Settings could not be applied"
+msgstr "Không thể áp dụng cài đặt"
+
+msgid "Settings unavailable"
+msgstr "Cài đặt không có sẵn"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Chính sách đã thay đổi ở nơi khác. Cài đặt mới nhất sẽ được tải lại."
+
+msgid "Disabled by user"
+msgstr "Bị người dùng vô hiệu hóa"
+
+msgid "Unsupported printer model"
+msgstr "Mẫu máy in không được hỗ trợ"
+
+msgid "AI Agent unavailable"
+msgstr "Tác nhân AI không có sẵn"
+
+msgid "NPU unavailable"
+msgstr "NPU không có sẵn"
+
+msgid "No camera"
+msgstr "Không có máy ảnh"
+
+msgid "Camera unavailable"
+msgstr "Máy ảnh không có sẵn"
+
+msgid "Printer is not printing"
+msgstr "Máy in không in được"
+
+msgid "Waiting for the first AI detection"
+msgstr "Chờ phát hiện AI đầu tiên"
+
+msgid "AI detection results are delayed"
+msgstr "Kết quả phát hiện AI bị trì hoãn"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Chụp ảnh hoặc suy luận AI không thành công"
+
+msgid "Camera snapshot is stale"
+msgstr "Ảnh chụp nhanh của máy ảnh đã cũ"
+
+msgid "Print session is unavailable"
+msgstr "Phiên in không khả dụng"
+
+msgid "Print state is unavailable"
+msgstr "Trạng thái in không khả dụng"
+
+msgid "AI model version mismatch"
+msgstr "Phiên bản mô hình AI không khớp"
+
+msgid "Muted for this print"
+msgstr "Đã tắt tiếng cho bản in này"
+
+msgid "All detection types are disabled"
+msgstr "Tất cả các loại phát hiện đều bị tắt"
+
+msgid "No valid AI policy"
+msgstr "Không có chính sách AI hợp lệ"
+
+msgid "AI configuration is being prepared"
+msgstr "Cấu hình AI đang được chuẩn bị"
+
+msgid "Policy verification failed"
+msgstr "Xác minh chính sách không thành công"
+
+msgid "Nozzle Blob"
+msgstr "Đốm trên vòi phun"
+
+msgid "First Layer Extrusion"
+msgstr "Vấn đề đùn lớp đầu tiên"
+
+msgid "Warp or Detachment"
+msgstr "Cong vênh hoặc tách rời"
+
+msgid "Off"
+msgstr "Tắt"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "Để kiểm tra vật thể lạ trước khi in, Chỉ chặn in ấn quan trọng khi Tự động tạm dừng được chọn."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Chế độ an toàn đang hoạt động. Việc kiểm tra trước khi in sẽ chỉ thông báo và không chặn việc in."
+
+msgid "AI Platform V3 is required"
+msgstr "Cần có nền tảng AI V3"

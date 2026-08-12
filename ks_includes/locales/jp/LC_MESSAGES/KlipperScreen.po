@@ -1557,3 +1557,171 @@ msgstr "デバイスのシリアル番号を読み取れませんでした。"
 
 msgid "Waiting for terms acceptance."
 msgstr "利用規約への同意を待っています。"
+
+msgid "Watching"
+msgstr "監視中"
+
+msgid "Not Watching"
+msgstr "監視停止中"
+
+msgid "Default Settings"
+msgstr "デフォルト設定"
+
+msgid "Sensitivity"
+msgstr "感度"
+
+msgid "Low"
+msgstr "低い"
+
+msgid "High"
+msgstr "高"
+
+msgid "Action"
+msgstr "アクション"
+
+msgid "Notify Only"
+msgstr "通知のみ"
+
+msgid "Auto Pause"
+msgstr "自動一時停止"
+
+msgid "Follow Default"
+msgstr "デフォルトに従う"
+
+msgid "Detection Types"
+msgstr "検出の種類"
+
+msgid "Configure"
+msgstr "設定する"
+
+msgid "No detection types are available for this printer"
+msgstr "このプリンタでは使用できる検出タイプがありません"
+
+msgid "Safe mode"
+msgstr "セーフモード"
+
+msgid "Applied"
+msgstr "適用済み"
+
+msgid "Synced"
+msgstr "同期済み"
+
+msgid "Applied locally"
+msgstr "ローカルで適用される"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "ローカルに適用され、クラウド同期を待機しています"
+
+msgid "Applying on this printer"
+msgstr "このプリンターで申請する"
+
+msgid "Waiting for cloud sync"
+msgstr "クラウド同期を待っています"
+
+msgid "Syncing with cloud"
+msgstr "クラウドとの同期"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "ローカルに適用され、クラウド設定が結合されます"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "ローカルに適用されるとクラウド設定が競合します"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "ローカルに適用するとクラウド同期が失敗する"
+
+msgid "Sync failed"
+msgstr "同期に失敗しました"
+
+msgid "Unsaved changes"
+msgstr "未保存の変更"
+
+msgid "Reloading current settings"
+msgstr "現在の設定を再ロードしています"
+
+msgid "Settings could not be applied"
+msgstr "設定を適用できませんでした"
+
+msgid "Settings unavailable"
+msgstr "設定が利用できません"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "他の場所でポリシーが変更されました。最新の設定が再読み込みされます。"
+
+msgid "Disabled by user"
+msgstr "ユーザーによって無効にされました"
+
+msgid "Unsupported printer model"
+msgstr "サポートされていないプリンターのモデル"
+
+msgid "AI Agent unavailable"
+msgstr "AI エージェントが利用不可"
+
+msgid "NPU unavailable"
+msgstr "NPU が使用不可"
+
+msgid "No camera"
+msgstr "カメラなし"
+
+msgid "Camera unavailable"
+msgstr "カメラが使用できません"
+
+msgid "Printer is not printing"
+msgstr "プリンターが印刷できない"
+
+msgid "Waiting for the first AI detection"
+msgstr "最初の AI 検出を待っています"
+
+msgid "AI detection results are delayed"
+msgstr "AIの検出結果が遅れる"
+
+msgid "Camera capture or AI inference failed"
+msgstr "カメラキャプチャまたは AI 推論が失敗しました"
+
+msgid "Camera snapshot is stale"
+msgstr "カメラのスナップショットが古い"
+
+msgid "Print session is unavailable"
+msgstr "印刷セッションが利用できません"
+
+msgid "Print state is unavailable"
+msgstr "印刷状態が利用できません"
+
+msgid "AI model version mismatch"
+msgstr "AI モデルのバージョンの不一致"
+
+msgid "Muted for this print"
+msgstr "このプリントではミュートされています"
+
+msgid "All detection types are disabled"
+msgstr "すべての検出タイプが無効になっています"
+
+msgid "No valid AI policy"
+msgstr "有効な AI ポリシーがありません"
+
+msgid "AI configuration is being prepared"
+msgstr "AI構成を準備中です"
+
+msgid "Policy verification failed"
+msgstr "ポリシーの検証に失敗しました"
+
+msgid "Nozzle Blob"
+msgstr "ノズルの樹脂塊"
+
+msgid "First Layer Extrusion"
+msgstr "第一層の押出異常"
+
+msgid "Warp or Detachment"
+msgstr "反りまたは剥離"
+
+msgid "Off"
+msgstr "オフ"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "印刷前の異物チェックでは、自動一時停止が選択されている場合にのみ、「クリティカル」は印刷をブロックします。"
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "セーフモードが有効になっています。印刷前チェックは通知のみを行い、印刷をブロックしません。"
+
+msgid "AI Platform V3 is required"
+msgstr "AI プラットフォーム V3 が必要です"

@@ -631,7 +631,6 @@ msgid "Package will be updated"
 
 msgstr "Pakett uuendatakse"
 
-
 msgid "Part Fan"
 msgstr "Osaventilaator"
 
@@ -946,11 +945,9 @@ msgid "commit"
 
 msgstr "toiming"
 
-
 msgid "day"
 
 msgstr "päev"
-
 
 msgid "g"
 msgstr "g"
@@ -958,7 +955,6 @@ msgstr "g"
 msgid "hour"
 
 msgstr "tund"
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr "Makrod, mis kasutavad 'rename_existing' on peidetud"
@@ -969,7 +965,6 @@ msgstr "Makrod, mille nimi algab '_' on peidetud"
 msgid "minute"
 
 msgstr "minut"
-
 
 msgid "mm"
 msgstr "mm"
@@ -989,7 +984,6 @@ msgstr "s"
 msgid "second"
 
 msgstr "sekund"
-
 
 #~ msgid "Are you sure you want to stop the calibration?"
 #~ msgstr "Kas olete kindel, et soovite kalibreerimise peatada?"
@@ -1017,7 +1011,6 @@ msgstr "sekund"
 
 #~ msgid "dBm"
 #~ msgstr "dBm"
-
 
 msgid "The nozzle temperature is too low, Are you sure you want to heat it?"
 msgstr "Düüsi temperatuur on liiga madal, kas olete kindel, et soovite seda kuumutada?"
@@ -1708,3 +1701,171 @@ msgstr "Seadme seerianumbrit ei õnnestunud lugeda."
 
 msgid "Waiting for terms acceptance."
 msgstr "Tingimustega nõustumise ootel."
+
+msgid "Watching"
+msgstr "Järelevalve"
+
+msgid "Not Watching"
+msgstr "Ei jälgi"
+
+msgid "Default Settings"
+msgstr "Vaikesätted"
+
+msgid "Sensitivity"
+msgstr "Tundlikkus"
+
+msgid "Low"
+msgstr "Madal"
+
+msgid "High"
+msgstr "Kõrge"
+
+msgid "Action"
+msgstr "Tegevus"
+
+msgid "Notify Only"
+msgstr "Ainult teata"
+
+msgid "Auto Pause"
+msgstr "Automaatne paus"
+
+msgid "Follow Default"
+msgstr "Jälgi vaikeseadet"
+
+msgid "Detection Types"
+msgstr "Tuvastamise tüübid"
+
+msgid "Configure"
+msgstr "Seadistage"
+
+msgid "No detection types are available for this printer"
+msgstr "Selle printeri jaoks pole tuvastustüüpe saadaval"
+
+msgid "Safe mode"
+msgstr "Turvarežiim"
+
+msgid "Applied"
+msgstr "Rakendatud"
+
+msgid "Synced"
+msgstr "Sünkroonitud"
+
+msgid "Applied locally"
+msgstr "Kohaldatakse kohapeal"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Rakendatud kohapeal, pilvesünkroonimise ootel"
+
+msgid "Applying on this printer"
+msgstr "Sellele printerile rakendamine"
+
+msgid "Waiting for cloud sync"
+msgstr "Pilvesünkroonimise ootel"
+
+msgid "Syncing with cloud"
+msgstr "Pilvega sünkroonimine"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Rakendatakse kohapeal, ühendades pilvesätted"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Kohaldatud, pilvesätted konfliktis"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Kohalikult rakendatud, pilvesünkroonimine ebaõnnestus"
+
+msgid "Sync failed"
+msgstr "Sünkroonimine ebaõnnestus"
+
+msgid "Unsaved changes"
+msgstr "Salvestamata muudatused"
+
+msgid "Reloading current settings"
+msgstr "Praeguste seadete uuesti laadimine"
+
+msgid "Settings could not be applied"
+msgstr "Seadeid ei saanud rakendada"
+
+msgid "Settings unavailable"
+msgstr "Seaded pole saadaval"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Mujal muutus poliitika. Viimased seaded laaditakse uuesti."
+
+msgid "Disabled by user"
+msgstr "Kasutaja poolt keelatud"
+
+msgid "Unsupported printer model"
+msgstr "Toetamata printeri mudel"
+
+msgid "AI Agent unavailable"
+msgstr "AI agent pole saadaval"
+
+msgid "NPU unavailable"
+msgstr "NPU pole saadaval"
+
+msgid "No camera"
+msgstr "Pole kaamerat"
+
+msgid "Camera unavailable"
+msgstr "Kaamera pole saadaval"
+
+msgid "Printer is not printing"
+msgstr "Printer ei prindi"
+
+msgid "Waiting for the first AI detection"
+msgstr "Ootan esimest tehisintellekti tuvastamist"
+
+msgid "AI detection results are delayed"
+msgstr "AI tuvastamise tulemused viibivad"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Kaamera jäädvustamine või AI järeldus ebaõnnestus"
+
+msgid "Camera snapshot is stale"
+msgstr "Kaamera hetktõmmis on aegunud"
+
+msgid "Print session is unavailable"
+msgstr "Prindiseanss pole saadaval"
+
+msgid "Print state is unavailable"
+msgstr "Prindi olek pole saadaval"
+
+msgid "AI model version mismatch"
+msgstr "AI mudeli versiooni mittevastavus"
+
+msgid "Muted for this print"
+msgstr "Selle prindi jaoks vaigistatud"
+
+msgid "All detection types are disabled"
+msgstr "Kõik tuvastamise tüübid on keelatud"
+
+msgid "No valid AI policy"
+msgstr "Kehtiv AI poliitika puudub"
+
+msgid "AI configuration is being prepared"
+msgstr "AI konfiguratsiooni valmistatakse ette"
+
+msgid "Policy verification failed"
+msgstr "Eeskirjade kinnitamine ebaõnnestus"
+
+msgid "Nozzle Blob"
+msgstr "Plekk otsikule"
+
+msgid "First Layer Extrusion"
+msgstr "Esimese kihi väljapressimise probleem"
+
+msgid "Warp or Detachment"
+msgstr "Väändumine või eraldumine"
+
+msgid "Off"
+msgstr "Väljas"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "Prindieelse võõrobjekti kontrollimiseks blokeerib Kriitiline printimine ainult siis, kui on valitud Auto Pause."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Turvarežiim on aktiivne. Trükieelne kontroll teavitab ainult ja ei blokeeri printimist."
+
+msgid "AI Platform V3 is required"
+msgstr "Vaja on AI platvormi V3"

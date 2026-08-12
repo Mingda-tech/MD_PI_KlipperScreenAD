@@ -858,9 +858,6 @@ msgstr "계속"
 #~ msgid "Delete"
 #~ msgstr "삭제"
 
-#~ msgid "Off"
-#~ msgstr "끄기"
-
 #~ msgid "View Mesh"
 #~ msgstr "메쉬 프로파일 보기"
 
@@ -1626,3 +1623,171 @@ msgstr "장치 일련번호를 읽을 수 없습니다."
 
 msgid "Waiting for terms acceptance."
 msgstr "약관 동의를 기다리는 중입니다."
+
+msgid "Watching"
+msgstr "감지 중"
+
+msgid "Not Watching"
+msgstr "감지하지 않음"
+
+msgid "Default Settings"
+msgstr "기본 설정"
+
+msgid "Sensitivity"
+msgstr "감도"
+
+msgid "Low"
+msgstr "낮음"
+
+msgid "High"
+msgstr "높음"
+
+msgid "Action"
+msgstr "액션"
+
+msgid "Notify Only"
+msgstr "알림만"
+
+msgid "Auto Pause"
+msgstr "자동 일시 정지"
+
+msgid "Follow Default"
+msgstr "기본값을 따르세요"
+
+msgid "Detection Types"
+msgstr "탐지 유형"
+
+msgid "Configure"
+msgstr "구성"
+
+msgid "No detection types are available for this printer"
+msgstr "이 프린터에 사용할 수 있는 감지 유형이 없습니다."
+
+msgid "Safe mode"
+msgstr "안전 모드"
+
+msgid "Applied"
+msgstr "적용됨"
+
+msgid "Synced"
+msgstr "동기화됨"
+
+msgid "Applied locally"
+msgstr "로컬로 적용"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "로컬에 적용되었으며 클라우드 동기화를 기다리는 중입니다."
+
+msgid "Applying on this printer"
+msgstr "이 프린터에 적용 중"
+
+msgid "Waiting for cloud sync"
+msgstr "클라우드 동기화를 기다리는 중"
+
+msgid "Syncing with cloud"
+msgstr "클라우드와 동기화 중"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "로컬로 적용, 클라우드 설정 병합"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "로컬로 적용됨, 클라우드 설정이 충돌함"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "로컬로 적용했지만 클라우드 동기화에 실패했습니다."
+
+msgid "Sync failed"
+msgstr "동기화 실패"
+
+msgid "Unsaved changes"
+msgstr "저장되지 않은 변경사항"
+
+msgid "Reloading current settings"
+msgstr "현재 설정을 다시 로드하는 중"
+
+msgid "Settings could not be applied"
+msgstr "설정을 적용할 수 없습니다."
+
+msgid "Settings unavailable"
+msgstr "설정을 사용할 수 없음"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "다른 곳에서 정책이 변경되었습니다. 최신 설정이 다시 로드됩니다."
+
+msgid "Disabled by user"
+msgstr "사용자에 의해 비활성화됨"
+
+msgid "Unsupported printer model"
+msgstr "지원되지 않는 프린터 모델"
+
+msgid "AI Agent unavailable"
+msgstr "AI 에이전트를 사용할 수 없음"
+
+msgid "NPU unavailable"
+msgstr "NPU를 사용할 수 없음"
+
+msgid "No camera"
+msgstr "카메라 없음"
+
+msgid "Camera unavailable"
+msgstr "카메라를 사용할 수 없음"
+
+msgid "Printer is not printing"
+msgstr "프린터가 인쇄되지 않습니다."
+
+msgid "Waiting for the first AI detection"
+msgstr "첫 번째 AI 감지를 기다리는 중"
+
+msgid "AI detection results are delayed"
+msgstr "AI 탐지 결과가 지연됩니다"
+
+msgid "Camera capture or AI inference failed"
+msgstr "카메라 캡처 또는 AI 추론 실패"
+
+msgid "Camera snapshot is stale"
+msgstr "카메라 스냅샷이 오래되었습니다."
+
+msgid "Print session is unavailable"
+msgstr "인쇄 세션을 사용할 수 없습니다."
+
+msgid "Print state is unavailable"
+msgstr "인쇄 상태를 사용할 수 없습니다."
+
+msgid "AI model version mismatch"
+msgstr "AI 모델 버전 불일치"
+
+msgid "Muted for this print"
+msgstr "이 인쇄물에 대해 음소거됨"
+
+msgid "All detection types are disabled"
+msgstr "모든 감지 유형이 비활성화되었습니다."
+
+msgid "No valid AI policy"
+msgstr "유효한 AI 정책이 없습니다."
+
+msgid "AI configuration is being prepared"
+msgstr "AI 구성 준비 중"
+
+msgid "Policy verification failed"
+msgstr "정책 확인 실패"
+
+msgid "Nozzle Blob"
+msgstr "노즐 뭉침"
+
+msgid "First Layer Extrusion"
+msgstr "첫 레이어 압출 이상"
+
+msgid "Warp or Detachment"
+msgstr "뒤틀림 또는 분리"
+
+msgid "Off"
+msgstr "끄기"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "인쇄 전 이물질 확인의 경우 Critical은 Auto Pause가 선택된 경우에만 인쇄를 차단합니다."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "안전 모드가 활성화되었습니다. 사전 인쇄 확인은 알림만 제공하며 인쇄를 차단하지 않습니다."
+
+msgid "AI Platform V3 is required"
+msgstr "AI Platform V3가 필요합니다."

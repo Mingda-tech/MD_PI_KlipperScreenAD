@@ -488,7 +488,6 @@ msgid "Package will be updated"
 
 msgstr "A csomag frissítésre kerül"
 
-
 msgid "Part Fan"
 msgstr "Tárgyhűtő"
 
@@ -761,14 +760,12 @@ msgid "commit"
 
 msgstr "ajánlás"
 
-
 msgid "dBm"
 msgstr "dBm"
 
 msgid "hour"
 
 msgstr "óra"
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr "a 'rename_existing' használó makrók el vannak rejtve"
@@ -779,7 +776,6 @@ msgstr "a '_' jellel kezdődő nevű makrók el vannak rejtve"
 msgid "minute"
 
 msgstr "perc"
-
 
 msgid "mm"
 msgstr "mm"
@@ -1530,3 +1526,171 @@ msgstr "Nem olvasható az eszköz sorozatszáma."
 
 msgid "Waiting for terms acceptance."
 msgstr "Várakozás a feltételek elfogadására."
+
+msgid "Watching"
+msgstr "Monitoring"
+
+msgid "Not Watching"
+msgstr "Nem figyelni"
+
+msgid "Default Settings"
+msgstr "Alapértelmezett beállítások"
+
+msgid "Sensitivity"
+msgstr "Érzékenység"
+
+msgid "Low"
+msgstr "Alacsony"
+
+msgid "High"
+msgstr "Magas"
+
+msgid "Action"
+msgstr "Akció"
+
+msgid "Notify Only"
+msgstr "Csak értesítés"
+
+msgid "Auto Pause"
+msgstr "Automatikus szünet"
+
+msgid "Follow Default"
+msgstr "Kövesse az alapértelmezettet"
+
+msgid "Detection Types"
+msgstr "Észlelési típusok"
+
+msgid "Configure"
+msgstr "Konfigurálás"
+
+msgid "No detection types are available for this printer"
+msgstr "Ehhez a nyomtatóhoz nem állnak rendelkezésre észlelési típusok"
+
+msgid "Safe mode"
+msgstr "Biztonságos mód"
+
+msgid "Applied"
+msgstr "Alkalmazva"
+
+msgid "Synced"
+msgstr "Szinkronizálva"
+
+msgid "Applied locally"
+msgstr "Helyben alkalmazva"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Helyben alkalmazva, felhő szinkronizálásra vár"
+
+msgid "Applying on this printer"
+msgstr "Jelentkezés ezen a nyomtatón"
+
+msgid "Waiting for cloud sync"
+msgstr "Várakozás a felhő szinkronizálására"
+
+msgid "Syncing with cloud"
+msgstr "Szinkronizálás felhővel"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Helyi alkalmazás, felhőbeállítások egyesítése"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Helyileg alkalmazva, a felhőbeállítások ütköznek"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Helyileg alkalmazva, a felhőszinkronizálás nem sikerült"
+
+msgid "Sync failed"
+msgstr "A szinkronizálás nem sikerült"
+
+msgid "Unsaved changes"
+msgstr "Nem mentett módosítások"
+
+msgid "Reloading current settings"
+msgstr "A jelenlegi beállítások újratöltése"
+
+msgid "Settings could not be applied"
+msgstr "A beállításokat nem sikerült alkalmazni"
+
+msgid "Settings unavailable"
+msgstr "A beállítások nem érhetők el"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "A politika máshol megváltozott. A legújabb beállítások újra betöltődnek."
+
+msgid "Disabled by user"
+msgstr "A felhasználó letiltotta"
+
+msgid "Unsupported printer model"
+msgstr "Nem támogatott nyomtatómodell"
+
+msgid "AI Agent unavailable"
+msgstr "Az AI-ügynök nem érhető el"
+
+msgid "NPU unavailable"
+msgstr "NPU nem érhető el"
+
+msgid "No camera"
+msgstr "Nincs kamera"
+
+msgid "Camera unavailable"
+msgstr "A kamera nem elérhető"
+
+msgid "Printer is not printing"
+msgstr "A nyomtató nem nyomtat"
+
+msgid "Waiting for the first AI detection"
+msgstr "Várakozás az első AI-észlelésre"
+
+msgid "AI detection results are delayed"
+msgstr "Az AI-felismerés eredménye késik"
+
+msgid "Camera capture or AI inference failed"
+msgstr "A kamerarögzítés vagy az AI-következtetés sikertelen"
+
+msgid "Camera snapshot is stale"
+msgstr "A kamera pillanatképe elavult"
+
+msgid "Print session is unavailable"
+msgstr "A nyomtatási munkamenet nem érhető el"
+
+msgid "Print state is unavailable"
+msgstr "A nyomtatási állapot nem érhető el"
+
+msgid "AI model version mismatch"
+msgstr "Nem egyezik az AI modell verziója"
+
+msgid "Muted for this print"
+msgstr "Elnémítva ehhez a nyomathoz"
+
+msgid "All detection types are disabled"
+msgstr "Minden észlelési típus le van tiltva"
+
+msgid "No valid AI policy"
+msgstr "Nincs érvényes AI szabályzat"
+
+msgid "AI configuration is being prepared"
+msgstr "Az AI konfiguráció előkészítése folyamatban van"
+
+msgid "Policy verification failed"
+msgstr "A szabályzat ellenőrzése nem sikerült"
+
+msgid "Nozzle Blob"
+msgstr "Folt a fúvókán"
+
+msgid "First Layer Extrusion"
+msgstr "Első réteg extrudálási probléma"
+
+msgid "Warp or Detachment"
+msgstr "Vetedés vagy leválás"
+
+msgid "Off"
+msgstr "Ki"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "A nyomtatás előtti idegen objektumok ellenőrzéséhez a Kritikus funkció csak akkor tiltja le a nyomtatást, ha az Automatikus szünet van kiválasztva."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "A csökkentett mód aktív. A nyomtatás előtti csekk csak értesít, nem blokkolja a nyomtatást."
+
+msgid "AI Platform V3 is required"
+msgstr "AI Platform V3 szükséges"

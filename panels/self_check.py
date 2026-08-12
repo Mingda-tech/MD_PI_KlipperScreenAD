@@ -31,6 +31,9 @@ class Panel(ScreenPanel):
         self.network_interfaces = netifaces.interfaces()
         self.wireless_interfaces = [iface for iface in self.network_interfaces if iface.startswith('w')]
         self.wifi = None
+        self.wifi_connected = False
+        self.wifi_check_pending = False
+        self.last_wifi_check = 0
         self.use_network_manager = os.system('systemctl is-active --quiet NetworkManager.service') == 0
         if len(self.wireless_interfaces) > 0:
             logging.info(f"Found wireless interfaces: {self.wireless_interfaces}")
@@ -41,6 +44,8 @@ class Panel(ScreenPanel):
                 logging.info("Using wpa_cli")
                 from ks_includes.wifi import WifiManager
             self.wifi = WifiManager(self.wireless_interfaces[0])
+            if self.use_network_manager:
+                self.wifi.add_callback("initialized", self.wifi_initialized_callback)
 
         self.test_items = ["Nozzle Heating", "Hot Bed Heating", "Nozzle Cooling Fan", "Hotend Cooling Fan", "Auto Leveling", "Camera", "WiFi"]
         self.steps = [x for x in range(len(self.test_items))]
@@ -101,6 +106,40 @@ class Panel(ScreenPanel):
 
         self.content.add(grid)        
 
+    def wifi_initialized_callback(self, initialized, error):
+        if error:
+            logging.error("WiFi initialization failed during self-check: %s", error)
+            self.wifi_connected = False
+            return
+        self.request_wifi_status()
+
+    def request_wifi_status(self):
+        if self.wifi is None or self.wifi_check_pending:
+            return
+        if self.use_network_manager and not self.wifi.initialized:
+            return
+        self.wifi_check_pending = True
+        self.last_wifi_check = time.monotonic()
+
+        if self.use_network_manager:
+            self.wifi.get_connected_ssid(self.wifi_status_callback)
+            return
+
+        try:
+            connected_ssid = self.wifi.get_connected_ssid()
+            GLib.idle_add(self.wifi_status_callback, connected_ssid, None)
+        except Exception as exc:
+            GLib.idle_add(self.wifi_status_callback, None, str(exc))
+
+    def wifi_status_callback(self, connected_ssid, error):
+        self.wifi_check_pending = False
+        if error:
+            logging.error("Unable to read the current WiFi connection: %s", error)
+            self.wifi_connected = False
+        else:
+            self.wifi_connected = connected_ssid is not None
+        return False
+
     def remove_all_dialog(self):
         self.close_screensaver()
         for dialog in self.screen.dialogs:
@@ -159,10 +198,9 @@ class Panel(ScreenPanel):
                         is_ok = False
                         break
             elif step == 6:  # WiFi
-                is_ok = False
-                connected_ssid = self.wifi.get_connected_ssid()
-                if connected_ssid is not None:
-                    is_ok = True
+                if time.monotonic() - self.last_wifi_check >= 2:
+                    self.request_wifi_status()
+                is_ok = self.wifi_connected
 
             if is_ok:
                 GLib.idle_add(self.change_state, step, 0)

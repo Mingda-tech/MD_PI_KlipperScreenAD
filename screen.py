@@ -1168,6 +1168,8 @@ class KlipperScreen(Gtk.Window):
             logging.debug("Power status changed: %s", data)
             self.printer.process_power_update(data)
             self.panels['splash_screen'].check_power_status()
+        elif action == "notify_ai_preflight_result":
+            self._handle_ai_preflight_result(data)
         elif action == "notify_gcode_response" and self.printer.state not in ["error", "shutdown"]:
             if not (data.startswith("B:") or data.startswith("T:")):
                 if "RESPOND TYPE=" in data:
@@ -1199,12 +1201,36 @@ class KlipperScreen(Gtk.Window):
                     logging.info(f"Variables content: {data['save_variables']['variables']}")
                     if "feed_system_active_tool" in data["save_variables"]["variables"]:
                         logging.info(f"feed_system_active_tool updated to: {data['save_variables']['variables']['feed_system_active_tool']}")
-        ai_detection_result = self._normalize_ai_detection_notification(action, data)
-        if ai_detection_result is not None:
-            self._handle_ai_detection_result(ai_detection_result)
-            action = "notify_ai_detection_result"
-            data = ai_detection_result
         self.process_update(action, data)
+
+    def _handle_ai_preflight_result(self, data):
+        payload = data[0] if isinstance(data, (list, tuple)) and data else data
+        if not isinstance(payload, dict):
+            logging.warning("Invalid AI preflight notification: %s", data)
+            return
+        self.ai_preflight_result = payload
+        result = str(payload.get("result") or "UNAVAILABLE").upper()
+        allow_print = bool(payload.get("allowPrint", True))
+        if result == "UNAVAILABLE":
+            self.show_popup_message(
+                _("AI pre-print check is unavailable. Printing will continue."),
+                level=2,
+            )
+        elif result == "WARNING":
+            self.show_popup_message(
+                _("AI pre-print check found a warning. Printing will continue."),
+                level=2,
+            )
+        elif result == "CRITICAL" and allow_print:
+            self.show_popup_message(
+                _("AI found a critical foreign object, but notify-only mode allows printing."),
+                level=3,
+            )
+        elif result == "CRITICAL":
+            self.show_popup_message(
+                _("AI found a critical foreign object. Print start was blocked."),
+                level=3,
+            )
 
     def process_update(self, *args):
         self.base_panel.process_update(*args)
@@ -1906,8 +1932,6 @@ class KlipperScreen(Gtk.Window):
         info = self.apiclient.send_request("machine/system_info")
         if info and 'system_info' in info:
             self.printer.system_info = info['system_info']
-        self.refresh_ai_detection_settings_cache(force=True)
-
         self.ws_subscribe()
         extra_items = (self.printer.get_tools()
                        + self.printer.get_heaters()

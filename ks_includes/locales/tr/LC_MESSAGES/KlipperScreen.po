@@ -492,7 +492,6 @@ msgid "Package will be updated"
 
 msgstr "Paket yükseltilecek"
 
-
 msgid "Part Fan"
 msgstr "Parça Fan"
 
@@ -765,14 +764,12 @@ msgid "commit"
 
 msgstr "commit"
 
-
 msgid "dBm"
 msgstr "dBm"
 
 msgid "hour"
 
 msgstr "saat"
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr "'rename_existing'i kullanan makrolar gizlendi"
@@ -783,7 +780,6 @@ msgstr "adı '_' ile başlayan makrolar gizlendi"
 msgid "minute"
 
 msgstr "dakika"
-
 
 msgid "mm"
 msgstr "mm"
@@ -870,9 +866,6 @@ msgstr "Devam et"
 
 #~ msgid "Delete"
 #~ msgstr "Sil"
-
-#~ msgid "Off"
-#~ msgstr "Kapa"
 
 #~ msgid "View Mesh"
 #~ msgstr "Örgüyü Görüntüle"
@@ -1642,3 +1635,171 @@ msgstr "Cihaz seri numarası okunamadı."
 
 msgid "Waiting for terms acceptance."
 msgstr "Koşulların kabul edilmesi bekleniyor."
+
+msgid "Watching"
+msgstr "İzleme"
+
+msgid "Not Watching"
+msgstr "İzlenmiyor"
+
+msgid "Default Settings"
+msgstr "Varsayılan Ayarlar"
+
+msgid "Sensitivity"
+msgstr "Hassasiyet"
+
+msgid "Low"
+msgstr "Düşük"
+
+msgid "High"
+msgstr "Yüksek"
+
+msgid "Action"
+msgstr "Eylem"
+
+msgid "Notify Only"
+msgstr "Yalnızca Bildir"
+
+msgid "Auto Pause"
+msgstr "Otomatik Duraklatma"
+
+msgid "Follow Default"
+msgstr "Varsayılanı Takip Et"
+
+msgid "Detection Types"
+msgstr "Algılama Türleri"
+
+msgid "Configure"
+msgstr "Yapılandır"
+
+msgid "No detection types are available for this printer"
+msgstr "Bu yazıcı için algılama türü mevcut değil"
+
+msgid "Safe mode"
+msgstr "Güvenli mod"
+
+msgid "Applied"
+msgstr "Uygulandı"
+
+msgid "Synced"
+msgstr "Senkronize edildi"
+
+msgid "Applied locally"
+msgstr "Yerel olarak uygulanır"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Yerel olarak uygulandı, bulut senkronizasyonu bekleniyor"
+
+msgid "Applying on this printer"
+msgstr "Bu yazıcıda uygulanıyor"
+
+msgid "Waiting for cloud sync"
+msgstr "Bulut senkronizasyonu bekleniyor"
+
+msgid "Syncing with cloud"
+msgstr "Bulutla senkronizasyon"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Yerel olarak uygulanır, bulut ayarları birleştirilir"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Yerel olarak uygulandı, bulut ayarları çakışıyor"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Yerel olarak uygulandı, bulut senkronizasyonu başarısız oldu"
+
+msgid "Sync failed"
+msgstr "Senkronizasyon başarısız oldu"
+
+msgid "Unsaved changes"
+msgstr "Kaydedilmemiş değişiklikler"
+
+msgid "Reloading current settings"
+msgstr "Mevcut ayarlar yeniden yükleniyor"
+
+msgid "Settings could not be applied"
+msgstr "Ayarlar uygulanamadı"
+
+msgid "Settings unavailable"
+msgstr "Ayarlar kullanılamıyor"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Politika başka yerde değişti. En son ayarlar yeniden yüklenecek."
+
+msgid "Disabled by user"
+msgstr "Kullanıcı tarafından devre dışı bırakıldı"
+
+msgid "Unsupported printer model"
+msgstr "Desteklenmeyen yazıcı modeli"
+
+msgid "AI Agent unavailable"
+msgstr "AI Aracısı kullanılamıyor"
+
+msgid "NPU unavailable"
+msgstr "NPU kullanılamıyor"
+
+msgid "No camera"
+msgstr "Kamera yok"
+
+msgid "Camera unavailable"
+msgstr "Kamera kullanılamıyor"
+
+msgid "Printer is not printing"
+msgstr "Yazıcı yazdırmıyor"
+
+msgid "Waiting for the first AI detection"
+msgstr "İlk AI tespitini bekliyorum"
+
+msgid "AI detection results are delayed"
+msgstr "AI tespit sonuçları gecikti"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Kamera yakalama veya yapay zeka çıkarımı başarısız oldu"
+
+msgid "Camera snapshot is stale"
+msgstr "Kamera anlık görüntüsü eski"
+
+msgid "Print session is unavailable"
+msgstr "Yazdırma oturumu kullanılamıyor"
+
+msgid "Print state is unavailable"
+msgstr "Yazdırma durumu kullanılamıyor"
+
+msgid "AI model version mismatch"
+msgstr "AI modeli sürüm uyuşmazlığı"
+
+msgid "Muted for this print"
+msgstr "Bu baskı için sessize alındı"
+
+msgid "All detection types are disabled"
+msgstr "Tüm algılama türleri devre dışı bırakıldı"
+
+msgid "No valid AI policy"
+msgstr "Geçerli bir yapay zeka politikası yok"
+
+msgid "AI configuration is being prepared"
+msgstr "Yapay zeka yapılandırması hazırlanıyor"
+
+msgid "Policy verification failed"
+msgstr "Politika doğrulaması başarısız oldu"
+
+msgid "Nozzle Blob"
+msgstr "Meme üzerinde damla"
+
+msgid "First Layer Extrusion"
+msgstr "Birinci katman ekstrüzyon sorunu"
+
+msgid "Warp or Detachment"
+msgstr "Çarpılma veya ayrılma"
+
+msgid "Off"
+msgstr "Kapalı"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "Baskı öncesi yabancı nesne kontrolü için Kritik, yalnızca Otomatik Duraklat seçildiğinde yazdırmayı engeller."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Güvenli mod etkin. Baskı öncesi kontrolü yalnızca bildirimde bulunur ve yazdırmayı engellemez."
+
+msgid "AI Platform V3 is required"
+msgstr "AI Platform V3 gereklidir"

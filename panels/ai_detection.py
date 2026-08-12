@@ -1,692 +1,1271 @@
+# -*- coding: utf-8 -*-
+"""AI Platform V3 status and policy client.
+
+KlipperScreen presents Agent state and edits the Agent-owned policy. It does
+not evaluate confidence, aggregate detections, or decide printer actions.
+"""
+
 import logging
 import threading
+import uuid
 
 import gi
 
 gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk, GLib, Pango
+from gi.repository import GLib, Gtk, Pango
+
 from ks_includes.screen_panel import ScreenPanel
 
 
-def _translation_strings():
-    _("First Layer")
-    _("First Layer Detection")
-    _("Foreign Object")
-    _("Foreign Object Detection")
-    _("General Detection")
-    _("Spaghetti")
-    _("Spaghetti Detection")
-    _("Warp Edge")
-    _("Warp Edge Detection")
-    _("Nozzle Blob Detection")
-    _("Pause Count")
-    _("Pause Count: %(count)d/%(required)d")
-
-
-DETECTION_TYPES = [
-    {
-        "key": "spaghetti",
-        "name": "Spaghetti Detection",
-        "short_name": "Spaghetti",
-        "macro": "AI_DETECT_SPAGHETTI",
-        "default_threshold": 0.70,
-        "default_interval": 30,
-        "default_scheduled": True,
-        "default_pause_consecutive": 3,
-        "aliases": [],
-    },
-    {
-        "key": "warphead",
-        "name": "Nozzle Blob Detection",
-        "short_name": "Nozzle Blob Detection",
-        "macro": "AI_DETECT_WARPHEAD",
-        "default_threshold": 0.75,
-        "default_interval": 60,
-        "default_scheduled": False,
-        "force_scheduled": False,
-        "default_pause_consecutive": 3,
-        "aliases": ["Warp Head Detection", "Warp Head", "Nozzle Blob"],
-    },
-    {
-        "key": "tooLessAndTooMuch",
-        "name": "First Layer Detection",
-        "short_name": "First Layer",
-        "macro": "AI_DETECT_EXTRUSION",
-        "default_threshold": 0.70,
-        "default_interval": 60,
-        "default_scheduled": False,
-        "default_pause_consecutive": 1,
-        "aliases": [
-            "Extrusion Detection",
-            "Extrusion",
-            "First Layer Detection",
-            "First Layer",
-        ],
-    },
-    {
-        "key": "warpEdgesAndNonStick",
-        "name": "Warp Edge Detection",
-        "short_name": "Warp Edge",
-        "macro": "AI_DETECT_NONSTICK",
-        "default_threshold": 0.70,
-        "default_interval": 120,
-        "default_scheduled": False,
-        "default_pause_consecutive": 1,
-        "aliases": [],
-    },
-    {
-        "key": "foreignBody",
-        "name": "Foreign Object Detection",
-        "short_name": "Foreign Object",
-        "macro": "AI_DETECT_FOREIGNBODY",
-        "default_threshold": 0.60,
-        "default_interval": 60,
-        "default_scheduled": False,
-        "force_scheduled": False,
-        "default_pause_consecutive": 1,
-        "aliases": ["Foreign Body Detection", "Foreign Body"],
-    },
-]
-
-DEFAULT_PAUSE_CONSECUTIVE_DETECTIONS = 1
-
-LEGACY_DETECTION_ALIASES = {
-    "coco80": "General Detection",
-    "ai_detect_coco80": "General Detection",
-    "general detection": "General Detection",
-    "general": "General Detection",
+PROTOCOL_VERSION = "AI_PLATFORM_V3"
+POLICY_SCHEMA_VERSION = 3
+SENSITIVITIES = ("LOW", "MEDIUM", "HIGH")
+ACTIONS = ("NOTIFY_ONLY", "AUTO_PAUSE")
+INHERIT = "INHERIT"
+DEFECT_TYPES = (
+    "SPAGHETTI",
+    "NOZZLE_BLOB",
+    "FIRST_LAYER_EXTRUSION",
+    "WARP_OR_DETACHMENT",
+    "FOREIGN_OBJECT",
+)
+DEFECT_NAMES = {
+    "SPAGHETTI": "Spaghetti",
+    "NOZZLE_BLOB": "Nozzle Blob",
+    "FIRST_LAYER_EXTRUSION": "First Layer Extrusion",
+    "WARP_OR_DETACHMENT": "Warp or Detachment",
+    "FOREIGN_OBJECT": "Foreign Object",
+}
+REASON_NAMES = {
+    "DISABLED_BY_USER": "Disabled by user",
+    "UNSUPPORTED_MODEL": "Unsupported printer model",
+    "AGENT_OFFLINE": "AI Agent unavailable",
+    "NPU_OFFLINE": "NPU unavailable",
+    "NO_CAMERA": "No camera",
+    "CAMERA_UNAVAILABLE": "Camera unavailable",
+    "NOT_PRINTING": "Printer is not printing",
+    "DETECTION_PENDING": "Waiting for the first AI detection",
+    "DETECTION_STALE": "AI detection results are delayed",
+    "CAPTURE_OR_INFERENCE_FAILED": "Camera capture or AI inference failed",
+    "STALE_FRAME": "Camera snapshot is stale",
+    "PRINT_SESSION_UNAVAILABLE": "Print session is unavailable",
+    "PRINT_STATE_UNAVAILABLE": "Print state is unavailable",
+    "MODEL_VERSION_MISMATCH": "AI model version mismatch",
+    "PRINT_MUTED": "Muted for this print",
+    "NO_ENABLED_DEFECTS": "All detection types are disabled",
+    "NO_VALID_POLICY": "No valid AI policy",
+    "POLICY_NOT_READY": "No valid AI policy",
+    "POLICY_SIGNATURE_INVALID": "Policy verification failed",
+}
+SYNC_NAMES = {
+    "SYNCED": "Synced",
+    "APPLIED": "Applied",
+    "LOCAL_APPLIED": "Applied locally",
+    "LOCAL_READY": "Applied locally",
+    "CACHE_LOADED": "Applied locally",
+    "LOCAL_APPLIED_PENDING": "Applied locally, waiting for cloud sync",
+    "LOCAL_PENDING_SYNC": "Applied locally, waiting for cloud sync",
+    "PENDING_LOCAL": "Applying on this printer",
+    "PENDING_CLOUD": "Waiting for cloud sync",
+    "WAITING_FOR_CLOUD_SYNC": "Applied locally, waiting for cloud sync",
+    "SYNCING": "Syncing with cloud",
+    "REBASING": "Applied locally, merging cloud settings",
+    "CONFLICT": "Applied locally, cloud settings conflict",
+    "FAILED": "Applied locally, cloud sync failed",
+    "ERROR": "Applied locally, cloud sync failed",
+    "FAILED_RETRYABLE": "Applied locally, cloud sync failed",
+    "FAILED_PERMANENT": "Applied locally, cloud sync failed",
+}
+SYNC_ONLY_REASONS = {
+    "CLOUD_OFFLINE", "CLOUD_SYNC_FAILED", "CLOUD_SYNC_PENDING",
+    "CLOUD_PROFILE_UNAVAILABLE", "CLOUD_UNAVAILABLE", "LOCAL_PENDING_SYNC",
+    "PACKAGE_UPGRADE_REQUIRED", "PENDING_CLOUD",
+    "POLICY_PENDING_SYNC", "POLICY_SYNC_FAILED", "POLICY_SYNC_PENDING",
+    "SYNC_CONFLICT", "SYNC_FAILED", "SYNC_FAILED_USING_LOCAL",
+    "WAITING_FOR_CLOUD_SYNC",
+}
+POLICY_TRUST_LOADING = {
+    "BOOTSTRAPPING", "INITIALIZING", "LOADING", "LOADING_CACHE",
+}
+POLICY_TRUST_UNAVAILABLE = {
+    "CACHE_CORRUPT", "INVALID", "NO_VALID_POLICY", "POLICY_NOT_READY",
+    "SIGNATURE_INVALID", "UNAVAILABLE",
+}
+POLICY_TRUST_DEGRADED = {
+    "CACHE_CORRUPT", "DEGRADED", "SAFE_DEGRADED", "SIGNATURE_INVALID",
+    "UNAVAILABLE", "VALID_DEGRADED",
+}
+SYNC_PENDING_STATES = {
+    "CLOUD_OFFLINE", "CLOUD_SYNC_PENDING", "LOCAL_APPLIED_PENDING",
+    "LOCAL_ONLY", "LOCAL_PENDING_SYNC", "PENDING", "PENDING_CLOUD",
+    "QUEUED", "RETRYING", "WAITING_FOR_CLOUD_SYNC",
+}
+SYNC_FAILED_STATES = {
+    "CLOUD_PROFILE_UNAVAILABLE", "CLOUD_SYNC_FAILED", "ERROR", "FAILED",
+    "FAILED_PERMANENT", "FAILED_RETRYABLE", "PACKAGE_UPGRADE_REQUIRED",
+    "SYNC_FAILED", "SYNC_FAILED_USING_LOCAL",
 }
 
 
-class Panel(ScreenPanel):
+def _translation_strings():
+    """Keep dynamic strings discoverable by the gettext extractor."""
+    _("AI Detection")
+    _("Checking...")
+    _("Offline")
+    _("Watching")
+    _("Not Watching")
+    _("Settings")
+    _("Default Settings")
+    _("Enabled")
+    _("Sensitivity")
+    _("Low")
+    _("Medium")
+    _("High")
+    _("Action")
+    _("Notify Only")
+    _("Auto Pause")
+    _("Follow Default")
+    _("Detection Types")
+    _("Configure")
+    _("No detection types are available for this printer")
+    _("Safe mode")
+    _("Saved")
+    _("Error")
+    _("Applied")
+    _("Synced")
+    _("Applied locally")
+    _("Applied locally, waiting for cloud sync")
+    _("Applying on this printer")
+    _("Waiting for cloud sync")
+    _("Syncing with cloud")
+    _("Applied locally, merging cloud settings")
+    _("Applied locally, cloud settings conflict")
+    _("Applied locally, cloud sync failed")
+    _("Sync failed")
+    _("Unsaved changes")
+    _("Reloading current settings")
+    _("Settings could not be applied")
+    _("Settings unavailable")
+    _("Policy changed elsewhere. Latest settings will be reloaded.")
+    _("Disabled by user")
+    _("Unsupported printer model")
+    _("AI Agent unavailable")
+    _("NPU unavailable")
+    _("No camera")
+    _("Camera unavailable")
+    _("Printer is not printing")
+    _("Waiting for the first AI detection")
+    _("AI detection results are delayed")
+    _("Camera capture or AI inference failed")
+    _("Camera snapshot is stale")
+    _("Print session is unavailable")
+    _("Print state is unavailable")
+    _("AI model version mismatch")
+    _("Muted for this print")
+    _("All detection types are disabled")
+    _("No valid AI policy")
+    _("AI configuration is being prepared")
+    _("Policy verification failed")
+    _("Spaghetti")
+    _("Nozzle Blob")
+    _("First Layer Extrusion")
+    _("Warp or Detachment")
+    _("Foreign Object")
+    _("Off")
+    _("For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected.")
+    _("Safe mode is active. The pre-print check will notify only and will not block printing.")
+    _("AI Platform V3 is required")
+    _("Close")
 
+
+def _unwrap_response(response, expected_key=None):
+    """Unwrap one response without mistaking nested status policy for status."""
+    if not isinstance(response, dict):
+        return None
+    result = response.get("result", response.get("data", response))
+    if not isinstance(result, dict):
+        return None
+    if expected_key and isinstance(result.get(expected_key), dict):
+        return result[expected_key]
+    return result
+
+
+def _policy_version(policy):
+    try:
+        return max(0, int((policy or {}).get("policyVersion") or 0))
+    except (TypeError, ValueError):
+        return 0
+
+
+class Panel(ScreenPanel):
     def __init__(self, screen, title):
         super().__init__(screen, title)
-        self.menu = ['main_menu']
-        self.settings = {}
-        self.status_timeout = None
-        self.ai_online = False
-        self.pause_on_defect = True
-        self.last_result = None
+        self.menu = ["main_menu"]
         self._active = False
+        self._refreshing = False
+        self._refresh_pending = False
+        self._updating_controls = False
+        self._saving = False
+        self._save_failed = False
+        self._conflict_reloading = False
+        self._dirty = False
+        self._policy_loaded = False
+        self._refresh_completed = False
+        self._protocol_ready = False
+        self._status_request_ok = False
+        self._policy_request_ok = False
+        self._policy_compatible = False
+        self._policy_generation = 0
+        self._pending_request_id = None
+        self._baseline_settings = None
+        self._editing_defect = None
+        self._icon_cache = {}
+        self.status_timeout = None
+        self.status = {}
+        self.policy = {}
+        self.supported_defects = set()
+        self.defect_drafts = {
+            defect_type: {"sensitivity": INHERIT, "actionMode": INHERIT}
+            for defect_type in DEFECT_TYPES
+        }
 
-        self.labels['main_menu'] = self._build_main_page()
-        self.labels['settings_menu'] = self._build_settings_page()
+        self.labels["main_menu"] = self._build_main_page()
+        self._build_defect_popover()
+        self._update_sync_summary()
+        self._update_control_sensitivity()
+        self._set_icon("status_icon", "info", 1.35)
+        self.content.add(self.labels["main_menu"])
 
-        self.content.add(self.labels['main_menu'])
-
-    # ==================== UI Build ====================
+    @staticmethod
+    def _defect_key(defect_type):
+        return defect_type.lower()
 
     def _build_main_page(self):
-        page = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=5)
+        page = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
+        page.get_style_context().add_class("ai-page")
+        page.pack_start(self._build_status_bar(), False, False, 0)
 
-        # --- Status bar ---
-        status_row = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-        status_row.get_style_context().add_class("frame-item")
-
-        self.labels['status_label'] = Gtk.Label()
-        self._set_status_label(_("Checking..."), "gray")
-        self.labels['status_label'].set_hexpand(True)
-        self.labels['status_label'].set_halign(Gtk.Align.START)
-
-        settings_btn = self._gtk.Button("fine-tune", _("Settings"), "color3")
-        settings_btn.connect("clicked", self.load_menu, 'settings', _("Settings"))
-
-        status_row.pack_start(self.labels['status_label'], True, True, 5)
-        status_row.pack_end(settings_btn, False, False, 5)
-        page.pack_start(status_row, False, False, 0)
-
-        # --- Pause on defect toggle ---
-        pause_row = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-        pause_row.get_style_context().add_class("frame-item")
-
-        pause_label = Gtk.Label()
-        pause_label.set_markup(
-            f"<big><b>{GLib.markup_escape_text(_('Pause Print on Defect'))}</b></big>"
-        )
-        pause_label.set_hexpand(True)
-        pause_label.set_halign(Gtk.Align.START)
-
-        self.labels['pause_switch'] = Gtk.Switch()
-        self.labels['pause_switch'].set_active(True)
-        self.labels['pause_switch'].set_property("width-request", round(self._gtk.font_size * 7))
-        self.labels['pause_switch'].set_property("height-request", round(self._gtk.font_size * 3.5))
-        self.labels['pause_switch'].connect("notify::active", self.on_pause_toggled)
-
-        pause_row.pack_start(pause_label, True, True, 5)
-        pause_row.pack_end(self.labels['pause_switch'], False, False, 5)
-        page.pack_start(pause_row, False, False, 0)
-
-        # --- Latest detection result ---
-        result_row = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=2)
-        result_row.get_style_context().add_class("frame-item")
-
-        result_title = Gtk.Label()
-        result_title.set_markup(
-            f"<big><b>{GLib.markup_escape_text(_('Latest Detection Result'))}</b></big>"
-        )
-        result_title.set_halign(Gtk.Align.START)
-
-        self.labels['result_text'] = Gtk.Label()
-        self.labels['result_text'].set_text(_("No detection results yet"))
-        self.labels['result_text'].set_halign(Gtk.Align.START)
-        self.labels['result_text'].set_line_wrap(True)
-        self.labels['result_text'].set_line_wrap_mode(Pango.WrapMode.WORD_CHAR)
-
-        result_row.pack_start(result_title, False, False, 2)
-        result_row.pack_start(self.labels['result_text'], False, False, 2)
-        page.pack_start(result_row, False, False, 0)
-
-        return page
-
-    def _build_settings_page(self):
-        grid = Gtk.Grid()
-        grid.set_column_homogeneous(True)
-        row_idx = 0
-
-        available_detection_types = [
-            dt for dt in DETECTION_TYPES if self._is_detection_macro_available(dt)
-        ]
-        for idx, dt in enumerate(available_detection_types):
-            key = dt['key']
-
-            # --- Section header ---
-            header = Gtk.Label()
-            header.set_markup(
-                f"\n<big><b>{GLib.markup_escape_text(_(dt['name']))}</b></big>  <small>({key})</small>"
-            )
-            header.set_halign(Gtk.Align.START)
-            grid.attach(header, 0, row_idx, 4, 1)
-            row_idx += 1
-
-            # --- Enable switch ---
-            sw_row = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-            sw_row.get_style_context().add_class("frame-item")
-
-            en_label = Gtk.Label()
-            en_label.set_markup(f"<b>{GLib.markup_escape_text(_('Enabled'))}</b>")
-            self.labels[f'{key}_enabled'] = Gtk.Switch()
-            macro_available = self._is_detection_macro_available(dt)
-            self.labels[f'{key}_enabled'].set_active(macro_available)
-            self.labels[f'{key}_enabled'].set_sensitive(macro_available)
-            self.labels[f'{key}_enabled'].set_property("width-request", round(self._gtk.font_size * 5))
-            self.labels[f'{key}_enabled'].set_property("height-request", round(self._gtk.font_size * 3))
-
-            sw_row.pack_start(en_label, False, False, 5)
-            sw_row.pack_start(self.labels[f'{key}_enabled'], False, False, 5)
-
-            grid.attach(sw_row, 0, row_idx, 4, 1)
-            row_idx += 1
-
-            # --- Confidence threshold slider ---
-            conf_row = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=5)
-            conf_label = Gtk.Label()
-            conf_label.set_markup(f"<b>{GLib.markup_escape_text(_('Confidence'))}</b>")
-            conf_label.set_size_request(round(self._gtk.font_size * 5), -1)
-
-            self.labels[f'{key}_threshold'] = Gtk.Scale.new_with_range(
-                Gtk.Orientation.HORIZONTAL, 0.1, 1.0, 0.05)
-            self.labels[f'{key}_threshold'].set_value(dt['default_threshold'])
-            self.labels[f'{key}_threshold'].set_digits(2)
-            self.labels[f'{key}_threshold'].set_hexpand(True)
-            self.labels[f'{key}_threshold'].set_has_origin(True)
-            self.labels[f'{key}_threshold'].get_style_context().add_class("option_slider")
-
-            conf_row.pack_start(conf_label, False, False, 5)
-            conf_row.pack_start(self.labels[f'{key}_threshold'], True, True, 5)
-            grid.attach(conf_row, 0, row_idx, 4, 1)
-            row_idx += 1
-
-            # --- Auto-pause consecutive detection count ---
-            pause_count_row = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=5)
-            pause_count_label = Gtk.Label()
-            pause_count_label.set_markup(
-                f"<b>{GLib.markup_escape_text(_('Pause Count'))}</b>"
-            )
-            pause_count_label.set_size_request(round(self._gtk.font_size * 5), -1)
-
-            self.labels[f'{key}_pause_count'] = Gtk.SpinButton.new_with_range(
-                1, 99, 1
-            )
-            self.labels[f'{key}_pause_count'].set_value(
-                dt.get(
-                    'default_pause_consecutive',
-                    DEFAULT_PAUSE_CONSECUTIVE_DETECTIONS
-                )
-            )
-            self.labels[f'{key}_pause_count'].set_numeric(True)
-            self.labels[f'{key}_pause_count'].set_property(
-                "width-request", round(self._gtk.font_size * 6)
-            )
-
-            pause_count_row.pack_start(pause_count_label, False, False, 5)
-            pause_count_row.pack_start(
-                self.labels[f'{key}_pause_count'], False, False, 5
-            )
-            grid.attach(pause_count_row, 0, row_idx, 4, 1)
-            row_idx += 1
-
-            if idx < len(available_detection_types) - 1:
-                separator = Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL)
-                grid.attach(separator, 0, row_idx, 4, 1)
-                row_idx += 1
-
-        # --- Save button ---
-        save_btn = self._gtk.Button(None, _("Save"), "color1")
-        save_btn.connect("clicked", self.save_settings)
-        grid.attach(save_btn, 1, row_idx, 2, 1)
+        body = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
+        body.get_style_context().add_class("ai-body")
+        defaults = self._build_defaults_panel()
+        defects = self._build_defects_panel()
+        self.labels["defaults_panel"] = defaults
+        self.labels["defects_panel"] = defects
+        body.pack_start(defaults, False, False, 0)
+        body.pack_start(defects, False, False, 0)
 
         scroll = self._gtk.ScrolledWindow()
-        scroll.add(grid)
-        return scroll
+        scroll.add(body)
+        page.pack_start(scroll, True, True, 0)
+        page.pack_end(self._build_save_bar(), False, False, 0)
+        return page
 
-    # ==================== Lifecycle ====================
+    def _build_status_bar(self):
+        bar = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=12)
+        bar.get_style_context().add_class("ai-status-bar")
+        bar.get_style_context().add_class("ai-status-loading")
+        self.labels["status_bar"] = bar
+
+        icon_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        icon_box.set_halign(Gtk.Align.CENTER)
+        icon_box.set_valign(Gtk.Align.CENTER)
+        icon_box.get_style_context().add_class("ai-status-icon")
+        self.labels["status_icon"] = Gtk.Image()
+        icon_box.pack_start(self.labels["status_icon"], True, True, 0)
+        bar.pack_start(icon_box, False, False, 0)
+
+        text = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=1)
+        text.set_valign(Gtk.Align.CENTER)
+        self.labels["status"] = Gtk.Label(label=_("Checking..."))
+        self.labels["status"].set_halign(Gtk.Align.START)
+        self.labels["status"].set_xalign(0)
+        self.labels["status_detail"] = Gtk.Label()
+        self.labels["status_detail"].set_halign(Gtk.Align.START)
+        self.labels["status_detail"].set_xalign(0)
+        self.labels["status_detail"].set_line_wrap(True)
+        self.labels["status_detail"].set_line_wrap_mode(Pango.WrapMode.WORD_CHAR)
+        self.labels["status_detail"].set_ellipsize(Pango.EllipsizeMode.END)
+        self.labels["status_detail"].set_single_line_mode(True)
+        self.labels["status_detail"].set_no_show_all(True)
+        self.labels["status_detail"].get_style_context().add_class("ai-muted")
+        text.pack_start(self.labels["status"], False, False, 0)
+        text.pack_start(self.labels["status_detail"], False, False, 0)
+        bar.pack_start(text, True, True, 0)
+
+        master = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
+        master.set_valign(Gtk.Align.CENTER)
+        master.get_style_context().add_class("ai-master-control")
+        enabled_label = Gtk.Label()
+        enabled_label.set_markup("<b>{}</b>".format(GLib.markup_escape_text(_("Enabled"))))
+        self.labels["enabled"] = self._switch(_("Enabled"))
+        self.labels["enabled"].connect("notify::active", self._on_enabled_changed)
+        master.pack_start(enabled_label, False, False, 0)
+        master.pack_start(self.labels["enabled"], False, False, 0)
+        bar.pack_end(master, False, False, 0)
+        return bar
+
+    def _build_defaults_panel(self):
+        vertical = self._screen.vertical_mode
+        panel = Gtk.Box(
+            orientation=(Gtk.Orientation.VERTICAL if vertical else Gtk.Orientation.HORIZONTAL),
+            spacing=8,
+        )
+        panel.get_style_context().add_class("ai-settings-panel")
+        panel.get_style_context().add_class("ai-card")
+        panel.get_style_context().add_class("ai-defaults-card")
+        panel.set_valign(Gtk.Align.START)
+        self.labels["sensitivity"] = self._combo(
+            _("Sensitivity"),
+            (("LOW", _("Low")), ("MEDIUM", _("Medium")), ("HIGH", _("High"))),
+            self._on_global_combo_changed,
+        )
+        sensitivity_row = self._setting_row(_("Sensitivity"), self.labels["sensitivity"])
+        sensitivity_row.get_style_context().add_class("ai-global-setting")
+        panel.pack_start(sensitivity_row, True, True, 0)
+        self.labels["action"] = self._combo(
+            _("Action"),
+            (("NOTIFY_ONLY", _("Notify Only")), ("AUTO_PAUSE", _("Auto Pause"))),
+            self._on_global_combo_changed,
+        )
+        action_row = self._setting_row(_("Action"), self.labels["action"])
+        action_row.get_style_context().add_class("ai-global-setting")
+        panel.pack_start(action_row, True, True, 0)
+        return panel
+
+    def _build_defects_panel(self):
+        panel = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=5)
+        panel.get_style_context().add_class("ai-settings-panel")
+        panel.get_style_context().add_class("ai-card")
+        panel.get_style_context().add_class("ai-defects-card")
+        panel.set_valign(Gtk.Align.START)
+        panel.pack_start(self._section_title(_("Detection Types")), False, False, 2)
+        state = Gtk.Label(label=_("Checking..."))
+        state.set_halign(Gtk.Align.START)
+        state.set_xalign(0)
+        state.set_line_wrap(True)
+        state.set_line_wrap_mode(Pango.WrapMode.WORD_CHAR)
+        state.set_no_show_all(True)
+        state.show()
+        self.labels["defects_state"] = state
+        panel.pack_start(state, False, False, 8)
+        for defect_type in DEFECT_TYPES:
+            panel.pack_start(self._build_defect_row(defect_type), False, False, 0)
+        return panel
+
+    def _build_defect_row(self, defect_type):
+        key = self._defect_key(defect_type)
+        row = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
+        row.get_style_context().add_class("ai-compact-row")
+        row.get_style_context().add_class("ai-defect-row")
+        row.set_size_request(-1, max(48, round(self._gtk.font_size * 2.35)))
+        self.labels["defect_{}_row".format(key)] = row
+        name = Gtk.Label()
+        name.set_markup("<b>{}</b>".format(GLib.markup_escape_text(_(DEFECT_NAMES[defect_type]))))
+        name.set_halign(Gtk.Align.START)
+        name.set_xalign(0)
+        name.set_hexpand(True)
+        summary = Gtk.Label()
+        summary.set_halign(Gtk.Align.START)
+        summary.set_xalign(0)
+        summary.set_ellipsize(Pango.EllipsizeMode.END)
+        summary.set_single_line_mode(True)
+        summary.set_no_show_all(True)
+        summary.get_style_context().add_class("ai-muted")
+        self.labels["defect_{}_summary".format(key)] = summary
+        if self._screen.vertical_mode:
+            text = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=1)
+            text.set_valign(Gtk.Align.CENTER)
+            text.pack_start(name, False, False, 0)
+            text.pack_start(summary, False, False, 0)
+            row.pack_start(text, True, True, 4)
+        else:
+            summary.set_size_request(max(210, round(self._gtk.font_size * 9.5)), -1)
+            row.pack_start(name, True, True, 4)
+            row.pack_start(summary, False, False, 4)
+
+        controls = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=6)
+        controls.set_valign(Gtk.Align.CENTER)
+        switch = self._switch(_(DEFECT_NAMES[defect_type]))
+        switch.connect("notify::active", self._on_defect_enabled_changed, defect_type)
+        self.labels["defect_{}_enabled".format(key)] = switch
+        controls.pack_start(switch, False, False, 0)
+        configure = self._gtk.Button(
+            "arrow-right", None, "ai-config-button", scale=0.38,
+        )
+        configure.set_no_show_all(True)
+        configure.set_hexpand(False)
+        configure.set_vexpand(False)
+        configure.set_size_request(
+            max(48, round(self._gtk.font_size * 2.2)),
+            max(48, round(self._gtk.font_size * 2.2)),
+        )
+        configure.get_accessible().set_name(
+            "{}: {}".format(_(DEFECT_NAMES[defect_type]), _("Configure"))
+        )
+        configure.connect("clicked", self._show_defect_editor, defect_type)
+        self.labels["defect_{}_configure".format(key)] = configure
+        controls.pack_start(configure, False, False, 0)
+        row.pack_end(controls, False, False, 2)
+        row.show_all()
+        row.hide()
+        row.set_no_show_all(True)
+        return row
+
+    def _build_save_bar(self):
+        bar = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
+        bar.get_style_context().add_class("ai-save-bar")
+        bar.get_style_context().add_class("ai-save-loading")
+        self.labels["save_bar"] = bar
+        self.labels["sync_icon"] = Gtk.Image()
+        bar.pack_start(self.labels["sync_icon"], False, False, 4)
+        self.labels["sync_summary"] = Gtk.Label(label=_("Checking..."))
+        self.labels["sync_summary"].set_halign(Gtk.Align.START)
+        self.labels["sync_summary"].set_xalign(0)
+        self.labels["sync_summary"].set_line_wrap(True)
+        bar.pack_start(self.labels["sync_summary"], True, True, 0)
+        save = self._gtk.Button(
+            "complete", _("Apply"), "ai-apply-button", scale=0.48,
+            position=Gtk.PositionType.LEFT, lines=1
+        )
+        save.set_hexpand(False)
+        save.set_vexpand(False)
+        save.set_size_request(
+            max(128, round(self._gtk.font_size * 6.3)),
+            max(52, round(self._gtk.font_size * 2.65)),
+        )
+        save.connect("clicked", self.save_settings)
+        self.labels["save"] = save
+        bar.pack_end(save, False, False, 4)
+        return bar
+
+    def _build_defect_popover(self):
+        content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=7)
+        content.get_style_context().add_class("ai-popover")
+        content.set_size_request(
+            min(round(self._gtk.font_size * 18), round(self._gtk.content_width * 0.58)), -1
+        )
+        self.labels["defect_editor_title"] = self._section_title("")
+        content.pack_start(self.labels["defect_editor_title"], False, False, 0)
+        self.labels["defect_editor_sensitivity"] = self._combo(
+            _("Sensitivity"),
+            ((INHERIT, _("Follow Default")), ("LOW", _("Low")),
+             ("MEDIUM", _("Medium")), ("HIGH", _("High"))),
+            self._on_defect_combo_changed,
+        )
+        content.pack_start(
+            self._setting_row(_("Sensitivity"), self.labels["defect_editor_sensitivity"]),
+            False, False, 0
+        )
+        self.labels["defect_editor_action"] = self._combo(
+            _("Action"),
+            ((INHERIT, _("Follow Default")), ("NOTIFY_ONLY", _("Notify Only")),
+             ("AUTO_PAUSE", _("Auto Pause"))),
+            self._on_defect_combo_changed,
+        )
+        content.pack_start(
+            self._setting_row(_("Action"), self.labels["defect_editor_action"]),
+            False, False, 0
+        )
+        preflight = Gtk.Label(
+            label=_(
+                "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+            )
+        )
+        preflight.set_halign(Gtk.Align.START)
+        preflight.set_xalign(0)
+        preflight.set_line_wrap(True)
+        preflight.set_no_show_all(True)
+        self.labels["defect_editor_preflight"] = preflight
+        content.pack_start(preflight, False, False, 2)
+        close = self._gtk.Button(None, _("Close"), "color2", lines=1)
+        close.set_vexpand(False)
+        close.set_size_request(-1, round(self._gtk.font_size * 2.8))
+        close.connect("clicked", self._close_defect_editor)
+        content.pack_end(close, False, False, 0)
+        popover = Gtk.Popover()
+        popover.set_position(
+            Gtk.PositionType.BOTTOM if self._screen.vertical_mode else Gtk.PositionType.LEFT
+        )
+        popover.add(content)
+        self.labels["defect_popover"] = popover
+
+    @staticmethod
+    def _section_title(title):
+        label = Gtk.Label()
+        label.set_markup("<big><b>{}</b></big>".format(GLib.markup_escape_text(title)))
+        label.set_halign(Gtk.Align.START)
+        label.set_xalign(0)
+        label.get_style_context().add_class("ai-section-title")
+        return label
+
+    def _setting_row(self, title, control):
+        row = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
+        row.get_style_context().add_class("ai-compact-row")
+        row.get_style_context().add_class("ai-setting-row")
+        row.set_size_request(-1, max(48, round(self._gtk.font_size * 2.35)))
+        label = Gtk.Label()
+        label.set_markup("<b>{}</b>".format(GLib.markup_escape_text(title)))
+        label.set_halign(Gtk.Align.START)
+        label.set_xalign(0)
+        label.set_hexpand(True)
+        row.pack_start(label, True, True, 6)
+        row.pack_end(control, False, False, 5)
+        return row
+
+    def _combo(self, accessible_name, choices, callback):
+        combo = Gtk.ComboBoxText()
+        combo.get_style_context().add_class("ai-combo")
+        for value, label in choices:
+            combo.append(value, label)
+        combo.set_active(0)
+        combo.set_size_request(
+            max(152, round(self._gtk.font_size * 6.7)),
+            max(44, round(self._gtk.font_size * 2.05)),
+        )
+        combo.get_accessible().set_name(accessible_name)
+        combo.connect("changed", callback)
+        return combo
+
+    @staticmethod
+    def _set_combo(combo, value, choices, default):
+        selected = value if value in choices else default
+        if not combo.set_active_id(selected):
+            combo.set_active(0)
+
+    @staticmethod
+    def _combo_value(combo, default):
+        return str(combo.get_active_id() or default).upper()
+
+    @staticmethod
+    def _set_optional_text(label, text):
+        label.set_text(text)
+        label.set_visible(bool(text))
+
+    @staticmethod
+    def _replace_style_class(widget, classes, active_class):
+        context = widget.get_style_context()
+        for style_class in classes:
+            context.remove_class(style_class)
+        context.add_class(active_class)
+
+    def _switch(self, accessible_name):
+        switch = Gtk.Switch()
+        switch.get_style_context().add_class("ai-compact-switch")
+        switch.set_valign(Gtk.Align.CENTER)
+        switch.set_size_request(
+            max(72, round(self._gtk.font_size * 3.25)),
+            max(44, round(self._gtk.font_size * 1.8)),
+        )
+        switch.get_accessible().set_name(accessible_name)
+        return switch
 
     def activate(self):
         self._active = True
-        self.fetch_status()
-        self.fetch_settings()
-        self.fetch_latest_result()
-        self.status_timeout = GLib.timeout_add_seconds(30, self.fetch_status)
+        self.refresh()
+        self.status_timeout = GLib.timeout_add_seconds(15, self.refresh)
 
     def deactivate(self):
         self._active = False
+        self._refresh_pending = False
         if self.status_timeout:
             GLib.source_remove(self.status_timeout)
             self.status_timeout = None
+        popover = self.labels.get("defect_popover")
+        if popover and popover.get_visible():
+            popover.popdown()
 
     def back(self):
-        if len(self.menu) > 1:
-            self.unload_menu()
+        popover = self.labels.get("defect_popover")
+        if popover and popover.get_visible():
+            popover.popdown()
             return True
         return False
 
     def process_update(self, action, data):
         if action in (
-            "notify_ai_detection_result",
-            "notify_detection_complete",
-            "notify_ai_detection_detection_complete",
+            "notify_server_info", "notify_klippy_ready", "notify_ai_status_updated",
+            "notify_ai_policy_applied", "notify_ai_preflight_result",
         ):
-            result = self._normalize_result_payload(data)
-            if result is not None:
-                self.last_result = result
-                self._update_result_display()
-        elif action == "notify_ai_detection_defect_detected":
-            result = self._normalize_result_payload(data)
-            if result is not None:
-                result = dict(result)
-                result.setdefault("has_defect", True)
-                self.last_result = result
-                self._update_result_display()
+            self.refresh()
 
-    # ==================== REST API ====================
-
-    def fetch_status(self):
+    def refresh(self):
         if not self._active:
             return False
-        def _do():
-            try:
-                result = self._screen.apiclient.send_request("server/ai_detection/status")
-            except Exception as e:
-                logging.exception(f"AI detection: failed to fetch status: {e}")
-                result = None
-            GLib.idle_add(self._on_status_fetched, result)
-        threading.Thread(target=_do, daemon=True).start()
-        return self._active
+        if self._refreshing:
+            self._refresh_pending = True
+            return True
+        self._refreshing = True
+        generation = self._policy_generation
 
-    def _on_status_fetched(self, result):
-        try:
-            if result and isinstance(result, dict) and 'result' in result:
-                data = result['result']
-                if not isinstance(data, dict):
-                    return
-                self.ai_online = bool(data.get('service_available', False))
-                color = "green" if self.ai_online else "red"
-                text = _("Online") if self.ai_online else _("Offline")
-                self._set_status_label(text, color)
-                if 'pause_on_defect' in data:
-                    self._set_pause_switch(bool(data['pause_on_defect']))
-                if 'last_detection' in data and isinstance(data['last_detection'], dict):
-                    self.last_result = data['last_detection']
-                    self._update_result_display()
-            else:
-                self.ai_online = False
-                self._set_status_label(_("Unknown"), "gray")
-        except Exception as e:
-            logging.exception(f"AI detection: error updating status UI: {e}")
-
-    def fetch_settings(self):
-        def _do():
-            try:
-                result = self._screen.apiclient.send_request("server/ai_detection/settings")
-            except Exception as e:
-                logging.exception(f"AI detection: failed to fetch settings: {e}")
-                result = None
-            GLib.idle_add(self._on_settings_fetched, result)
-        threading.Thread(target=_do, daemon=True).start()
-
-    def _on_settings_fetched(self, result):
-        try:
-            if not result or not isinstance(result, dict) or 'result' not in result:
-                return
-            data = result['result']
-            if not isinstance(data, dict):
-                return
-            categories = data.get('categories', {})
-            if not isinstance(categories, dict):
-                return
-            categories = self._set_detection_settings(categories)
-
-            if 'pause_on_defect' in data:
-                self._set_pause_switch(bool(data['pause_on_defect']))
-
-            for dt in DETECTION_TYPES:
-                key = dt['key']
-                cat = categories.get(key, {})
-                if not isinstance(cat, dict):
-                    continue
-                if f'{key}_enabled' in self.labels:
-                    macro_available = self._is_detection_macro_available(dt)
-                    self.labels[f'{key}_enabled'].set_active(bool(cat.get('enabled', False)))
-                    self.labels[f'{key}_enabled'].set_sensitive(macro_available)
-                if f'{key}_threshold' in self.labels:
-                    try:
-                        val = float(cat.get('confidence_threshold', dt['default_threshold']))
-                        self.labels[f'{key}_threshold'].set_value(max(0.1, min(1.0, val)))
-                    except (TypeError, ValueError):
-                        pass
-                if f'{key}_pause_count' in self.labels:
-                    self.labels[f'{key}_pause_count'].set_value(
-                        self._get_pause_consecutive_value(cat, dt)
-                    )
-        except Exception as e:
-            logging.exception(f"AI detection: error updating settings UI: {e}")
-
-    def fetch_latest_result(self):
-        def _do():
-            try:
-                result = self._screen.apiclient.send_request("server/ai_detection/history?limit=1")
-            except Exception as e:
-                logging.exception(f"AI detection: failed to fetch history: {e}")
-                result = None
-            GLib.idle_add(self._on_history_fetched, result)
-        threading.Thread(target=_do, daemon=True).start()
-
-    def _on_history_fetched(self, result):
-        try:
-            if not result or not isinstance(result, dict) or 'result' not in result:
-                return
-            data = result['result']
-            if not isinstance(data, dict):
-                return
-            records = data.get('records', [])
-            if isinstance(records, list) and records:
-                self.last_result = records[0]
-                self._update_result_display()
-        except Exception as e:
-            logging.exception(f"AI detection: error updating history UI: {e}")
-
-    def _update_result_display(self):
-        if not self.last_result or not isinstance(self.last_result, dict):
-            self.labels['result_text'].set_text(_("No detection results yet"))
-            return
-        r = self.last_result
-
-        dtype = self._translate_detection_name(r.get('model_name', r.get('defect_type')))
-        error_msg = self._get_result_error(r)
-        if error_msg:
-            escaped_type = GLib.markup_escape_text(dtype)
-            escaped_error = GLib.markup_escape_text(error_msg)
-            status = (
-                f'<span foreground="red">'
-                f'{GLib.markup_escape_text(_("Error"))}</span>'
+        def request():
+            status = self._request("server/ai_detection/status")
+            policy = self._request("server/ai_detection/policy")
+            GLib.idle_add(
+                self._apply_response, status, policy, generation
             )
-            self.labels['result_text'].set_markup(
-                f"<b>{escaped_type}</b>\n{status}\n{escaped_error}"
-            )
-            return
 
-        defect = bool(r.get('has_defect', False))
-        status_label = _("Defect") if defect else _("Normal")
-        status_color = "red" if defect else "green"
-        escaped_type = GLib.markup_escape_text(dtype)
-        status = f'<span foreground="{status_color}">{GLib.markup_escape_text(status_label)}</span>'
-        lines = [f"<b>{escaped_type}</b>", status]
-        pause_progress = self._format_pause_progress(r)
-        if pause_progress:
-            lines.append(GLib.markup_escape_text(pause_progress))
-        self.labels['result_text'].set_markup("\n".join(lines))
+        threading.Thread(target=request, daemon=True).start()
+        return True
 
-    # ==================== User Actions ====================
+    def _request(self, endpoint):
+        try:
+            response = self._screen.apiclient.send_request(endpoint)
+            return response if isinstance(response, dict) else None
+        except Exception as error:
+            logging.warning("AI Platform V3 endpoint %s unavailable: %s", endpoint, error)
+            return None
 
-    def on_pause_toggled(self, switch, gparam):
-        active = switch.get_active()
-
-        def _do():
-            try:
-                self._screen.apiclient.post_request(
-                    "server/ai_detection/settings",
-                    json={"pause_on_defect": active})
-                GLib.idle_add(self._set_pause_switch, active)
-            except Exception as e:
-                logging.exception(f"AI detection: failed to update pause_on_defect: {e}")
-        threading.Thread(target=_do, daemon=True).start()
-
-    def save_settings(self, widget):
-        categories = {}
-        for dt in DETECTION_TYPES:
-            key = dt['key']
-            existing = self.settings.get(key, {})
-            if not isinstance(existing, dict):
-                existing = {}
-            try:
-                detection_interval = int(existing.get('detection_interval', dt['default_interval']))
-            except (TypeError, ValueError):
-                detection_interval = dt['default_interval']
-            macro_available = self._is_detection_macro_available(dt)
-            has_controls = (
-                f'{key}_enabled' in self.labels and
-                f'{key}_threshold' in self.labels
-            )
-            if macro_available and has_controls:
-                enabled = self.labels[f'{key}_enabled'].get_active()
-                confidence_threshold = round(self.labels[f'{key}_threshold'].get_value(), 2)
-            else:
-                enabled = False
-                confidence_threshold = existing.get('confidence_threshold', dt['default_threshold'])
-                try:
-                    confidence_threshold = round(float(confidence_threshold), 2)
-                except (TypeError, ValueError):
-                    confidence_threshold = dt['default_threshold']
-            pause_count = self._get_pause_consecutive_value(existing, dt)
-            if macro_available and f'{key}_pause_count' in self.labels:
-                pause_count = int(self.labels[f'{key}_pause_count'].get_value())
-            if not macro_available and f'{key}_enabled' in self.labels:
-                self.labels[f'{key}_enabled'].set_active(False)
-            category = {
-                "enabled": enabled,
-                "confidence_threshold": confidence_threshold,
-                "scheduled": self._get_scheduled_value(existing, dt),
-                "detection_interval": max(10, min(300, detection_interval)),
-                "pause_consecutive_detections": max(
-                    DEFAULT_PAUSE_CONSECUTIVE_DETECTIONS,
-                    pause_count
-                ),
-            }
-            categories[key] = category
-
-        def _do():
-            try:
-                result = self._screen.apiclient.post_request(
-                    "server/ai_detection/settings",
-                    json={"categories": categories})
-                if result:
-                    GLib.idle_add(self._set_detection_settings, categories)
-                    GLib.idle_add(self._screen.show_popup_message, _("Saved"), 1)
-                else:
-                    GLib.idle_add(self._screen.show_popup_message, _("Error"), 2)
-            except Exception as e:
-                logging.exception(f"AI detection: failed to save settings: {e}")
-                GLib.idle_add(self._screen.show_popup_message, _("Error"), 2)
-        threading.Thread(target=_do, daemon=True).start()
-
-    # ==================== Helpers ====================
-
-    def _set_status_label(self, text, color):
-        self.labels['status_label'].set_markup(
-            f'<big><b>{GLib.markup_escape_text(_("AI Status"))}:</b> '
-            f'<span foreground="{color}">● {GLib.markup_escape_text(text)}</span></big>'
+    def _apply_response(self, status_response, policy_response, generation):
+        self._refreshing = False
+        status = _unwrap_response(status_response, "status")
+        policy = _unwrap_response(policy_response, "policy")
+        self._refresh_completed = True
+        self._status_request_ok = status is not None
+        policy_response_is_current = generation == self._policy_generation
+        if policy_response_is_current:
+            self._policy_request_ok = policy is not None
+        self.status = status if status is not None else {}
+        status_v3 = bool(
+            self._status_request_ok
+            and self.status.get("protocolVersion") == PROTOCOL_VERSION
+            and str(self.status.get("policySchemaVersion") or "") == str(POLICY_SCHEMA_VERSION)
         )
-
-    def _is_detection_enabled(self, defect_type):
-        dt = next((d for d in DETECTION_TYPES if d['key'] == defect_type), None)
-        if dt is not None and not self._is_detection_macro_available(dt):
-            return False
-        category = self.settings.get(defect_type)
-        if isinstance(category, dict) and 'enabled' in category:
-            return bool(category.get('enabled'))
-        return dt is not None
-
-    def _set_detection_settings(self, categories):
-        if isinstance(categories, dict):
-            categories = self._apply_detection_defaults(categories)
-            self.settings = categories
-            self._screen.update_ai_detection_settings_cache(categories=categories)
-            return categories
-        return {}
-
-    def _get_gcode_macro_names(self):
-        try:
-            return {str(macro).casefold() for macro in self._printer.get_gcode_macros()}
-        except Exception as e:
-            logging.warning(f"AI detection: failed to read gcode macros: {e}")
-            return set()
-
-    def _is_detection_macro_available(self, detection_type):
-        if not isinstance(detection_type, dict):
-            return False
-        macro = detection_type.get("macro")
-        if not macro:
-            return False
-        return str(macro).casefold() in self._get_gcode_macro_names()
-
-    def _apply_detection_defaults(self, categories):
-        normalized = {
-            str(key): dict(value)
-            for key, value in categories.items()
-            if isinstance(value, dict)
-        }
-        for dt in DETECTION_TYPES:
-            key = dt["key"]
-            category = normalized.get(key, {})
-            macro_available = self._is_detection_macro_available(dt)
-            if not macro_available:
-                category["enabled"] = False
-            elif "enabled" not in category:
-                category["enabled"] = True
-            category["pause_consecutive_detections"] = (
-                self._get_pause_consecutive_value(category, dt)
-            )
-            if "scheduled" not in category or "force_scheduled" in dt:
-                category["scheduled"] = self._get_scheduled_value(
-                    category, dt
-                )
-            normalized[key] = category
-        return normalized
-
-    def _get_scheduled_value(self, category, detection_type):
-        if "force_scheduled" in detection_type:
-            return bool(detection_type["force_scheduled"])
-        default_value = bool(detection_type.get("default_scheduled", False))
-        if not isinstance(category, dict):
-            return default_value
-        return bool(category.get("scheduled", default_value))
-
-    def _get_pause_consecutive_value(self, category, detection_type):
-        default_value = detection_type.get(
-            "default_pause_consecutive",
-            DEFAULT_PAUSE_CONSECUTIVE_DETECTIONS
+        policy_v3 = bool(
+            policy is not None
+            and policy.get("protocolVersion") == PROTOCOL_VERSION
+            and str(policy.get("policySchemaVersion") or "") == str(POLICY_SCHEMA_VERSION)
         )
-        if not isinstance(category, dict):
-            category = {}
-        raw_value = category.get(
-            "pause_consecutive_detections",
-            default_value
-        )
-        try:
-            value = int(raw_value)
-        except (TypeError, ValueError):
-            value = default_value
-        return max(DEFAULT_PAUSE_CONSECUTIVE_DETECTIONS, value)
+        if policy_response_is_current:
+            self._policy_compatible = policy_v3
+        self._protocol_ready = bool(status_v3 and self._policy_compatible)
 
-    def _normalize_result_payload(self, data):
-        if isinstance(data, dict):
-            return data
-        if isinstance(data, list) and data and isinstance(data[0], dict):
-            return data[0]
+        incoming_version = _policy_version(policy)
+        current_version = _policy_version(self.policy)
+        policy_not_older = current_version <= 0 or incoming_version >= current_version
+        conflict_policy_is_newer = incoming_version > current_version
+
+        if (
+            policy_response_is_current
+            and policy_v3
+            and self._conflict_reloading
+            and conflict_policy_is_newer
+        ):
+            self._conflict_reloading = False
+            self._save_failed = False
+            self._dirty = False
+            self.policy = policy
+            self._apply_policy()
+        elif (
+            policy_response_is_current
+            and policy_v3
+            and policy_not_older
+            and not self._dirty
+            and not self._saving
+        ):
+            self.policy = policy
+            self._apply_policy()
+        else:
+            self._update_control_sensitivity()
+        self._apply_status()
+        self._update_defect_summaries()
+        self._update_sync_summary()
+        if self._refresh_pending and self._active:
+            self._refresh_pending = False
+            GLib.idle_add(self._run_pending_refresh)
+        return False
+
+    def _run_pending_refresh(self):
+        self.refresh()
+        return False
+
+    def _agent_policy_value(self, key, policy=None):
+        status_policy = self.status.get("policy")
+        if not isinstance(status_policy, dict):
+            status_policy = {}
+        sources = [policy] if isinstance(policy, dict) else []
+        sources.extend((self.status, status_policy, self.policy))
+        for source in sources:
+            if isinstance(source, dict) and source.get(key) is not None:
+                return source.get(key)
         return None
 
-    def _get_result_error(self, result):
-        if not isinstance(result, dict):
-            return None
-        if result.get("success", True) is not False:
-            return None
-        error = (
-            result.get("error") or
-            result.get("message") or
-            result.get("last_error") or
-            result.get("service_error")
+    def _policy_trust_state(self, policy=None):
+        return str(self._agent_policy_value("policyTrustState", policy) or "").upper()
+
+    def _legacy_policy_unconfigured(self, policy=None):
+        candidate = policy if isinstance(policy, dict) else self.policy
+        if not isinstance(candidate, dict):
+            candidate = {}
+        status_policy = self.status.get("policy")
+        if not candidate and isinstance(status_policy, dict):
+            candidate = status_policy
+        supported = candidate.get("supportedDefectTypes") or []
+        model_version = str(candidate.get("modelVersion") or "").upper()
+        return bool(
+            not supported
+            and model_version == "UNCONFIGURED"
+            and (candidate.get("safeDegraded") or self.status.get("safeDegraded"))
         )
-        if error is None:
-            return _("AI detection failed")
-        return str(error)
 
-    def _translate_detection_name(self, raw_name):
-        if raw_name is None:
-            return _("Unknown")
+    def _no_valid_policy(self, policy=None):
+        trust_state = self._policy_trust_state(policy)
+        return bool(
+            trust_state in POLICY_TRUST_UNAVAILABLE
+            or self._legacy_policy_unconfigured(policy)
+        )
 
-        value = str(raw_name)
-        normalized = value.strip().casefold()
-        for dt in DETECTION_TYPES:
-            aliases = [
-                dt["key"],
-                dt["macro"],
-                dt["name"],
-                dt["short_name"],
-                *dt.get("aliases", []),
-            ]
-            if normalized in {alias.casefold() for alias in aliases}:
-                return _(dt["name"])
-        if normalized in LEGACY_DETECTION_ALIASES:
-            return _(LEGACY_DETECTION_ALIASES[normalized])
-        return value
-
-    def _format_pause_progress(self, result):
-        if not isinstance(result, dict):
-            return None
-        if (
-            "consecutive_defects" not in result or
-            "pause_consecutive_detections" not in result
+    def _runtime_reason(self):
+        reason = str(self.status.get("notWatchingReason") or "").upper()
+        sync_only = reason in SYNC_ONLY_REASONS
+        if sync_only:
+            reason = ""
+        if self._policy_trust_state() in (
+            "POLICY_SIGNATURE_INVALID", "SIGNATURE_INVALID"
         ):
-            return None
+            reason = "POLICY_SIGNATURE_INVALID"
+        elif self._no_valid_policy():
+            reason = "NO_VALID_POLICY"
+        return reason or None, sync_only
+
+    def _policy_sync_state(self, policy=None):
+        if isinstance(policy, dict):
+            state = policy.get("policySyncState")
+            if state is None:
+                state = policy.get("applyStatus")
+        else:
+            state = self._agent_policy_value("policySyncState")
+            if state is None:
+                state = self._agent_policy_value("applyStatus")
+        return str(state or "").upper()
+
+    def _policy_sync_error(self, policy=None):
+        return str(self._agent_policy_value("policySyncError", policy) or "").strip()
+
+    def _policy_outbox_depth(self, policy=None):
         try:
-            count = int(result.get("consecutive_defects", 0))
-            required = int(result.get("pause_consecutive_detections", 0))
+            return max(
+                0,
+                int(self._agent_policy_value("policyOutboxDepth", policy) or 0),
+            )
         except (TypeError, ValueError):
-            return None
-        if required < DEFAULT_PAUSE_CONSECUTIVE_DETECTIONS:
-            return None
-        return _("Pause Count: %(count)d/%(required)d") % {
-            "count": max(0, count),
-            "required": required,
+            return 0
+
+    def _agent_sync_text(self, policy=None):
+        state = self._policy_sync_state(policy)
+        outbox_depth = self._policy_outbox_depth(policy)
+        sync_error = self._policy_sync_error(policy)
+        if state == "CONFLICT":
+            return _("Applied locally, cloud settings conflict")
+        if state == "REBASING":
+            return _("Applied locally, merging cloud settings")
+        if state == "SYNCING":
+            return _("Syncing with cloud")
+        if state in SYNC_PENDING_STATES or outbox_depth > 0:
+            return _("Applied locally, waiting for cloud sync")
+        if state in SYNC_FAILED_STATES or sync_error:
+            return _("Applied locally, cloud sync failed")
+        return _(SYNC_NAMES.get(state or "APPLIED", state or "APPLIED"))
+
+    def _apply_status(self):
+        online = bool(
+            self._status_request_ok
+            and self.status.get("protocolVersion") == PROTOCOL_VERSION
+            and str(self.status.get("policySchemaVersion") or "") == str(POLICY_SCHEMA_VERSION)
+        )
+        reason, sync_only_reason = self._runtime_reason() if online else (None, False)
+        trust_state = self._policy_trust_state()
+        loading_policy = online and trust_state in POLICY_TRUST_LOADING and not reason
+        sync_state = self._policy_sync_state()
+        cloud_sync_only = bool(
+            sync_state in SYNC_PENDING_STATES
+            or sync_state in SYNC_FAILED_STATES
+            or sync_state in ("CONFLICT", "REBASING", "SYNCING")
+            or self._policy_sync_error()
+            or self._policy_outbox_depth() > 0
+        )
+        reported_watching = self.status.get("watching")
+        if (sync_only_reason or cloud_sync_only) and not reason:
+            watching = online
+        elif isinstance(reported_watching, bool):
+            watching = reported_watching and not reason and not loading_policy
+        else:
+            watching = online and not reason and not loading_policy
+        safe_degraded = self._safe_degraded() if online else False
+        if loading_policy:
+            state_text = _("Checking...")
+            icon_name = "info"
+        elif watching:
+            state_text = _("Watching")
+            icon_name = "warning" if safe_degraded else "check_pass"
+        elif online:
+            state_text = _("Not Watching")
+            icon_name = "warning" if safe_degraded else "info"
+        else:
+            state_text = _("Offline")
+            icon_name = "check_fail"
+        self.labels["status"].set_markup(
+            "<big><b>{}</b></big>".format(GLib.markup_escape_text(state_text))
+        )
+        self._set_icon("status_icon", icon_name, 1.35)
+        if loading_policy:
+            status_class = "ai-status-loading"
+        elif watching and not safe_degraded:
+            status_class = "ai-status-watching"
+        elif online:
+            status_class = "ai-status-idle"
+        else:
+            status_class = "ai-status-offline"
+        self._replace_style_class(
+            self.labels["status_bar"],
+            ("ai-status-loading", "ai-status-watching", "ai-status-idle", "ai-status-offline"),
+            status_class,
+        )
+        details = []
+        if loading_policy:
+            details.append(_("AI configuration is being prepared"))
+        elif reason:
+            details.append(_(REASON_NAMES.get(reason, reason)))
+        if not online:
+            details.append(_("AI Platform V3 is required") if self._status_request_ok
+                           else _("AI Agent unavailable"))
+        if safe_degraded and not reason:
+            details.append("{} · {}".format(_("Safe mode"), _("Notify Only")))
+        self._set_optional_text(self.labels["status_detail"], " · ".join(details))
+
+    def _apply_policy(self):
+        self._updating_controls = True
+        try:
+            supported = self.policy.get("supportedDefectTypes")
+            if not isinstance(supported, list):
+                supported = list((self.policy.get("defectPolicies") or {}).keys())
+            macro_state = str(self.policy.get("macroCapabilityState") or "").upper()
+            macro_supported = self.policy.get("macroSupportedDefectTypes")
+            if (
+                macro_state not in ("READY", "UNAVAILABLE")
+                or not isinstance(macro_supported, list)
+            ):
+                supported = []
+            else:
+                macro_supported = {
+                    str(item).upper() for item in macro_supported
+                    if str(item).upper() in DEFECT_TYPES
+                }
+                supported = [
+                    item for item in supported if str(item).upper() in macro_supported
+                ]
+            self.supported_defects = {
+                str(item).upper() for item in supported
+                if str(item).upper() in DEFECT_TYPES
+            }
+            self.labels["enabled"].set_active(
+                bool(self.supported_defects and self.policy.get("enabled", True))
+            )
+            self._set_combo(
+                self.labels["sensitivity"], str(self.policy.get("sensitivity") or "MEDIUM").upper(),
+                SENSITIVITIES, "MEDIUM"
+            )
+            self._set_combo(
+                self.labels["action"], str(self.policy.get("actionMode") or "NOTIFY_ONLY").upper(),
+                ACTIONS, "NOTIFY_ONLY"
+            )
+            overrides = self.policy.get("defectOverrides") or {}
+            if not isinstance(overrides, dict):
+                overrides = {}
+            for defect_type in DEFECT_TYPES:
+                key = self._defect_key(defect_type)
+                override = overrides.get(defect_type) or {}
+                if not isinstance(override, dict):
+                    override = {}
+                self.labels["defect_{}_enabled".format(key)].set_active(
+                    bool(override.get("enabled", True))
+                )
+                sensitivity = str(override.get("sensitivity") or INHERIT).upper()
+                action = str(override.get("actionMode") or INHERIT).upper()
+                self.defect_drafts[defect_type] = {
+                    "sensitivity": sensitivity if sensitivity in (INHERIT,) + SENSITIVITIES else INHERIT,
+                    "actionMode": action if action in (INHERIT,) + ACTIONS else INHERIT,
+                }
+            self._policy_loaded = True
+            self._dirty = False
+            self._baseline_settings = self._settings_snapshot()
+        finally:
+            self._updating_controls = False
+        self._update_defect_summaries()
+        self._update_control_sensitivity()
+
+    def _safe_degraded(self):
+        status_policy = self.status.get("policy")
+        if not isinstance(status_policy, dict):
+            status_policy = {}
+        return bool(
+            self._policy_trust_state() in POLICY_TRUST_DEGRADED
+            or self.status.get("safeDegraded") or status_policy.get("safeDegraded")
+            or (self._policy_compatible and self.policy.get("safeDegraded"))
+        )
+
+    def _update_control_sensitivity(self):
+        controls_ready = bool(
+            self._protocol_ready and self.supported_defects
+            and not self._no_valid_policy()
+            and not self._saving and not self._conflict_reloading
+        )
+        subordinate_ready = controls_ready and self.labels["enabled"].get_active()
+        for panel_key in ("defaults_panel", "defects_panel"):
+            panel = self.labels.get(panel_key)
+            if panel:
+                context = panel.get_style_context()
+                if subordinate_ready:
+                    context.remove_class("ai-card-disabled")
+                else:
+                    context.add_class("ai-card-disabled")
+        self.labels["enabled"].set_sensitive(controls_ready)
+        self.labels["sensitivity"].set_sensitive(subordinate_ready)
+        action_ready = subordinate_ready and not self._safe_degraded()
+        self.labels["action"].set_sensitive(action_ready)
+        for defect_type in DEFECT_TYPES:
+            key = self._defect_key(defect_type)
+            supported = defect_type in self.supported_defects
+            self.labels["defect_{}_enabled".format(key)].set_sensitive(subordinate_ready and supported)
+            self.labels["defect_{}_configure".format(key)].set_sensitive(subordinate_ready and supported)
+        editor_ready = subordinate_ready and self._editing_defect in self.supported_defects
+        self.labels["defect_editor_sensitivity"].set_sensitive(editor_ready)
+        self.labels["defect_editor_action"].set_sensitive(
+            editor_ready and not self._safe_degraded()
+        )
+        self.labels["save"].set_sensitive(controls_ready and self._dirty and not self._saving)
+
+    def _update_defect_summaries(self):
+        if not self._policy_loaded:
+            self.labels["defects_state"].set_text(_("Checking..."))
+            self.labels["defects_state"].show()
+            return
+        empty_text = _("No valid AI policy") if self._no_valid_policy() else _(
+            "No detection types are available for this printer"
+        )
+        self.labels["defects_state"].set_text(empty_text)
+        has_supported_defects = bool(self.supported_defects)
+        self.labels["defects_state"].set_visible(not has_supported_defects)
+        self.labels["defaults_panel"].set_visible(has_supported_defects)
+        global_sensitivity = self._combo_value(self.labels["sensitivity"], "MEDIUM")
+        global_action = self._combo_value(self.labels["action"], "NOTIFY_ONLY")
+        sensitivity_names = {"LOW": _("Low"), "MEDIUM": _("Medium"), "HIGH": _("High")}
+        action_names = {"NOTIFY_ONLY": _("Notify Only"), "AUTO_PAUSE": _("Auto Pause")}
+        effective_policies = self.policy.get("defectPolicies") or {}
+        if not isinstance(effective_policies, dict):
+            effective_policies = {}
+        for defect_type in DEFECT_TYPES:
+            key = self._defect_key(defect_type)
+            supported = defect_type in self.supported_defects
+            self.labels["defect_{}_row".format(key)].set_visible(supported)
+            enabled = self.labels["defect_{}_enabled".format(key)].get_active()
+            draft = self.defect_drafts[defect_type]
+            sensitivity = draft.get("sensitivity", INHERIT)
+            action = draft.get("actionMode", INHERIT)
+            effective_sensitivity = global_sensitivity if sensitivity == INHERIT else sensitivity
+            effective_action = global_action if action == INHERIT else action
+            server_effective = effective_policies.get(defect_type)
+            if not self._dirty and isinstance(server_effective, dict):
+                effective_sensitivity = str(server_effective.get("sensitivity") or effective_sensitivity).upper()
+                effective_action = str(server_effective.get("actionMode") or effective_action).upper()
+            if self._safe_degraded() and effective_action == "AUTO_PAUSE":
+                effective_action = "NOTIFY_ONLY"
+            if not supported:
+                summary = ""
+            elif not enabled:
+                summary = _("Off")
+            else:
+                summary = "{} · {}".format(
+                    sensitivity_names.get(effective_sensitivity, _("Medium")),
+                    action_names.get(effective_action, _("Notify Only")),
+                )
+            summary_label = self.labels["defect_{}_summary".format(key)]
+            summary_label.set_text(summary)
+            summary_label.set_visible(bool(summary))
+            self.labels["defect_{}_configure".format(key)].set_visible(supported)
+
+    def _update_sync_summary(self):
+        if self._saving:
+            value = _("Applying on this printer")
+            state_class = "ai-save-loading"
+            icon_name = "hourglass"
+        elif self._conflict_reloading:
+            value = _("Reloading current settings")
+            state_class = "ai-save-warning"
+            icon_name = "warning"
+        elif self._save_failed:
+            value = _("Settings could not be applied")
+            state_class = "ai-save-error"
+            icon_name = "check_fail"
+        elif self._dirty:
+            value = _("Unsaved changes")
+            state_class = "ai-save-dirty"
+            icon_name = "warning"
+        elif self._refresh_completed and not self._policy_compatible:
+            value = _("Settings unavailable")
+            state_class = "ai-save-error"
+            icon_name = "check_fail"
+        elif not self._policy_loaded:
+            value = _("Checking...")
+            state_class = "ai-save-loading"
+            icon_name = "hourglass"
+        else:
+            value = self._agent_sync_text()
+            sync_state = self._policy_sync_state()
+            if (
+                sync_state in SYNC_FAILED_STATES or sync_state == "CONFLICT"
+                or self._policy_sync_error()
+            ):
+                state_class = "ai-save-error"
+                icon_name = "check_fail"
+            elif (
+                sync_state in SYNC_PENDING_STATES
+                or sync_state in ("REBASING", "SYNCING")
+                or self._policy_outbox_depth() > 0
+            ):
+                state_class = "ai-save-warning"
+                icon_name = "hourglass"
+            else:
+                state_class = "ai-save-synced"
+                icon_name = "check_pass"
+        self._replace_style_class(
+            self.labels["save_bar"],
+            ("ai-save-loading", "ai-save-dirty", "ai-save-warning",
+             "ai-save-error", "ai-save-synced"),
+            state_class,
+        )
+        self._set_icon("sync_icon", icon_name, 0.8)
+        self.labels["sync_summary"].set_markup(
+            "<b>{}</b>".format(GLib.markup_escape_text(value))
+        )
+
+    def _mark_dirty(self):
+        if self._updating_controls or self._saving:
+            return
+        if self._save_failed:
+            self._pending_request_id = None
+        self._save_failed = False
+        current_settings = self._settings_snapshot()
+        self._dirty = bool(
+            self._baseline_settings is None
+            or current_settings != self._baseline_settings
+        )
+        if self._dirty and not self._pending_request_id:
+            self._pending_request_id = str(uuid.uuid4())
+        elif not self._dirty:
+            self._pending_request_id = None
+        self._update_sync_summary()
+        self._update_control_sensitivity()
+
+    def _on_enabled_changed(self, switch, param):
+        if self._updating_controls:
+            return
+        self._mark_dirty()
+        self._update_control_sensitivity()
+
+    def _on_defect_enabled_changed(self, switch, param, defect_type):
+        if self._updating_controls:
+            return
+        self._mark_dirty()
+        self._update_defect_summaries()
+
+    def _on_global_combo_changed(self, combo):
+        if self._updating_controls or combo.get_active_id() is None:
+            return
+        self._mark_dirty()
+        self._update_defect_summaries()
+
+    def _on_defect_combo_changed(self, combo):
+        if self._updating_controls or self._editing_defect not in DEFECT_TYPES:
+            return
+        self.defect_drafts[self._editing_defect] = {
+            "sensitivity": self._combo_value(self.labels["defect_editor_sensitivity"], INHERIT),
+            "actionMode": self._combo_value(self.labels["defect_editor_action"], INHERIT),
+        }
+        self._mark_dirty()
+        self._update_defect_summaries()
+
+    def _show_defect_editor(self, widget, defect_type):
+        if defect_type not in self.supported_defects:
+            return
+        self._editing_defect = defect_type
+        draft = self.defect_drafts[defect_type]
+        self._updating_controls = True
+        try:
+            self.labels["defect_editor_title"].set_markup(
+                "<big><b>{}</b></big>".format(GLib.markup_escape_text(_(DEFECT_NAMES[defect_type])))
+            )
+            self._set_combo(
+                self.labels["defect_editor_sensitivity"], draft.get("sensitivity", INHERIT),
+                (INHERIT,) + SENSITIVITIES, INHERIT
+            )
+            self._set_combo(
+                self.labels["defect_editor_action"], draft.get("actionMode", INHERIT),
+                (INHERIT,) + ACTIONS, INHERIT
+            )
+        finally:
+            self._updating_controls = False
+        self._update_control_sensitivity()
+        popover = self.labels["defect_popover"]
+        popover.set_relative_to(widget)
+        popover.show_all()
+        if defect_type == "FOREIGN_OBJECT":
+            preflight_text = _(
+                "Safe mode is active. The pre-print check will notify only and will not block printing."
+            ) if self._safe_degraded() else _(
+                "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+            )
+            self.labels["defect_editor_preflight"].set_text(preflight_text)
+            self.labels["defect_editor_preflight"].show()
+        else:
+            self.labels["defect_editor_preflight"].hide()
+
+    def _close_defect_editor(self, widget):
+        self.labels["defect_popover"].popdown()
+
+    def _set_icon(self, label_key, icon_name, scale):
+        cache_key = (icon_name, scale)
+        pixbuf = self._icon_cache.get(cache_key)
+        if pixbuf is None:
+            size = round(self._gtk.font_size * scale)
+            pixbuf = self._gtk.PixbufFromIcon(icon_name, size, size)
+            self._icon_cache[cache_key] = pixbuf
+        if pixbuf is not None:
+            self.labels[label_key].set_from_pixbuf(pixbuf)
+        else:
+            self.labels[label_key].clear()
+
+    def _build_defect_overrides(self):
+        overrides = {}
+        for defect_type in DEFECT_TYPES:
+            if defect_type not in self.supported_defects:
+                continue
+            key = self._defect_key(defect_type)
+            item = {"enabled": self.labels["defect_{}_enabled".format(key)].get_active()}
+            draft = self.defect_drafts[defect_type]
+            if draft.get("sensitivity", INHERIT) != INHERIT:
+                item["sensitivity"] = draft["sensitivity"]
+            if draft.get("actionMode", INHERIT) != INHERIT:
+                item["actionMode"] = draft["actionMode"]
+            overrides[defect_type] = item
+        return overrides
+
+    def _settings_snapshot(self):
+        return {
+            "enabled": self.labels["enabled"].get_active(),
+            "sensitivity": self._combo_value(self.labels["sensitivity"], "MEDIUM"),
+            "actionMode": self._combo_value(self.labels["action"], "NOTIFY_ONLY"),
+            "defectOverrides": self._build_defect_overrides(),
         }
 
-    def _set_pause_switch(self, active):
-        self.pause_on_defect = active
-        self._screen.update_ai_detection_settings_cache(pause_on_defect=active)
-        try:
-            self.labels['pause_switch'].handler_block_by_func(self.on_pause_toggled)
-            self.labels['pause_switch'].set_active(active)
-            self.labels['pause_switch'].handler_unblock_by_func(self.on_pause_toggled)
-        except Exception as e:
-            logging.warning(f"AI detection: failed to update pause switch: {e}")
+    def save_settings(self, widget):
+        if self._saving or not self._dirty:
+            return
+        if not self.supported_defects:
+            self._screen.show_popup_message(_("Unsupported printer model"), 2)
+            return
+        if not self._protocol_ready:
+            self._screen.show_popup_message(_("AI Agent unavailable"), 2)
+            return
+        if not self._pending_request_id:
+            self._pending_request_id = str(uuid.uuid4())
+        payload = {
+            "protocolVersion": PROTOCOL_VERSION,
+            "policySchemaVersion": POLICY_SCHEMA_VERSION,
+            "basePolicyVersion": int(
+                self.policy.get("policyVersion") or self.policy.get("basePolicyVersion") or 0
+            ),
+            "enabled": self.labels["enabled"].get_active(),
+            "sensitivity": self._combo_value(self.labels["sensitivity"], "MEDIUM"),
+            "actionMode": self._combo_value(self.labels["action"], "NOTIFY_ONLY"),
+            "defectOverrides": self._build_defect_overrides(),
+            "clientRequestId": self._pending_request_id,
+        }
+        self._saving = True
+        self._gtk.Button_busy(self.labels["save"], True)
+        self._update_sync_summary()
+        self._update_control_sensitivity()
+
+        def request():
+            try:
+                response = self._screen.apiclient.post_request(
+                    "server/ai_detection/policy", json=payload
+                )
+                policy = _unwrap_response(response, "policy")
+                if policy is None:
+                    status = str(getattr(self._screen.apiclient, "status", "") or "")
+                    GLib.idle_add(self._settings_failed, status)
+                else:
+                    GLib.idle_add(self._settings_saved, policy)
+            except Exception as error:
+                logging.warning("AI Platform V3 settings update failed: %s", error)
+                GLib.idle_add(self._settings_failed, str(error))
+
+        threading.Thread(target=request, daemon=True).start()
+
+    def _settings_saved(self, policy):
+        valid = bool(
+            isinstance(policy, dict) and policy.get("protocolVersion") == PROTOCOL_VERSION
+            and int(policy.get("policySchemaVersion") or 0) == POLICY_SCHEMA_VERSION
+        )
+        legacy_apply_status = str(policy.get("applyStatus") or "APPLIED").upper()
+        explicit_sync_state = policy.get("policySyncState") is not None
+        if not valid or (
+            not explicit_sync_state and legacy_apply_status in ("FAILED", "ERROR")
+        ):
+            return self._settings_failed(legacy_apply_status)
+        self._saving = False
+        self._save_failed = False
+        self._dirty = False
+        self._pending_request_id = None
+        self._policy_generation += 1
+        self._policy_request_ok = True
+        self._policy_compatible = True
+        self.policy = policy
+        self._gtk.Button_busy(self.labels["save"], False)
+        self._apply_policy()
+        self._update_sync_summary()
+        sync_state = self._policy_sync_state(policy)
+        if sync_state == "PENDING_LOCAL":
+            message = _("Applying on this printer")
+        elif (
+            sync_state in SYNC_PENDING_STATES
+            or sync_state in SYNC_FAILED_STATES
+            or sync_state in ("CONFLICT", "REBASING", "SYNCING")
+            or self._policy_outbox_depth(policy) > 0
+            or self._policy_sync_error(policy)
+        ):
+            message = self._agent_sync_text(policy)
+        else:
+            message = _("Saved")
+        self._screen.show_popup_message(message, 1)
+        self.refresh()
+        return False
+
+    def _settings_failed(self, error_status=""):
+        self._saving = False
+        self._gtk.Button_busy(self.labels["save"], False)
+        if "409" in str(error_status):
+            self._save_failed = False
+            self._conflict_reloading = True
+            self._dirty = True
+            self._pending_request_id = None
+            self._policy_generation += 1
+            self._update_control_sensitivity()
+            self._update_sync_summary()
+            self._screen.show_popup_message(
+                _("Policy changed elsewhere. Latest settings will be reloaded."), 2
+            )
+            self.refresh()
+        else:
+            self._save_failed = True
+            self._dirty = True
+            if (
+                "400" in str(error_status)
+                or "426" in str(error_status)
+                or str(error_status).upper() in ("FAILED", "ERROR")
+            ):
+                self._pending_request_id = None
+            self._update_control_sensitivity()
+            self._update_sync_summary()
+            self._screen.show_popup_message(_("Error"), 2)
+        return False

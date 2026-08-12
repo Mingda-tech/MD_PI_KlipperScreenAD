@@ -868,9 +868,6 @@ msgstr "המשך"
 #~ msgid "Delete"
 #~ msgstr "מחק"
 
-#~ msgid "Off"
-#~ msgstr "כבוי"
-
 #~ msgid "View Mesh"
 #~ msgstr "צפה ברשת"
 
@@ -1749,3 +1746,171 @@ msgstr "לא ניתן לקרוא את המספר הסידורי של המכשי�
 
 msgid "Waiting for terms acceptance."
 msgstr "ממתין להסכמה לתנאים."
+
+msgid "Watching"
+msgstr "ניטור"
+
+msgid "Not Watching"
+msgstr "לא במעקב"
+
+msgid "Default Settings"
+msgstr "הגדרות ברירת מחדל"
+
+msgid "Sensitivity"
+msgstr "רגישות"
+
+msgid "Low"
+msgstr "נמוך"
+
+msgid "High"
+msgstr "גבוה"
+
+msgid "Action"
+msgstr "פעולה"
+
+msgid "Notify Only"
+msgstr "הודעה בלבד"
+
+msgid "Auto Pause"
+msgstr "השהייה אוטומטית"
+
+msgid "Follow Default"
+msgstr "עקוב אחר ברירת מחדל"
+
+msgid "Detection Types"
+msgstr "סוגי זיהוי"
+
+msgid "Configure"
+msgstr "הגדר"
+
+msgid "No detection types are available for this printer"
+msgstr "אין סוגי זיהוי זמינים עבור מדפסת זו"
+
+msgid "Safe mode"
+msgstr "מצב בטוח"
+
+msgid "Applied"
+msgstr "הוחל"
+
+msgid "Synced"
+msgstr "מסונכרן"
+
+msgid "Applied locally"
+msgstr "מיושם באופן מקומי"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "הוחל באופן מקומי, ממתין לסנכרון בענן"
+
+msgid "Applying on this printer"
+msgstr "יישום במדפסת זו"
+
+msgid "Waiting for cloud sync"
+msgstr "ממתין לסנכרון בענן"
+
+msgid "Syncing with cloud"
+msgstr "סנכרון עם ענן"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "מיושם באופן מקומי, מיזוג הגדרות ענן"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "מיושם באופן מקומי, הגדרות ענן מתנגשות"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "הוחל באופן מקומי, סנכרון הענן נכשל"
+
+msgid "Sync failed"
+msgstr "הסנכרון נכשל"
+
+msgid "Unsaved changes"
+msgstr "שינויים שלא נשמרו"
+
+msgid "Reloading current settings"
+msgstr "טוען מחדש את ההגדרות הנוכחיות"
+
+msgid "Settings could not be applied"
+msgstr "לא ניתן להחיל את ההגדרות"
+
+msgid "Settings unavailable"
+msgstr "ההגדרות לא זמינות"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "המדיניות השתנתה במקום אחר. ההגדרות האחרונות ייטענו מחדש."
+
+msgid "Disabled by user"
+msgstr "מושבת על ידי משתמש"
+
+msgid "Unsupported printer model"
+msgstr "דגם מדפסת לא נתמך"
+
+msgid "AI Agent unavailable"
+msgstr "סוכן AI אינו זמין"
+
+msgid "NPU unavailable"
+msgstr "NPU לא זמין"
+
+msgid "No camera"
+msgstr "אין מצלמה"
+
+msgid "Camera unavailable"
+msgstr "המצלמה לא זמינה"
+
+msgid "Printer is not printing"
+msgstr "המדפסת לא מדפיסה"
+
+msgid "Waiting for the first AI detection"
+msgstr "מחכה לזיהוי הבינה המלאכותית הראשון"
+
+msgid "AI detection results are delayed"
+msgstr "תוצאות זיהוי AI מתעכבות"
+
+msgid "Camera capture or AI inference failed"
+msgstr "לכידת מצלמה או הסקת AI נכשלו"
+
+msgid "Camera snapshot is stale"
+msgstr "תמונת המצב של המצלמה מעופשת"
+
+msgid "Print session is unavailable"
+msgstr "הפעלת הדפסה אינה זמינה"
+
+msgid "Print state is unavailable"
+msgstr "מצב ההדפסה אינו זמין"
+
+msgid "AI model version mismatch"
+msgstr "חוסר התאמה של דגם AI"
+
+msgid "Muted for this print"
+msgstr "מושתק עבור הדפסה זו"
+
+msgid "All detection types are disabled"
+msgstr "כל סוגי הזיהוי מושבתים"
+
+msgid "No valid AI policy"
+msgstr "אין מדיניות AI תקפה"
+
+msgid "AI configuration is being prepared"
+msgstr "תצורת AI נמצאת בהכנה"
+
+msgid "Policy verification failed"
+msgstr "אימות המדיניות נכשל"
+
+msgid "Nozzle Blob"
+msgstr "כתם על הזרבובית"
+
+msgid "First Layer Extrusion"
+msgstr "בעיית שחול בשכבה ראשונה"
+
+msgid "Warp or Detachment"
+msgstr "עיוות או ניתוק"
+
+msgid "Off"
+msgstr "כבוי"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "עבור בדיקת אובייקט זר מראש, קריטי חוסם הדפסה רק כאשר השהייה אוטומטית נבחרה."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "מצב בטוח פעיל. בדיקת טרום ההדפסה תודיע רק ולא תחסום הדפסה."
+
+msgid "AI Platform V3 is required"
+msgstr "נדרשת פלטפורמת AI V3"

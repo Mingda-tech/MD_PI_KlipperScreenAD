@@ -351,6 +351,185 @@ trough {
     min-height: 350px;
 }
 
+/* Touch-friendly cards used by the embedded AI policy panel. */
+.ai-page {
+    padding: .2em .45em .35em;
+}
+
+.ai-body {
+    padding: .05em 0;
+}
+
+.ai-status-bar,
+.ai-save-bar,
+.ai-card {
+    background-color: alpha(@text, .045);
+    border: .05em solid alpha(@text, .14);
+    border-radius: .75em;
+}
+
+.ai-status-bar {
+    min-height: 2.85em;
+    padding: .35em .55em;
+    border-left-width: .24em;
+}
+
+.ai-status-loading {
+    border-left-color: @color4;
+}
+
+.ai-status-watching,
+.ai-save-synced {
+    border-left-color: @echo;
+}
+
+.ai-status-idle,
+.ai-save-warning,
+.ai-save-dirty {
+    border-left-color: @warning;
+}
+
+.ai-status-offline,
+.ai-save-error {
+    border-left-color: @error;
+}
+
+.ai-status-icon {
+    background-color: alpha(@text, .07);
+    border-radius: 2em;
+    min-width: 2.6em;
+    min-height: 2.6em;
+}
+
+.ai-master-control {
+    background-color: alpha(@text, .055);
+    border-radius: 2em;
+    padding: 0 .25em 0 .65em;
+}
+
+.ai-card {
+    padding: .45em .6em .55em;
+}
+
+.ai-defaults-card {
+    padding: .18em .5em;
+}
+
+.ai-card-disabled {
+    opacity: .58;
+}
+
+.ai-section-title {
+    padding: .05em .1em .2em;
+}
+
+.ai-muted {
+    color: alpha(@text, .68);
+    font-size: .88em;
+}
+
+.ai-compact-row {
+    min-height: 2.25em;
+}
+
+.ai-setting-row,
+.ai-defect-row {
+    background-color: transparent;
+    border: 0;
+    border-top: .05em solid alpha(@text, .12);
+    border-radius: 0;
+    margin: 0;
+    padding: .08em .25em;
+}
+
+.ai-defect-row {
+    padding-left: .4em;
+}
+
+.ai-global-setting {
+    border-top: 0;
+    padding: .04em .4em;
+}
+
+switch.ai-compact-switch {
+    margin: .1em .2em;
+    min-width: 3.25em;
+    min-height: 1.8em;
+    border-radius: 2em;
+}
+
+switch.ai-compact-switch slider {
+    min-width: 1.55em;
+    min-height: 1.55em;
+    margin: .12em;
+    border-radius: 2em;
+}
+
+combobox.ai-combo box button {
+    background-color: alpha(@text, .07);
+    border: .05em solid alpha(@text, .16);
+    border-radius: .55em;
+    margin: .12em 0;
+    padding: .35em .65em;
+}
+
+button.ai-config-button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 2em;
+    margin: .08em;
+    min-height: 2em;
+    min-width: 2em;
+    padding: .1em;
+}
+
+button.ai-config-button:active {
+    background-color: @active;
+}
+
+.ai-settings-panel button:disabled,
+switch.ai-compact-switch:disabled {
+    opacity: .52;
+}
+
+.ai-save-bar {
+    min-height: 2.65em;
+    padding: .3em .4em .3em .55em;
+    border-left-width: .24em;
+}
+
+.ai-save-loading {
+    border-left-color: @color4;
+}
+
+button.ai-apply-button {
+    background-color: @color3;
+    border: 0;
+    border-radius: .65em;
+    margin: .1em;
+    min-height: 2.4em;
+    padding: .15em .65em;
+    font-weight: 600;
+}
+
+button.ai-apply-button:active {
+    background-color: @active;
+}
+
+button.ai-apply-button:disabled {
+    background-color: alpha(@text, .055);
+    opacity: .48;
+}
+
+.ai-popover {
+    background-color: @bg;
+    border: .05em solid alpha(@text, .18);
+    border-radius: .7em;
+    padding: .55em .65em;
+}
+
+.heatergraph {
+
 .heater-list scrollbar slider{
     min-width: 1.5em;
 }

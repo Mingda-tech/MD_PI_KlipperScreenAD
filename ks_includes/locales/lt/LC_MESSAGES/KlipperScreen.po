@@ -1541,3 +1541,171 @@ msgstr "Nepavyko nuskaityti įrenginio serijos numerio."
 
 msgid "Waiting for terms acceptance."
 msgstr "Laukiama sutikimo su sąlygomis."
+
+msgid "Watching"
+msgstr "Stebėjimas"
+
+msgid "Not Watching"
+msgstr "Ne stebėjimas"
+
+msgid "Default Settings"
+msgstr "Numatytieji nustatymai"
+
+msgid "Sensitivity"
+msgstr "Jautrumas"
+
+msgid "Low"
+msgstr "Žemas"
+
+msgid "High"
+msgstr "Aukštas"
+
+msgid "Action"
+msgstr "Veiksmas"
+
+msgid "Notify Only"
+msgstr "Tik pranešti"
+
+msgid "Auto Pause"
+msgstr "Automatinė pauzė"
+
+msgid "Follow Default"
+msgstr "Sekite numatytuosius nustatymus"
+
+msgid "Detection Types"
+msgstr "Aptikimo tipai"
+
+msgid "Configure"
+msgstr "Konfigūruoti"
+
+msgid "No detection types are available for this printer"
+msgstr "Šiam spausdintuvui nėra jokių aptikimo tipų"
+
+msgid "Safe mode"
+msgstr "Saugus režimas"
+
+msgid "Applied"
+msgstr "Taikoma"
+
+msgid "Synced"
+msgstr "Sinchronizuota"
+
+msgid "Applied locally"
+msgstr "Taikoma lokaliai"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Taikoma vietoje, laukiama sinchronizavimo debesyje"
+
+msgid "Applying on this printer"
+msgstr "Taikant šį spausdintuvą"
+
+msgid "Waiting for cloud sync"
+msgstr "Laukiama debesies sinchronizavimo"
+
+msgid "Syncing with cloud"
+msgstr "Sinchronizuojama su debesimi"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Taikoma lokaliai, sujungiami debesies nustatymai"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Taikoma lokaliai, debesies nustatymai nesuderinami"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Pritaikyta vietoje, sinchronizuoti debesyje nepavyko"
+
+msgid "Sync failed"
+msgstr "Sinchronizuoti nepavyko"
+
+msgid "Unsaved changes"
+msgstr "Neišsaugoti pakeitimai"
+
+msgid "Reloading current settings"
+msgstr "Iš naujo įkeliami dabartiniai nustatymai"
+
+msgid "Settings could not be applied"
+msgstr "Nepavyko pritaikyti nustatymų"
+
+msgid "Settings unavailable"
+msgstr "Nustatymai nepasiekiami"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Politika pasikeitė kitur. Naujausi nustatymai bus įkelti iš naujo."
+
+msgid "Disabled by user"
+msgstr "Išjungė naudotojas"
+
+msgid "Unsupported printer model"
+msgstr "Nepalaikomas spausdintuvo modelis"
+
+msgid "AI Agent unavailable"
+msgstr "AI agentas nepasiekiamas"
+
+msgid "NPU unavailable"
+msgstr "NPU nepasiekiamas"
+
+msgid "No camera"
+msgstr "Nėra fotoaparato"
+
+msgid "Camera unavailable"
+msgstr "Kamera nepasiekiama"
+
+msgid "Printer is not printing"
+msgstr "Spausdintuvas nespausdina"
+
+msgid "Waiting for the first AI detection"
+msgstr "Laukiama pirmojo AI aptikimo"
+
+msgid "AI detection results are delayed"
+msgstr "AI aptikimo rezultatai vėluoja"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Nepavyko užfiksuoti fotoaparato arba daryti AI išvadą"
+
+msgid "Camera snapshot is stale"
+msgstr "Fotoaparato momentinė nuotrauka pasenusi"
+
+msgid "Print session is unavailable"
+msgstr "Spausdinimo sesija negalima"
+
+msgid "Print state is unavailable"
+msgstr "Spausdinimo būsena negalima"
+
+msgid "AI model version mismatch"
+msgstr "AI modelio versijos neatitikimas"
+
+msgid "Muted for this print"
+msgstr "Nutildyta šiam spaudiniui"
+
+msgid "All detection types are disabled"
+msgstr "Visi aptikimo tipai išjungti"
+
+msgid "No valid AI policy"
+msgstr "Nėra galiojančios AI politikos"
+
+msgid "AI configuration is being prepared"
+msgstr "AI konfigūracija ruošiama"
+
+msgid "Policy verification failed"
+msgstr "Politikos patvirtinimas nepavyko"
+
+msgid "Nozzle Blob"
+msgstr "Dėmė ant purkštuko"
+
+msgid "First Layer Extrusion"
+msgstr "Pirmojo sluoksnio ekstruzijos problema"
+
+msgid "Warp or Detachment"
+msgstr "Iškrypimas arba atsiskyrimas"
+
+msgid "Off"
+msgstr "Išjungta"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "Prieš spausdinant svetimų objektų patikrą, kritinis spausdinimas blokuojamas tik tada, kai pasirenkama automatinė pauzė."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Saugus režimas aktyvus. Išankstinio spausdinimo patikrinimas tik įspės ir neblokuos spausdinimo."
+
+msgid "AI Platform V3 is required"
+msgstr "Reikalinga AI platforma V3"

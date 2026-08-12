@@ -1587,3 +1587,171 @@ msgstr "تعذرت قراءة الرقم التسلسلي للجهاز."
 
 msgid "Waiting for terms acceptance."
 msgstr "في انتظار الموافقة على الشروط."
+
+msgid "Watching"
+msgstr "المراقبة"
+
+msgid "Not Watching"
+msgstr "لا مراقبة"
+
+msgid "Default Settings"
+msgstr "الإعدادات الافتراضية"
+
+msgid "Sensitivity"
+msgstr "الحساسية"
+
+msgid "Low"
+msgstr "منخفض"
+
+msgid "High"
+msgstr "عالية"
+
+msgid "Action"
+msgstr "العمل"
+
+msgid "Notify Only"
+msgstr "إعلام فقط"
+
+msgid "Auto Pause"
+msgstr "الإيقاف المؤقت التلقائي"
+
+msgid "Follow Default"
+msgstr "اتبع الافتراضي"
+
+msgid "Detection Types"
+msgstr "أنواع الكشف"
+
+msgid "Configure"
+msgstr "تكوين"
+
+msgid "No detection types are available for this printer"
+msgstr "لا تتوفر أي أنواع كشف لهذه الطابعة"
+
+msgid "Safe mode"
+msgstr "الوضع الآمن"
+
+msgid "Applied"
+msgstr "مطبق"
+
+msgid "Synced"
+msgstr "تمت المزامنة"
+
+msgid "Applied locally"
+msgstr "تطبق محليا"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "يتم تطبيقه محليًا، في انتظار المزامنة السحابية"
+
+msgid "Applying on this printer"
+msgstr "تنطبق على هذه الطابعة"
+
+msgid "Waiting for cloud sync"
+msgstr "في انتظار المزامنة السحابية"
+
+msgid "Syncing with cloud"
+msgstr "المزامنة مع السحابة"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "يتم تطبيقه محليًا، ودمج إعدادات السحابة"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "يتم تطبيقه محليًا، وتتعارض إعدادات السحابة"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "تم تطبيقه محليًا، فشلت المزامنة السحابية"
+
+msgid "Sync failed"
+msgstr "فشلت المزامنة"
+
+msgid "Unsaved changes"
+msgstr "التغييرات غير المحفوظة"
+
+msgid "Reloading current settings"
+msgstr "إعادة تحميل الإعدادات الحالية"
+
+msgid "Settings could not be applied"
+msgstr "لا يمكن تطبيق الإعدادات"
+
+msgid "Settings unavailable"
+msgstr "الإعدادات غير متاحة"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "تغيرت السياسة في مكان آخر. سيتم إعادة تحميل أحدث الإعدادات."
+
+msgid "Disabled by user"
+msgstr "تم التعطيل من قبل المستخدم"
+
+msgid "Unsupported printer model"
+msgstr "طراز الطابعة غير مدعوم"
+
+msgid "AI Agent unavailable"
+msgstr "وكيل الذكاء الاصطناعي غير متاح"
+
+msgid "NPU unavailable"
+msgstr "وحدة المعالجة العصبية غير متوفرة"
+
+msgid "No camera"
+msgstr "لا توجد كاميرا"
+
+msgid "Camera unavailable"
+msgstr "الكاميرا غير متوفرة"
+
+msgid "Printer is not printing"
+msgstr "الطابعة لا تطبع"
+
+msgid "Waiting for the first AI detection"
+msgstr "في انتظار اكتشاف الذكاء الاصطناعي الأول"
+
+msgid "AI detection results are delayed"
+msgstr "تأخرت نتائج الكشف عن الذكاء الاصطناعي"
+
+msgid "Camera capture or AI inference failed"
+msgstr "فشل التقاط الكاميرا أو استنتاج الذكاء الاصطناعي"
+
+msgid "Camera snapshot is stale"
+msgstr "لقطة الكاميرا قديمة"
+
+msgid "Print session is unavailable"
+msgstr "جلسة الطباعة غير متاحة"
+
+msgid "Print state is unavailable"
+msgstr "حالة الطباعة غير متاحة"
+
+msgid "AI model version mismatch"
+msgstr "عدم تطابق إصدار نموذج الذكاء الاصطناعي"
+
+msgid "Muted for this print"
+msgstr "كتم الصوت لهذه الطباعة"
+
+msgid "All detection types are disabled"
+msgstr "تم تعطيل كافة أنواع الكشف"
+
+msgid "No valid AI policy"
+msgstr "لا توجد سياسة ذكاء اصطناعي صالحة"
+
+msgid "AI configuration is being prepared"
+msgstr "يجري إعداد تكوين الذكاء الاصطناعي"
+
+msgid "Policy verification failed"
+msgstr "فشل التحقق من السياسة"
+
+msgid "Nozzle Blob"
+msgstr "فقاعة على فوهة"
+
+msgid "First Layer Extrusion"
+msgstr "مشكلة قذف الطبقة الأولى"
+
+msgid "Warp or Detachment"
+msgstr "تزييفها أو الانفصال"
+
+msgid "Off"
+msgstr "إيقاف"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "بالنسبة لفحص الأجسام الغريبة قبل الطباعة، يمنع الطباعة الحرجة فقط عند تحديد إيقاف مؤقت تلقائي."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "الوضع الآمن نشط. سوف يقوم فحص ما قبل الطباعة بإعلامك فقط ولن يمنع الطباعة."
+
+msgid "AI Platform V3 is required"
+msgstr "مطلوب AI Platform V3"

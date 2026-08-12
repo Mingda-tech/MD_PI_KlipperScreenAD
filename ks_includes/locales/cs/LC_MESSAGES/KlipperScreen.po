@@ -762,15 +762,11 @@ msgstr "Z offset:"
 msgid "commit"
 msgstr "potvrzení"
 
-
-
 msgid "dBm"
 msgstr "dBm"
 
 msgid "hour"
 msgstr "hodina"
-
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr "makra, která používají 'rename_existing', jsou skryta"
@@ -780,8 +776,6 @@ msgstr "makra s názvem začínajícím na '_' jsou skrytá"
 
 msgid "minute"
 msgstr "minuta"
-
-
 
 msgid "mm"
 msgstr "mm"
@@ -1463,3 +1457,171 @@ msgstr "Nelze přečíst sériové číslo zařízení."
 
 msgid "Waiting for terms acceptance."
 msgstr "Čeká se na souhlas s podmínkami."
+
+msgid "Watching"
+msgstr "Sledování"
+
+msgid "Not Watching"
+msgstr "Ne sledování"
+
+msgid "Default Settings"
+msgstr "Výchozí nastavení"
+
+msgid "Sensitivity"
+msgstr "Citlivost"
+
+msgid "Low"
+msgstr "Nízká"
+
+msgid "High"
+msgstr "Vysoká"
+
+msgid "Action"
+msgstr "Akce"
+
+msgid "Notify Only"
+msgstr "Pouze upozorňovat"
+
+msgid "Auto Pause"
+msgstr "Automatická pauza"
+
+msgid "Follow Default"
+msgstr "Postupujte podle výchozího nastavení"
+
+msgid "Detection Types"
+msgstr "Typy detekce"
+
+msgid "Configure"
+msgstr "Konfigurovat"
+
+msgid "No detection types are available for this printer"
+msgstr "Pro tuto tiskárnu nejsou k dispozici žádné typy detekce"
+
+msgid "Safe mode"
+msgstr "Nouzový režim"
+
+msgid "Applied"
+msgstr "Aplikováno"
+
+msgid "Synced"
+msgstr "Synchronizováno"
+
+msgid "Applied locally"
+msgstr "Aplikováno lokálně"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Aplikováno místně, čeká se na synchronizaci s cloudem"
+
+msgid "Applying on this printer"
+msgstr "Používá se na této tiskárně"
+
+msgid "Waiting for cloud sync"
+msgstr "Čekání na synchronizaci s cloudem"
+
+msgid "Syncing with cloud"
+msgstr "Synchronizace s cloudem"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Aplikováno lokálně, sloučení nastavení cloudu"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Při použití místně dochází ke konfliktu nastavení cloudu"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Aplikováno místně, synchronizace s cloudem se nezdařila"
+
+msgid "Sync failed"
+msgstr "Synchronizace se nezdařila"
+
+msgid "Unsaved changes"
+msgstr "Neuložené změny"
+
+msgid "Reloading current settings"
+msgstr "Opětovné načtení aktuálního nastavení"
+
+msgid "Settings could not be applied"
+msgstr "Nastavení nelze použít"
+
+msgid "Settings unavailable"
+msgstr "Nastavení nejsou k dispozici"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Politika se změnila jinde. Budou znovu načtena nejnovější nastavení."
+
+msgid "Disabled by user"
+msgstr "Zakázáno uživatelem"
+
+msgid "Unsupported printer model"
+msgstr "Nepodporovaný model tiskárny"
+
+msgid "AI Agent unavailable"
+msgstr "Agent AI není k dispozici"
+
+msgid "NPU unavailable"
+msgstr "NPU není k dispozici"
+
+msgid "No camera"
+msgstr "Žádná kamera"
+
+msgid "Camera unavailable"
+msgstr "Kamera není k dispozici"
+
+msgid "Printer is not printing"
+msgstr "Tiskárna netiskne"
+
+msgid "Waiting for the first AI detection"
+msgstr "Čeká se na první detekci AI"
+
+msgid "AI detection results are delayed"
+msgstr "Výsledky detekce AI jsou zpožděné"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Snímání fotoaparátem nebo odvození AI se nezdařilo"
+
+msgid "Camera snapshot is stale"
+msgstr "Snímek z fotoaparátu je zastaralý"
+
+msgid "Print session is unavailable"
+msgstr "Tisková relace není k dispozici"
+
+msgid "Print state is unavailable"
+msgstr "Stav tisku není k dispozici"
+
+msgid "AI model version mismatch"
+msgstr "Nesoulad verze modelu AI"
+
+msgid "Muted for this print"
+msgstr "Ztlumeno pro tento tisk"
+
+msgid "All detection types are disabled"
+msgstr "Všechny typy detekce jsou zakázány"
+
+msgid "No valid AI policy"
+msgstr "Žádné platné zásady AI"
+
+msgid "AI configuration is being prepared"
+msgstr "Konfigurace AI se připravuje"
+
+msgid "Policy verification failed"
+msgstr "Ověření zásad se nezdařilo"
+
+msgid "Nozzle Blob"
+msgstr "Kapka na trysce"
+
+msgid "First Layer Extrusion"
+msgstr "Problém s vytlačováním první vrstvy"
+
+msgid "Warp or Detachment"
+msgstr "Pokřivení nebo oddělení"
+
+msgid "Off"
+msgstr "Vypnuto"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "Pro předtiskovou kontrolu cizích objektů, Kritické blokuje tisk pouze při volbě Auto Pause."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Nouzový režim je aktivní. Kontrola před tiskem pouze upozorní a neblokuje tisk."
+
+msgid "AI Platform V3 is required"
+msgstr "Je vyžadována platforma AI Platform V3"

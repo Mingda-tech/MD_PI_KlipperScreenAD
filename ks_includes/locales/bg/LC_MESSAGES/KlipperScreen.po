@@ -156,3 +156,189 @@ msgstr "Серийният номер на устройството не мож�
 
 msgid "Waiting for terms acceptance."
 msgstr "Изчаква се приемане на условията."
+
+msgid "Watching"
+msgstr "Мониторинг"
+
+msgid "Not Watching"
+msgstr "Не се наблюдава"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Default Settings"
+msgstr "Настройки по подразбиране"
+
+msgid "Sensitivity"
+msgstr "Чувствителност"
+
+msgid "Low"
+msgstr "ниско"
+
+msgid "Medium"
+msgstr "Средно"
+
+msgid "High"
+msgstr "високо"
+
+msgid "Action"
+msgstr "Действие"
+
+msgid "Notify Only"
+msgstr "Само известяване"
+
+msgid "Auto Pause"
+msgstr "Автоматична пауза"
+
+msgid "Follow Default"
+msgstr "Следвайте по подразбиране"
+
+msgid "Detection Types"
+msgstr "Видове откриване"
+
+msgid "Configure"
+msgstr "Конфигуриране"
+
+msgid "No detection types are available for this printer"
+msgstr "Няма налични типове откриване за този принтер"
+
+msgid "Safe mode"
+msgstr "Безопасен режим"
+
+msgid "Saved"
+msgstr "Записано"
+
+msgid "Error"
+msgstr "Грешка"
+
+msgid "Applied"
+msgstr "Приложено"
+
+msgid "Synced"
+msgstr "Синхронизирано"
+
+msgid "Applied locally"
+msgstr "Прилага се локално"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Прилага се локално, чака се синхронизиране в облак"
+
+msgid "Applying on this printer"
+msgstr "Кандидатстване на този принтер"
+
+msgid "Waiting for cloud sync"
+msgstr "Изчаква се синхронизиране в облак"
+
+msgid "Syncing with cloud"
+msgstr "Синхронизиране с облак"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Прилага се локално, обединява настройките на облака"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Прилага се локално, настройките на облака са в конфликт"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Приложено локално, синхронизирането в облак е неуспешно"
+
+msgid "Sync failed"
+msgstr "Синхронизирането е неуспешно"
+
+msgid "Unsaved changes"
+msgstr "Незапазени промени"
+
+msgid "Reloading current settings"
+msgstr "Презареждане на текущите настройки"
+
+msgid "Settings could not be applied"
+msgstr "Настройките не можаха да бъдат приложени"
+
+msgid "Settings unavailable"
+msgstr "Настройките са недостъпни"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Политиката се промени другаде. Последните настройки ще бъдат презаредени."
+
+msgid "Disabled by user"
+msgstr "Деактивирано от потребител"
+
+msgid "Unsupported printer model"
+msgstr "Неподдържан модел принтер"
+
+msgid "AI Agent unavailable"
+msgstr "AI агентът е недостъпен"
+
+msgid "NPU unavailable"
+msgstr "NPU не е наличен"
+
+msgid "No camera"
+msgstr "Без камера"
+
+msgid "Camera unavailable"
+msgstr "Камерата е недостъпна"
+
+msgid "Printer is not printing"
+msgstr "Принтерът не печата"
+
+msgid "Waiting for the first AI detection"
+msgstr "Изчаква се първото откриване на AI"
+
+msgid "AI detection results are delayed"
+msgstr "Резултатите от откриване на AI се забавят"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Заснемането на камерата или изводът с AI не са успешни"
+
+msgid "Camera snapshot is stale"
+msgstr "Моментната снимка на камерата е остаряла"
+
+msgid "Print session is unavailable"
+msgstr "Сесията за печат не е налична"
+
+msgid "Print state is unavailable"
+msgstr "Състоянието на печат не е налично"
+
+msgid "AI model version mismatch"
+msgstr "Несъответствие на версията на AI модела"
+
+msgid "Muted for this print"
+msgstr "Заглушен за този печат"
+
+msgid "All detection types are disabled"
+msgstr "Всички видове откриване са деактивирани"
+
+msgid "No valid AI policy"
+msgstr "Няма валидна политика за AI"
+
+msgid "AI configuration is being prepared"
+msgstr "Конфигурацията на AI се подготвя"
+
+msgid "Policy verification failed"
+msgstr "Проверката на правилата е неуспешна"
+
+msgid "Nozzle Blob"
+msgstr "Петно върху дюзата"
+
+msgid "First Layer Extrusion"
+msgstr "Проблем с екструдирането на първия слой"
+
+msgid "Warp or Detachment"
+msgstr "Изкривяване или отделяне"
+
+msgid "Off"
+msgstr "Изкл"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "За проверката за чужди обекти преди печат, Критичното блокира печата само когато е избрана автоматична пауза."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Безопасният режим е активен. Проверката преди печат само ще уведоми и няма да блокира печата."
+
+msgid "AI Platform V3 is required"
+msgstr "Изисква се AI Platform V3"
+
+msgid "Close"
+msgstr "Затваряне"
+
+msgid "Apply"
+msgstr "Приложи"

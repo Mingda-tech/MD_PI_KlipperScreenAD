@@ -491,7 +491,6 @@ msgid "Package will be updated"
 
 msgstr "Il pacchetto verrà aggiornato"
 
-
 msgid "Part Fan"
 msgstr "Part Fan"
 
@@ -764,14 +763,12 @@ msgid "commit"
 
 msgstr "Applica"
 
-
 msgid "dBm"
 msgstr "dBm"
 
 msgid "hour"
 
 msgstr "ora"
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr "macro che usano 'rename_existing' sono nascoste"
@@ -782,7 +779,6 @@ msgstr "macros con nome che inzia con '_' sono nascoste"
 msgid "minute"
 
 msgstr "minuto"
-
 
 msgid "mm"
 msgstr "mm"
@@ -864,9 +860,6 @@ msgstr "Continua"
 
 #~ msgid "Delete"
 #~ msgstr "Elimina"
-
-#~ msgid "Off"
-#~ msgstr "Off"
 
 #~ msgid "View Mesh"
 #~ msgstr "Visual. Mesh"
@@ -1692,3 +1685,171 @@ msgstr "Impossibile leggere il numero di serie del dispositivo."
 
 msgid "Waiting for terms acceptance."
 msgstr "In attesa dell’accettazione dei termini."
+
+msgid "Watching"
+msgstr "Monitoraggio"
+
+msgid "Not Watching"
+msgstr "Non monitorare"
+
+msgid "Default Settings"
+msgstr "Impostazioni predefinite"
+
+msgid "Sensitivity"
+msgstr "Sensibilità"
+
+msgid "Low"
+msgstr "Basso"
+
+msgid "High"
+msgstr "Alto"
+
+msgid "Action"
+msgstr "Azione"
+
+msgid "Notify Only"
+msgstr "Solo notifica"
+
+msgid "Auto Pause"
+msgstr "Pausa automatica"
+
+msgid "Follow Default"
+msgstr "Segui predefinito"
+
+msgid "Detection Types"
+msgstr "Tipi di rilevamento"
+
+msgid "Configure"
+msgstr "Configura"
+
+msgid "No detection types are available for this printer"
+msgstr "Nessun tipo di rilevamento disponibile per questa stampante"
+
+msgid "Safe mode"
+msgstr "Modalità provvisoria"
+
+msgid "Applied"
+msgstr "Applicato"
+
+msgid "Synced"
+msgstr "Sincronizzato"
+
+msgid "Applied locally"
+msgstr "Applicato localmente"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Applicato localmente, in attesa della sincronizzazione cloud"
+
+msgid "Applying on this printer"
+msgstr "Applicazione su questa stampante"
+
+msgid "Waiting for cloud sync"
+msgstr "In attesa della sincronizzazione cloud"
+
+msgid "Syncing with cloud"
+msgstr "Sincronizzazione con il cloud"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Applicato localmente, unendo le impostazioni cloud"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Applicato localmente, le impostazioni del cloud sono in conflitto"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Applicato localmente, la sincronizzazione cloud non è riuscita"
+
+msgid "Sync failed"
+msgstr "Sincronizzazione non riuscita"
+
+msgid "Unsaved changes"
+msgstr "Modifiche non salvate"
+
+msgid "Reloading current settings"
+msgstr "Ricaricamento delle impostazioni correnti"
+
+msgid "Settings could not be applied"
+msgstr "Impossibile applicare le impostazioni"
+
+msgid "Settings unavailable"
+msgstr "Impostazioni non disponibili"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "La politica è cambiata altrove. Verranno ricaricate le ultime impostazioni."
+
+msgid "Disabled by user"
+msgstr "Disabilitato dall'utente"
+
+msgid "Unsupported printer model"
+msgstr "Modello di stampante non supportato"
+
+msgid "AI Agent unavailable"
+msgstr "Agente AI non disponibile"
+
+msgid "NPU unavailable"
+msgstr "NPU non disponibile"
+
+msgid "No camera"
+msgstr "Nessuna fotocamera"
+
+msgid "Camera unavailable"
+msgstr "Fotocamera non disponibile"
+
+msgid "Printer is not printing"
+msgstr "La stampante non stampa"
+
+msgid "Waiting for the first AI detection"
+msgstr "In attesa del primo rilevamento dell'IA"
+
+msgid "AI detection results are delayed"
+msgstr "I risultati del rilevamento AI vengono ritardati"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Acquisizione della fotocamera o inferenza AI non riuscita"
+
+msgid "Camera snapshot is stale"
+msgstr "L'istantanea della fotocamera è obsoleta"
+
+msgid "Print session is unavailable"
+msgstr "La sessione di stampa non è disponibile"
+
+msgid "Print state is unavailable"
+msgstr "Lo stato di stampa non è disponibile"
+
+msgid "AI model version mismatch"
+msgstr "Mancata corrispondenza della versione del modello AI"
+
+msgid "Muted for this print"
+msgstr "Disattivato per questa stampa"
+
+msgid "All detection types are disabled"
+msgstr "Tutti i tipi di rilevamento sono disabilitati"
+
+msgid "No valid AI policy"
+msgstr "Nessuna politica IA valida"
+
+msgid "AI configuration is being prepared"
+msgstr "La configurazione dell'IA è in preparazione"
+
+msgid "Policy verification failed"
+msgstr "La verifica della politica non è riuscita"
+
+msgid "Nozzle Blob"
+msgstr "Macchia sull'ugello"
+
+msgid "First Layer Extrusion"
+msgstr "Problema di estrusione del primo strato"
+
+msgid "Warp or Detachment"
+msgstr "Deformazione o distacco"
+
+msgid "Off"
+msgstr "Spento"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "Per il controllo prestampa di oggetti estranei, Critico blocca la stampa solo quando è selezionata Pausa automatica."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "La modalità provvisoria è attiva. Il controllo prestampa avviserà solo e non bloccherà la stampa."
+
+msgid "AI Platform V3 is required"
+msgstr "È richiesta la piattaforma AI Platform V3"

@@ -494,8 +494,6 @@ msgid "Package will be updated"
 
 msgstr "Пакет будет обновлен"
 
-
-
 msgid "Part Fan"
 msgstr "Вентилятор обдува детали"
 
@@ -768,16 +766,12 @@ msgid "commit"
 
 msgstr "изменение"
 
-
-
 msgid "dBm"
 msgstr "дБм"
 
 msgid "hour"
 
 msgstr "час"
-
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr "макросы, использующие rename_existing, скрыты"
@@ -788,8 +782,6 @@ msgstr "макросы с именем, начинающиеся с '_', скр�
 msgid "minute"
 
 msgstr "минута"
-
-
 
 msgid "mm"
 msgstr "мм"
@@ -876,9 +868,6 @@ msgstr "Продолжить"
 
 #~ msgid "Delete"
 #~ msgstr "Удалить"
-
-#~ msgid "Off"
-#~ msgstr "Выкл."
 
 #~ msgid "View Mesh"
 #~ msgstr "Смотреть сетку"
@@ -1728,3 +1717,171 @@ msgstr "Не удалось прочитать серийный номер ус�
 
 msgid "Waiting for terms acceptance."
 msgstr "Ожидание согласия с условиями."
+
+msgid "Watching"
+msgstr "Мониторинг"
+
+msgid "Not Watching"
+msgstr "Не контролирует"
+
+msgid "Default Settings"
+msgstr "Настройки по умолчанию"
+
+msgid "Sensitivity"
+msgstr "Чувствительность"
+
+msgid "Low"
+msgstr "Низкий"
+
+msgid "High"
+msgstr "Высокий"
+
+msgid "Action"
+msgstr "Действие"
+
+msgid "Notify Only"
+msgstr "Только уведомлять"
+
+msgid "Auto Pause"
+msgstr "Автоматическая пауза"
+
+msgid "Follow Default"
+msgstr "Следовать по умолчанию"
+
+msgid "Detection Types"
+msgstr "Типы обнаружения"
+
+msgid "Configure"
+msgstr "Настроить"
+
+msgid "No detection types are available for this printer"
+msgstr "Для этого принтера не доступны типы обнаружения."
+
+msgid "Safe mode"
+msgstr "Безопасный режим"
+
+msgid "Applied"
+msgstr "Прикладной"
+
+msgid "Synced"
+msgstr "Синхронизировано"
+
+msgid "Applied locally"
+msgstr "Применяется локально"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Применено локально, ожидание синхронизации с облаком"
+
+msgid "Applying on this printer"
+msgstr "Применение на этом принтере"
+
+msgid "Waiting for cloud sync"
+msgstr "Ожидание синхронизации с облаком"
+
+msgid "Syncing with cloud"
+msgstr "Синхронизация с облаком"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Применяется локально, объединяя настройки облака"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Применяется локально, конфликт настроек облака"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Применено локально, синхронизация с облаком не удалась."
+
+msgid "Sync failed"
+msgstr "Синхронизация не удалась"
+
+msgid "Unsaved changes"
+msgstr "Несохраненные изменения"
+
+msgid "Reloading current settings"
+msgstr "Перезагрузка текущих настроек"
+
+msgid "Settings could not be applied"
+msgstr "Не удалось применить настройки."
+
+msgid "Settings unavailable"
+msgstr "Настройки недоступны"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Политика изменилась в другом месте. Последние настройки будут перезагружены."
+
+msgid "Disabled by user"
+msgstr "Отключено пользователем"
+
+msgid "Unsupported printer model"
+msgstr "Неподдерживаемая модель принтера"
+
+msgid "AI Agent unavailable"
+msgstr "AI-агент недоступен"
+
+msgid "NPU unavailable"
+msgstr "НПУ недоступен"
+
+msgid "No camera"
+msgstr "Нет камеры"
+
+msgid "Camera unavailable"
+msgstr "Камера недоступна"
+
+msgid "Printer is not printing"
+msgstr "Принтер не печатает"
+
+msgid "Waiting for the first AI detection"
+msgstr "Ожидание первого обнаружения ИИ"
+
+msgid "AI detection results are delayed"
+msgstr "Результаты обнаружения ИИ задерживаются"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Не удалось выполнить захват камеры или сделать вывод AI."
+
+msgid "Camera snapshot is stale"
+msgstr "Снимок с камеры устарел"
+
+msgid "Print session is unavailable"
+msgstr "Сеанс печати недоступен"
+
+msgid "Print state is unavailable"
+msgstr "Состояние печати недоступно"
+
+msgid "AI model version mismatch"
+msgstr "Несоответствие версии модели AI"
+
+msgid "Muted for this print"
+msgstr "Звук отключен для этого отпечатка"
+
+msgid "All detection types are disabled"
+msgstr "Все типы обнаружения отключены"
+
+msgid "No valid AI policy"
+msgstr "Нет действующей политики в отношении ИИ"
+
+msgid "AI configuration is being prepared"
+msgstr "Конфигурация AI находится в стадии подготовки"
+
+msgid "Policy verification failed"
+msgstr "Проверка политики не удалась"
+
+msgid "Nozzle Blob"
+msgstr "Капля на сопле"
+
+msgid "First Layer Extrusion"
+msgstr "Проблема с экструзией первого слоя"
+
+msgid "Warp or Detachment"
+msgstr "Деформация или отсоединение"
+
+msgid "Off"
+msgstr "Выкл."
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "При проверке на наличие посторонних предметов перед печатью параметр «Критический» блокирует печать только при выборе автоматической паузы."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Безопасный режим активен. Проверка перед печатью будет только уведомлять и не блокировать печать."
+
+msgid "AI Platform V3 is required"
+msgstr "Требуется платформа AI V3."

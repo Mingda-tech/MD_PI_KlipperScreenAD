@@ -488,7 +488,6 @@ msgstr ""
 
 msgid "Package will be updated"
 
-
 msgid "Part Fan"
 msgstr ""
 
@@ -759,12 +758,10 @@ msgstr ""
 
 msgid "commit"
 
-
 msgid "dBm"
 msgstr ""
 
 msgid "hour"
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr ""
@@ -773,7 +770,6 @@ msgid "macros with a name starting with '_' are hidden"
 msgstr ""
 
 msgid "minute"
-
 
 msgid "mm"
 msgstr ""
@@ -937,4 +933,172 @@ msgid "Unable to refresh automatically. The current QR code will expire soon."
 msgstr ""
 
 msgid "Waiting for terms acceptance."
+msgstr ""
+
+msgid "Watching"
+msgstr ""
+
+msgid "Not Watching"
+msgstr ""
+
+msgid "Default Settings"
+msgstr ""
+
+msgid "Sensitivity"
+msgstr ""
+
+msgid "Low"
+msgstr ""
+
+msgid "High"
+msgstr ""
+
+msgid "Action"
+msgstr ""
+
+msgid "Notify Only"
+msgstr ""
+
+msgid "Auto Pause"
+msgstr ""
+
+msgid "Follow Default"
+msgstr ""
+
+msgid "Detection Types"
+msgstr ""
+
+msgid "Configure"
+msgstr ""
+
+msgid "No detection types are available for this printer"
+msgstr ""
+
+msgid "Safe mode"
+msgstr ""
+
+msgid "Applied"
+msgstr ""
+
+msgid "Synced"
+msgstr ""
+
+msgid "Applied locally"
+msgstr ""
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr ""
+
+msgid "Applying on this printer"
+msgstr ""
+
+msgid "Waiting for cloud sync"
+msgstr ""
+
+msgid "Syncing with cloud"
+msgstr ""
+
+msgid "Applied locally, merging cloud settings"
+msgstr ""
+
+msgid "Applied locally, cloud settings conflict"
+msgstr ""
+
+msgid "Applied locally, cloud sync failed"
+msgstr ""
+
+msgid "Sync failed"
+msgstr ""
+
+msgid "Unsaved changes"
+msgstr ""
+
+msgid "Reloading current settings"
+msgstr ""
+
+msgid "Settings could not be applied"
+msgstr ""
+
+msgid "Settings unavailable"
+msgstr ""
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr ""
+
+msgid "Disabled by user"
+msgstr ""
+
+msgid "Unsupported printer model"
+msgstr ""
+
+msgid "AI Agent unavailable"
+msgstr ""
+
+msgid "NPU unavailable"
+msgstr ""
+
+msgid "No camera"
+msgstr ""
+
+msgid "Camera unavailable"
+msgstr ""
+
+msgid "Printer is not printing"
+msgstr ""
+
+msgid "Waiting for the first AI detection"
+msgstr ""
+
+msgid "AI detection results are delayed"
+msgstr ""
+
+msgid "Camera capture or AI inference failed"
+msgstr ""
+
+msgid "Camera snapshot is stale"
+msgstr ""
+
+msgid "Print session is unavailable"
+msgstr ""
+
+msgid "Print state is unavailable"
+msgstr ""
+
+msgid "AI model version mismatch"
+msgstr ""
+
+msgid "Muted for this print"
+msgstr ""
+
+msgid "All detection types are disabled"
+msgstr ""
+
+msgid "No valid AI policy"
+msgstr ""
+
+msgid "AI configuration is being prepared"
+msgstr ""
+
+msgid "Policy verification failed"
+msgstr ""
+
+msgid "Nozzle Blob"
+msgstr ""
+
+msgid "First Layer Extrusion"
+msgstr ""
+
+msgid "Warp or Detachment"
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr ""
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr ""
+
+msgid "AI Platform V3 is required"
 msgstr ""

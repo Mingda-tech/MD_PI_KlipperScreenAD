@@ -494,7 +494,6 @@ msgid "Package will be updated"
 
 msgstr "Paketet kommer att uppdateras"
 
-
 msgid "Part Fan"
 msgstr "Del Fläkt"
 
@@ -767,14 +766,12 @@ msgid "commit"
 
 msgstr "commit"
 
-
 msgid "dBm"
 msgstr "dBm"
 
 msgid "hour"
 
 msgstr "timme"
-
 
 msgid "macros that use 'rename_existing' are hidden"
 msgstr "makron som använder 'rename_existing' är dolda"
@@ -785,7 +782,6 @@ msgstr "makron med ett namn som börjar med '_' är dolda"
 msgid "minute"
 
 msgstr "minut"
-
 
 msgid "mm"
 msgstr "mm"
@@ -850,9 +846,6 @@ msgstr "Fortsätt"
 
 #~ msgid "Delete"
 #~ msgstr "Radera"
-
-#~ msgid "Off"
-#~ msgstr "Avstängd"
 
 #~ msgid "Sort by: "
 #~ msgstr "Sortera efter: "
@@ -1613,3 +1606,171 @@ msgstr "Det gick inte att läsa enhetens serienummer."
 
 msgid "Waiting for terms acceptance."
 msgstr "Väntar på godkännande av villkoren."
+
+msgid "Watching"
+msgstr "Övervakning"
+
+msgid "Not Watching"
+msgstr "Övervakar inte"
+
+msgid "Default Settings"
+msgstr "Standardinställningar"
+
+msgid "Sensitivity"
+msgstr "Känslighet"
+
+msgid "Low"
+msgstr "Låg"
+
+msgid "High"
+msgstr "Hög"
+
+msgid "Action"
+msgstr "Åtgärd"
+
+msgid "Notify Only"
+msgstr "Endast meddela"
+
+msgid "Auto Pause"
+msgstr "Automatisk paus"
+
+msgid "Follow Default"
+msgstr "Följ Default"
+
+msgid "Detection Types"
+msgstr "Detektionstyper"
+
+msgid "Configure"
+msgstr "Konfigurera"
+
+msgid "No detection types are available for this printer"
+msgstr "Inga detekteringstyper är tillgängliga för den här skrivaren"
+
+msgid "Safe mode"
+msgstr "Säkert läge"
+
+msgid "Applied"
+msgstr "Tillämpas"
+
+msgid "Synced"
+msgstr "Synkroniserad"
+
+msgid "Applied locally"
+msgstr "Tillämpas lokalt"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "Tillämpas lokalt, väntar på molnsynkronisering"
+
+msgid "Applying on this printer"
+msgstr "Ansöker på den här skrivaren"
+
+msgid "Waiting for cloud sync"
+msgstr "Väntar på molnsynkronisering"
+
+msgid "Syncing with cloud"
+msgstr "Synkronisera med molnet"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "Tillämpas lokalt, sammanfogar molninställningar"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "Tillämpas lokalt, molninställningar konflikt"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "Tillämpas lokalt, molnsynkronisering misslyckades"
+
+msgid "Sync failed"
+msgstr "Synkronisering misslyckades"
+
+msgid "Unsaved changes"
+msgstr "Osparade ändringar"
+
+msgid "Reloading current settings"
+msgstr "Laddar om aktuella inställningar"
+
+msgid "Settings could not be applied"
+msgstr "Inställningarna kunde inte tillämpas"
+
+msgid "Settings unavailable"
+msgstr "Inställningarna är inte tillgängliga"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "Policyn ändrades på annat håll. De senaste inställningarna kommer att laddas om."
+
+msgid "Disabled by user"
+msgstr "Inaktiverad av användaren"
+
+msgid "Unsupported printer model"
+msgstr "Skrivarmodell som inte stöds"
+
+msgid "AI Agent unavailable"
+msgstr "AI-agent inte tillgänglig"
+
+msgid "NPU unavailable"
+msgstr "NPU är inte tillgänglig"
+
+msgid "No camera"
+msgstr "Ingen kamera"
+
+msgid "Camera unavailable"
+msgstr "Kameran är inte tillgänglig"
+
+msgid "Printer is not printing"
+msgstr "Skrivaren skriver inte ut"
+
+msgid "Waiting for the first AI detection"
+msgstr "Väntar på den första AI-detekteringen"
+
+msgid "AI detection results are delayed"
+msgstr "AI-detektionsresultat är försenade"
+
+msgid "Camera capture or AI inference failed"
+msgstr "Kamerafångst eller AI-inferens misslyckades"
+
+msgid "Camera snapshot is stale"
+msgstr "Kameraögonblicksbilden är inaktuell"
+
+msgid "Print session is unavailable"
+msgstr "Utskriftssessionen är inte tillgänglig"
+
+msgid "Print state is unavailable"
+msgstr "Utskriftsläget är inte tillgängligt"
+
+msgid "AI model version mismatch"
+msgstr "AI-modellversionen matchar inte"
+
+msgid "Muted for this print"
+msgstr "Dämpad för detta tryck"
+
+msgid "All detection types are disabled"
+msgstr "Alla detekteringstyper är inaktiverade"
+
+msgid "No valid AI policy"
+msgstr "Ingen giltig AI-policy"
+
+msgid "AI configuration is being prepared"
+msgstr "AI-konfiguration förbereds"
+
+msgid "Policy verification failed"
+msgstr "Policyverifiering misslyckades"
+
+msgid "Nozzle Blob"
+msgstr "Blob på munstycket"
+
+msgid "First Layer Extrusion"
+msgstr "Första skiktets extruderingsproblem"
+
+msgid "Warp or Detachment"
+msgstr "Vridning eller lösgöring"
+
+msgid "Off"
+msgstr "Av"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "För förtryckskontrollen av främmande objekt blockerar Kritisk utskrift endast när Auto Paus är valt."
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "Säkert läge är aktivt. Förtryckskontrollen meddelar endast och blockerar inte utskrift."
+
+msgid "AI Platform V3 is required"
+msgstr "AI Platform V3 krävs"

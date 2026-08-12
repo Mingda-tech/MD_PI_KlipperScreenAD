@@ -847,9 +847,6 @@ msgstr "繼續"
 #~ msgid "Delete"
 #~ msgstr "删除"
 
-#~ msgid "Off"
-#~ msgstr "关闭"
-
 #~ msgid "View Mesh"
 #~ msgstr "查看热床网格"
 
@@ -1698,3 +1695,171 @@ msgstr "無法讀取裝置序號。"
 
 msgid "Waiting for terms acceptance."
 msgstr "正在等待同意條款。"
+
+msgid "Watching"
+msgstr "監測中"
+
+msgid "Not Watching"
+msgstr "未監測"
+
+msgid "Default Settings"
+msgstr "預設設定"
+
+msgid "Sensitivity"
+msgstr "靈敏度"
+
+msgid "Low"
+msgstr "低"
+
+msgid "High"
+msgstr "高"
+
+msgid "Action"
+msgstr "處理方式"
+
+msgid "Notify Only"
+msgstr "僅通知"
+
+msgid "Auto Pause"
+msgstr "自動暫停"
+
+msgid "Follow Default"
+msgstr "跟隨預設"
+
+msgid "Detection Types"
+msgstr "檢測項目"
+
+msgid "Configure"
+msgstr "設定"
+
+msgid "No detection types are available for this printer"
+msgstr "目前印表機暫無可用偵測項目"
+
+msgid "Safe mode"
+msgstr "安全降級"
+
+msgid "Applied"
+msgstr "已生效"
+
+msgid "Synced"
+msgstr "已同步"
+
+msgid "Applied locally"
+msgstr "本機已生效"
+
+msgid "Applied locally, waiting for cloud sync"
+msgstr "本機已生效，等待雲端同步"
+
+msgid "Applying on this printer"
+msgstr "正在印表機上應用"
+
+msgid "Waiting for cloud sync"
+msgstr "等待雲端同步"
+
+msgid "Syncing with cloud"
+msgstr "正在同步雲端"
+
+msgid "Applied locally, merging cloud settings"
+msgstr "本機已生效，正在合併雲端設置"
+
+msgid "Applied locally, cloud settings conflict"
+msgstr "本機已生效，雲端設定有衝突"
+
+msgid "Applied locally, cloud sync failed"
+msgstr "本機已生效，雲端同步失敗"
+
+msgid "Sync failed"
+msgstr "同步失敗"
+
+msgid "Unsaved changes"
+msgstr "有未儲存的更改"
+
+msgid "Reloading current settings"
+msgstr "正在重新加載當前設置"
+
+msgid "Settings could not be applied"
+msgstr "設定未能在本機生效"
+
+msgid "Settings unavailable"
+msgstr "設定暫不可用"
+
+msgid "Policy changed elsewhere. Latest settings will be reloaded."
+msgstr "設定已在其他終端更新，將重新載入最新設定。"
+
+msgid "Disabled by user"
+msgstr "用戶已關閉"
+
+msgid "Unsupported printer model"
+msgstr "不支援的印表機型號"
+
+msgid "AI Agent unavailable"
+msgstr "AI Agent 不可用"
+
+msgid "NPU unavailable"
+msgstr "NPU 不可用"
+
+msgid "No camera"
+msgstr "未偵測到攝影機"
+
+msgid "Camera unavailable"
+msgstr "網路攝影機不可用"
+
+msgid "Printer is not printing"
+msgstr "印表機未在列印"
+
+msgid "Waiting for the first AI detection"
+msgstr "正在等待首次 AI 檢測"
+
+msgid "AI detection results are delayed"
+msgstr "AI 偵測結果已延遲"
+
+msgid "Camera capture or AI inference failed"
+msgstr "相機取幀或 AI 推理失敗"
+
+msgid "Camera snapshot is stale"
+msgstr "網路攝影機畫面未更新"
+
+msgid "Print session is unavailable"
+msgstr "列印任務資訊不可用"
+
+msgid "Print state is unavailable"
+msgstr "列印狀態不可用"
+
+msgid "AI model version mismatch"
+msgstr "AI 模型版本不匹配"
+
+msgid "Muted for this print"
+msgstr "本次列印已靜音"
+
+msgid "All detection types are disabled"
+msgstr "所有檢測項目均已關閉"
+
+msgid "No valid AI policy"
+msgstr "AI 配置尚未就緒"
+
+msgid "AI configuration is being prepared"
+msgstr "正在準備 AI 配置"
+
+msgid "Policy verification failed"
+msgstr "策略校驗失敗"
+
+msgid "Nozzle Blob"
+msgstr "裹頭"
+
+msgid "First Layer Extrusion"
+msgstr "首層擠出異常"
+
+msgid "Warp or Detachment"
+msgstr "翹邊或脫落"
+
+msgid "Off"
+msgstr "關閉"
+
+msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
+msgstr "預先列印異物檢查中，只有在選擇「自動暫停」時，嚴重風險才會阻止開始列印。"
+
+msgid "Safe mode is active. The pre-print check will notify only and will not block printing."
+msgstr "目前處於安全降級模式，預檢只通知，不會阻止開印"
+
+msgid "AI Platform V3 is required"
+msgstr "需要 AI Platform V3"
