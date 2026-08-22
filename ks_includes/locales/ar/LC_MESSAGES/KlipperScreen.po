@@ -1510,6 +1510,15 @@ msgstr "إيقاف الطباعة مؤقتًا عند اكتشاف عيب"
 msgid "Spaghetti"
 msgstr "سباغيتي"
 
+msgid "Unknown"
+msgstr "غير معروف"
+
+msgid "Device locked"
+msgstr "الجهاز مقفل"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "تم قفل هذه الطابعة بواسطة مسؤول.\nيرجى الاتصال بالمسؤول."
+
 msgid "Spaghetti Detection"
 msgstr "كشف السباغيتي"
 

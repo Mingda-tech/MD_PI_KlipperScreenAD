@@ -857,6 +857,9 @@ msgstr ""
 msgid "Spaghetti"
 msgstr ""
 
+msgid "Unknown"
+msgstr ""
+
 msgid "Spaghetti Detection"
 msgstr ""
 

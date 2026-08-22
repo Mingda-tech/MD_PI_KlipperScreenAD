@@ -1464,6 +1464,15 @@ msgstr "Pristabdyti spausdinimą aptikus defektą"
 msgid "Spaghetti"
 msgstr "Spagečiai"
 
+msgid "Unknown"
+msgstr "Nežinoma"
+
+msgid "Device locked"
+msgstr "Įrenginys užrakintas"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Šį spausdintuvą užrakino administratorius.\nKreipkitės į administratorių."
+
 msgid "Spaghetti Detection"
 msgstr "Spagečių aptikimas"
 

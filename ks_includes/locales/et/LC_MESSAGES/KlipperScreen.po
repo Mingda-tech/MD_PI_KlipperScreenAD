@@ -1624,6 +1624,15 @@ msgstr "Peata printimine defekti korral"
 msgid "Spaghetti"
 msgstr "Spaghetti"
 
+msgid "Unknown"
+msgstr "Tundmatu"
+
+msgid "Device locked"
+msgstr "Seade on lukustatud"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Administraator on selle printeri lukustanud.\nVõtke ühendust administraatoriga."
+
 msgid "Spaghetti Detection"
 msgstr "Spaghetti tuvastus"
 

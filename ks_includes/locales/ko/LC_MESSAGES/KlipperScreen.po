@@ -1546,6 +1546,15 @@ msgstr "결함 발생 시 출력 일시정지"
 msgid "Spaghetti"
 msgstr "스파게티"
 
+msgid "Unknown"
+msgstr "알 수 없음"
+
+msgid "Device locked"
+msgstr "장치가 잠겼습니다"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "관리자가 이 프린터를 잠갔습니다.\n관리자에게 문의하세요."
+
 msgid "Spaghetti Detection"
 msgstr "스파게티 감지"
 

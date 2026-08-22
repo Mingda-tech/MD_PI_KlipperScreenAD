@@ -1558,6 +1558,15 @@ msgstr "Kusur olduğunda baskıyı duraklat"
 msgid "Spaghetti"
 msgstr "Spagetti"
 
+msgid "Unknown"
+msgstr "Bilinmiyor"
+
+msgid "Device locked"
+msgstr "Cihaz kilitlendi"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Bu yazıcı bir yönetici tarafından kilitlendi.\nLütfen yöneticiyle iletişime geçin."
+
 msgid "Spaghetti Detection"
 msgstr "Spagetti algılama"
 

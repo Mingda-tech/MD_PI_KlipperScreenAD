@@ -1561,6 +1561,15 @@ msgstr "Призупиняти друк при дефекті"
 msgid "Spaghetti"
 msgstr "Спагеті"
 
+msgid "Unknown"
+msgstr "Невідомо"
+
+msgid "Device locked"
+msgstr "Пристрій заблоковано"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Цей принтер заблоковано адміністратором.\nЗверніться до адміністратора."
+
 msgid "Spaghetti Detection"
 msgstr "Виявлення спагеті"
 

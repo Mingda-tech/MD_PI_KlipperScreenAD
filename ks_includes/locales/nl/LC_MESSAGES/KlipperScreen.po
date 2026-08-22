@@ -1483,6 +1483,15 @@ msgstr "Print pauzeren bij defect"
 msgid "Spaghetti"
 msgstr "Spaghetti"
 
+msgid "Unknown"
+msgstr "Onbekend"
+
+msgid "Device locked"
+msgstr "Apparaat vergrendeld"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Deze printer is door een beheerder vergrendeld.\nNeem contact op met de beheerder."
+
 msgid "Spaghetti Detection"
 msgstr "Spaghetti-detectie"
 

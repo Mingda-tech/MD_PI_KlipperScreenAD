@@ -1502,6 +1502,15 @@ msgstr "Pausar impressão em caso de defeito"
 msgid "Spaghetti"
 msgstr "Esparguete"
 
+msgid "Unknown"
+msgstr "Desconhecido"
+
+msgid "Device locked"
+msgstr "Dispositivo bloqueado"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Esta impressora foi bloqueada por um administrador.\nContacte o administrador."
+
 msgid "Spaghetti Detection"
 msgstr "Deteção de esparguete"
 

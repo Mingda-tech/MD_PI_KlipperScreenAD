@@ -1638,6 +1638,15 @@ msgstr "检测到缺陷时暂停打印"
 msgid "Spaghetti"
 msgstr "意大利面"
 
+msgid "Unknown"
+msgstr "未知"
+
+msgid "Device locked"
+msgstr "设备已锁定"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "设备已被管理员锁定。\n请联系管理员。"
+
 msgid "Spaghetti Detection"
 msgstr "意大利面检测"
 

@@ -1482,6 +1482,15 @@ msgstr "Sæt print på pause ved defekt"
 msgid "Spaghetti"
 msgstr "Spaghetti"
 
+msgid "Unknown"
+msgstr "Ukendt"
+
+msgid "Device locked"
+msgstr "Enheden er låst"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Denne printer er blevet låst af en administrator.\nKontakt administratoren."
+
 msgid "Spaghetti Detection"
 msgstr "Spaghetti-detektion"
 

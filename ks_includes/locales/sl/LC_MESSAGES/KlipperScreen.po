@@ -1688,6 +1688,15 @@ msgstr "Začasno ustavi tisk ob napaki"
 msgid "Spaghetti"
 msgstr "Spaghetti"
 
+msgid "Unknown"
+msgstr "Neznano"
+
+msgid "Device locked"
+msgstr "Naprava je zaklenjena"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Ta tiskalnik je zaklenil skrbnik.\nObrnite se na skrbnika."
+
 msgid "Spaghetti Detection"
 msgstr "Zaznavanje spaghetti"
 

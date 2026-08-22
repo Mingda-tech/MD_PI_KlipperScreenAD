@@ -763,6 +763,25 @@ popover button {
     background-color: @bg;
 }
 
+.device-lock-overlay {
+    background-color: #111318;
+    color: #ffffff;
+    border: 0;
+    margin: 0;
+    padding: 3em;
+}
+
+.device-lock-title {
+    color: #ffffff;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.device-lock-message {
+    color: #d7dbe3;
+    font-size: 1.45em;
+}
+
 .screensaver,
 .screensaver button,
 .screensaver button:hover,

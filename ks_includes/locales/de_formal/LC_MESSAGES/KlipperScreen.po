@@ -1622,6 +1622,15 @@ msgstr "Druck bei Fehler pausieren"
 msgid "Spaghetti"
 msgstr "Spaghetti"
 
+msgid "Unknown"
+msgstr "Unbekannt"
+
+msgid "Device locked"
+msgstr "Gerät gesperrt"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Dieser Drucker wurde von einem Administrator gesperrt.\nBitte wenden Sie sich an den Administrator."
+
 msgid "Spaghetti Detection"
 msgstr "Spaghetti-Erkennung"
 

@@ -1691,6 +1691,15 @@ msgstr "Tạm dừng in khi phát hiện lỗi"
 msgid "Spaghetti"
 msgstr "Spaghetti"
 
+msgid "Unknown"
+msgstr "Không xác định"
+
+msgid "Device locked"
+msgstr "Thiết bị đã bị khóa"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Máy in này đã bị quản trị viên khóa.\nVui lòng liên hệ với quản trị viên."
+
 msgid "Spaghetti Detection"
 msgstr "Phát hiện spaghetti"
 

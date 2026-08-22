@@ -1669,6 +1669,15 @@ msgstr "השהה הדפסה בעת זיהוי פגם"
 msgid "Spaghetti"
 msgstr "ספגטי"
 
+msgid "Unknown"
+msgstr "לא ידוע"
+
+msgid "Device locked"
+msgstr "המכשיר נעול"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "מדפסת זו ננעלה על ידי מנהל מערכת.\nיש לפנות למנהל המערכת."
+
 msgid "Spaghetti Detection"
 msgstr "זיהוי ספגטי"
 

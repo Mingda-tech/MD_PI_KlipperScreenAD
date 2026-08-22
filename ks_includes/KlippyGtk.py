@@ -241,6 +241,12 @@ class KlippyGtk:
         content_area.add(content)
 
         dialog.show_all()
+        if getattr(self.screen, "device_lock_active", False):
+            # Dialogs are separate Wayland surfaces and could otherwise appear
+            # above the root lock overlay. Keep the object valid for callers,
+            # but never expose it while the administrative lock is active.
+            dialog.hide()
+            dialog._created_while_device_locked = True
         # Change cursor to blank
         if self.cursor:
             dialog.get_window().set_cursor(

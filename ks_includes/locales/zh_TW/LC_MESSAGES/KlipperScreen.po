@@ -1618,6 +1618,15 @@ msgstr "檢測到缺陷時暫停列印"
 msgid "Spaghetti"
 msgstr "義大利麵"
 
+msgid "Unknown"
+msgstr "未知"
+
+msgid "Device locked"
+msgstr "裝置已鎖定"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "此印表機已被管理員鎖定。\n請聯絡管理員。"
+
 msgid "Spaghetti Detection"
 msgstr "義大利麵檢測"
 

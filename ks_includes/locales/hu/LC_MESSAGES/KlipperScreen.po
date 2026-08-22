@@ -1449,6 +1449,15 @@ msgstr "Nyomtatás szüneteltetése hiba esetén"
 msgid "Spaghetti"
 msgstr "Spagetti"
 
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+msgid "Device locked"
+msgstr "Az eszköz zárolva"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Ezt a nyomtatót egy rendszergazda zárolta.\nForduljon a rendszergazdához."
+
 msgid "Spaghetti Detection"
 msgstr "Spagetti észlelése"
 

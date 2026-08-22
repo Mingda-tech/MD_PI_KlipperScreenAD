@@ -1380,6 +1380,15 @@ msgstr "Pozastavit tisk při zjištění vady"
 msgid "Spaghetti"
 msgstr "Spaghetti"
 
+msgid "Unknown"
+msgstr "Neznámé"
+
+msgid "Device locked"
+msgstr "Zařízení je uzamčeno"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Tato tiskárna byla uzamčena správcem.\nObraťte se na správce."
+
 msgid "Spaghetti Detection"
 msgstr "Detekce spaghetti"
 

@@ -79,6 +79,15 @@ msgstr "Пауза на печата при дефект"
 msgid "Spaghetti"
 msgstr "Спагети"
 
+msgid "Unknown"
+msgstr "Неизвестно"
+
+msgid "Device locked"
+msgstr "Устройството е заключено"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Този принтер е заключен от администратор.\nМоля, свържете се с администратора."
+
 msgid "Spaghetti Detection"
 msgstr "Откриване на спагети"
 

@@ -1477,6 +1477,15 @@ msgstr "Wstrzymaj druk przy wykryciu defektu"
 msgid "Spaghetti"
 msgstr "Spaghetti"
 
+msgid "Unknown"
+msgstr "Nieznane"
+
+msgid "Device locked"
+msgstr "Urządzenie zablokowane"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Ta drukarka została zablokowana przez administratora.\nSkontaktuj się z administratorem."
+
 msgid "Spaghetti Detection"
 msgstr "Wykrywanie spaghetti"
 

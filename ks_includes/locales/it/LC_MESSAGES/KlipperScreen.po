@@ -1608,6 +1608,15 @@ msgstr "Metti in pausa la stampa in caso di difetto"
 msgid "Spaghetti"
 msgstr "Spaghetti"
 
+msgid "Unknown"
+msgstr "Sconosciuto"
+
+msgid "Device locked"
+msgstr "Dispositivo bloccato"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Questa stampante è stata bloccata da un amministratore.\nContattare l'amministratore."
+
 msgid "Spaghetti Detection"
 msgstr "Rilevamento spaghetti"
 

@@ -1480,6 +1480,15 @@ msgstr "欠陥検出時に印刷を一時停止"
 msgid "Spaghetti"
 msgstr "スパゲッティ"
 
+msgid "Unknown"
+msgstr "不明"
+
+msgid "Device locked"
+msgstr "デバイスはロックされています"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "このプリンターは管理者によってロックされています。\n管理者にお問い合わせください。"
+
 msgid "Spaghetti Detection"
 msgstr "スパゲッティ検出"
 

@@ -11,6 +11,7 @@ import locale
 import sys
 import gi
 import configparser
+import threading
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk, GLib, Pango, GdkPixbuf
@@ -28,6 +29,8 @@ from ks_includes.printer import Printer
 from ks_includes.multi_material import SWITCH_DATA_OBJECT
 from ks_includes.widgets.keyboard import Keyboard
 from ks_includes.config import KlipperScreenConfig
+from ks_includes.device_lock import DeviceLockSocketClient, DeviceLockStateReader
+from ks_includes.ai_detection_result import current_auto_pause_fault, result_signature
 from panels.base_panel import BasePanel
 
 logging.getLogger("urllib3").setLevel(logging.WARNING)
@@ -80,6 +83,14 @@ AI_DETECTION_DISPLAY_NAMES = {
     "general": "General Detection",
     "general detection": "General Detection",
 }
+AI_DETECTION_V3_DISPLAY_NAMES = {
+    "SPAGHETTI": "Spaghetti",
+    "NOZZLE_BLOB": "Nozzle Blob",
+    "FIRST_LAYER_EXTRUSION": "First Layer Extrusion",
+    "WARP_OR_DETACHMENT": "Warp or Detachment",
+    "FOREIGN_OBJECT": "Foreign Object",
+}
+AI_DETECTION_STATUS_RETRY_DELAYS_MS = (500, 1000, 2000)
 AI_DETECTION_CATEGORY_CONFIGS = {
     "spaghetti": {
         "default_threshold": 0.70,
@@ -221,6 +232,9 @@ class KlipperScreen(Gtk.Window):
         self.ai_detection_dialog = None
         self.ai_detection_last_signature = None
         self.ai_detection_error_last_signature = None
+        self.ai_detection_status_request_pending = False
+        self.ai_detection_status_retry_source = None
+        self.ai_detection_status_retry_index = 0
         self.ai_pause_active = False
         self.ai_pause_requested = False
         self.ai_pause_on_defect_enabled = True
@@ -230,6 +244,14 @@ class KlipperScreen(Gtk.Window):
         self.auto_open_extrude_runtime_enabled = True
         self.panels_reinit = []
         self.manual_settings = {}
+        self.device_lock_active = False
+        self.device_lock_overlay = None
+        self.device_lock_poll_timer = None
+        self._device_lock_signature = None
+        self._device_lock_ack_signature = None
+        self._device_lock_ack_inflight = None
+        self._device_lock_reader = DeviceLockStateReader()
+        self._device_lock_client = DeviceLockSocketClient()
 
         configfile = os.path.normpath(os.path.expanduser(args.configfile))
 
@@ -285,6 +307,10 @@ class KlipperScreen(Gtk.Window):
                 Gdk.Cursor.new_for_display(Gdk.Display.get_default(), Gdk.CursorType.BLANK_CURSOR))
             os.system("xsetroot  -cursor ks_includes/emptyCursor.xbm ks_includes/emptyCursor.xbm")
         self.base_panel.activate()
+        self._poll_device_lock_state()
+        self.device_lock_poll_timer = GLib.timeout_add_seconds(
+            1, self._poll_device_lock_state
+        )
         if self._config.errors:
             self.show_error_modal("Invalid config file", self._config.get_errors())
             # Prevent this dialog from being destroyed
@@ -297,6 +323,178 @@ class KlipperScreen(Gtk.Window):
         self.klippy_config_path = None
         self.klippy_config = None
         self.is_show_manual = True
+
+    def _poll_device_lock_state(self):
+        try:
+            state = self._device_lock_reader.read()
+            if state.signature != self._device_lock_signature:
+                logging.info(
+                    "Administrative lock state changed: locked=%s desired=%s actual=%s "
+                    "phase=%s policyVersion=%s generation=%s",
+                    state.locked,
+                    state.desired,
+                    state.actual,
+                    state.phase,
+                    state.policy_version,
+                    state.generation,
+                )
+                self._device_lock_signature = state.signature
+                if state.locked:
+                    self._show_device_lock_overlay()
+                else:
+                    self._hide_device_lock_overlay()
+            self._acknowledge_device_lock_ui(state)
+        except Exception as e:
+            logging.warning(f"Unable to refresh administrative lock state: {e}")
+        if self.device_lock_active:
+            for dialog in list(self.dialogs):
+                dialog.hide()
+        return True
+
+    def _show_device_lock_overlay(self):
+        if self.device_lock_active and self.device_lock_overlay is not None:
+            return
+        if self.screensaver is not None:
+            self.close_screensaver()
+        self._invalidate_ai_detection_status_request()
+        if self.ai_detection_dialog is not None:
+            self.ai_detection_dialog.hide()
+        self._close_ai_detection_dialog()
+        self.ai_detection_last_signature = None
+        self._clear_ai_pause_state()
+        self._set_auto_open_extrude_runtime(True, "Administrative lock activated")
+        self.device_lock_active = True
+        self.remove_keyboard()
+        self.popup_queue = []
+        self.close_popup_message()
+        if self.popup_process_timeout is not None:
+            GLib.source_remove(self.popup_process_timeout)
+            self.popup_process_timeout = None
+        for dialog in list(self.dialogs):
+            try:
+                dialog.destroy()
+            except Exception:
+                logging.debug("Unable to destroy dialog while locking", exc_info=True)
+        self.dialogs = []
+
+        event_box = Gtk.EventBox()
+        event_box.set_can_focus(True)
+        event_box.set_above_child(True)
+        event_box.set_size_request(self.width, self.height)
+        event_box.get_style_context().add_class("device-lock-overlay")
+        event_box.connect("button-press-event", self._consume_locked_input)
+        event_box.connect("button-release-event", self._consume_locked_input)
+        event_box.connect("touch-event", self._consume_locked_input)
+        event_box.connect("key-press-event", self._consume_locked_input)
+
+        content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=24)
+        content.set_halign(Gtk.Align.CENTER)
+        content.set_valign(Gtk.Align.CENTER)
+        content.set_hexpand(True)
+        content.set_vexpand(True)
+
+        title = Gtk.Label(label=_("Device locked"))
+        title.get_style_context().add_class("device-lock-title")
+        title.set_justify(Gtk.Justification.CENTER)
+        title.set_line_wrap(True)
+        message = Gtk.Label(
+            label=_("This printer has been locked by an administrator.\nPlease contact the administrator.")
+        )
+        message.get_style_context().add_class("device-lock-message")
+        message.set_justify(Gtk.Justification.CENTER)
+        message.set_line_wrap(True)
+        content.pack_start(title, False, False, 0)
+        content.pack_start(message, False, False, 0)
+        event_box.add(content)
+
+        current = self.get_child()
+        if current is not None:
+            self.remove(current)
+        self.add(event_box)
+        self.device_lock_overlay = event_box
+        self.set_keep_above(True)
+        self.fullscreen()
+        self.wake_screen()
+        event_box.show_all()
+        event_box.grab_focus()
+        if self.screensaver_timeout is not None:
+            GLib.source_remove(self.screensaver_timeout)
+            self.screensaver_timeout = None
+
+    def _hide_device_lock_overlay(self):
+        if not self.device_lock_active and self.device_lock_overlay is None:
+            return
+        overlay = self.device_lock_overlay
+        self.device_lock_active = False
+        self.device_lock_overlay = None
+        if overlay is not None and overlay.get_parent() is self:
+            self.remove(overlay)
+        if self.base_panel.main_grid.get_parent() is None:
+            self.add(self.base_panel.main_grid)
+        for dialog in list(self.dialogs):
+            if getattr(dialog, "_created_while_device_locked", False):
+                self.dialogs.remove(dialog)
+                dialog.destroy()
+        self.set_keep_above(False)
+        self.show_all()
+        self.reset_screensaver_timeout()
+        if self._ai_pause_signal_active():
+            self._schedule_ai_detection_status_request(reset=True)
+
+    @staticmethod
+    def _consume_locked_input(*args):
+        return True
+
+    def _acknowledge_device_lock_ui(self, state):
+        if not state.capable and not state.locked:
+            return
+        preparing_unlock = (
+            state.locked
+            and state.desired == "UNLOCKED"
+            and state.actual == "LOCKED"
+            and state.phase == "APPLYING"
+        )
+        actual = (
+            "READY_TO_UNLOCK"
+            if preparing_unlock
+            else ("LOCKED" if state.locked else "UNLOCKED")
+        )
+        signature = (state.generation, actual)
+        if (
+            signature == self._device_lock_ack_signature
+            or signature == self._device_lock_ack_inflight
+        ):
+            return
+        self._device_lock_ack_inflight = signature
+
+        def send_ack():
+            try:
+                response = self._device_lock_client.acknowledge_ui(
+                    state.generation, actual
+                )
+                if response.get("ok") is not True:
+                    raise RuntimeError(
+                        response.get("error")
+                        or "lock controller rejected UI acknowledgement"
+                    )
+                GLib.idle_add(self._finish_device_lock_ack, signature, True, None)
+            except Exception as e:
+                GLib.idle_add(self._finish_device_lock_ack, signature, False, str(e))
+
+        threading.Thread(
+            target=send_ack,
+            name="DeviceLockUiAck",
+            daemon=True,
+        ).start()
+
+    def _finish_device_lock_ack(self, signature, success, error):
+        if self._device_lock_ack_inflight == signature:
+            self._device_lock_ack_inflight = None
+        if success:
+            self._device_lock_ack_signature = signature
+        elif error:
+            logging.debug(f"Unable to acknowledge lock UI state: {error}")
+        return False
         
     def load_klipper_config(self):
         self.klippy_config = None
@@ -379,6 +577,11 @@ class KlipperScreen(Gtk.Window):
             self.show_printer_select()
 
     def connect_printer(self, name):
+        self._invalidate_ai_detection_status_request()
+        self._close_ai_detection_dialog()
+        self.ai_detection_last_signature = None
+        self._clear_ai_pause_state()
+        self._set_auto_open_extrude_runtime(True, "Printer connection changed")
         self.connecting_to_printer = name
         if self._ws is not None and self._ws.connected:
             self._ws.close()
@@ -514,6 +717,10 @@ class KlipperScreen(Gtk.Window):
         self.process_update("notify_log", log_entry)
 
     def show_popup_message(self, message, level=3):
+        if self.device_lock_active:
+            self.log_notification(message, level)
+            logging.info("Suppressing popup while administratively locked")
+            return False
         import time
         current_time = time.time()
         
@@ -553,6 +760,10 @@ class KlipperScreen(Gtk.Window):
         if self.popup_process_timeout is not None:
             GLib.source_remove(self.popup_process_timeout)
             self.popup_process_timeout = None
+
+        if self.device_lock_active:
+            self.popup_queue = []
+            return False
         
         if not self.popup_queue:
             return False
@@ -660,6 +871,10 @@ class KlipperScreen(Gtk.Window):
 
     def show_error_modal(self, err, e=""):
         logging.error(f"Showing error modal: {err} {e}")
+        if self.device_lock_active:
+            self.log_notification(f"{err}: {e}", level=3)
+            logging.info("Suppressing error modal while administratively locked")
+            return
 
         title = Gtk.Label()
         title.set_markup(f"<b>{err}</b>\n")
@@ -814,6 +1029,8 @@ class KlipperScreen(Gtk.Window):
         self.attach_panel(self._cur_panels[-1])
 
     def reset_screensaver_timeout(self, *args):
+        if self.device_lock_active:
+            return
         if self.screensaver_timeout is not None:
             GLib.source_remove(self.screensaver_timeout)
             self.screensaver_timeout = None
@@ -821,6 +1038,8 @@ class KlipperScreen(Gtk.Window):
             self.screensaver_timeout = GLib.timeout_add_seconds(self.blanking_time, self.show_screensaver)
 
     def show_screensaver(self):
+        if self.device_lock_active:
+            return False
         logging.debug("Showing Screensaver")
         if self.screensaver is not None:
             self.close_screensaver()
@@ -950,12 +1169,21 @@ class KlipperScreen(Gtk.Window):
 
     def state_disconnected(self):
         logging.debug("### Going to disconnected")
+        self._invalidate_ai_detection_status_request()
+        self._close_ai_detection_dialog()
+        self.ai_detection_last_signature = None
+        self._clear_ai_pause_state()
+        self._set_auto_open_extrude_runtime(True, "Printer disconnected")
         self.close_screensaver()
         self.initialized = False
         self.reinit_count = 0
         self._init_printer(_("Firmware has disconnected"), remove=True)
 
     def state_error(self):
+        self._invalidate_ai_detection_status_request()
+        self._close_ai_detection_dialog()
+        self._clear_ai_pause_state()
+        self._set_auto_open_extrude_runtime(True, "Printer entered error state")
         self.close_screensaver()
         msg = _("Firmware has encountered an error.") + "\n"
         state = self.printer.get_stat("webhooks", "state_message")
@@ -966,6 +1194,8 @@ class KlipperScreen(Gtk.Window):
         self.printer_initializing(msg + "\n" + state, remove=True)
 
     def state_paused(self):
+        if self._ai_pause_signal_active():
+            self._schedule_ai_detection_status_request(reset=True)
         ai_pause = bool(
             self.ai_pause_active
             or self.ai_pause_requested
@@ -991,6 +1221,7 @@ class KlipperScreen(Gtk.Window):
         self.show_panel("job_status", _("Printing"), remove_all=True, preserve_dialogs=preserve_dialogs)
 
     def state_printing(self):
+        self._invalidate_ai_detection_status_request()
         preserve_ai_dialog = self.ai_detection_dialog is not None and not self.ai_pause_active
         if self.ai_pause_active:
             logging.info("Printing state resumed after AI pause, clearing AI detection dialog")
@@ -1006,9 +1237,116 @@ class KlipperScreen(Gtk.Window):
             self._set_auto_open_extrude_runtime(True, "Normal printing state")
         self._show_job_status_panel(preserve_ai_detection_dialog=preserve_ai_dialog)
 
+    def _ai_pause_signal_active(self):
+        return bool(
+            self.printer is not None
+            and (
+                self.printer.state == "paused"
+                or self.printer.get_stat("pause_resume", "is_paused")
+            )
+        )
+
+    def _cancel_ai_detection_status_retry(self):
+        if self.ai_detection_status_retry_source is not None:
+            GLib.source_remove(self.ai_detection_status_retry_source)
+            self.ai_detection_status_retry_source = None
+        self.ai_detection_status_retry_index = 0
+
+    def _invalidate_ai_detection_status_request(self):
+        self._cancel_ai_detection_status_retry()
+        self.ai_detection_status_request_pending = False
+
+    def _schedule_ai_detection_status_request(self, reset=False):
+        if reset:
+            self._cancel_ai_detection_status_retry()
+        if (
+            not self._ai_pause_signal_active()
+            or self.device_lock_active
+            or self.ai_detection_dialog is not None
+            or self.ai_detection_status_request_pending
+            or self.ai_detection_status_retry_source is not None
+            or self.ai_detection_status_retry_index
+            >= len(AI_DETECTION_STATUS_RETRY_DELAYS_MS)
+        ):
+            return False
+        delay_ms = AI_DETECTION_STATUS_RETRY_DELAYS_MS[
+            self.ai_detection_status_retry_index
+        ]
+        self.ai_detection_status_retry_index += 1
+        self.ai_detection_status_retry_source = GLib.timeout_add(
+            delay_ms, self._run_ai_detection_status_request
+        )
+        return False
+
+    def _run_ai_detection_status_request(self):
+        self.ai_detection_status_retry_source = None
+        self._request_ai_detection_status()
+        return False
+
+    def _request_ai_detection_status(self):
+        if (
+            self.apiclient is None
+            or not self._ai_pause_signal_active()
+            or self.device_lock_active
+            or self.ai_detection_status_request_pending
+        ):
+            return False
+
+        client = self.apiclient
+        request_token = object()
+        self.ai_detection_status_request_pending = request_token
+
+        def request():
+            try:
+                response = client.send_request("server/ai_detection/status")
+            except Exception as error:
+                logging.warning("Unable to request AI detection status: %s", error)
+                response = False
+            GLib.idle_add(
+                self._handle_ai_detection_status_response,
+                response,
+                client,
+                request_token,
+            )
+
+        threading.Thread(target=request, daemon=True).start()
+        return False
+
+    def _handle_ai_detection_status_response(self, response, client, request_token):
+        if (
+            client is not self.apiclient
+            or request_token is not self.ai_detection_status_request_pending
+        ):
+            return False
+        self.ai_detection_status_request_pending = False
+        if self.device_lock_active or not self._ai_pause_signal_active():
+            self._cancel_ai_detection_status_retry()
+            return False
+        if not isinstance(response, dict):
+            self._schedule_ai_detection_status_request()
+            return False
+        status = response.get("result", response)
+        result = current_auto_pause_fault(status)
+        if result is None:
+            self._schedule_ai_detection_status_request()
+            return False
+
+        self._cancel_ai_detection_status_retry()
+        signature = result_signature(result)
+        if signature == self.ai_detection_last_signature:
+            return False
+        self.ai_detection_last_signature = signature
+        self.ai_pause_active = True
+        self.ai_pause_requested = False
+        self._set_auto_open_extrude_runtime(False, "AI pause confirmed")
+        self._show_ai_detection_dialog(result)
+        return False
+
     def state_ready(self, wait=True):
+        self._invalidate_ai_detection_status_request()
         self._clear_ai_pause_state()
         self._close_ai_detection_dialog()
+        self._set_auto_open_extrude_runtime(True, "Printer ready")
         # Do not return to main menu if completing a job, timeouts/user input will return
         if "job_status" in self._cur_panels and wait:
             return
@@ -1051,6 +1389,10 @@ class KlipperScreen(Gtk.Window):
         self.printer_initializing(_("Firmware is attempting to start"))
 
     def state_shutdown(self):
+        self._invalidate_ai_detection_status_request()
+        self._close_ai_detection_dialog()
+        self._clear_ai_pause_state()
+        self._set_auto_open_extrude_runtime(True, "Printer shutdown")
         self.close_screensaver()
         msg = self.printer.get_stat("webhooks", "state_message")
         msg = msg if "ready" not in msg else ""
@@ -1150,6 +1492,12 @@ class KlipperScreen(Gtk.Window):
             self.printer.process_update({'webhooks': {'state': "ready"}})
         elif action == "notify_status_update" and self.printer.state != "shutdown":
             self.printer.process_update(data)
+            pause_resume = data.get("pause_resume")
+            if isinstance(pause_resume, dict) and "is_paused" in pause_resume:
+                if pause_resume.get("is_paused") is True:
+                    self._schedule_ai_detection_status_request(reset=True)
+                else:
+                    self._invalidate_ai_detection_status_request()
             if 'manual_probe' in data and data['manual_probe']['is_active'] and 'zcalibrate' not in self._cur_panels:
                 if self.setup_init == 0:
                     self.show_panel("zcalibrate", _('Z Calibrate'))
@@ -1633,13 +1981,16 @@ class KlipperScreen(Gtk.Window):
     def _load_ai_detection_pixbuf(self, image_path):
         if not image_path:
             return None
-
-        max_width = int(self.width * 0.85)
-        max_height = int(self.height * 0.55)
+        image_path = os.path.abspath(os.path.expanduser(str(image_path)))
+        if not os.path.isfile(image_path) or not os.access(image_path, os.R_OK):
+            logging.warning("AI detection evidence is unavailable: %s", image_path)
+            return None
         try:
-            return GdkPixbuf.Pixbuf.new_from_file_at_scale(image_path, max_width, max_height, True)
-        except Exception as e:
-            logging.warning(f"AI detection: failed to load prediction image {image_path}: {e}")
+            return GdkPixbuf.Pixbuf.new_from_file_at_scale(
+                image_path, int(self.width * 0.85), int(self.height * 0.55), True
+            )
+        except Exception as error:
+            logging.warning("Unable to load AI detection evidence %s: %s", image_path, error)
             return None
 
     def _translate_ai_detection_name(self, raw_name):
@@ -1666,9 +2017,29 @@ class KlipperScreen(Gtk.Window):
         self.gtk.remove_dialog(dialog)
 
     def _show_ai_detection_dialog(self, result):
-        dtype = self._translate_ai_detection_name(result.get("model_name", result.get("defect_type")))
-        message = _("Defect detected: %s") % dtype
-        image_path = self._resolve_ai_detection_output_path(result)
+        is_v3_result = any(
+            key in result
+            for key in ("captureId", "incidentId", "defectType", "evidencePath")
+        )
+        if is_v3_result:
+            defect_type = str(result.get("defectType") or "").upper()
+            dtype = _(
+                AI_DETECTION_V3_DISPLAY_NAMES.get(
+                    defect_type, defect_type or "Unknown"
+                )
+            )
+        else:
+            dtype = self._translate_ai_detection_name(
+                result.get("model_name", result.get("defect_type"))
+            )
+
+        confidence = result.get("confidence")
+        try:
+            confidence_text = "{:.1f}%".format(float(confidence) * 100)
+        except (TypeError, ValueError):
+            confidence_text = _("Unknown")
+
+        image_path = result.get("evidencePath") or self._resolve_ai_detection_output_path(result)
         pixbuf = self._load_ai_detection_pixbuf(image_path)
 
         content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=12)
@@ -1676,7 +2047,13 @@ class KlipperScreen(Gtk.Window):
         content.set_vexpand(True)
 
         label = Gtk.Label()
-        label.set_markup(f"<big><b>{GLib.markup_escape_text(message)}</b></big>")
+        label.set_markup(
+            "<big><b>{}</b></big>\n{}: {}".format(
+                GLib.markup_escape_text(_("Defect detected: %s") % dtype),
+                GLib.markup_escape_text(_("Confidence")),
+                GLib.markup_escape_text(confidence_text),
+            )
+        )
         label.set_halign(Gtk.Align.START)
         label.set_xalign(0)
         label.set_line_wrap(True)
@@ -1692,10 +2069,12 @@ class KlipperScreen(Gtk.Window):
             frame.add(image)
             content.pack_start(frame, True, True, 0)
 
-        buttons = [{"name": _("Close"), "response": Gtk.ResponseType.CANCEL}]
         self._close_ai_detection_dialog()
         self.ai_detection_dialog = self.gtk.Dialog(
-            _("AI Detection"), buttons, content, self._close_ai_detection_dialog
+            _("AI Detection"),
+            [{"name": _("Close"), "response": Gtk.ResponseType.CANCEL}],
+            content,
+            self._close_ai_detection_dialog,
         )
 
     def _handle_ai_detection_result(self, result):
@@ -2036,11 +2415,14 @@ class KlipperScreen(Gtk.Window):
         self.keyboard = None
 
     def _key_press_event(self, widget, event):
+        if self.device_lock_active:
+            return True
         keyval_name = Gdk.keyval_name(event.keyval)
         if keyval_name == "Escape":
             self._menu_go_back(home=True)
         elif keyval_name == "BackSpace" and len(self._cur_panels) > 1 and self.keyboard is None:
             self.base_panel.back()
+        return False
 
     def update_size(self, *args):
         width, height = self.get_size()

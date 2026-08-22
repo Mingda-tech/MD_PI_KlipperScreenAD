@@ -1444,6 +1444,15 @@ msgstr "Pause Print on Defect"
 msgid "Spaghetti"
 msgstr "Spaghetti"
 
+msgid "Unknown"
+msgstr "Unknown"
+
+msgid "Device locked"
+msgstr "Device locked"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "This printer has been locked by an administrator.\nPlease contact the administrator."
+
 msgid "Spaghetti Detection"
 msgstr "Spaghetti Detection"
 

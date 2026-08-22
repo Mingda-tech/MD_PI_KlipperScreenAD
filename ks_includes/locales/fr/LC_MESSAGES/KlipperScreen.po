@@ -1664,6 +1664,15 @@ msgstr "Mettre l'impression en pause en cas de défaut"
 msgid "Spaghetti"
 msgstr "Spaghetti"
 
+msgid "Unknown"
+msgstr "Inconnu"
+
+msgid "Device locked"
+msgstr "Appareil verrouillé"
+
+msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
+msgstr "Cette imprimante a été verrouillée par un administrateur.\nVeuillez contacter l’administrateur."
+
 msgid "Spaghetti Detection"
 msgstr "Détection de spaghetti"
 
