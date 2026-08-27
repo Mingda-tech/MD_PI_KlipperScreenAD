@@ -2012,3 +2012,6 @@ msgstr "Usa los controles para alinear el cabezal y después guarda la posición
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "La calibración de posición todavía se está inicializando. Espera un momento y vuelve a intentarlo."
+
+msgid "Position Calibration"
+msgstr "Calibración de posición"

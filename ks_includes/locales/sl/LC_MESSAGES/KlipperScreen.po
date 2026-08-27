@@ -2053,3 +2053,6 @@ msgstr "S krmilniki poravnajte tiskalno glavo in nato shranite položaj."
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Kalibracija položaja se še inicializira. Počakajte trenutek in poskusite znova."
+
+msgid "Position Calibration"
+msgstr "Kalibracija položaja"

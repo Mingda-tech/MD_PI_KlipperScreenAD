@@ -1847,3 +1847,6 @@ msgstr "Brug kontrollerne til at justere printhovedet, og gem derefter positione
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Positionskalibreringen initialiseres stadig. Vent et øjeblik, og prøv igen."
+
+msgid "Position Calibration"
+msgstr "Positionskalibrering"

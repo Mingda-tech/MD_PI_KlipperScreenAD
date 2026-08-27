@@ -1987,3 +1987,6 @@ msgstr "Richten Sie den Druckkopf mit den Steuerelementen aus und speichern Sie 
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Die Positionskalibrierung wird noch initialisiert. Warten Sie einen Moment und versuchen Sie es erneut."
+
+msgid "Position Calibration"
+msgstr "Positionskalibrierung"

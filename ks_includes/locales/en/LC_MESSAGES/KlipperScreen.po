@@ -1809,3 +1809,6 @@ msgstr "Use the controls to align the toolhead, then save the position."
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Position calibration is still initializing. Wait a moment and retry."
+
+msgid "Position Calibration"
+msgstr "Position Calibration"

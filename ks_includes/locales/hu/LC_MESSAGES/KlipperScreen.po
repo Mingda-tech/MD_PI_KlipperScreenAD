@@ -1814,3 +1814,6 @@ msgstr "A vezérlőkkel igazítsa be a nyomtatófejet, majd mentse el a pozíci�
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "A pozíciókalibrálás inicializálása még folyamatban van. Várjon egy pillanatot, majd próbálja újra."
+
+msgid "Position Calibration"
+msgstr "Pozíciókalibrálás"

@@ -1894,3 +1894,6 @@ msgstr "Använd reglagen för att rikta in skrivhuvudet och spara sedan position
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Positionskalibreringen initieras fortfarande. Vänta en stund och försök igen."
+
+msgid "Position Calibration"
+msgstr "Positionskalibrering"

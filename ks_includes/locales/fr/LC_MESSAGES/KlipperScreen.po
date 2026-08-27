@@ -2029,3 +2029,6 @@ msgstr "Utilisez les commandes pour aligner la tête d’outil, puis enregistrez
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "La calibration de position est encore en cours d’initialisation. Patientez un instant et réessayez."
+
+msgid "Position Calibration"
+msgstr "Calibration de position"

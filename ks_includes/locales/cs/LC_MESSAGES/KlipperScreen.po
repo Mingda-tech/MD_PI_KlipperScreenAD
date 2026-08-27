@@ -1745,3 +1745,6 @@ msgstr "Pomocí ovládacích prvků vyrovnejte tiskovou hlavu a poté polohu ulo
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Kalibrace polohy se stále inicializuje. Chvíli počkejte a zkuste to znovu."
+
+msgid "Position Calibration"
+msgstr "Kalibrace polohy"

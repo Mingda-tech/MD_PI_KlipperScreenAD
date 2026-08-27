@@ -1848,3 +1848,6 @@ msgstr "Lijn de printkop uit met de bediening en sla daarna de positie op."
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "De positiekalibratie wordt nog geïnitialiseerd. Wacht even en probeer opnieuw."
+
+msgid "Position Calibration"
+msgstr "Positiekalibratie"

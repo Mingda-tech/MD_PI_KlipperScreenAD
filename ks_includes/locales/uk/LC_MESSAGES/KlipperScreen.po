@@ -1926,3 +1926,6 @@ msgstr "Вирівняйте друкувальну головку за допо
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Калібрування положення ще ініціалізується. Зачекайте трохи та повторіть спробу."
+
+msgid "Position Calibration"
+msgstr "Калібрування положення"

@@ -1842,3 +1842,6 @@ msgstr "Użyj elementów sterujących, aby wyrównać głowicę, a następnie za
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Kalibracja pozycji jest nadal inicjowana. Poczekaj chwilę i spróbuj ponownie."
+
+msgid "Position Calibration"
+msgstr "Kalibracja pozycji"

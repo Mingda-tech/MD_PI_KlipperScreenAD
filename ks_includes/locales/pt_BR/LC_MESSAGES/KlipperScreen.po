@@ -2055,3 +2055,6 @@ msgstr "Use os controles para alinhar o cabeçote e depois salve a posição."
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "A calibração de posição ainda está sendo inicializada. Aguarde um momento e tente novamente."
+
+msgid "Position Calibration"
+msgstr "Calibração de posição"

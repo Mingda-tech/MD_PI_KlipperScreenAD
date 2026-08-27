@@ -1829,3 +1829,6 @@ msgstr "Valdikliais sulygiuokite spausdinimo galvutę, tada išsaugokite padėt�
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Padėties kalibravimas vis dar inicijuojamas. Palaukite ir bandykite dar kartą."
+
+msgid "Position Calibration"
+msgstr "Padėties kalibravimas"

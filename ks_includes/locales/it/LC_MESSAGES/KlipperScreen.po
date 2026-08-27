@@ -1973,3 +1973,6 @@ msgstr "Usa i controlli per allineare la testina, quindi salva la posizione."
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "La calibrazione della posizione è ancora in fase di inizializzazione. Attendi un momento e riprova."
+
+msgid "Position Calibration"
+msgstr "Calibrazione posizione"

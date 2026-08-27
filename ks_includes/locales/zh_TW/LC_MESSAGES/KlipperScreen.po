@@ -1983,3 +1983,6 @@ msgstr "使用控制按鈕對準工具頭，然後儲存位置。"
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "位置校準仍在初始化。請稍候片刻再重試。"
+
+msgid "Position Calibration"
+msgstr "位置校準"

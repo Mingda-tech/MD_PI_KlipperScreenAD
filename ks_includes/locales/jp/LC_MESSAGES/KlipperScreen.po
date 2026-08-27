@@ -1845,3 +1845,6 @@ msgstr "操作ボタンでツールヘッドの位置を合わせ、位置を保
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "位置キャリブレーションを初期化中です。しばらく待ってから再試行してください。"
+
+msgid "Position Calibration"
+msgstr "位置キャリブレーション"

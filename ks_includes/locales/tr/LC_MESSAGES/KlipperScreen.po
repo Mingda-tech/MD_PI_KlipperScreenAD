@@ -1923,3 +1923,6 @@ msgstr "Kontrolleri kullanarak yazıcı kafasını hizalayın ve ardından konum
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Konum kalibrasyonu hâlâ başlatılıyor. Biraz bekleyip tekrar deneyin."
+
+msgid "Position Calibration"
+msgstr "Konum kalibrasyonu"

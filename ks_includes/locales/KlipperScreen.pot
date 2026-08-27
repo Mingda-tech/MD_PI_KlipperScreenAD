@@ -1216,3 +1216,6 @@ msgstr ""
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr ""
+
+msgid "Position Calibration"
+msgstr ""

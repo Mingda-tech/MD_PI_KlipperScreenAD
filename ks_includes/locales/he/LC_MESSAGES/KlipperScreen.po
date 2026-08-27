@@ -2034,3 +2034,6 @@ msgstr "יש להשתמש בפקדים כדי ליישר את ראש הכלי ו
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "כיול המיקום עדיין מאותחל. יש להמתין רגע ולנסות שוב."
+
+msgid "Position Calibration"
+msgstr "כיול מיקום"

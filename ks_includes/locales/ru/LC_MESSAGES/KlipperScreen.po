@@ -2005,3 +2005,6 @@ msgstr "Выровняйте печатающую головку кнопкам�
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Калибровка положения ещё инициализируется. Подождите немного и повторите попытку."
+
+msgid "Position Calibration"
+msgstr "Калибровка положения"

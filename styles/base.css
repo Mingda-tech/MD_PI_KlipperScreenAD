@@ -720,16 +720,13 @@ button.position-calibration-target {
 }
 
 button.position-calibration-target:active,
-button.position-calibration-distance:active,
 button.position-calibration-control:active,
 button.position-calibration-target:hover,
-button.position-calibration-distance:hover,
 button.position-calibration-control:hover {
     background-color: @active;
 }
 
 button.position-calibration-target:focus,
-button.position-calibration-distance:focus,
 button.position-calibration-control:focus {
     outline-color: @lines;
     outline-style: solid;
@@ -783,20 +780,6 @@ button.position-calibration-control:focus {
 
 .position-calibration-center {
     color: @lines;
-    font-weight: bold;
-}
-
-button.position-calibration-distance {
-    border: .1em solid @lines;
-    border-radius: .35em;
-    margin: .15em;
-    min-height: 2.5em;
-    padding: .15em;
-}
-
-button.position-calibration-distance-active {
-    background-color: @active;
-    border-bottom: .3em solid @color1;
     font-weight: bold;
 }
 

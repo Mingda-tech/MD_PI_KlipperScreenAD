@@ -17,7 +17,7 @@ from ks_includes.screen_panel import ScreenPanel
 
 
 class Panel(ScreenPanel):
-    DISTANCES = ("0.01", "0.05", "0.1", "0.5", "1")
+    DISTANCES = ("0.1", "0.5", "1", "5", "10")
     TARGETS = (
         ("PROBE_DEPLOY", "probe-deploy"),
         ("PROBE_STOW", "probe-stow"),
@@ -125,12 +125,24 @@ class Panel(ScreenPanel):
         distance_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=2)
         distance_label = Gtk.Label(label=_("Move Distance (mm)"))
         distance_box.pack_start(distance_label, False, False, 0)
-        distance_grid = self._gtk.HomogeneousGrid()
+        distance_grid = Gtk.Grid()
         self.distance_buttons = {}
         for index, distance in enumerate(self.DISTANCES):
             button = self._gtk.Button(label=distance, lines=1)
-            button.set_can_focus(True)
-            button.get_style_context().add_class("position-calibration-distance")
+            button.set_direction(Gtk.TextDirection.LTR)
+            context = button.get_style_context()
+            if (
+                (self._screen.lang_ltr and index == 0)
+                or (not self._screen.lang_ltr and index == len(self.DISTANCES) - 1)
+            ):
+                context.add_class("distbutton_top")
+            elif (
+                (not self._screen.lang_ltr and index == 0)
+                or (self._screen.lang_ltr and index == len(self.DISTANCES) - 1)
+            ):
+                context.add_class("distbutton_bottom")
+            else:
+                context.add_class("distbutton")
             button.connect("clicked", self._change_distance, distance)
             distance_grid.attach(button, index, 0, 1, 1)
             self.distance_buttons[distance] = button
@@ -388,9 +400,9 @@ class Panel(ScreenPanel):
     def _mark_active_distance(self):
         for distance, button in self.distance_buttons.items():
             context = button.get_style_context()
-            context.remove_class("position-calibration-distance-active")
+            context.remove_class("distbutton_active")
             if distance == self.distance:
-                context.add_class("position-calibration-distance-active")
+                context.add_class("distbutton_active")
 
     def _change_distance(self, _widget, distance):
         if self.state != "adjusting":

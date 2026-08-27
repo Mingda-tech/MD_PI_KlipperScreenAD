@@ -1989,3 +1989,6 @@ msgstr "Joonda prindipea juhtnuppudega ja salvesta seejärel asend."
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Asendi kalibreerimine alles käivitub. Oota hetk ja proovi uuesti."
+
+msgid "Position Calibration"
+msgstr "Asendi kalibreerimine"

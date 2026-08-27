@@ -2056,3 +2056,6 @@ msgstr "Dùng các nút điều khiển để căn chỉnh đầu in, sau đó l
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "Hiệu chuẩn vị trí vẫn đang khởi tạo. Hãy đợi một lát rồi thử lại."
+
+msgid "Position Calibration"
+msgstr "Hiệu chuẩn vị trí"

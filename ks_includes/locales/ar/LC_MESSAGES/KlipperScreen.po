@@ -1875,3 +1875,6 @@ msgstr "استخدم عناصر التحكم لمحاذاة رأس الأداة�
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "لا تزال معايرة الموضع قيد التهيئة. انتظر لحظة ثم أعد المحاولة."
+
+msgid "Position Calibration"
+msgstr "معايرة الموضع"

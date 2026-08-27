@@ -474,3 +474,6 @@ msgstr "Опитайте отново"
 
 msgid "Save"
 msgstr "Запазване"
+
+msgid "Position Calibration"
+msgstr "Калибриране на позицията"

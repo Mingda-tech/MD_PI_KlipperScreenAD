@@ -1867,3 +1867,6 @@ msgstr "Utilize os controlos para alinhar a cabeça de impressão e guarde depoi
 
 msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr "A calibração de posição ainda está a inicializar. Aguarde um momento e tente novamente."
+
+msgid "Position Calibration"
+msgstr "Calibração de posição"
