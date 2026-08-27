@@ -721,12 +721,10 @@ button.position-calibration-target {
 
 button.position-calibration-target:active,
 button.position-calibration-control:active,
-button.position-calibration-target:hover,
 button.position-calibration-control:hover {
     background-color: @active;
 }
 
-button.position-calibration-target:focus,
 button.position-calibration-control:focus {
     outline-color: @lines;
     outline-style: solid;
@@ -764,7 +762,30 @@ button.position-calibration-control:focus {
 .position-calibration-info {
     border: .1em solid @lines;
     border-radius: .45em;
-    padding: .4em;
+    margin-bottom: .5em;
+    padding: .5em .55em;
+}
+
+.position-calibration-info-header {
+    border-bottom: .05em solid alpha(@text, .2);
+    padding-bottom: .4em;
+}
+
+.position-calibration-coordinate-strip {
+    margin-top: .15em;
+}
+
+.position-calibration-axis {
+    color: @lines;
+    font-size: .82em;
+}
+
+.position-calibration-status {
+    padding: .45em .2em;
+}
+
+.position-calibration-primary-action {
+    margin: .15em 0;
 }
 
 .position-calibration-subheading {

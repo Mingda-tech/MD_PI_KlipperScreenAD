@@ -79,8 +79,6 @@ class Panel(ScreenPanel):
         for index, (target, icon) in enumerate(self.TARGETS):
             label = self._target_label(target)
             button = self._gtk.Button(icon, label, scale=1.0, lines=1)
-            button.set_can_focus(True)
-            button.set_tooltip_text(label)
             button.get_style_context().add_class("position-calibration-target")
             button.connect("clicked", self._select_target, target, label)
             target_grid.attach(button, index % 2, index // 2, 1, 1)
@@ -110,22 +108,13 @@ class Panel(ScreenPanel):
 
         movement = self._build_movement_grid()
         info = self._build_information_panel()
-        body = Gtk.Grid()
-        body.set_hexpand(True)
-        body.set_vexpand(True)
-        body.set_column_homogeneous(not self._screen.vertical_mode)
-        if self._screen.vertical_mode:
-            body.attach(info, 0, 0, 1, 1)
-            body.attach(movement, 0, 1, 1, 2)
-        else:
-            body.attach(movement, 0, 0, 2, 1)
-            body.attach(info, 2, 0, 1, 1)
-        view.pack_start(body, True, True, 0)
 
         distance_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=2)
+        distance_box.set_hexpand(True)
         distance_label = Gtk.Label(label=_("Move Distance (mm)"))
         distance_box.pack_start(distance_label, False, False, 0)
         distance_grid = Gtk.Grid()
+        distance_grid.set_hexpand(True)
         self.distance_buttons = {}
         for index, distance in enumerate(self.DISTANCES):
             button = self._gtk.Button(label=distance, lines=1)
@@ -147,7 +136,25 @@ class Panel(ScreenPanel):
             distance_grid.attach(button, index, 0, 1, 1)
             self.distance_buttons[distance] = button
         distance_box.pack_start(distance_grid, True, True, 0)
-        view.pack_start(distance_box, False, False, 0)
+
+        body = Gtk.Grid()
+        body.set_hexpand(True)
+        body.set_vexpand(True)
+        body.set_column_homogeneous(not self._screen.vertical_mode)
+        if self._screen.vertical_mode:
+            info.set_vexpand(False)
+            body.attach(info, 0, 0, 1, 1)
+            body.attach(movement, 0, 1, 1, 2)
+            body.attach(distance_box, 0, 3, 1, 1)
+        else:
+            left_column = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+            left_column.set_hexpand(True)
+            left_column.set_vexpand(True)
+            left_column.pack_start(movement, True, True, 0)
+            left_column.pack_end(distance_box, False, False, 0)
+            body.attach(left_column, 0, 0, 2, 1)
+            body.attach(info, 2, 0, 1, 1)
+        view.pack_start(body, True, True, 0)
 
         self._mark_active_distance()
         return view
@@ -187,51 +194,80 @@ class Panel(ScreenPanel):
         return grid
 
     def _build_information_panel(self):
-        panel = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=5)
+        panel = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+        panel.set_hexpand(True)
+        panel.set_vexpand(True)
+        panel.set_valign(Gtk.Align.FILL)
         panel.get_style_context().add_class("position-calibration-info")
 
+        header = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=3)
+        header.get_style_context().add_class("position-calibration-info-header")
         self.coordinate_title = Gtk.Label(label=_("Saved Position"))
         self.coordinate_title.set_halign(Gtk.Align.START)
         self.coordinate_title.get_style_context().add_class("position-calibration-subheading")
-        panel.pack_start(self.coordinate_title, False, False, 0)
+        header.pack_start(self.coordinate_title, False, False, 0)
 
         coordinates = Gtk.Grid()
-        coordinates.set_column_homogeneous(True)
+        coordinates.set_hexpand(True)
+        coordinates.set_column_spacing(8)
+        coordinates.set_row_spacing(8)
+        coordinates.get_style_context().add_class("position-calibration-coordinate-strip")
         self.coordinate_labels = {}
         for row, axis in enumerate(("x", "y", "z")):
             axis_label = Gtk.Label(label=axis.upper())
             axis_label.set_halign(Gtk.Align.START)
+            axis_label.get_style_context().add_class("position-calibration-axis")
             value_label = Gtk.Label(label="—")
+            value_label.set_hexpand(True)
             value_label.set_halign(Gtk.Align.END)
             value_label.get_style_context().add_class("position-calibration-coordinate")
             coordinates.attach(axis_label, 0, row, 1, 1)
             coordinates.attach(value_label, 1, row, 1, 1)
             self.coordinate_labels[axis] = value_label
-        panel.pack_start(coordinates, False, False, 0)
+        header.pack_start(coordinates, False, False, 0)
+        panel.pack_start(header, False, False, 0)
 
-        status_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=6)
+        status_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=5)
+        status_box.set_hexpand(True)
+        status_box.set_vexpand(True)
+        status_box.set_valign(Gtk.Align.CENTER)
+        status_box.get_style_context().add_class("position-calibration-status")
         self.status_spinner = Gtk.Spinner()
         self.status_spinner.set_no_show_all(True)
+        self.status_spinner.set_halign(Gtk.Align.CENTER)
         self.status_label = Gtk.Label()
-        self.status_label.set_halign(Gtk.Align.START)
+        self.status_label.set_halign(Gtk.Align.CENTER)
+        self.status_label.set_justify(Gtk.Justification.CENTER)
         self.status_label.set_line_wrap(True)
         self.status_label.set_line_wrap_mode(Pango.WrapMode.WORD_CHAR)
         status_box.pack_start(self.status_spinner, False, False, 0)
-        status_box.pack_start(self.status_label, True, True, 0)
+        status_box.pack_start(self.status_label, False, False, 0)
         panel.pack_start(status_box, True, True, 0)
 
-        self.start_button = self._gtk.Button("start", _("Start Calibration"), "color1", scale=0.65, lines=1)
+        self.start_button = self._gtk.Button(
+            "start", _("Start Calibration"), "color1", scale=0.42, position=Gtk.PositionType.LEFT, lines=1
+        )
+        self.start_button.set_vexpand(False)
         self.start_button.set_can_focus(True)
         self.start_button.get_style_context().add_class("position-calibration-control")
+        self.start_button.get_style_context().add_class("position-calibration-primary-action")
         self.start_button.connect("clicked", self._start_clicked)
-        panel.pack_start(self.start_button, True, True, 0)
+        panel.pack_start(self.start_button, False, False, 0)
 
         actions = self._gtk.HomogeneousGrid()
-        self.cancel_button = self._gtk.Button("cancel", _("Cancel"), scale=0.55, lines=1)
+        actions.set_vexpand(False)
+        actions.get_style_context().add_class("position-calibration-actions")
+        self.cancel_button = self._gtk.Button(
+            "cancel", _("Cancel"), scale=0.4, position=Gtk.PositionType.LEFT, lines=1
+        )
+        self.cancel_button.set_vexpand(False)
         self.cancel_button.set_can_focus(True)
         self.cancel_button.get_style_context().add_class("position-calibration-control")
         self.cancel_button.connect("clicked", self._cancel_clicked)
-        self.save_button = self._gtk.Button("complete", _("Save Position"), "color4", scale=0.55, lines=1)
+        self.save_button = self._gtk.Button(
+            "complete", _("Save Position"), "color4", scale=0.4, position=Gtk.PositionType.LEFT, lines=1
+        )
+        self.save_button.set_vexpand(False)
         self.save_button.set_can_focus(True)
         self.save_button.get_style_context().add_class("position-calibration-control")
         self.save_button.connect("clicked", self._save_clicked)
@@ -436,7 +472,11 @@ class Panel(ScreenPanel):
         )
         message.set_line_wrap(True)
         message.set_line_wrap_mode(Pango.WrapMode.WORD_CHAR)
+        message.set_hexpand(True)
+        message.set_vexpand(True)
         message.set_halign(Gtk.Align.CENTER)
+        message.set_valign(Gtk.Align.CENTER)
+        message.set_justify(Gtk.Justification.CENTER)
         buttons = [
             {"name": _("Start Moving"), "response": Gtk.ResponseType.OK},
             {"name": _("Cancel"), "response": Gtk.ResponseType.CANCEL},
