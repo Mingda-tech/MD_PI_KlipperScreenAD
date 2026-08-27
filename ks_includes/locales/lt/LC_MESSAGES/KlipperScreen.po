@@ -1396,12 +1396,6 @@ msgstr "AI aptikimas"
 msgid "AI Status"
 msgstr "AI būsena"
 
-msgid "AI Detection Error"
-msgstr "DI aptikimo klaida"
-
-msgid "AI detection failed"
-msgstr "DI aptikimas nepavyko"
-
 msgid "Checking..."
 msgstr "Tikrinama..."
 
@@ -1421,17 +1415,8 @@ msgstr "Įjungta"
 msgid "First Layer"
 msgstr "Pirmasis sluoksnis"
 
-msgid "First Layer Detection"
-msgstr "Pirmojo sluoksnio aptikimas"
-
 msgid "Foreign Object"
 msgstr "Pašalinis objektas"
-
-msgid "Foreign Object Detection"
-msgstr "Pašalinio objekto aptikimas"
-
-msgid "General Detection"
-msgstr "Bendras aptikimas"
 
 msgid "Latest Detection Result"
 msgstr "Paskutinis aptikimo rezultatas"
@@ -1441,9 +1426,6 @@ msgstr "Aptikimo rezultatų dar nėra"
 
 msgid "Normal"
 msgstr "Normalu"
-
-msgid "Nozzle Blob Detection"
-msgstr "Antgalio gumulo aptikimas"
 
 msgid "Offline"
 msgstr "Atsijungta"
@@ -1473,14 +1455,8 @@ msgstr "Įrenginys užrakintas"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Šį spausdintuvą užrakino administratorius.\nKreipkitės į administratorių."
 
-msgid "Spaghetti Detection"
-msgstr "Spagečių aptikimas"
-
 msgid "Warp Edge"
 msgstr "Užsirietęs kraštas"
-
-msgid "Warp Edge Detection"
-msgstr "Užsirietusio krašto aptikimas"
 
 msgid "Device QR Code"
 msgstr "Įrenginio QR kodas"
@@ -1701,11 +1677,14 @@ msgstr "Politikos patvirtinimas nepavyko"
 msgid "Nozzle Blob"
 msgstr "Dėmė ant purkštuko"
 
-msgid "First Layer Extrusion"
-msgstr "Pirmojo sluoksnio ekstruzijos problema"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Iškrypimas arba atsiskyrimas"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Išjungta"
@@ -1718,3 +1697,135 @@ msgstr "Saugus režimas aktyvus. Išankstinio spausdinimo patikrinimas tik įsp�
 
 msgid "AI Platform V3 is required"
 msgstr "Reikalinga AI platforma V3"
+
+msgid "Adjust"
+msgstr "Reguliuoti"
+
+msgid "Adjust Position"
+msgstr "Reguliuoti padėtį"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "Vyksta kitas padėties kalibravimas. Pirmiausia naudokite Saugų išėjimą."
+
+msgid "Calibration cancelled."
+msgstr "Kalibravimas atšauktas."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Nepavyko išsaugoti: dabartinė padėtis nepatenka į nustatytą diapazoną."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "Ryšys nutrūko. Prisijunkite iš naujo, tada naudokite Saugų išėjimą."
+
+msgid "Current Position"
+msgstr "Dabartinė padėtis"
+
+msgid "Fine Clean"
+msgstr "Tikslus valymas"
+
+msgid "Loading saved position…"
+msgstr "Įkeliama išsaugota padėtis…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "Judėjimas užblokuotas: tikslinė padėtis nepatenka į nustatytą diapazoną."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "Judėjimas nepavyko. Patikrinkite įrenginį, tada naudokite Saugų išėjimą."
+
+msgid "Moving the toolhead to safety…"
+msgstr "Spausdinimo galvutė perkeliama į saugią padėtį…"
+
+msgid "Moving to safety…"
+msgstr "Perkeliama į saugią padėtį…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Perkeliama į kalibravimo padėtį. Nelieskite įrenginio."
+
+msgid "Moving…"
+msgstr "Perkeliama…"
+
+msgid "Nozzle Clean"
+msgstr "Purkštuko valymas"
+
+msgid "Position saved."
+msgstr "Padėtis išsaugota."
+
+msgid "Prepare"
+msgstr "Paruošti"
+
+msgid "Printer connection is unavailable."
+msgstr "Ryšys su spausdintuvu nepasiekiamas."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "Vyksta spausdinimas. Prieš kalibravimą užbaikite spausdinimą."
+
+msgid "Probe Deploy"
+msgstr "Išskleisti zondą"
+
+msgid "Probe Stow"
+msgstr "Suskleisti zondą"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Patikrinkite išsaugotą padėtį, tada pradėkite kalibravimą."
+
+msgid "Safe Exit"
+msgstr "Saugus išėjimas"
+
+msgid "Save Position"
+msgstr "Išsaugoti padėtį"
+
+msgid "Saved Position"
+msgstr "Išsaugota padėtis"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Išsaugoma ir spausdinimo galvutė perkeliama į saugią padėtį…"
+
+msgid "Saving…"
+msgstr "Išsaugoma…"
+
+msgid "Select a position to calibrate"
+msgstr "Pasirinkite kalibruojamą padėtį"
+
+msgid "Start Calibration"
+msgstr "Pradėti kalibravimą"
+
+msgid "Start Moving"
+msgstr "Pradėti judėjimą"
+
+msgid "Start Position Calibration"
+msgstr "Pradėti padėties kalibravimą"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "Kalibravimo seansas baigėsi. Grįžkite ir pradėkite iš naujo."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "Dabartinės koordinatės netinkamos. Sureguliuokite padėtį ir bandykite dar kartą."
+
+msgid "The current position is outside the configured movement range."
+msgstr "Dabartinė padėtis nepatenka į nustatytą judėjimo diapazoną."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "Padėties išsaugoti nepavyko. Patikrinkite Klipper žurnalą ir bandykite dar kartą."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "Spausdintuvas gali nustatyti pradines ašių padėtis ir pajudinti spausdinimo galvutę. Prieš tęsdami nuimkite atspausdintas dalis ir atlaisvinkite judėjimo zoną."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "Spausdintuvas grąžino netinkamą kalibravimo atsakymą."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "Pasirinktas kalibravimas pasikeitė. Grįžkite ir pradėkite iš naujo."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "Spausdinimo galvutė judės automatiškai. Prieš pradėdami atlaisvinkite judėjimo zoną."
+
+msgid "This calibration action is not supported."
+msgstr "Šis kalibravimo veiksmas nepalaikomas."
+
+msgid "This calibration position is not supported."
+msgstr "Ši kalibravimo padėtis nepalaikoma."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "Valdikliais sulygiuokite spausdinimo galvutę, tada išsaugokite padėtį."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "Padėties kalibravimas vis dar inicijuojamas. Palaukite ir bandykite dar kartą."

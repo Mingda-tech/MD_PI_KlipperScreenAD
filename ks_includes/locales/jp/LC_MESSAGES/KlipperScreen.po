@@ -1412,12 +1412,6 @@ msgstr "AI検出"
 msgid "AI Status"
 msgstr "AI状態"
 
-msgid "AI Detection Error"
-msgstr "AI検出エラー"
-
-msgid "AI detection failed"
-msgstr "AI検出に失敗しました"
-
 msgid "Checking..."
 msgstr "確認中..."
 
@@ -1437,17 +1431,8 @@ msgstr "有効"
 msgid "First Layer"
 msgstr "1層目"
 
-msgid "First Layer Detection"
-msgstr "1層目検出"
-
 msgid "Foreign Object"
 msgstr "異物"
-
-msgid "Foreign Object Detection"
-msgstr "異物検出"
-
-msgid "General Detection"
-msgstr "汎用検出"
 
 msgid "Latest Detection Result"
 msgstr "最新の検出結果"
@@ -1457,9 +1442,6 @@ msgstr "検出結果はまだありません"
 
 msgid "Normal"
 msgstr "正常"
-
-msgid "Nozzle Blob Detection"
-msgstr "ノズル付着物検出"
 
 msgid "Offline"
 msgstr "オフライン"
@@ -1489,14 +1471,8 @@ msgstr "デバイスはロックされています"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "このプリンターは管理者によってロックされています。\n管理者にお問い合わせください。"
 
-msgid "Spaghetti Detection"
-msgstr "スパゲッティ検出"
-
 msgid "Warp Edge"
 msgstr "反り縁"
-
-msgid "Warp Edge Detection"
-msgstr "反り縁検出"
 
 msgid "Device QR Code"
 msgstr "デバイスのQRコード"
@@ -1717,11 +1693,14 @@ msgstr "ポリシーの検証に失敗しました"
 msgid "Nozzle Blob"
 msgstr "ノズルの樹脂塊"
 
-msgid "First Layer Extrusion"
-msgstr "第一層の押出異常"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "反りまたは剥離"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "オフ"
@@ -1734,3 +1713,135 @@ msgstr "セーフモードが有効になっています。印刷前チェック
 
 msgid "AI Platform V3 is required"
 msgstr "AI プラットフォーム V3 が必要です"
+
+msgid "Adjust"
+msgstr "調整"
+
+msgid "Adjust Position"
+msgstr "位置を調整"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "別の位置キャリブレーションが実行中です。先に「安全終了」を使用してください。"
+
+msgid "Calibration cancelled."
+msgstr "キャリブレーションをキャンセルしました。"
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "保存できません：現在位置が設定範囲外です。"
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "接続が切断されました。再接続後に「安全終了」を使用してください。"
+
+msgid "Current Position"
+msgstr "現在位置"
+
+msgid "Fine Clean"
+msgstr "精密クリーニング"
+
+msgid "Loading saved position…"
+msgstr "保存位置を読み込み中…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "移動を停止しました：目標位置が設定範囲外です。"
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "移動に失敗しました。機体を確認してから「安全終了」を使用してください。"
+
+msgid "Moving the toolhead to safety…"
+msgstr "ツールヘッドを安全な位置へ移動中…"
+
+msgid "Moving to safety…"
+msgstr "安全な位置へ移動中…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "キャリブレーション位置へ移動中です。機体に触れないでください。"
+
+msgid "Moving…"
+msgstr "移動中…"
+
+msgid "Nozzle Clean"
+msgstr "ノズルクリーニング"
+
+msgid "Position saved."
+msgstr "位置を保存しました。"
+
+msgid "Prepare"
+msgstr "準備"
+
+msgid "Printer connection is unavailable."
+msgstr "プリンターに接続できません。"
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "印刷中です。キャリブレーション前に印刷を終了してください。"
+
+msgid "Probe Deploy"
+msgstr "プローブを展開"
+
+msgid "Probe Stow"
+msgstr "プローブを格納"
+
+msgid "Review the saved position, then start calibration."
+msgstr "保存位置を確認してからキャリブレーションを開始してください。"
+
+msgid "Safe Exit"
+msgstr "安全終了"
+
+msgid "Save Position"
+msgstr "位置を保存"
+
+msgid "Saved Position"
+msgstr "保存位置"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "保存してツールヘッドを安全な位置へ移動中…"
+
+msgid "Saving…"
+msgstr "保存中…"
+
+msgid "Select a position to calibrate"
+msgstr "キャリブレーションする位置を選択"
+
+msgid "Start Calibration"
+msgstr "キャリブレーション開始"
+
+msgid "Start Moving"
+msgstr "移動開始"
+
+msgid "Start Position Calibration"
+msgstr "位置キャリブレーション開始"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "キャリブレーションセッションが終了しました。戻ってやり直してください。"
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "現在の座標が無効です。位置を調整して再試行してください。"
+
+msgid "The current position is outside the configured movement range."
+msgstr "現在位置が設定された移動範囲外です。"
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "位置を保存できませんでした。Klipperログを確認して再試行してください。"
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "プリンターが原点復帰し、ツールヘッドを移動する場合があります。続行する前に印刷物を取り外し、可動範囲を空けてください。"
+
+msgid "The printer returned an invalid calibration response."
+msgstr "プリンターから無効なキャリブレーション応答が返されました。"
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "選択したキャリブレーションが変更されました。戻ってやり直してください。"
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "ツールヘッドは自動的に移動します。開始前に可動範囲を空けてください。"
+
+msgid "This calibration action is not supported."
+msgstr "このキャリブレーション操作には対応していません。"
+
+msgid "This calibration position is not supported."
+msgstr "このキャリブレーション位置には対応していません。"
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "操作ボタンでツールヘッドの位置を合わせ、位置を保存してください。"
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "位置キャリブレーションを初期化中です。しばらく待ってから再試行してください。"

@@ -1312,12 +1312,6 @@ msgstr "AI detekce"
 msgid "AI Status"
 msgstr "Stav AI"
 
-msgid "AI Detection Error"
-msgstr "Chyba detekce AI"
-
-msgid "AI detection failed"
-msgstr "Detekce AI selhala"
-
 msgid "Checking..."
 msgstr "Kontrola..."
 
@@ -1337,17 +1331,8 @@ msgstr "Povoleno"
 msgid "First Layer"
 msgstr "První vrstva"
 
-msgid "First Layer Detection"
-msgstr "Detekce první vrstvy"
-
 msgid "Foreign Object"
 msgstr "Cizí objekt"
-
-msgid "Foreign Object Detection"
-msgstr "Detekce cizího objektu"
-
-msgid "General Detection"
-msgstr "Obecná detekce"
 
 msgid "Latest Detection Result"
 msgstr "Poslední výsledek detekce"
@@ -1357,9 +1342,6 @@ msgstr "Zatím žádné výsledky detekce"
 
 msgid "Normal"
 msgstr "Normální"
-
-msgid "Nozzle Blob Detection"
-msgstr "Detekce nánosu na trysce"
 
 msgid "Offline"
 msgstr "Offline"
@@ -1389,14 +1371,8 @@ msgstr "Zařízení je uzamčeno"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Tato tiskárna byla uzamčena správcem.\nObraťte se na správce."
 
-msgid "Spaghetti Detection"
-msgstr "Detekce spaghetti"
-
 msgid "Warp Edge"
 msgstr "Zkroucená hrana"
-
-msgid "Warp Edge Detection"
-msgstr "Detekce zkroucené hrany"
 
 msgid "Device QR Code"
 msgstr "QR kód zařízení"
@@ -1617,11 +1593,14 @@ msgstr "Ověření zásad se nezdařilo"
 msgid "Nozzle Blob"
 msgstr "Kapka na trysce"
 
-msgid "First Layer Extrusion"
-msgstr "Problém s vytlačováním první vrstvy"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Pokřivení nebo oddělení"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Vypnuto"
@@ -1634,3 +1613,135 @@ msgstr "Nouzový režim je aktivní. Kontrola před tiskem pouze upozorní a neb
 
 msgid "AI Platform V3 is required"
 msgstr "Je vyžadována platforma AI Platform V3"
+
+msgid "Adjust"
+msgstr "Upravit"
+
+msgid "Adjust Position"
+msgstr "Upravit polohu"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "Probíhá jiná kalibrace polohy. Nejprve použijte Bezpečný odjezd."
+
+msgid "Calibration cancelled."
+msgstr "Kalibrace byla zrušena."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Nelze uložit: aktuální poloha je mimo nastavený rozsah."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "Připojení bylo přerušeno. Znovu se připojte a poté použijte Bezpečný odjezd."
+
+msgid "Current Position"
+msgstr "Aktuální poloha"
+
+msgid "Fine Clean"
+msgstr "Jemné čištění"
+
+msgid "Loading saved position…"
+msgstr "Načítání uložené polohy…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "Pohyb byl zablokován: cílová poloha je mimo nastavený rozsah."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "Pohyb se nezdařil. Zkontrolujte tiskárnu a poté použijte Bezpečný odjezd."
+
+msgid "Moving the toolhead to safety…"
+msgstr "Přesouvání tiskové hlavy do bezpečné polohy…"
+
+msgid "Moving to safety…"
+msgstr "Přesouvání do bezpečné polohy…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Přesouvání do kalibrační polohy. Nedotýkejte se tiskárny."
+
+msgid "Moving…"
+msgstr "Přesouvání…"
+
+msgid "Nozzle Clean"
+msgstr "Čištění trysky"
+
+msgid "Position saved."
+msgstr "Poloha byla uložena."
+
+msgid "Prepare"
+msgstr "Příprava"
+
+msgid "Printer connection is unavailable."
+msgstr "Připojení k tiskárně není k dispozici."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "Probíhá tisk. Před kalibrací tisk ukončete."
+
+msgid "Probe Deploy"
+msgstr "Vysunutí sondy"
+
+msgid "Probe Stow"
+msgstr "Zasunutí sondy"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Zkontrolujte uloženou polohu a poté spusťte kalibraci."
+
+msgid "Safe Exit"
+msgstr "Bezpečný odjezd"
+
+msgid "Save Position"
+msgstr "Uložit polohu"
+
+msgid "Saved Position"
+msgstr "Uložená poloha"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Ukládání a přesouvání tiskové hlavy do bezpečné polohy…"
+
+msgid "Saving…"
+msgstr "Ukládání…"
+
+msgid "Select a position to calibrate"
+msgstr "Vyberte polohu ke kalibraci"
+
+msgid "Start Calibration"
+msgstr "Spustit kalibraci"
+
+msgid "Start Moving"
+msgstr "Spustit pohyb"
+
+msgid "Start Position Calibration"
+msgstr "Spustit kalibraci polohy"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "Relace kalibrace skončila. Vraťte se a začněte znovu."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "Aktuální souřadnice nejsou platné. Upravte polohu a zkuste to znovu."
+
+msgid "The current position is outside the configured movement range."
+msgstr "Aktuální poloha je mimo nastavený rozsah pohybu."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "Polohu se nepodařilo uložit. Zkontrolujte protokol Klipperu a zkuste to znovu."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "Tiskárna může provést najetí do výchozí polohy a přesunout tiskovou hlavu. Před pokračováním odstraňte vytištěné díly a uvolněte prostor pro pohyb."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "Tiskárna vrátila neplatnou odpověď kalibrace."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "Vybraná kalibrace se změnila. Vraťte se a začněte znovu."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "Tisková hlava se bude pohybovat automaticky. Před spuštěním uvolněte prostor pro pohyb."
+
+msgid "This calibration action is not supported."
+msgstr "Tato kalibrační akce není podporována."
+
+msgid "This calibration position is not supported."
+msgstr "Tato kalibrační poloha není podporována."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "Pomocí ovládacích prvků vyrovnejte tiskovou hlavu a poté polohu uložte."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "Kalibrace polohy se stále inicializuje. Chvíli počkejte a zkuste to znovu."

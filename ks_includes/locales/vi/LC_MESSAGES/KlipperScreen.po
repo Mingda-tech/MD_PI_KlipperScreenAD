@@ -1623,12 +1623,6 @@ msgstr "Phát hiện AI"
 msgid "AI Status"
 msgstr "Trạng thái AI"
 
-msgid "AI Detection Error"
-msgstr "Lỗi phát hiện AI"
-
-msgid "AI detection failed"
-msgstr "Phát hiện AI thất bại"
-
 msgid "Checking..."
 msgstr "Đang kiểm tra..."
 
@@ -1648,17 +1642,8 @@ msgstr "Đã bật"
 msgid "First Layer"
 msgstr "Lớp đầu tiên"
 
-msgid "First Layer Detection"
-msgstr "Phát hiện lớp đầu tiên"
-
 msgid "Foreign Object"
 msgstr "Vật thể lạ"
-
-msgid "Foreign Object Detection"
-msgstr "Phát hiện vật thể lạ"
-
-msgid "General Detection"
-msgstr "Phát hiện tổng quát"
 
 msgid "Latest Detection Result"
 msgstr "Kết quả phát hiện gần nhất"
@@ -1668,9 +1653,6 @@ msgstr "Chưa có kết quả phát hiện"
 
 msgid "Normal"
 msgstr "Bình thường"
-
-msgid "Nozzle Blob Detection"
-msgstr "Phát hiện nhựa bám đầu phun"
 
 msgid "Offline"
 msgstr "Ngoại tuyến"
@@ -1700,14 +1682,8 @@ msgstr "Thiết bị đã bị khóa"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Máy in này đã bị quản trị viên khóa.\nVui lòng liên hệ với quản trị viên."
 
-msgid "Spaghetti Detection"
-msgstr "Phát hiện spaghetti"
-
 msgid "Warp Edge"
 msgstr "Cong mép"
-
-msgid "Warp Edge Detection"
-msgstr "Phát hiện cong mép"
 
 msgid "Device QR Code"
 msgstr "Mã QR thiết bị"
@@ -1928,11 +1904,14 @@ msgstr "Xác minh chính sách không thành công"
 msgid "Nozzle Blob"
 msgstr "Đốm trên vòi phun"
 
-msgid "First Layer Extrusion"
-msgstr "Vấn đề đùn lớp đầu tiên"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Cong vênh hoặc tách rời"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Tắt"
@@ -1945,3 +1924,135 @@ msgstr "Chế độ an toàn đang hoạt động. Việc kiểm tra trước kh
 
 msgid "AI Platform V3 is required"
 msgstr "Cần có nền tảng AI V3"
+
+msgid "Adjust"
+msgstr "Điều chỉnh"
+
+msgid "Adjust Position"
+msgstr "Điều chỉnh vị trí"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "Một quá trình hiệu chuẩn vị trí khác đang hoạt động. Hãy dùng Thoát an toàn trước."
+
+msgid "Calibration cancelled."
+msgstr "Đã hủy hiệu chuẩn."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Không thể lưu: vị trí hiện tại nằm ngoài phạm vi đã cấu hình."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "Mất kết nối. Hãy kết nối lại, sau đó dùng Thoát an toàn."
+
+msgid "Current Position"
+msgstr "Vị trí hiện tại"
+
+msgid "Fine Clean"
+msgstr "Vệ sinh tinh"
+
+msgid "Loading saved position…"
+msgstr "Đang tải vị trí đã lưu…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "Chuyển động bị chặn: vị trí đích nằm ngoài phạm vi đã cấu hình."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "Di chuyển thất bại. Hãy kiểm tra máy, sau đó dùng Thoát an toàn."
+
+msgid "Moving the toolhead to safety…"
+msgstr "Đang đưa đầu in đến vị trí an toàn…"
+
+msgid "Moving to safety…"
+msgstr "Đang di chuyển đến vị trí an toàn…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Đang di chuyển đến vị trí hiệu chuẩn. Không chạm vào máy."
+
+msgid "Moving…"
+msgstr "Đang di chuyển…"
+
+msgid "Nozzle Clean"
+msgstr "Vệ sinh đầu phun"
+
+msgid "Position saved."
+msgstr "Đã lưu vị trí."
+
+msgid "Prepare"
+msgstr "Chuẩn bị"
+
+msgid "Printer connection is unavailable."
+msgstr "Không có kết nối máy in."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "Máy đang in. Hãy kết thúc bản in trước khi hiệu chuẩn."
+
+msgid "Probe Deploy"
+msgstr "Triển khai đầu dò"
+
+msgid "Probe Stow"
+msgstr "Thu đầu dò"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Kiểm tra vị trí đã lưu, sau đó bắt đầu hiệu chuẩn."
+
+msgid "Safe Exit"
+msgstr "Thoát an toàn"
+
+msgid "Save Position"
+msgstr "Lưu vị trí"
+
+msgid "Saved Position"
+msgstr "Vị trí đã lưu"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Đang lưu và đưa đầu in đến vị trí an toàn…"
+
+msgid "Saving…"
+msgstr "Đang lưu…"
+
+msgid "Select a position to calibrate"
+msgstr "Chọn vị trí cần hiệu chuẩn"
+
+msgid "Start Calibration"
+msgstr "Bắt đầu hiệu chuẩn"
+
+msgid "Start Moving"
+msgstr "Bắt đầu di chuyển"
+
+msgid "Start Position Calibration"
+msgstr "Bắt đầu hiệu chuẩn vị trí"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "Phiên hiệu chuẩn đã kết thúc. Hãy quay lại và bắt đầu lại."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "Tọa độ hiện tại không hợp lệ. Hãy điều chỉnh vị trí và thử lại."
+
+msgid "The current position is outside the configured movement range."
+msgstr "Vị trí hiện tại nằm ngoài phạm vi di chuyển đã cấu hình."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "Không thể lưu vị trí. Hãy kiểm tra nhật ký Klipper và thử lại."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "Máy in có thể chạy về gốc và di chuyển đầu in. Tháo các chi tiết đã in và dọn trống vùng chuyển động trước khi tiếp tục."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "Máy in trả về phản hồi hiệu chuẩn không hợp lệ."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "Mục hiệu chuẩn đã chọn đã thay đổi. Hãy quay lại và bắt đầu lại."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "Đầu in sẽ tự động di chuyển. Hãy dọn trống vùng chuyển động trước khi bắt đầu."
+
+msgid "This calibration action is not supported."
+msgstr "Hành động hiệu chuẩn này không được hỗ trợ."
+
+msgid "This calibration position is not supported."
+msgstr "Vị trí hiệu chuẩn này không được hỗ trợ."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "Dùng các nút điều khiển để căn chỉnh đầu in, sau đó lưu vị trí."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "Hiệu chuẩn vị trí vẫn đang khởi tạo. Hãy đợi một lát rồi thử lại."

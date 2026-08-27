@@ -1415,12 +1415,6 @@ msgstr "AI-detectie"
 msgid "AI Status"
 msgstr "AI-status"
 
-msgid "AI Detection Error"
-msgstr "Fout bij AI-detectie"
-
-msgid "AI detection failed"
-msgstr "AI-detectie mislukt"
-
 msgid "Checking..."
 msgstr "Controleren..."
 
@@ -1440,17 +1434,8 @@ msgstr "Ingeschakeld"
 msgid "First Layer"
 msgstr "Eerste laag"
 
-msgid "First Layer Detection"
-msgstr "Detectie van eerste laag"
-
 msgid "Foreign Object"
 msgstr "Vreemd voorwerp"
-
-msgid "Foreign Object Detection"
-msgstr "Detectie van vreemd voorwerp"
-
-msgid "General Detection"
-msgstr "Algemene detectie"
 
 msgid "Latest Detection Result"
 msgstr "Laatste detectieresultaat"
@@ -1460,9 +1445,6 @@ msgstr "Nog geen detectieresultaten"
 
 msgid "Normal"
 msgstr "Normaal"
-
-msgid "Nozzle Blob Detection"
-msgstr "Detectie van klont aan spuitmond"
 
 msgid "Offline"
 msgstr "Offline"
@@ -1492,14 +1474,8 @@ msgstr "Apparaat vergrendeld"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Deze printer is door een beheerder vergrendeld.\nNeem contact op met de beheerder."
 
-msgid "Spaghetti Detection"
-msgstr "Spaghetti-detectie"
-
 msgid "Warp Edge"
 msgstr "Opkrullende rand"
-
-msgid "Warp Edge Detection"
-msgstr "Detectie van opkrullende rand"
 
 msgid "Device QR Code"
 msgstr "QR-code van het apparaat"
@@ -1720,11 +1696,14 @@ msgstr "Beleidsverificatie mislukt"
 msgid "Nozzle Blob"
 msgstr "Klontje op het mondstuk"
 
-msgid "First Layer Extrusion"
-msgstr "Extrusieprobleem van de eerste laag"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Vervorming of onthechting"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Uit"
@@ -1737,3 +1716,135 @@ msgstr "Veilige modus is actief. De controle vóór het afdrukken geeft alleen e
 
 msgid "AI Platform V3 is required"
 msgstr "AI Platform V3 is vereist"
+
+msgid "Adjust"
+msgstr "Aanpassen"
+
+msgid "Adjust Position"
+msgstr "Positie aanpassen"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "Er is een andere positiekalibratie actief. Gebruik eerst Veilig afsluiten."
+
+msgid "Calibration cancelled."
+msgstr "Kalibratie geannuleerd."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Kan niet opslaan: de huidige positie ligt buiten het ingestelde bereik."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "De verbinding is verbroken. Maak opnieuw verbinding en gebruik daarna Veilig afsluiten."
+
+msgid "Current Position"
+msgstr "Huidige positie"
+
+msgid "Fine Clean"
+msgstr "Fijne reiniging"
+
+msgid "Loading saved position…"
+msgstr "Opgeslagen positie laden…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "Beweging geblokkeerd: de doelpositie ligt buiten het ingestelde bereik."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "Beweging mislukt. Controleer de machine en gebruik daarna Veilig afsluiten."
+
+msgid "Moving the toolhead to safety…"
+msgstr "Printkop naar een veilige positie verplaatsen…"
+
+msgid "Moving to safety…"
+msgstr "Naar een veilige positie verplaatsen…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Naar de kalibratiepositie verplaatsen. Raak de machine niet aan."
+
+msgid "Moving…"
+msgstr "Verplaatsen…"
+
+msgid "Nozzle Clean"
+msgstr "Spuitmond reinigen"
+
+msgid "Position saved."
+msgstr "Positie opgeslagen."
+
+msgid "Prepare"
+msgstr "Voorbereiden"
+
+msgid "Printer connection is unavailable."
+msgstr "Printerverbinding niet beschikbaar."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "Er wordt geprint. Beëindig de print voor het kalibreren."
+
+msgid "Probe Deploy"
+msgstr "Probe uitklappen"
+
+msgid "Probe Stow"
+msgstr "Probe opbergen"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Controleer de opgeslagen positie en start daarna de kalibratie."
+
+msgid "Safe Exit"
+msgstr "Veilig afsluiten"
+
+msgid "Save Position"
+msgstr "Positie opslaan"
+
+msgid "Saved Position"
+msgstr "Opgeslagen positie"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Opslaan en de printkop naar een veilige positie verplaatsen…"
+
+msgid "Saving…"
+msgstr "Opslaan…"
+
+msgid "Select a position to calibrate"
+msgstr "Selecteer een positie om te kalibreren"
+
+msgid "Start Calibration"
+msgstr "Kalibratie starten"
+
+msgid "Start Moving"
+msgstr "Beweging starten"
+
+msgid "Start Position Calibration"
+msgstr "Positiekalibratie starten"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "De kalibratiesessie is beëindigd. Ga terug en begin opnieuw."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "De huidige coördinaten zijn ongeldig. Pas de positie aan en probeer opnieuw."
+
+msgid "The current position is outside the configured movement range."
+msgstr "De huidige positie ligt buiten het ingestelde bewegingsbereik."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "De positie kon niet worden opgeslagen. Controleer het Klipper-logboek en probeer opnieuw."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "De printer kan naar de beginpositie gaan en de printkop bewegen. Verwijder geprinte onderdelen en maak het bewegingsgebied vrij voordat u doorgaat."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "De printer heeft een ongeldig kalibratieantwoord teruggestuurd."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "De geselecteerde kalibratie is gewijzigd. Ga terug en begin opnieuw."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "De printkop beweegt automatisch. Maak het bewegingsgebied vrij voordat u begint."
+
+msgid "This calibration action is not supported."
+msgstr "Deze kalibratieactie wordt niet ondersteund."
+
+msgid "This calibration position is not supported."
+msgstr "Deze kalibratiepositie wordt niet ondersteund."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "Lijn de printkop uit met de bediening en sla daarna de positie op."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "De positiekalibratie wordt nog geïnitialiseerd. Wacht even en probeer opnieuw."

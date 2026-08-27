@@ -1540,12 +1540,6 @@ msgstr "Rilevamento AI"
 msgid "AI Status"
 msgstr "Stato AI"
 
-msgid "AI Detection Error"
-msgstr "Errore di rilevamento IA"
-
-msgid "AI detection failed"
-msgstr "Rilevamento IA non riuscito"
-
 msgid "Checking..."
 msgstr "Verifica in corso..."
 
@@ -1565,17 +1559,8 @@ msgstr "Abilitato"
 msgid "First Layer"
 msgstr "Primo strato"
 
-msgid "First Layer Detection"
-msgstr "Rilevamento del primo strato"
-
 msgid "Foreign Object"
 msgstr "Oggetto estraneo"
-
-msgid "Foreign Object Detection"
-msgstr "Rilevamento oggetto estraneo"
-
-msgid "General Detection"
-msgstr "Rilevamento generale"
 
 msgid "Latest Detection Result"
 msgstr "Ultimo risultato di rilevamento"
@@ -1585,9 +1570,6 @@ msgstr "Nessun risultato di rilevamento disponibile"
 
 msgid "Normal"
 msgstr "Normale"
-
-msgid "Nozzle Blob Detection"
-msgstr "Rilevamento accumulo sull'ugello"
 
 msgid "Offline"
 msgstr "Offline"
@@ -1617,14 +1599,8 @@ msgstr "Dispositivo bloccato"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Questa stampante è stata bloccata da un amministratore.\nContattare l'amministratore."
 
-msgid "Spaghetti Detection"
-msgstr "Rilevamento spaghetti"
-
 msgid "Warp Edge"
 msgstr "Bordo sollevato"
-
-msgid "Warp Edge Detection"
-msgstr "Rilevamento bordo sollevato"
 
 msgid "Device QR Code"
 msgstr "Codice QR del dispositivo"
@@ -1845,11 +1821,14 @@ msgstr "La verifica della politica non è riuscita"
 msgid "Nozzle Blob"
 msgstr "Macchia sull'ugello"
 
-msgid "First Layer Extrusion"
-msgstr "Problema di estrusione del primo strato"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Deformazione o distacco"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Spento"
@@ -1862,3 +1841,135 @@ msgstr "La modalità provvisoria è attiva. Il controllo prestampa avviserà sol
 
 msgid "AI Platform V3 is required"
 msgstr "È richiesta la piattaforma AI Platform V3"
+
+msgid "Adjust"
+msgstr "Regola"
+
+msgid "Adjust Position"
+msgstr "Regola posizione"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "Un’altra calibrazione della posizione è attiva. Usa prima Uscita sicura."
+
+msgid "Calibration cancelled."
+msgstr "Calibrazione annullata."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Impossibile salvare: la posizione attuale è fuori dall’intervallo configurato."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "Connessione persa. Riconnettiti, quindi usa Uscita sicura."
+
+msgid "Current Position"
+msgstr "Posizione attuale"
+
+msgid "Fine Clean"
+msgstr "Pulizia fine"
+
+msgid "Loading saved position…"
+msgstr "Caricamento della posizione salvata…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "Movimento bloccato: la posizione di destinazione è fuori dall’intervallo configurato."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "Movimento non riuscito. Controlla la macchina, quindi usa Uscita sicura."
+
+msgid "Moving the toolhead to safety…"
+msgstr "Spostamento della testina in posizione sicura…"
+
+msgid "Moving to safety…"
+msgstr "Spostamento in posizione sicura…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Spostamento alla posizione di calibrazione. Non toccare la macchina."
+
+msgid "Moving…"
+msgstr "Spostamento…"
+
+msgid "Nozzle Clean"
+msgstr "Pulizia ugello"
+
+msgid "Position saved."
+msgstr "Posizione salvata."
+
+msgid "Prepare"
+msgstr "Prepara"
+
+msgid "Printer connection is unavailable."
+msgstr "Connessione alla stampante non disponibile."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "La stampa è in corso. Termina la stampa prima della calibrazione."
+
+msgid "Probe Deploy"
+msgstr "Estendi sonda"
+
+msgid "Probe Stow"
+msgstr "Riponi sonda"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Controlla la posizione salvata, quindi avvia la calibrazione."
+
+msgid "Safe Exit"
+msgstr "Uscita sicura"
+
+msgid "Save Position"
+msgstr "Salva posizione"
+
+msgid "Saved Position"
+msgstr "Posizione salvata"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Salvataggio e spostamento della testina in posizione sicura…"
+
+msgid "Saving…"
+msgstr "Salvataggio…"
+
+msgid "Select a position to calibrate"
+msgstr "Seleziona una posizione da calibrare"
+
+msgid "Start Calibration"
+msgstr "Avvia calibrazione"
+
+msgid "Start Moving"
+msgstr "Avvia movimento"
+
+msgid "Start Position Calibration"
+msgstr "Avvia calibrazione posizione"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "La sessione di calibrazione è terminata. Torna indietro e ricomincia."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "Le coordinate attuali non sono valide. Regola la posizione e riprova."
+
+msgid "The current position is outside the configured movement range."
+msgstr "La posizione attuale è fuori dall’intervallo di movimento configurato."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "Impossibile salvare la posizione. Controlla il registro di Klipper e riprova."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "La stampante potrebbe eseguire l’homing e muovere la testina. Rimuovi le parti stampate e libera l’area di movimento prima di continuare."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "La stampante ha restituito una risposta di calibrazione non valida."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "La calibrazione selezionata è cambiata. Torna indietro e ricomincia."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "La testina si muoverà automaticamente. Libera l’area di movimento prima di iniziare."
+
+msgid "This calibration action is not supported."
+msgstr "Questa azione di calibrazione non è supportata."
+
+msgid "This calibration position is not supported."
+msgstr "Questa posizione di calibrazione non è supportata."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "Usa i controlli per allineare la testina, quindi salva la posizione."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "La calibrazione della posizione è ancora in fase di inizializzazione. Attendi un momento e riprova."

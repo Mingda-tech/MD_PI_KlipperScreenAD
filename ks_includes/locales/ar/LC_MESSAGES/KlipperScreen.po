@@ -1442,12 +1442,6 @@ msgstr "كشف الذكاء الاصطناعي"
 msgid "AI Status"
 msgstr "حالة الذكاء الاصطناعي"
 
-msgid "AI Detection Error"
-msgstr "خطأ في اكتشاف الذكاء الاصطناعي"
-
-msgid "AI detection failed"
-msgstr "فشل اكتشاف الذكاء الاصطناعي"
-
 msgid "Checking..."
 msgstr "جارٍ التحقق..."
 
@@ -1467,17 +1461,8 @@ msgstr "مفعل"
 msgid "First Layer"
 msgstr "الطبقة الأولى"
 
-msgid "First Layer Detection"
-msgstr "كشف الطبقة الأولى"
-
 msgid "Foreign Object"
 msgstr "جسم غريب"
-
-msgid "Foreign Object Detection"
-msgstr "كشف جسم غريب"
-
-msgid "General Detection"
-msgstr "كشف عام"
 
 msgid "Latest Detection Result"
 msgstr "آخر نتيجة كشف"
@@ -1487,9 +1472,6 @@ msgstr "لا توجد نتائج كشف بعد"
 
 msgid "Normal"
 msgstr "طبيعي"
-
-msgid "Nozzle Blob Detection"
-msgstr "كشف تكتل الفوهة"
 
 msgid "Offline"
 msgstr "غير متصل"
@@ -1519,14 +1501,8 @@ msgstr "الجهاز مقفل"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "تم قفل هذه الطابعة بواسطة مسؤول.\nيرجى الاتصال بالمسؤول."
 
-msgid "Spaghetti Detection"
-msgstr "كشف السباغيتي"
-
 msgid "Warp Edge"
 msgstr "حافة ملتوية"
-
-msgid "Warp Edge Detection"
-msgstr "كشف الحافة الملتوية"
 
 msgid "Device QR Code"
 msgstr "رمز QR للجهاز"
@@ -1747,11 +1723,14 @@ msgstr "فشل التحقق من السياسة"
 msgid "Nozzle Blob"
 msgstr "فقاعة على فوهة"
 
-msgid "First Layer Extrusion"
-msgstr "مشكلة قذف الطبقة الأولى"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "تزييفها أو الانفصال"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "إيقاف"
@@ -1764,3 +1743,135 @@ msgstr "الوضع الآمن نشط. سوف يقوم فحص ما قبل الط�
 
 msgid "AI Platform V3 is required"
 msgstr "مطلوب AI Platform V3"
+
+msgid "Adjust"
+msgstr "ضبط"
+
+msgid "Adjust Position"
+msgstr "ضبط الموضع"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "توجد معايرة موضع أخرى نشطة. استخدم الخروج الآمن أولاً."
+
+msgid "Calibration cancelled."
+msgstr "تم إلغاء المعايرة."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "تعذر الحفظ: الموضع الحالي خارج النطاق المضبوط."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "انقطع الاتصال. أعد الاتصال، ثم استخدم الخروج الآمن."
+
+msgid "Current Position"
+msgstr "الموضع الحالي"
+
+msgid "Fine Clean"
+msgstr "تنظيف دقيق"
+
+msgid "Loading saved position…"
+msgstr "جارٍ تحميل الموضع المحفوظ…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "تم منع الحركة: الموضع المستهدف خارج النطاق المضبوط."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "فشلت الحركة. افحص الجهاز، ثم استخدم الخروج الآمن."
+
+msgid "Moving the toolhead to safety…"
+msgstr "جارٍ نقل رأس الأداة إلى موضع آمن…"
+
+msgid "Moving to safety…"
+msgstr "جارٍ الانتقال إلى موضع آمن…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "جارٍ الانتقال إلى موضع المعايرة. لا تلمس الجهاز."
+
+msgid "Moving…"
+msgstr "جارٍ التحريك…"
+
+msgid "Nozzle Clean"
+msgstr "تنظيف الفوهة"
+
+msgid "Position saved."
+msgstr "تم حفظ الموضع."
+
+msgid "Prepare"
+msgstr "تحضير"
+
+msgid "Printer connection is unavailable."
+msgstr "اتصال الطابعة غير متاح."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "الطباعة جارية. أنهِ الطباعة قبل المعايرة."
+
+msgid "Probe Deploy"
+msgstr "نشر المسبار"
+
+msgid "Probe Stow"
+msgstr "سحب المسبار"
+
+msgid "Review the saved position, then start calibration."
+msgstr "راجع الموضع المحفوظ، ثم ابدأ المعايرة."
+
+msgid "Safe Exit"
+msgstr "خروج آمن"
+
+msgid "Save Position"
+msgstr "حفظ الموضع"
+
+msgid "Saved Position"
+msgstr "الموضع المحفوظ"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "جارٍ الحفظ ونقل رأس الأداة إلى موضع آمن…"
+
+msgid "Saving…"
+msgstr "جارٍ الحفظ…"
+
+msgid "Select a position to calibrate"
+msgstr "حدد موضعًا لمعايرته"
+
+msgid "Start Calibration"
+msgstr "بدء المعايرة"
+
+msgid "Start Moving"
+msgstr "بدء الحركة"
+
+msgid "Start Position Calibration"
+msgstr "بدء معايرة الموضع"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "انتهت جلسة المعايرة. ارجع وابدأ من جديد."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "الإحداثيات الحالية غير صالحة. اضبط الموضع وأعد المحاولة."
+
+msgid "The current position is outside the configured movement range."
+msgstr "الموضع الحالي خارج نطاق الحركة المضبوط."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "تعذر حفظ الموضع. تحقق من سجل Klipper وأعد المحاولة."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "قد تقوم الطابعة بالعودة إلى نقطة الصفر وتحريك رأس الأداة. أزل الأجزاء المطبوعة وأخلِ منطقة الحركة قبل المتابعة."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "أعادت الطابعة استجابة معايرة غير صالحة."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "تغيرت المعايرة المحددة. ارجع وابدأ من جديد."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "سيتحرك رأس الأداة تلقائيًا. أخلِ منطقة الحركة قبل البدء."
+
+msgid "This calibration action is not supported."
+msgstr "إجراء المعايرة هذا غير مدعوم."
+
+msgid "This calibration position is not supported."
+msgstr "موضع المعايرة هذا غير مدعوم."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "استخدم عناصر التحكم لمحاذاة رأس الأداة، ثم احفظ الموضع."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "لا تزال معايرة الموضع قيد التهيئة. انتظر لحظة ثم أعد المحاولة."

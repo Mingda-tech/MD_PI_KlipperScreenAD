@@ -588,7 +588,7 @@ msgid "Retraction Speed"
 msgstr ""
 
 msgid "Retry"
-msgstr ""
+msgstr "Prøv igen"
 
 msgid "Retrying"
 msgstr ""
@@ -1414,12 +1414,6 @@ msgstr "AI-detektion"
 msgid "AI Status"
 msgstr "AI-status"
 
-msgid "AI Detection Error"
-msgstr "Fejl i AI-detektion"
-
-msgid "AI detection failed"
-msgstr "AI-detektion mislykkedes"
-
 msgid "Checking..."
 msgstr "Kontrollerer..."
 
@@ -1439,17 +1433,8 @@ msgstr "Aktiveret"
 msgid "First Layer"
 msgstr "Første lag"
 
-msgid "First Layer Detection"
-msgstr "Detektion af første lag"
-
 msgid "Foreign Object"
 msgstr "Fremmed objekt"
-
-msgid "Foreign Object Detection"
-msgstr "Detektion af fremmed objekt"
-
-msgid "General Detection"
-msgstr "Generel detektion"
 
 msgid "Latest Detection Result"
 msgstr "Seneste detektionsresultat"
@@ -1459,9 +1444,6 @@ msgstr "Ingen detektionsresultater endnu"
 
 msgid "Normal"
 msgstr "Normal"
-
-msgid "Nozzle Blob Detection"
-msgstr "Registrering af klump på dysen"
 
 msgid "Offline"
 msgstr "Offline"
@@ -1491,14 +1473,8 @@ msgstr "Enheden er låst"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Denne printer er blevet låst af en administrator.\nKontakt administratoren."
 
-msgid "Spaghetti Detection"
-msgstr "Spaghetti-detektion"
-
 msgid "Warp Edge"
 msgstr "Kantløft"
-
-msgid "Warp Edge Detection"
-msgstr "Detektion af kantløft"
 
 msgid "Device QR Code"
 msgstr "Enhedens QR-kode"
@@ -1719,11 +1695,14 @@ msgstr "Politikbekræftelse mislykkedes"
 msgid "Nozzle Blob"
 msgstr "Klat på dysen"
 
-msgid "First Layer Extrusion"
-msgstr "Første lags ekstruderingsproblem"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Vridning eller løsrivelse"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Fra"
@@ -1736,3 +1715,135 @@ msgstr "Sikker tilstand er aktiv. Pre-print-kontrollen giver kun besked og bloke
 
 msgid "AI Platform V3 is required"
 msgstr "AI Platform V3 er påkrævet"
+
+msgid "Adjust"
+msgstr "Juster"
+
+msgid "Adjust Position"
+msgstr "Juster position"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "En anden positionskalibrering er aktiv. Brug Sikker afslutning først."
+
+msgid "Calibration cancelled."
+msgstr "Kalibreringen blev annulleret."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Kan ikke gemme: den aktuelle position er uden for det konfigurerede område."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "Forbindelsen blev afbrudt. Opret forbindelse igen, og brug derefter Sikker afslutning."
+
+msgid "Current Position"
+msgstr "Aktuel position"
+
+msgid "Fine Clean"
+msgstr "Finrensning"
+
+msgid "Loading saved position…"
+msgstr "Indlæser gemt position…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "Bevægelsen blev blokeret: målpositionen er uden for det konfigurerede område."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "Bevægelsen mislykkedes. Kontrollér maskinen, og brug derefter Sikker afslutning."
+
+msgid "Moving the toolhead to safety…"
+msgstr "Flytter printhovedet til en sikker position…"
+
+msgid "Moving to safety…"
+msgstr "Flytter til en sikker position…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Flytter til kalibreringspositionen. Rør ikke maskinen."
+
+msgid "Moving…"
+msgstr "Flytter…"
+
+msgid "Nozzle Clean"
+msgstr "Dyserensning"
+
+msgid "Position saved."
+msgstr "Positionen blev gemt."
+
+msgid "Prepare"
+msgstr "Forbered"
+
+msgid "Printer connection is unavailable."
+msgstr "Printerforbindelsen er ikke tilgængelig."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "Udskrivning er aktiv. Afslut udskrivningen før kalibrering."
+
+msgid "Probe Deploy"
+msgstr "Udfold probe"
+
+msgid "Probe Stow"
+msgstr "Indfold probe"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Gennemse den gemte position, og start derefter kalibreringen."
+
+msgid "Safe Exit"
+msgstr "Sikker afslutning"
+
+msgid "Save Position"
+msgstr "Gem position"
+
+msgid "Saved Position"
+msgstr "Gemt position"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Gemmer og flytter printhovedet til en sikker position…"
+
+msgid "Saving…"
+msgstr "Gemmer…"
+
+msgid "Select a position to calibrate"
+msgstr "Vælg en position, der skal kalibreres"
+
+msgid "Start Calibration"
+msgstr "Start kalibrering"
+
+msgid "Start Moving"
+msgstr "Start bevægelse"
+
+msgid "Start Position Calibration"
+msgstr "Start positionskalibrering"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "Kalibreringssessionen er afsluttet. Gå tilbage, og start igen."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "De aktuelle koordinater er ugyldige. Juster positionen, og prøv igen."
+
+msgid "The current position is outside the configured movement range."
+msgstr "Den aktuelle position er uden for det konfigurerede bevægelsesområde."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "Positionen kunne ikke gemmes. Kontrollér Klipper-loggen, og prøv igen."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "Printeren kan nulstille akserne og flytte printhovedet. Fjern printede emner, og ryd bevægelsesområdet, før du fortsætter."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "Printeren returnerede et ugyldigt kalibreringssvar."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "Den valgte kalibrering blev ændret. Gå tilbage, og start igen."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "Printhovedet bevæger sig automatisk. Ryd bevægelsesområdet før start."
+
+msgid "This calibration action is not supported."
+msgstr "Denne kalibreringshandling understøttes ikke."
+
+msgid "This calibration position is not supported."
+msgstr "Denne kalibreringsposition understøttes ikke."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "Brug kontrollerne til at justere printhovedet, og gem derefter positionen."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "Positionskalibreringen initialiseres stadig. Vent et øjeblik, og prøv igen."

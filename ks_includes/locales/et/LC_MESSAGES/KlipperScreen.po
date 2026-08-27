@@ -1556,12 +1556,6 @@ msgstr "AI tuvastus"
 msgid "AI Status"
 msgstr "AI olek"
 
-msgid "AI Detection Error"
-msgstr "AI-tuvastuse viga"
-
-msgid "AI detection failed"
-msgstr "AI-tuvastus nurjus"
-
 msgid "Checking..."
 msgstr "Kontrollin..."
 
@@ -1581,17 +1575,8 @@ msgstr "Lubatud"
 msgid "First Layer"
 msgstr "Esimene kiht"
 
-msgid "First Layer Detection"
-msgstr "Esimese kihi tuvastus"
-
 msgid "Foreign Object"
 msgstr "Võõrkeha"
-
-msgid "Foreign Object Detection"
-msgstr "Võõrkeha tuvastus"
-
-msgid "General Detection"
-msgstr "Üldine tuvastus"
 
 msgid "Latest Detection Result"
 msgstr "Viimane tuvastustulemus"
@@ -1601,9 +1586,6 @@ msgstr "Tuvastustulemusi veel pole"
 
 msgid "Normal"
 msgstr "Normaalne"
-
-msgid "Nozzle Blob Detection"
-msgstr "Düüsi klombi tuvastamine"
 
 msgid "Offline"
 msgstr "Võrguühenduseta"
@@ -1633,14 +1615,8 @@ msgstr "Seade on lukustatud"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Administraator on selle printeri lukustanud.\nVõtke ühendust administraatoriga."
 
-msgid "Spaghetti Detection"
-msgstr "Spaghetti tuvastus"
-
 msgid "Warp Edge"
 msgstr "Kõverdunud serv"
-
-msgid "Warp Edge Detection"
-msgstr "Kõverdunud serva tuvastus"
 
 msgid "Device QR Code"
 msgstr "Seadme QR-kood"
@@ -1861,11 +1837,14 @@ msgstr "Eeskirjade kinnitamine ebaõnnestus"
 msgid "Nozzle Blob"
 msgstr "Plekk otsikule"
 
-msgid "First Layer Extrusion"
-msgstr "Esimese kihi väljapressimise probleem"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Väändumine või eraldumine"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Väljas"
@@ -1878,3 +1857,135 @@ msgstr "Turvarežiim on aktiivne. Trükieelne kontroll teavitab ainult ja ei blo
 
 msgid "AI Platform V3 is required"
 msgstr "Vaja on AI platvormi V3"
+
+msgid "Adjust"
+msgstr "Kohanda"
+
+msgid "Adjust Position"
+msgstr "Kohanda asendit"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "Teine asendi kalibreerimine on aktiivne. Kasuta esmalt Turvalist väljumist."
+
+msgid "Calibration cancelled."
+msgstr "Kalibreerimine tühistatud."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Salvestamine ebaõnnestus: praegune asend on seadistatud vahemikust väljas."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "Ühendus katkes. Ühenda uuesti ja kasuta seejärel Turvalist väljumist."
+
+msgid "Current Position"
+msgstr "Praegune asend"
+
+msgid "Fine Clean"
+msgstr "Täppispuhastus"
+
+msgid "Loading saved position…"
+msgstr "Salvestatud asendi laadimine…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "Liikumine blokeeriti: sihtasend on seadistatud vahemikust väljas."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "Liikumine ebaõnnestus. Kontrolli masinat ja kasuta seejärel Turvalist väljumist."
+
+msgid "Moving the toolhead to safety…"
+msgstr "Prindipea viiakse turvalisse asendisse…"
+
+msgid "Moving to safety…"
+msgstr "Liikumine turvalisse asendisse…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Liikumine kalibreerimisasendisse. Ära puuduta masinat."
+
+msgid "Moving…"
+msgstr "Liikumine…"
+
+msgid "Nozzle Clean"
+msgstr "Düüsi puhastus"
+
+msgid "Position saved."
+msgstr "Asend salvestatud."
+
+msgid "Prepare"
+msgstr "Valmistu"
+
+msgid "Printer connection is unavailable."
+msgstr "Printeri ühendus pole saadaval."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "Printimine on aktiivne. Lõpeta printimine enne kalibreerimist."
+
+msgid "Probe Deploy"
+msgstr "Sondi väljastamine"
+
+msgid "Probe Stow"
+msgstr "Sondi hoiustamine"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Kontrolli salvestatud asendit ja alusta seejärel kalibreerimist."
+
+msgid "Safe Exit"
+msgstr "Turvaline väljumine"
+
+msgid "Save Position"
+msgstr "Salvesta asend"
+
+msgid "Saved Position"
+msgstr "Salvestatud asend"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Salvestamine ja prindipea turvalisse asendisse viimine…"
+
+msgid "Saving…"
+msgstr "Salvestamine…"
+
+msgid "Select a position to calibrate"
+msgstr "Vali kalibreeritav asend"
+
+msgid "Start Calibration"
+msgstr "Alusta kalibreerimist"
+
+msgid "Start Moving"
+msgstr "Alusta liikumist"
+
+msgid "Start Position Calibration"
+msgstr "Alusta asendi kalibreerimist"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "Kalibreerimisseanss lõppes. Mine tagasi ja alusta uuesti."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "Praegused koordinaadid ei kehti. Kohanda asendit ja proovi uuesti."
+
+msgid "The current position is outside the configured movement range."
+msgstr "Praegune asend on seadistatud liikumisvahemikust väljas."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "Asendit ei saanud salvestada. Kontrolli Klipperi logi ja proovi uuesti."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "Printer võib teljed nullida ja prindipead liigutada. Eemalda prinditud detailid ning vabasta enne jätkamist liikumisala."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "Printer tagastas vigase kalibreerimisvastuse."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "Valitud kalibreerimine muutus. Mine tagasi ja alusta uuesti."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "Prindipea liigub automaatselt. Vabasta liikumisala enne alustamist."
+
+msgid "This calibration action is not supported."
+msgstr "Seda kalibreerimistoimingut ei toetata."
+
+msgid "This calibration position is not supported."
+msgstr "Seda kalibreerimisasendit ei toetata."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "Joonda prindipea juhtnuppudega ja salvesta seejärel asend."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "Asendi kalibreerimine alles käivitub. Oota hetk ja proovi uuesti."

@@ -14,6 +14,11 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import GLib, Gtk, Pango
 
+from ks_includes.ai_detection_result import (
+    DEFECT_MODEL_KEYS,
+    canonical_defect_map,
+    canonical_defect_type,
+)
 from ks_includes.screen_panel import ScreenPanel
 
 
@@ -22,19 +27,14 @@ POLICY_SCHEMA_VERSION = 3
 SENSITIVITIES = ("LOW", "MEDIUM", "HIGH")
 ACTIONS = ("NOTIFY_ONLY", "AUTO_PAUSE")
 INHERIT = "INHERIT"
-DEFECT_TYPES = (
-    "SPAGHETTI",
-    "NOZZLE_BLOB",
-    "FIRST_LAYER_EXTRUSION",
-    "WARP_OR_DETACHMENT",
-    "FOREIGN_OBJECT",
-)
+DEFECT_TYPES = tuple(DEFECT_MODEL_KEYS)
 DEFECT_NAMES = {
     "SPAGHETTI": "Spaghetti",
     "NOZZLE_BLOB": "Nozzle Blob",
-    "FIRST_LAYER_EXTRUSION": "First Layer Extrusion",
-    "WARP_OR_DETACHMENT": "Warp or Detachment",
     "FOREIGN_OBJECT": "Foreign Object",
+    "UNDER_EXTRUSION": "Under Extrusion",
+    "OVER_EXTRUSION": "Over Extrusion",
+    "WARPING": "Warping",
 }
 REASON_NAMES = {
     "DISABLED_BY_USER": "Disabled by user",
@@ -168,8 +168,9 @@ def _translation_strings():
     _("Policy verification failed")
     _("Spaghetti")
     _("Nozzle Blob")
-    _("First Layer Extrusion")
-    _("Warp or Detachment")
+    _("Under Extrusion")
+    _("Over Extrusion")
+    _("Warping")
     _("Foreign Object")
     _("Off")
     _("For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected.")
@@ -847,15 +848,16 @@ class Panel(ScreenPanel):
                 supported = []
             else:
                 macro_supported = {
-                    str(item).upper() for item in macro_supported
-                    if str(item).upper() in DEFECT_TYPES
+                    canonical_defect_type(item) for item in macro_supported
+                    if canonical_defect_type(item) in DEFECT_TYPES
                 }
                 supported = [
-                    item for item in supported if str(item).upper() in macro_supported
+                    canonical_defect_type(item) for item in supported
+                    if canonical_defect_type(item) in macro_supported
                 ]
             self.supported_defects = {
-                str(item).upper() for item in supported
-                if str(item).upper() in DEFECT_TYPES
+                canonical_defect_type(item) for item in supported
+                if canonical_defect_type(item) in DEFECT_TYPES
             }
             self.labels["enabled"].set_active(
                 bool(self.supported_defects and self.policy.get("enabled", True))
@@ -868,9 +870,7 @@ class Panel(ScreenPanel):
                 self.labels["action"], str(self.policy.get("actionMode") or "NOTIFY_ONLY").upper(),
                 ACTIONS, "NOTIFY_ONLY"
             )
-            overrides = self.policy.get("defectOverrides") or {}
-            if not isinstance(overrides, dict):
-                overrides = {}
+            overrides = canonical_defect_map(self.policy.get("defectOverrides"))
             for defect_type in DEFECT_TYPES:
                 key = self._defect_key(defect_type)
                 override = overrides.get(defect_type) or {}
@@ -950,9 +950,9 @@ class Panel(ScreenPanel):
         global_action = self._combo_value(self.labels["action"], "NOTIFY_ONLY")
         sensitivity_names = {"LOW": _("Low"), "MEDIUM": _("Medium"), "HIGH": _("High")}
         action_names = {"NOTIFY_ONLY": _("Notify Only"), "AUTO_PAUSE": _("Auto Pause")}
-        effective_policies = self.policy.get("defectPolicies") or {}
-        if not isinstance(effective_policies, dict):
-            effective_policies = {}
+        effective_policies = canonical_defect_map(
+            self.policy.get("defectPolicies")
+        )
         for defect_type in DEFECT_TYPES:
             key = self._defect_key(defect_type)
             supported = defect_type in self.supported_defects

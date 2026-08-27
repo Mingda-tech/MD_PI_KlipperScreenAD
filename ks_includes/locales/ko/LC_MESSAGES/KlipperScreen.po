@@ -1478,12 +1478,6 @@ msgstr "AI 감지"
 msgid "AI Status"
 msgstr "AI 상태"
 
-msgid "AI Detection Error"
-msgstr "AI 감지 오류"
-
-msgid "AI detection failed"
-msgstr "AI 감지에 실패했습니다"
-
 msgid "Checking..."
 msgstr "확인 중..."
 
@@ -1503,17 +1497,8 @@ msgstr "사용"
 msgid "First Layer"
 msgstr "첫 레이어"
 
-msgid "First Layer Detection"
-msgstr "첫 레이어 감지"
-
 msgid "Foreign Object"
 msgstr "이물질"
-
-msgid "Foreign Object Detection"
-msgstr "이물질 감지"
-
-msgid "General Detection"
-msgstr "일반 감지"
 
 msgid "Latest Detection Result"
 msgstr "최근 감지 결과"
@@ -1523,9 +1508,6 @@ msgstr "아직 감지 결과가 없습니다"
 
 msgid "Normal"
 msgstr "정상"
-
-msgid "Nozzle Blob Detection"
-msgstr "노즐 뭉침 감지"
 
 msgid "Offline"
 msgstr "오프라인"
@@ -1555,14 +1537,8 @@ msgstr "장치가 잠겼습니다"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "관리자가 이 프린터를 잠갔습니다.\n관리자에게 문의하세요."
 
-msgid "Spaghetti Detection"
-msgstr "스파게티 감지"
-
 msgid "Warp Edge"
 msgstr "들뜬 가장자리"
-
-msgid "Warp Edge Detection"
-msgstr "들뜬 가장자리 감지"
 
 msgid "Device QR Code"
 msgstr "장치 QR 코드"
@@ -1783,11 +1759,14 @@ msgstr "정책 확인 실패"
 msgid "Nozzle Blob"
 msgstr "노즐 뭉침"
 
-msgid "First Layer Extrusion"
-msgstr "첫 레이어 압출 이상"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "뒤틀림 또는 분리"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "끄기"
@@ -1800,3 +1779,135 @@ msgstr "안전 모드가 활성화되었습니다. 사전 인쇄 확인은 알�
 
 msgid "AI Platform V3 is required"
 msgstr "AI Platform V3가 필요합니다."
+
+msgid "Adjust"
+msgstr "조정"
+
+msgid "Adjust Position"
+msgstr "위치 조정"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "다른 위치 보정이 진행 중입니다. 먼저 안전 종료를 사용하세요."
+
+msgid "Calibration cancelled."
+msgstr "보정이 취소되었습니다."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "저장할 수 없습니다. 현재 위치가 설정된 범위를 벗어났습니다."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "연결이 끊겼습니다. 다시 연결한 후 안전 종료를 사용하세요."
+
+msgid "Current Position"
+msgstr "현재 위치"
+
+msgid "Fine Clean"
+msgstr "정밀 청소"
+
+msgid "Loading saved position…"
+msgstr "저장된 위치 불러오는 중…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "이동이 차단되었습니다. 목표 위치가 설정된 범위를 벗어났습니다."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "이동에 실패했습니다. 장비를 확인한 후 안전 종료를 사용하세요."
+
+msgid "Moving the toolhead to safety…"
+msgstr "툴헤드를 안전한 위치로 이동하는 중…"
+
+msgid "Moving to safety…"
+msgstr "안전한 위치로 이동하는 중…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "보정 위치로 이동하는 중입니다. 장비를 만지지 마세요."
+
+msgid "Moving…"
+msgstr "이동 중…"
+
+msgid "Nozzle Clean"
+msgstr "노즐 청소"
+
+msgid "Position saved."
+msgstr "위치가 저장되었습니다."
+
+msgid "Prepare"
+msgstr "준비"
+
+msgid "Printer connection is unavailable."
+msgstr "프린터에 연결할 수 없습니다."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "인쇄 중입니다. 보정하기 전에 인쇄를 종료하세요."
+
+msgid "Probe Deploy"
+msgstr "프로브 전개"
+
+msgid "Probe Stow"
+msgstr "프로브 수납"
+
+msgid "Review the saved position, then start calibration."
+msgstr "저장된 위치를 확인한 후 보정을 시작하세요."
+
+msgid "Safe Exit"
+msgstr "안전 종료"
+
+msgid "Save Position"
+msgstr "위치 저장"
+
+msgid "Saved Position"
+msgstr "저장된 위치"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "저장하고 툴헤드를 안전한 위치로 이동하는 중…"
+
+msgid "Saving…"
+msgstr "저장 중…"
+
+msgid "Select a position to calibrate"
+msgstr "보정할 위치 선택"
+
+msgid "Start Calibration"
+msgstr "보정 시작"
+
+msgid "Start Moving"
+msgstr "이동 시작"
+
+msgid "Start Position Calibration"
+msgstr "위치 보정 시작"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "보정 세션이 종료되었습니다. 돌아가서 다시 시작하세요."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "현재 좌표가 올바르지 않습니다. 위치를 조정하고 다시 시도하세요."
+
+msgid "The current position is outside the configured movement range."
+msgstr "현재 위치가 설정된 이동 범위를 벗어났습니다."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "위치를 저장하지 못했습니다. Klipper 로그를 확인하고 다시 시도하세요."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "프린터가 원점 복귀하고 툴헤드를 이동할 수 있습니다. 계속하기 전에 출력물을 제거하고 이동 영역을 비우세요."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "프린터가 올바르지 않은 보정 응답을 반환했습니다."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "선택한 보정 항목이 변경되었습니다. 돌아가서 다시 시작하세요."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "툴헤드가 자동으로 이동합니다. 시작하기 전에 이동 영역을 비우세요."
+
+msgid "This calibration action is not supported."
+msgstr "이 보정 작업은 지원되지 않습니다."
+
+msgid "This calibration position is not supported."
+msgstr "이 보정 위치는 지원되지 않습니다."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "조작 버튼으로 툴헤드를 맞춘 후 위치를 저장하세요."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "위치 보정을 초기화하는 중입니다. 잠시 기다렸다가 다시 시도하세요."

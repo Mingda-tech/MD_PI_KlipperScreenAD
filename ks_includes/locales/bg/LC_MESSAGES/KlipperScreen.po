@@ -11,12 +11,6 @@ msgstr "AI откриване"
 msgid "AI Status"
 msgstr "Състояние на AI"
 
-msgid "AI Detection Error"
-msgstr "Грешка при AI откриването"
-
-msgid "AI detection failed"
-msgstr "AI откриването е неуспешно"
-
 msgid "Checking..."
 msgstr "Проверка..."
 
@@ -36,17 +30,8 @@ msgstr "Активирано"
 msgid "First Layer"
 msgstr "Първи слой"
 
-msgid "First Layer Detection"
-msgstr "Откриване на първи слой"
-
 msgid "Foreign Object"
 msgstr "Чужд обект"
-
-msgid "Foreign Object Detection"
-msgstr "Откриване на чужд обект"
-
-msgid "General Detection"
-msgstr "Общо откриване"
 
 msgid "Latest Detection Result"
 msgstr "Последен резултат от откриване"
@@ -56,9 +41,6 @@ msgstr "Все още няма резултати от откриване"
 
 msgid "Normal"
 msgstr "Нормално"
-
-msgid "Nozzle Blob Detection"
-msgstr "Откриване на натрупване на дюзата"
 
 msgid "Offline"
 msgstr "Офлайн"
@@ -88,14 +70,8 @@ msgstr "Устройството е заключено"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Този принтер е заключен от администратор.\nМоля, свържете се с администратора."
 
-msgid "Spaghetti Detection"
-msgstr "Откриване на спагети"
-
 msgid "Warp Edge"
 msgstr "Изкривен ръб"
-
-msgid "Warp Edge Detection"
-msgstr "Откриване на изкривен ръб"
 
 msgid "Device QR Code"
 msgstr "QR код на устройството"
@@ -328,11 +304,14 @@ msgstr "Проверката на правилата е неуспешна"
 msgid "Nozzle Blob"
 msgstr "Петно върху дюзата"
 
-msgid "First Layer Extrusion"
-msgstr "Проблем с екструдирането на първия слой"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Изкривяване или отделяне"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Изкл"
@@ -351,3 +330,147 @@ msgstr "Затваряне"
 
 msgid "Apply"
 msgstr "Приложи"
+
+msgid "Adjust"
+msgstr "Настройване"
+
+msgid "Adjust Position"
+msgstr "Настройване на позицията"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "Активно е друго калибриране на позиция. Първо използвайте Безопасно излизане."
+
+msgid "Calibration cancelled."
+msgstr "Калибрирането е отменено."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Не може да се запази: текущата позиция е извън конфигурирания диапазон."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "Връзката е прекъсната. Свържете се отново, след което използвайте Безопасно излизане."
+
+msgid "Current Position"
+msgstr "Текуща позиция"
+
+msgid "Fine Clean"
+msgstr "Фино почистване"
+
+msgid "Loading saved position…"
+msgstr "Зареждане на запазената позиция…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "Движението е блокирано: целевата позиция е извън конфигурирания диапазон."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "Движението е неуспешно. Проверете машината, след което използвайте Безопасно излизане."
+
+msgid "Moving the toolhead to safety…"
+msgstr "Преместване на печатащата глава в безопасна позиция…"
+
+msgid "Moving to safety…"
+msgstr "Преместване към безопасна позиция…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Преместване към позицията за калибриране. Не докосвайте машината."
+
+msgid "Moving…"
+msgstr "Преместване…"
+
+msgid "Nozzle Clean"
+msgstr "Почистване на дюзата"
+
+msgid "Position saved."
+msgstr "Позицията е запазена."
+
+msgid "Prepare"
+msgstr "Подготовка"
+
+msgid "Printer connection is unavailable."
+msgstr "Връзката с принтера не е налична."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "Печатането е активно. Завършете печата преди калибриране."
+
+msgid "Probe Deploy"
+msgstr "Разгъване на сондата"
+
+msgid "Probe Stow"
+msgstr "Прибиране на сондата"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Прегледайте запазената позиция, след което стартирайте калибрирането."
+
+msgid "Safe Exit"
+msgstr "Безопасно излизане"
+
+msgid "Save Position"
+msgstr "Запазване на позицията"
+
+msgid "Saved Position"
+msgstr "Запазена позиция"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Запазване и преместване на печатащата глава в безопасна позиция…"
+
+msgid "Saving…"
+msgstr "Запазване…"
+
+msgid "Select a position to calibrate"
+msgstr "Изберете позиция за калибриране"
+
+msgid "Start Calibration"
+msgstr "Стартиране на калибрирането"
+
+msgid "Start Moving"
+msgstr "Стартиране на движението"
+
+msgid "Start Position Calibration"
+msgstr "Стартиране на калибрирането на позицията"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "Сесията за калибриране приключи. Върнете се и започнете отново."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "Текущите координати са невалидни. Настройте позицията и опитайте отново."
+
+msgid "The current position is outside the configured movement range."
+msgstr "Текущата позиция е извън конфигурирания диапазон на движение."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "Позицията не можа да бъде запазена. Проверете дневника на Klipper и опитайте отново."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "Принтерът може да се върне в начална позиция и да премести печатащата глава. Отстранете отпечатаните детайли и освободете зоната за движение, преди да продължите."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "Принтерът върна невалиден отговор за калибриране."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "Избраното калибриране се промени. Върнете се и започнете отново."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "Печатащата глава ще се премести автоматично. Освободете зоната за движение, преди да започнете."
+
+msgid "This calibration action is not supported."
+msgstr "Това действие за калибриране не се поддържа."
+
+msgid "This calibration position is not supported."
+msgstr "Тази позиция за калибриране не се поддържа."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "Използвайте контролите, за да подравните печатащата глава, след което запазете позицията."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "Калибрирането на позицията все още се инициализира. Изчакайте малко и опитайте отново."
+
+msgid "Cancel"
+msgstr "Отказ"
+
+msgid "Move Distance (mm)"
+msgstr "Разстояние на движение (mm)"
+
+msgid "Retry"
+msgstr "Опитайте отново"
+
+msgid "Save"
+msgstr "Запазване"

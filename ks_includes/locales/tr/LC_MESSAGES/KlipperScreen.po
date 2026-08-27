@@ -1490,12 +1490,6 @@ msgstr "AI algılama"
 msgid "AI Status"
 msgstr "AI durumu"
 
-msgid "AI Detection Error"
-msgstr "AI algılama hatası"
-
-msgid "AI detection failed"
-msgstr "AI algılama başarısız oldu"
-
 msgid "Checking..."
 msgstr "Kontrol ediliyor..."
 
@@ -1515,17 +1509,8 @@ msgstr "Etkin"
 msgid "First Layer"
 msgstr "İlk katman"
 
-msgid "First Layer Detection"
-msgstr "İlk katman algılama"
-
 msgid "Foreign Object"
 msgstr "Yabancı nesne"
-
-msgid "Foreign Object Detection"
-msgstr "Yabancı nesne algılama"
-
-msgid "General Detection"
-msgstr "Genel algılama"
 
 msgid "Latest Detection Result"
 msgstr "Son algılama sonucu"
@@ -1535,9 +1520,6 @@ msgstr "Henüz algılama sonucu yok"
 
 msgid "Normal"
 msgstr "Normal"
-
-msgid "Nozzle Blob Detection"
-msgstr "Nozulda birikinti algılama"
 
 msgid "Offline"
 msgstr "Çevrimdışı"
@@ -1567,14 +1549,8 @@ msgstr "Cihaz kilitlendi"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Bu yazıcı bir yönetici tarafından kilitlendi.\nLütfen yöneticiyle iletişime geçin."
 
-msgid "Spaghetti Detection"
-msgstr "Spagetti algılama"
-
 msgid "Warp Edge"
 msgstr "Kalkmış kenar"
-
-msgid "Warp Edge Detection"
-msgstr "Kalkmış kenar algılama"
 
 msgid "Device QR Code"
 msgstr "Cihaz QR Kodu"
@@ -1795,11 +1771,14 @@ msgstr "Politika doğrulaması başarısız oldu"
 msgid "Nozzle Blob"
 msgstr "Meme üzerinde damla"
 
-msgid "First Layer Extrusion"
-msgstr "Birinci katman ekstrüzyon sorunu"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Çarpılma veya ayrılma"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Kapalı"
@@ -1812,3 +1791,135 @@ msgstr "Güvenli mod etkin. Baskı öncesi kontrolü yalnızca bildirimde bulunu
 
 msgid "AI Platform V3 is required"
 msgstr "AI Platform V3 gereklidir"
+
+msgid "Adjust"
+msgstr "Ayarla"
+
+msgid "Adjust Position"
+msgstr "Konumu ayarla"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "Başka bir konum kalibrasyonu etkin. Önce Güvenli Çıkış'ı kullanın."
+
+msgid "Calibration cancelled."
+msgstr "Kalibrasyon iptal edildi."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Kaydedilemiyor: geçerli konum yapılandırılmış aralığın dışında."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "Bağlantı kesildi. Yeniden bağlanın ve ardından Güvenli Çıkış'ı kullanın."
+
+msgid "Current Position"
+msgstr "Geçerli konum"
+
+msgid "Fine Clean"
+msgstr "Hassas temizleme"
+
+msgid "Loading saved position…"
+msgstr "Kayıtlı konum yükleniyor…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "Hareket engellendi: hedef konum yapılandırılmış aralığın dışında."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "Hareket başarısız oldu. Makineyi kontrol edin ve ardından Güvenli Çıkış'ı kullanın."
+
+msgid "Moving the toolhead to safety…"
+msgstr "Yazıcı kafası güvenli bir konuma taşınıyor…"
+
+msgid "Moving to safety…"
+msgstr "Güvenli bir konuma taşınıyor…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Kalibrasyon konumuna taşınıyor. Makineye dokunmayın."
+
+msgid "Moving…"
+msgstr "Hareket ediyor…"
+
+msgid "Nozzle Clean"
+msgstr "Nozul temizleme"
+
+msgid "Position saved."
+msgstr "Konum kaydedildi."
+
+msgid "Prepare"
+msgstr "Hazırla"
+
+msgid "Printer connection is unavailable."
+msgstr "Yazıcı bağlantısı kullanılamıyor."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "Yazdırma etkin. Kalibrasyondan önce yazdırmayı bitirin."
+
+msgid "Probe Deploy"
+msgstr "Probu aç"
+
+msgid "Probe Stow"
+msgstr "Probu kaldır"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Kayıtlı konumu inceleyin ve ardından kalibrasyonu başlatın."
+
+msgid "Safe Exit"
+msgstr "Güvenli Çıkış"
+
+msgid "Save Position"
+msgstr "Konumu kaydet"
+
+msgid "Saved Position"
+msgstr "Kayıtlı konum"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Kaydediliyor ve yazıcı kafası güvenli bir konuma taşınıyor…"
+
+msgid "Saving…"
+msgstr "Kaydediliyor…"
+
+msgid "Select a position to calibrate"
+msgstr "Kalibre edilecek konumu seçin"
+
+msgid "Start Calibration"
+msgstr "Kalibrasyonu başlat"
+
+msgid "Start Moving"
+msgstr "Hareketi başlat"
+
+msgid "Start Position Calibration"
+msgstr "Konum kalibrasyonunu başlat"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "Kalibrasyon oturumu sona erdi. Geri dönün ve yeniden başlayın."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "Geçerli koordinatlar geçersiz. Konumu ayarlayıp tekrar deneyin."
+
+msgid "The current position is outside the configured movement range."
+msgstr "Geçerli konum yapılandırılmış hareket aralığının dışında."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "Konum kaydedilemedi. Klipper günlüğünü kontrol edip tekrar deneyin."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "Yazıcı eksenleri referanslayabilir ve yazıcı kafasını hareket ettirebilir. Devam etmeden önce basılı parçaları çıkarın ve hareket alanını boşaltın."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "Yazıcı geçersiz bir kalibrasyon yanıtı döndürdü."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "Seçili kalibrasyon değişti. Geri dönün ve yeniden başlayın."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "Yazıcı kafası otomatik olarak hareket edecek. Başlamadan önce hareket alanını boşaltın."
+
+msgid "This calibration action is not supported."
+msgstr "Bu kalibrasyon işlemi desteklenmiyor."
+
+msgid "This calibration position is not supported."
+msgstr "Bu kalibrasyon konumu desteklenmiyor."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "Kontrolleri kullanarak yazıcı kafasını hizalayın ve ardından konumu kaydedin."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "Konum kalibrasyonu hâlâ başlatılıyor. Biraz bekleyip tekrar deneyin."

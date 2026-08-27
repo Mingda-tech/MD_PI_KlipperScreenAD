@@ -698,6 +698,116 @@ button.ai-apply-button:disabled {
     font-size: 0.95em;
 }
 
+/* Position calibration: scoped, theme-token-only industrial controls */
+.position-calibration-selection,
+.position-calibration-detail {
+    padding: .35em;
+}
+
+.position-calibration-heading {
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: .15em .35em;
+}
+
+button.position-calibration-target {
+    border: .1em solid @lines;
+    border-bottom: .35em solid @color1;
+    border-radius: .55em;
+    margin: .3em;
+    min-height: 4em;
+    padding: .35em;
+}
+
+button.position-calibration-target:active,
+button.position-calibration-distance:active,
+button.position-calibration-control:active,
+button.position-calibration-target:hover,
+button.position-calibration-distance:hover,
+button.position-calibration-control:hover {
+    background-color: @active;
+}
+
+button.position-calibration-target:focus,
+button.position-calibration-distance:focus,
+button.position-calibration-control:focus {
+    outline-color: @lines;
+    outline-style: solid;
+    outline-width: .15em;
+    outline-offset: -.15em;
+}
+
+.position-calibration-notice {
+    border-top: .1em solid @lines;
+    padding: .4em .55em;
+}
+
+.position-calibration-step {
+    color: @lines;
+    border-bottom: .2em solid @active;
+    padding: .25em;
+}
+
+.position-calibration-step-active {
+    color: @text;
+    border-bottom-color: @color1;
+    font-weight: bold;
+}
+
+.position-calibration-step-complete {
+    color: @text;
+    border-bottom-color: @color4;
+}
+
+.position-calibration-movement,
+.position-calibration-info {
+    margin: .2em;
+}
+
+.position-calibration-info {
+    border: .1em solid @lines;
+    border-radius: .45em;
+    padding: .4em;
+}
+
+.position-calibration-subheading {
+    font-weight: bold;
+    padding-bottom: .2em;
+}
+
+.position-calibration-coordinate {
+    font-family: Free Mono;
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+.position-calibration-center {
+    color: @lines;
+    font-weight: bold;
+}
+
+button.position-calibration-distance {
+    border: .1em solid @lines;
+    border-radius: .35em;
+    margin: .15em;
+    min-height: 2.5em;
+    padding: .15em;
+}
+
+button.position-calibration-distance-active {
+    background-color: @active;
+    border-bottom: .3em solid @color1;
+    font-weight: bold;
+}
+
+.position-calibration-error {
+    color: @text;
+    background-color: @error;
+    border-radius: .35em;
+    padding: .2em .35em;
+    font-weight: bold;
+}
+
 .tempbutton_top {
     border: .15em solid @lines;
     border-bottom: 0;

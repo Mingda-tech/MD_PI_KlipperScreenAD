@@ -1,3 +1,33 @@
+DEFECT_MODEL_KEYS = {
+    "SPAGHETTI": "spaghetti",
+    "NOZZLE_BLOB": "nozzle_blob",
+    "FOREIGN_OBJECT": "foreign_object",
+    "UNDER_EXTRUSION": "under_extrusion",
+    "OVER_EXTRUSION": "over_extrusion",
+    "WARPING": "warping",
+}
+
+
+def canonical_defect_type(value):
+    """Return the normalized public V3 defect type."""
+    raw_value = str(value or "").strip()
+    if not raw_value:
+        return ""
+    public_value = raw_value.upper()
+    return public_value
+
+
+def canonical_defect_map(value):
+    """Normalize policy map keys to public V3 defect types."""
+    if not isinstance(value, dict):
+        return {}
+    return {
+        canonical_defect_type(defect_type): item
+        for defect_type, item in value.items()
+        if canonical_defect_type(defect_type)
+    }
+
+
 def is_auto_pause_fault(result):
     """Return whether a V3 latest result represents an active AI pause."""
     if not isinstance(result, dict):

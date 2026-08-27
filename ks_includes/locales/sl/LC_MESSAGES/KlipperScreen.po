@@ -1620,12 +1620,6 @@ msgstr "Zaznavanje AI"
 msgid "AI Status"
 msgstr "Stanje AI"
 
-msgid "AI Detection Error"
-msgstr "Napaka zaznavanja z UI"
-
-msgid "AI detection failed"
-msgstr "Zaznavanje z UI ni uspelo"
-
 msgid "Checking..."
 msgstr "Preverjanje..."
 
@@ -1645,17 +1639,8 @@ msgstr "Omogočeno"
 msgid "First Layer"
 msgstr "Prva plast"
 
-msgid "First Layer Detection"
-msgstr "Zaznavanje prve plasti"
-
 msgid "Foreign Object"
 msgstr "Tuj predmet"
-
-msgid "Foreign Object Detection"
-msgstr "Zaznavanje tujega predmeta"
-
-msgid "General Detection"
-msgstr "Splošno zaznavanje"
 
 msgid "Latest Detection Result"
 msgstr "Zadnji rezultat zaznavanja"
@@ -1665,9 +1650,6 @@ msgstr "Še ni rezultatov zaznavanja"
 
 msgid "Normal"
 msgstr "Običajno"
-
-msgid "Nozzle Blob Detection"
-msgstr "Zaznavanje kepe na šobi"
 
 msgid "Offline"
 msgstr "Brez povezave"
@@ -1697,14 +1679,8 @@ msgstr "Naprava je zaklenjena"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Ta tiskalnik je zaklenil skrbnik.\nObrnite se na skrbnika."
 
-msgid "Spaghetti Detection"
-msgstr "Zaznavanje spaghetti"
-
 msgid "Warp Edge"
 msgstr "Zvihan rob"
-
-msgid "Warp Edge Detection"
-msgstr "Zaznavanje zvihanega roba"
 
 msgid "Device QR Code"
 msgstr "QR-koda naprave"
@@ -1925,11 +1901,14 @@ msgstr "Preverjanje pravilnika ni uspelo"
 msgid "Nozzle Blob"
 msgstr "Macka na šobi"
 
-msgid "First Layer Extrusion"
-msgstr "Težava pri iztiskanju prve plasti"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Zvijanje ali odstop"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Izključeno"
@@ -1942,3 +1921,135 @@ msgstr "Varni način je aktiven. Preverjanje pred tiskanjem bo samo obvestilo in
 
 msgid "AI Platform V3 is required"
 msgstr "Zahtevana je platforma AI Platform V3"
+
+msgid "Adjust"
+msgstr "Prilagodi"
+
+msgid "Adjust Position"
+msgstr "Prilagodi položaj"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "Aktivna je druga kalibracija položaja. Najprej uporabite Varen izhod."
+
+msgid "Calibration cancelled."
+msgstr "Kalibracija preklicana."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Shranjevanje ni mogoče: trenutni položaj je zunaj nastavljenega območja."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "Povezava je bila prekinjena. Znova se povežite in nato uporabite Varen izhod."
+
+msgid "Current Position"
+msgstr "Trenutni položaj"
+
+msgid "Fine Clean"
+msgstr "Fino čiščenje"
+
+msgid "Loading saved position…"
+msgstr "Nalaganje shranjenega položaja…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "Premik blokiran: ciljni položaj je zunaj nastavljenega območja."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "Premik ni uspel. Preverite napravo in nato uporabite Varen izhod."
+
+msgid "Moving the toolhead to safety…"
+msgstr "Premikanje tiskalne glave v varen položaj…"
+
+msgid "Moving to safety…"
+msgstr "Premikanje v varen položaj…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Premikanje v kalibracijski položaj. Ne dotikajte se naprave."
+
+msgid "Moving…"
+msgstr "Premikanje…"
+
+msgid "Nozzle Clean"
+msgstr "Čiščenje šobe"
+
+msgid "Position saved."
+msgstr "Položaj shranjen."
+
+msgid "Prepare"
+msgstr "Pripravi"
+
+msgid "Printer connection is unavailable."
+msgstr "Povezava s tiskalnikom ni na voljo."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "Tiskanje je aktivno. Pred kalibracijo končajte tiskanje."
+
+msgid "Probe Deploy"
+msgstr "Raztegni tipalo"
+
+msgid "Probe Stow"
+msgstr "Pospravi tipalo"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Preglejte shranjeni položaj in nato začnite kalibracijo."
+
+msgid "Safe Exit"
+msgstr "Varen izhod"
+
+msgid "Save Position"
+msgstr "Shrani položaj"
+
+msgid "Saved Position"
+msgstr "Shranjeni položaj"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Shranjevanje in premikanje tiskalne glave v varen položaj…"
+
+msgid "Saving…"
+msgstr "Shranjevanje…"
+
+msgid "Select a position to calibrate"
+msgstr "Izberite položaj za kalibracijo"
+
+msgid "Start Calibration"
+msgstr "Začni kalibracijo"
+
+msgid "Start Moving"
+msgstr "Začni premik"
+
+msgid "Start Position Calibration"
+msgstr "Začni kalibracijo položaja"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "Kalibracijska seja se je končala. Vrnite se in začnite znova."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "Trenutne koordinate niso veljavne. Prilagodite položaj in poskusite znova."
+
+msgid "The current position is outside the configured movement range."
+msgstr "Trenutni položaj je zunaj nastavljenega območja premikanja."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "Položaja ni bilo mogoče shraniti. Preverite dnevnik Klipper in poskusite znova."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "Tiskalnik lahko izvede pomik v izhodišče in premakne tiskalno glavo. Pred nadaljevanjem odstranite natisnjene dele in sprostite območje premikanja."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "Tiskalnik je vrnil neveljaven odgovor kalibracije."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "Izbrana kalibracija se je spremenila. Vrnite se in začnite znova."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "Tiskalna glava se bo premikala samodejno. Pred začetkom sprostite območje premikanja."
+
+msgid "This calibration action is not supported."
+msgstr "To kalibracijsko dejanje ni podprto."
+
+msgid "This calibration position is not supported."
+msgstr "Ta kalibracijski položaj ni podprt."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "S krmilniki poravnajte tiskalno glavo in nato shranite položaj."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "Kalibracija položaja se še inicializira. Počakajte trenutek in poskusite znova."

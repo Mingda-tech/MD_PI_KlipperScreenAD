@@ -1461,12 +1461,6 @@ msgstr "AI-detektering"
 msgid "AI Status"
 msgstr "AI-status"
 
-msgid "AI Detection Error"
-msgstr "Fel vid AI-detektering"
-
-msgid "AI detection failed"
-msgstr "AI-detekteringen misslyckades"
-
 msgid "Checking..."
 msgstr "Kontrollerar..."
 
@@ -1486,17 +1480,8 @@ msgstr "Aktiverad"
 msgid "First Layer"
 msgstr "Första lager"
 
-msgid "First Layer Detection"
-msgstr "Detektering av första lager"
-
 msgid "Foreign Object"
 msgstr "Främmande objekt"
-
-msgid "Foreign Object Detection"
-msgstr "Detektering av främmande objekt"
-
-msgid "General Detection"
-msgstr "Allmän detektering"
 
 msgid "Latest Detection Result"
 msgstr "Senaste detekteringsresultat"
@@ -1506,9 +1491,6 @@ msgstr "Inga detekteringsresultat ännu"
 
 msgid "Normal"
 msgstr "Normal"
-
-msgid "Nozzle Blob Detection"
-msgstr "Detektering av klump på munstycket"
 
 msgid "Offline"
 msgstr "Offline"
@@ -1538,14 +1520,8 @@ msgstr "Enheten är låst"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Den här skrivaren har låsts av en administratör.\nKontakta administratören."
 
-msgid "Spaghetti Detection"
-msgstr "Spaghetti-detektering"
-
 msgid "Warp Edge"
 msgstr "Uppkrullad kant"
-
-msgid "Warp Edge Detection"
-msgstr "Detektering av uppkrullad kant"
 
 msgid "Device QR Code"
 msgstr "Enhetens QR-kod"
@@ -1766,11 +1742,14 @@ msgstr "Policyverifiering misslyckades"
 msgid "Nozzle Blob"
 msgstr "Blob på munstycket"
 
-msgid "First Layer Extrusion"
-msgstr "Första skiktets extruderingsproblem"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Vridning eller lösgöring"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Av"
@@ -1783,3 +1762,135 @@ msgstr "Säkert läge är aktivt. Förtryckskontrollen meddelar endast och block
 
 msgid "AI Platform V3 is required"
 msgstr "AI Platform V3 krävs"
+
+msgid "Adjust"
+msgstr "Justera"
+
+msgid "Adjust Position"
+msgstr "Justera position"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "En annan positionskalibrering är aktiv. Använd Säker avslutning först."
+
+msgid "Calibration cancelled."
+msgstr "Kalibreringen avbröts."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Kan inte spara: den aktuella positionen ligger utanför det konfigurerade området."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "Anslutningen förlorades. Anslut igen och använd sedan Säker avslutning."
+
+msgid "Current Position"
+msgstr "Aktuell position"
+
+msgid "Fine Clean"
+msgstr "Finrengöring"
+
+msgid "Loading saved position…"
+msgstr "Läser in sparad position…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "Rörelsen blockerades: målpositionen ligger utanför det konfigurerade området."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "Rörelsen misslyckades. Kontrollera maskinen och använd sedan Säker avslutning."
+
+msgid "Moving the toolhead to safety…"
+msgstr "Flyttar skrivhuvudet till en säker position…"
+
+msgid "Moving to safety…"
+msgstr "Flyttar till en säker position…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Flyttar till kalibreringspositionen. Rör inte maskinen."
+
+msgid "Moving…"
+msgstr "Flyttar…"
+
+msgid "Nozzle Clean"
+msgstr "Munstycksrengöring"
+
+msgid "Position saved."
+msgstr "Positionen sparades."
+
+msgid "Prepare"
+msgstr "Förbered"
+
+msgid "Printer connection is unavailable."
+msgstr "Skrivaranslutningen är inte tillgänglig."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "Utskrift pågår. Avsluta utskriften före kalibrering."
+
+msgid "Probe Deploy"
+msgstr "Fäll ut prob"
+
+msgid "Probe Stow"
+msgstr "Fäll in prob"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Granska den sparade positionen och starta sedan kalibreringen."
+
+msgid "Safe Exit"
+msgstr "Säker avslutning"
+
+msgid "Save Position"
+msgstr "Spara position"
+
+msgid "Saved Position"
+msgstr "Sparad position"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Sparar och flyttar skrivhuvudet till en säker position…"
+
+msgid "Saving…"
+msgstr "Sparar…"
+
+msgid "Select a position to calibrate"
+msgstr "Välj en position att kalibrera"
+
+msgid "Start Calibration"
+msgstr "Starta kalibrering"
+
+msgid "Start Moving"
+msgstr "Starta rörelse"
+
+msgid "Start Position Calibration"
+msgstr "Starta positionskalibrering"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "Kalibreringssessionen avslutades. Gå tillbaka och börja om."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "De aktuella koordinaterna är ogiltiga. Justera positionen och försök igen."
+
+msgid "The current position is outside the configured movement range."
+msgstr "Den aktuella positionen ligger utanför det konfigurerade rörelseområdet."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "Positionen kunde inte sparas. Kontrollera Klipper-loggen och försök igen."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "Skrivaren kan köra hem axlarna och flytta skrivhuvudet. Ta bort utskrivna delar och frigör rörelseområdet innan du fortsätter."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "Skrivaren returnerade ett ogiltigt kalibreringssvar."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "Den valda kalibreringen ändrades. Gå tillbaka och börja om."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "Skrivhuvudet flyttas automatiskt. Frigör rörelseområdet innan du börjar."
+
+msgid "This calibration action is not supported."
+msgstr "Den här kalibreringsåtgärden stöds inte."
+
+msgid "This calibration position is not supported."
+msgstr "Den här kalibreringspositionen stöds inte."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "Använd reglagen för att rikta in skrivhuvudet och spara sedan positionen."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "Positionskalibreringen initieras fortfarande. Vänta en stund och försök igen."

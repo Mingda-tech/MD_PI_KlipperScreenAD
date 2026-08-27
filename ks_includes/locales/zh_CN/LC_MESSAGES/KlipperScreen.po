@@ -1567,14 +1567,8 @@ msgstr "自动进料"
 msgid "AI Detection"
 msgstr "AI检测"
 
-msgid "AI Detection Error"
-msgstr "AI检测错误"
-
 msgid "AI Status"
 msgstr "AI状态"
-
-msgid "AI detection failed"
-msgstr "AI检测失败"
 
 msgid "Checking..."
 msgstr "检查中..."
@@ -1595,17 +1589,8 @@ msgstr "启用"
 msgid "First Layer"
 msgstr "首层"
 
-msgid "First Layer Detection"
-msgstr "首层检测"
-
 msgid "Foreign Object"
 msgstr "异物"
-
-msgid "Foreign Object Detection"
-msgstr "异物检测"
-
-msgid "General Detection"
-msgstr "通用检测"
 
 msgid "Latest Detection Result"
 msgstr "最新检测结果"
@@ -1615,9 +1600,6 @@ msgstr "暂无检测结果"
 
 msgid "Normal"
 msgstr "正常"
-
-msgid "Nozzle Blob Detection"
-msgstr "裹头检测"
 
 msgid "Offline"
 msgstr "离线"
@@ -1647,14 +1629,8 @@ msgstr "设备已锁定"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "设备已被管理员锁定。\n请联系管理员。"
 
-msgid "Spaghetti Detection"
-msgstr "意大利面检测"
-
 msgid "Warp Edge"
 msgstr "翘边"
-
-msgid "Warp Edge Detection"
-msgstr "翘边检测"
 
 msgid "Device QR Code"
 msgstr "设备二维码"
@@ -1875,11 +1851,14 @@ msgstr "策略校验失败"
 msgid "Nozzle Blob"
 msgstr "裹头"
 
-msgid "First Layer Extrusion"
-msgstr "首层挤出异常"
+msgid "Under Extrusion"
+msgstr "挤出不足"
 
-msgid "Warp or Detachment"
-msgstr "翘边或脱落"
+msgid "Over Extrusion"
+msgstr "挤料过多"
+
+msgid "Warping"
+msgstr "翘边"
 
 msgid "For the pre-print foreign-object check, Critical blocks printing only when Auto Pause is selected."
 msgstr "预打印异物检查中，仅当选择“自动暂停”时，严重风险才会阻止开始打印。"
@@ -1904,3 +1883,135 @@ msgstr "AI 发现严重异物，已阻止开始打印。"
 
 msgid "Off"
 msgstr "关闭"
+
+msgid "Adjust"
+msgstr "微调"
+
+msgid "Adjust Position"
+msgstr "微调位置"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "另一个位置校准正在进行。请先安全退出。"
+
+msgid "Calibration cancelled."
+msgstr "校准已取消。"
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "无法保存：当前位置超出已配置的运动范围。"
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "连接已中断。重新连接后请执行安全退出。"
+
+msgid "Current Position"
+msgstr "当前位置"
+
+msgid "Fine Clean"
+msgstr "精细清洁"
+
+msgid "Loading saved position…"
+msgstr "正在加载已保存位置…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "移动已阻止：目标位置超出已配置范围。"
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "移动失败。请检查机器，然后执行安全退出。"
+
+msgid "Moving the toolhead to safety…"
+msgstr "正在将工具头移至安全位置…"
+
+msgid "Moving to safety…"
+msgstr "正在移至安全位置…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "正在移至校准位置。请勿触碰机器。"
+
+msgid "Moving…"
+msgstr "正在移动…"
+
+msgid "Nozzle Clean"
+msgstr "喷嘴清洁"
+
+msgid "Position saved."
+msgstr "位置已保存。"
+
+msgid "Prepare"
+msgstr "准备"
+
+msgid "Printer connection is unavailable."
+msgstr "打印机连接不可用。"
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "打印正在进行。请结束打印后再校准。"
+
+msgid "Probe Deploy"
+msgstr "探针部署"
+
+msgid "Probe Stow"
+msgstr "探针收回"
+
+msgid "Review the saved position, then start calibration."
+msgstr "请检查已保存位置，然后开始校准。"
+
+msgid "Safe Exit"
+msgstr "安全退出"
+
+msgid "Save Position"
+msgstr "保存位置"
+
+msgid "Saved Position"
+msgstr "已保存位置"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "正在保存并将工具头移至安全位置…"
+
+msgid "Saving…"
+msgstr "正在保存…"
+
+msgid "Select a position to calibrate"
+msgstr "选择要校准的位置"
+
+msgid "Start Calibration"
+msgstr "开始校准"
+
+msgid "Start Moving"
+msgstr "开始移动"
+
+msgid "Start Position Calibration"
+msgstr "开始位置校准"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "校准会话已结束。请返回后重新开始。"
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "当前坐标无效。请调整位置后重试。"
+
+msgid "The current position is outside the configured movement range."
+msgstr "当前位置超出已配置的运动范围。"
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "无法保存位置。请检查 Klipper 日志后重试。"
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "打印机可能会归零并移动工具头。继续前请取下打印件并清理运动区域。"
+
+msgid "The printer returned an invalid calibration response."
+msgstr "打印机返回了无效的校准响应。"
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "所选校准项目已改变。请返回后重新开始。"
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "工具头将自动移动。开始前请清理运动区域。"
+
+msgid "This calibration action is not supported."
+msgstr "不支持此校准操作。"
+
+msgid "This calibration position is not supported."
+msgstr "不支持此校准位置。"
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "使用控制按钮对准工具头，然后保存位置。"
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "位置校准仍在初始化。请稍候片刻再重试。"

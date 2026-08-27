@@ -786,13 +786,7 @@ msgstr ""
 msgid "AI Detection"
 msgstr ""
 
-msgid "AI Detection Error"
-msgstr ""
-
 msgid "AI Status"
-msgstr ""
-
-msgid "AI detection failed"
 msgstr ""
 
 msgid "Checking..."
@@ -814,16 +808,7 @@ msgstr ""
 msgid "First Layer"
 msgstr ""
 
-msgid "First Layer Detection"
-msgstr ""
-
 msgid "Foreign Object"
-msgstr ""
-
-msgid "Foreign Object Detection"
-msgstr ""
-
-msgid "General Detection"
 msgstr ""
 
 msgid "Latest Detection Result"
@@ -833,9 +818,6 @@ msgid "No detection results yet"
 msgstr ""
 
 msgid "Normal"
-msgstr ""
-
-msgid "Nozzle Blob Detection"
 msgstr ""
 
 msgid "Offline"
@@ -860,13 +842,7 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-msgid "Spaghetti Detection"
-msgstr ""
-
 msgid "Warp Edge"
-msgstr ""
-
-msgid "Warp Edge Detection"
 msgstr ""
 
 msgid "Device QR Code"
@@ -1088,10 +1064,13 @@ msgstr ""
 msgid "Nozzle Blob"
 msgstr ""
 
-msgid "First Layer Extrusion"
+msgid "Under Extrusion"
 msgstr ""
 
-msgid "Warp or Detachment"
+msgid "Over Extrusion"
+msgstr ""
+
+msgid "Warping"
 msgstr ""
 
 msgid "Off"
@@ -1104,4 +1083,136 @@ msgid "Safe mode is active. The pre-print check will notify only and will not bl
 msgstr ""
 
 msgid "AI Platform V3 is required"
+msgstr ""
+
+msgid "Adjust"
+msgstr ""
+
+msgid "Adjust Position"
+msgstr ""
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr ""
+
+msgid "Calibration cancelled."
+msgstr ""
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr ""
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr ""
+
+msgid "Current Position"
+msgstr ""
+
+msgid "Fine Clean"
+msgstr ""
+
+msgid "Loading saved position…"
+msgstr ""
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr ""
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr ""
+
+msgid "Moving the toolhead to safety…"
+msgstr ""
+
+msgid "Moving to safety…"
+msgstr ""
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr ""
+
+msgid "Moving…"
+msgstr ""
+
+msgid "Nozzle Clean"
+msgstr ""
+
+msgid "Position saved."
+msgstr ""
+
+msgid "Prepare"
+msgstr ""
+
+msgid "Printer connection is unavailable."
+msgstr ""
+
+msgid "Printing is active. End the print before calibrating."
+msgstr ""
+
+msgid "Probe Deploy"
+msgstr ""
+
+msgid "Probe Stow"
+msgstr ""
+
+msgid "Review the saved position, then start calibration."
+msgstr ""
+
+msgid "Safe Exit"
+msgstr ""
+
+msgid "Save Position"
+msgstr ""
+
+msgid "Saved Position"
+msgstr ""
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr ""
+
+msgid "Saving…"
+msgstr ""
+
+msgid "Select a position to calibrate"
+msgstr ""
+
+msgid "Start Calibration"
+msgstr ""
+
+msgid "Start Moving"
+msgstr ""
+
+msgid "Start Position Calibration"
+msgstr ""
+
+msgid "The calibration session ended. Return and start again."
+msgstr ""
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr ""
+
+msgid "The current position is outside the configured movement range."
+msgstr ""
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr ""
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr ""
+
+msgid "The printer returned an invalid calibration response."
+msgstr ""
+
+msgid "The selected calibration changed. Return and start again."
+msgstr ""
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr ""
+
+msgid "This calibration action is not supported."
+msgstr ""
+
+msgid "This calibration position is not supported."
+msgstr ""
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr ""
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
 msgstr ""

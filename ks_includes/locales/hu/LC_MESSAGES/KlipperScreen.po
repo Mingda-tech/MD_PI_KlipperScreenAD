@@ -1381,12 +1381,6 @@ msgstr "AI-észlelés"
 msgid "AI Status"
 msgstr "AI állapot"
 
-msgid "AI Detection Error"
-msgstr "AI-észlelési hiba"
-
-msgid "AI detection failed"
-msgstr "Az AI-észlelés sikertelen"
-
 msgid "Checking..."
 msgstr "Ellenőrzés..."
 
@@ -1406,17 +1400,8 @@ msgstr "Engedélyezve"
 msgid "First Layer"
 msgstr "Első réteg"
 
-msgid "First Layer Detection"
-msgstr "Első réteg észlelése"
-
 msgid "Foreign Object"
 msgstr "Idegen tárgy"
-
-msgid "Foreign Object Detection"
-msgstr "Idegen tárgy észlelése"
-
-msgid "General Detection"
-msgstr "Általános észlelés"
 
 msgid "Latest Detection Result"
 msgstr "Legutóbbi észlelési eredmény"
@@ -1426,9 +1411,6 @@ msgstr "Még nincs észlelési eredmény"
 
 msgid "Normal"
 msgstr "Normál"
-
-msgid "Nozzle Blob Detection"
-msgstr "Fúvókalerakódás észlelése"
 
 msgid "Offline"
 msgstr "Offline"
@@ -1458,14 +1440,8 @@ msgstr "Az eszköz zárolva"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "Ezt a nyomtatót egy rendszergazda zárolta.\nForduljon a rendszergazdához."
 
-msgid "Spaghetti Detection"
-msgstr "Spagetti észlelése"
-
 msgid "Warp Edge"
 msgstr "Felgörbült szél"
-
-msgid "Warp Edge Detection"
-msgstr "Felgörbült szél észlelése"
 
 msgid "Device QR Code"
 msgstr "Eszköz QR-kódja"
@@ -1686,11 +1662,14 @@ msgstr "A szabályzat ellenőrzése nem sikerült"
 msgid "Nozzle Blob"
 msgstr "Folt a fúvókán"
 
-msgid "First Layer Extrusion"
-msgstr "Első réteg extrudálási probléma"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "Vetedés vagy leválás"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "Ki"
@@ -1703,3 +1682,135 @@ msgstr "A csökkentett mód aktív. A nyomtatás előtti csekk csak értesít, n
 
 msgid "AI Platform V3 is required"
 msgstr "AI Platform V3 szükséges"
+
+msgid "Adjust"
+msgstr "Beállítás"
+
+msgid "Adjust Position"
+msgstr "Pozíció beállítása"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "Egy másik pozíciókalibrálás aktív. Először használja a Biztonságos kilépést."
+
+msgid "Calibration cancelled."
+msgstr "Kalibrálás megszakítva."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "Nem menthető: a jelenlegi pozíció a beállított tartományon kívül van."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "A kapcsolat megszakadt. Csatlakozzon újra, majd használja a Biztonságos kilépést."
+
+msgid "Current Position"
+msgstr "Jelenlegi pozíció"
+
+msgid "Fine Clean"
+msgstr "Finom tisztítás"
+
+msgid "Loading saved position…"
+msgstr "Mentett pozíció betöltése…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "A mozgás blokkolva: a célpozíció a beállított tartományon kívül van."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "A mozgás sikertelen. Ellenőrizze a gépet, majd használja a Biztonságos kilépést."
+
+msgid "Moving the toolhead to safety…"
+msgstr "A nyomtatófej biztonságos pozícióba mozgatása…"
+
+msgid "Moving to safety…"
+msgstr "Mozgás biztonságos pozícióba…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "Mozgás a kalibrálási pozícióba. Ne érintse meg a gépet."
+
+msgid "Moving…"
+msgstr "Mozgás…"
+
+msgid "Nozzle Clean"
+msgstr "Fúvókatisztítás"
+
+msgid "Position saved."
+msgstr "Pozíció elmentve."
+
+msgid "Prepare"
+msgstr "Előkészítés"
+
+msgid "Printer connection is unavailable."
+msgstr "A nyomtatókapcsolat nem érhető el."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "Nyomtatás van folyamatban. Kalibrálás előtt fejezze be a nyomtatást."
+
+msgid "Probe Deploy"
+msgstr "Szonda kihelyezése"
+
+msgid "Probe Stow"
+msgstr "Szonda visszahelyezése"
+
+msgid "Review the saved position, then start calibration."
+msgstr "Ellenőrizze a mentett pozíciót, majd indítsa el a kalibrálást."
+
+msgid "Safe Exit"
+msgstr "Biztonságos kilépés"
+
+msgid "Save Position"
+msgstr "Pozíció mentése"
+
+msgid "Saved Position"
+msgstr "Mentett pozíció"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "Mentés és a nyomtatófej biztonságos pozícióba mozgatása…"
+
+msgid "Saving…"
+msgstr "Mentés…"
+
+msgid "Select a position to calibrate"
+msgstr "Válassza ki a kalibrálandó pozíciót"
+
+msgid "Start Calibration"
+msgstr "Kalibrálás indítása"
+
+msgid "Start Moving"
+msgstr "Mozgás indítása"
+
+msgid "Start Position Calibration"
+msgstr "Pozíciókalibrálás indítása"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "A kalibrálási munkamenet véget ért. Lépjen vissza, és kezdje újra."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "A jelenlegi koordináták érvénytelenek. Állítsa be a pozíciót, majd próbálja újra."
+
+msgid "The current position is outside the configured movement range."
+msgstr "A jelenlegi pozíció a beállított mozgástartományon kívül van."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "A pozíciót nem sikerült elmenteni. Ellenőrizze a Klipper naplóját, majd próbálja újra."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "A nyomtató alaphelyzetbe állíthatja a tengelyeket és megmozdíthatja a nyomtatófejet. Távolítsa el a nyomtatott darabokat, és a folytatás előtt tegye szabaddá a mozgási területet."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "A nyomtató érvénytelen kalibrálási választ adott."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "A kiválasztott kalibrálás megváltozott. Lépjen vissza, és kezdje újra."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "A nyomtatófej automatikusan mozog. Indítás előtt tegye szabaddá a mozgási területet."
+
+msgid "This calibration action is not supported."
+msgstr "Ez a kalibrálási művelet nem támogatott."
+
+msgid "This calibration position is not supported."
+msgstr "Ez a kalibrálási pozíció nem támogatott."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "A vezérlőkkel igazítsa be a nyomtatófejet, majd mentse el a pozíciót."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "A pozíciókalibrálás inicializálása még folyamatban van. Várjon egy pillanatot, majd próbálja újra."

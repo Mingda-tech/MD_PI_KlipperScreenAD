@@ -594,7 +594,7 @@ msgid "Retraction Speed"
 msgstr "מהירות משיכה"
 
 msgid "Retry"
-msgstr ""
+msgstr "נסה שוב"
 
 msgid "Retrying"
 msgstr "מנסה שוב"
@@ -1601,12 +1601,6 @@ msgstr "זיהוי AI"
 msgid "AI Status"
 msgstr "מצב AI"
 
-msgid "AI Detection Error"
-msgstr "שגיאת זיהוי בינה מלאכותית"
-
-msgid "AI detection failed"
-msgstr "זיהוי הבינה המלאכותית נכשל"
-
 msgid "Checking..."
 msgstr "בודק..."
 
@@ -1626,17 +1620,8 @@ msgstr "מופעל"
 msgid "First Layer"
 msgstr "שכבה ראשונה"
 
-msgid "First Layer Detection"
-msgstr "זיהוי שכבה ראשונה"
-
 msgid "Foreign Object"
 msgstr "עצם זר"
-
-msgid "Foreign Object Detection"
-msgstr "זיהוי עצם זר"
-
-msgid "General Detection"
-msgstr "זיהוי כללי"
 
 msgid "Latest Detection Result"
 msgstr "תוצאת הזיהוי האחרונה"
@@ -1646,9 +1631,6 @@ msgstr "עדיין אין תוצאות זיהוי"
 
 msgid "Normal"
 msgstr "תקין"
-
-msgid "Nozzle Blob Detection"
-msgstr "זיהוי גוש על הדיזה"
 
 msgid "Offline"
 msgstr "לא מקוון"
@@ -1678,14 +1660,8 @@ msgstr "המכשיר נעול"
 msgid "This printer has been locked by an administrator.\nPlease contact the administrator."
 msgstr "מדפסת זו ננעלה על ידי מנהל מערכת.\nיש לפנות למנהל המערכת."
 
-msgid "Spaghetti Detection"
-msgstr "זיהוי ספגטי"
-
 msgid "Warp Edge"
 msgstr "קצה מורם"
-
-msgid "Warp Edge Detection"
-msgstr "זיהוי קצה מורם"
 
 msgid "Device QR Code"
 msgstr "קוד QR של המכשיר"
@@ -1906,11 +1882,14 @@ msgstr "אימות המדיניות נכשל"
 msgid "Nozzle Blob"
 msgstr "כתם על הזרבובית"
 
-msgid "First Layer Extrusion"
-msgstr "בעיית שחול בשכבה ראשונה"
+msgid "Under Extrusion"
+msgstr "Under Extrusion"
 
-msgid "Warp or Detachment"
-msgstr "עיוות או ניתוק"
+msgid "Over Extrusion"
+msgstr "Over Extrusion"
+
+msgid "Warping"
+msgstr "Warping"
 
 msgid "Off"
 msgstr "כבוי"
@@ -1923,3 +1902,135 @@ msgstr "מצב בטוח פעיל. בדיקת טרום ההדפסה תודיע ר
 
 msgid "AI Platform V3 is required"
 msgstr "נדרשת פלטפורמת AI V3"
+
+msgid "Adjust"
+msgstr "כוונון"
+
+msgid "Adjust Position"
+msgstr "כוונון מיקום"
+
+msgid "Another position calibration is active. Use Safe Exit first."
+msgstr "כיול מיקום אחר פעיל. יש להשתמש תחילה ביציאה בטוחה."
+
+msgid "Calibration cancelled."
+msgstr "הכיול בוטל."
+
+msgid "Cannot save: the current position is outside the configured range."
+msgstr "לא ניתן לשמור: המיקום הנוכחי מחוץ לטווח שהוגדר."
+
+msgid "Connection was lost. Reconnect, then use Safe Exit."
+msgstr "החיבור נותק. יש להתחבר מחדש ולאחר מכן להשתמש ביציאה בטוחה."
+
+msgid "Current Position"
+msgstr "מיקום נוכחי"
+
+msgid "Fine Clean"
+msgstr "ניקוי עדין"
+
+msgid "Loading saved position…"
+msgstr "המיקום השמור נטען…"
+
+msgid "Movement blocked: the target is outside the configured range."
+msgstr "התנועה נחסמה: מיקום היעד מחוץ לטווח שהוגדר."
+
+msgid "Movement failed. Check the machine, then use Safe Exit."
+msgstr "התנועה נכשלה. יש לבדוק את המכונה ולאחר מכן להשתמש ביציאה בטוחה."
+
+msgid "Moving the toolhead to safety…"
+msgstr "ראש הכלי מועבר למיקום בטוח…"
+
+msgid "Moving to safety…"
+msgstr "מעבר למיקום בטוח…"
+
+msgid "Moving to the calibration position. Do not touch the machine."
+msgstr "מעבר למיקום הכיול. אין לגעת במכונה."
+
+msgid "Moving…"
+msgstr "בתנועה…"
+
+msgid "Nozzle Clean"
+msgstr "ניקוי הדיזה"
+
+msgid "Position saved."
+msgstr "המיקום נשמר."
+
+msgid "Prepare"
+msgstr "הכנה"
+
+msgid "Printer connection is unavailable."
+msgstr "החיבור למדפסת אינו זמין."
+
+msgid "Printing is active. End the print before calibrating."
+msgstr "מתבצעת הדפסה. יש לסיים את ההדפסה לפני הכיול."
+
+msgid "Probe Deploy"
+msgstr "פריסת הגשוש"
+
+msgid "Probe Stow"
+msgstr "קיפול הגשוש"
+
+msgid "Review the saved position, then start calibration."
+msgstr "יש לבדוק את המיקום השמור ולאחר מכן להתחיל בכיול."
+
+msgid "Safe Exit"
+msgstr "יציאה בטוחה"
+
+msgid "Save Position"
+msgstr "שמירת מיקום"
+
+msgid "Saved Position"
+msgstr "מיקום שמור"
+
+msgid "Saving and moving the toolhead to safety…"
+msgstr "המיקום נשמר וראש הכלי מועבר למיקום בטוח…"
+
+msgid "Saving…"
+msgstr "שומר…"
+
+msgid "Select a position to calibrate"
+msgstr "בחירת מיקום לכיול"
+
+msgid "Start Calibration"
+msgstr "התחלת כיול"
+
+msgid "Start Moving"
+msgstr "התחלת תנועה"
+
+msgid "Start Position Calibration"
+msgstr "התחלת כיול מיקום"
+
+msgid "The calibration session ended. Return and start again."
+msgstr "הפעלת הכיול הסתיימה. יש לחזור ולהתחיל מחדש."
+
+msgid "The current coordinates are invalid. Adjust the position and retry."
+msgstr "הקואורדינטות הנוכחיות אינן תקינות. יש לכוונן את המיקום ולנסות שוב."
+
+msgid "The current position is outside the configured movement range."
+msgstr "המיקום הנוכחי מחוץ לטווח התנועה שהוגדר."
+
+msgid "The position could not be saved. Check the Klipper log and retry."
+msgstr "לא ניתן היה לשמור את המיקום. יש לבדוק את יומן Klipper ולנסות שוב."
+
+msgid "The printer may home and move the toolhead. Remove printed parts and clear the movement area before continuing."
+msgstr "ייתכן שהמדפסת תבצע איפוס צירים ותזיז את ראש הכלי. יש להסיר חלקים מודפסים ולפנות את אזור התנועה לפני המשך."
+
+msgid "The printer returned an invalid calibration response."
+msgstr "המדפסת החזירה תגובת כיול לא תקינה."
+
+msgid "The selected calibration changed. Return and start again."
+msgstr "הכיול שנבחר השתנה. יש לחזור ולהתחיל מחדש."
+
+msgid "The toolhead will move automatically. Clear the movement area before starting."
+msgstr "ראש הכלי ינוע אוטומטית. יש לפנות את אזור התנועה לפני התחלה."
+
+msgid "This calibration action is not supported."
+msgstr "פעולת כיול זו אינה נתמכת."
+
+msgid "This calibration position is not supported."
+msgstr "מיקום כיול זה אינו נתמך."
+
+msgid "Use the controls to align the toolhead, then save the position."
+msgstr "יש להשתמש בפקדים כדי ליישר את ראש הכלי ולאחר מכן לשמור את המיקום."
+
+msgid "Position calibration is still initializing. Wait a moment and retry."
+msgstr "כיול המיקום עדיין מאותחל. יש להמתין רגע ולנסות שוב."
