@@ -10,16 +10,6 @@ from ks_includes.screen_panel import ScreenPanel
 
 def get_grid_attachments(item_count, columns, expand_last=False):
     """Return (column, row, width, height) tuples for visible menu items."""
-    if item_count == 5 and columns in (3, 4):
-        # Use six half-width tracks to center a 3 + 2 card layout.
-        return [
-            (0, 0, 2, 1),
-            (2, 0, 2, 1),
-            (4, 0, 2, 1),
-            (1, 1, 2, 1),
-            (3, 1, 2, 1),
-        ]
-
     if columns == 4:
         if item_count <= 4:
             columns = 2
