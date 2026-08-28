@@ -78,7 +78,7 @@ class Panel(ScreenPanel):
         self.target_buttons = {}
         for index, (target, icon) in enumerate(self.TARGETS):
             label = self._target_label(target)
-            button = self._gtk.Button(icon, label, scale=1.0, lines=1)
+            button = self._gtk.Button(icon, label, scale=2.0, lines=1)
             button.get_style_context().add_class("position-calibration-target")
             button.connect("clicked", self._select_target, target, label)
             target_grid.attach(button, index % 2, index // 2, 1, 1)

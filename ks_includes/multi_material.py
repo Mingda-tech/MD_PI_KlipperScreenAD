@@ -2,6 +2,7 @@ import logging
 
 
 SWITCH_DATA_OBJECT = "gcode_macro _SWITCH_TOOLS_DATA"
+FEEDER_SENSOR_PREFIX = "gcode_button enter_button_"
 MAX_SUPPORTED_CHANNELS = 10
 MATERIAL_FIELDS = ("vendor", "type", "min_temp", "max_temp", "color")
 
@@ -81,6 +82,32 @@ def get_active_channel(printer, default=0):
 
 def get_filament_mask(printer, default=None):
     return _as_int(get_switch_data(printer).get("filament_index"), default)
+
+
+def get_feeder_sensors(printer):
+    sensors = {}
+    for section in printer.get_config_section_list(FEEDER_SENSOR_PREFIX):
+        channel = _as_int(section.rsplit("_", 1)[-1])
+        if channel is not None and 1 <= channel <= MAX_SUPPORTED_CHANNELS:
+            sensors[channel] = section
+    return dict(sorted(sensors.items()))
+
+
+def get_channel_presence(printer, channel, fallback_mask=None, feeder_sensors=None):
+    channel = _as_int(channel)
+    if channel is None or channel < 1:
+        return None
+    sensors = feeder_sensors if feeder_sensors is not None else get_feeder_sensors(printer)
+    sensor = sensors.get(channel)
+    if sensor is not None:
+        state = printer.get_stat(sensor, "state")
+        if isinstance(state, str):
+            state = state.strip().upper()
+            if state == "PRESSED":
+                return True
+            if state == "RELEASED":
+                return False
+    return is_channel_loaded(fallback_mask, channel)
 
 
 def is_channel_loaded(mask, channel):

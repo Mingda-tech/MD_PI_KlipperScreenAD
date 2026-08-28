@@ -3,12 +3,17 @@ import re
 import gi
 
 gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk, Pango
+from gi.repository import GdkPixbuf, GLib, Gtk, Pango
 from ks_includes.KlippyGcodes import KlippyGcodes
+from ks_includes.KlippyGtk import find_widget
+from ks_includes.icon_tint import resolve_theme_color, tint_pixel_data
 from ks_includes.multi_material import (
     SWITCH_DATA_OBJECT,
     get_active_channel,
+    get_channel_presence,
     get_channel_count,
+    get_feeder_sensors,
+    get_filament_mask,
     get_material_record,
     parse_material_records,
 )
@@ -22,6 +27,14 @@ class Panel(ScreenPanel):
         self.current_extruder = self._printer.get_stat("toolhead", "extruder")
         self.channel_count = get_channel_count(self._printer)
         self.current_tool = get_active_channel(self._printer, default=0)
+        self.filament_mask = get_filament_mask(self._printer)
+        self.feeder_sensors = get_feeder_sensors(self._printer)
+        self.tool_icon_sources = {}
+        self.tool_icon_states = {}
+        self.tool_icon_colors = {
+            True: resolve_theme_color(self._gtk.themedir, "echo", (54, 117, 84)),
+            False: resolve_theme_color(self._gtk.themedir, "error", (152, 30, 31)),
+        }
         self.multi_material_enabled = True if self.current_tool > 0 else False
         self.previous_tool = self.current_tool if self.current_tool > 0 else 1
 
@@ -88,10 +101,14 @@ class Panel(ScreenPanel):
         self._apply_multi_material_text_limit()
 
         extgrid = self._gtk.HomogeneousGrid()
-        tool_columns = 3 if self.channel_count <= 6 else 5
+        tool_columns = min(len(self.available_tools), 5)
         for position, tool_num in enumerate(self.available_tools):
             extruder = f"extruder{tool_num}"
             self.labels[extruder] = self._gtk.Button(f"filament-{tool_num}", f"T{tool_num}")
+            self.labels[extruder].get_style_context().add_class("extrude-tool-status")
+            image = find_widget(self.labels[extruder], Gtk.Image)
+            if image is not None and image.get_pixbuf() is not None:
+                self.tool_icon_sources[tool_num] = image.get_pixbuf().copy()
             self.labels[extruder].connect("clicked", self.change_extruder, tool_num + 1)
             extgrid.attach(
                 self.labels[extruder],
@@ -196,6 +213,7 @@ class Panel(ScreenPanel):
 
                 # 更新所有按钮状态
         self._update_tool_buttons()
+        self._update_tool_filament_status()
         self.content.add(grid)
 
     def _update_tool_buttons(self):
@@ -208,6 +226,70 @@ class Panel(ScreenPanel):
             button.set_sensitive(allow_selection)
             if self.current_tool == tool_num + 1:
                 button.get_style_context().add_class("button_active")
+
+    def _update_tool_filament_status(self):
+        for tool_num in self.available_tools:
+            button = self.labels.get(f"extruder{tool_num}")
+            if button is None:
+                continue
+            context = button.get_style_context()
+            context.remove_class("extrude-tool-loaded")
+            context.remove_class("extrude-tool-empty")
+            loaded = get_channel_presence(
+                self._printer,
+                tool_num + 1,
+                self.filament_mask,
+                self.feeder_sensors,
+            )
+            if loaded is True:
+                context.add_class("extrude-tool-loaded")
+            elif loaded is False:
+                context.add_class("extrude-tool-empty")
+            self._update_tool_icon(button, tool_num, loaded)
+
+    def _update_tool_icon(self, button, tool_num, loaded):
+        if self.tool_icon_states.get(tool_num) is loaded:
+            return
+        image = find_widget(button, Gtk.Image)
+        source = self.tool_icon_sources.get(tool_num)
+        if image is None or source is None:
+            return
+        if loaded is None:
+            image.set_from_pixbuf(source)
+            self.tool_icon_states[tool_num] = None
+            return
+        try:
+            pixels = tint_pixel_data(
+                bytes(source.get_pixels()),
+                source.get_width(),
+                source.get_height(),
+                source.get_rowstride(),
+                source.get_n_channels(),
+                self.tool_icon_colors[loaded],
+            )
+            tinted = GdkPixbuf.Pixbuf.new_from_bytes(
+                GLib.Bytes.new(pixels),
+                GdkPixbuf.Colorspace.RGB,
+                source.get_has_alpha(),
+                source.get_bits_per_sample(),
+                source.get_width(),
+                source.get_height(),
+                source.get_rowstride(),
+            )
+        except (TypeError, ValueError, GLib.Error) as error:
+            logging.warning("Unable to tint T%s filament icon: %s", tool_num, error)
+            return
+        image.set_from_pixbuf(tinted)
+        self.tool_icon_states[tool_num] = loaded
+
+    def _set_filament_mask(self, filament_mask):
+        try:
+            filament_mask = int(filament_mask)
+        except (TypeError, ValueError):
+            self.filament_mask = None
+        else:
+            self.filament_mask = filament_mask if filament_mask >= 0 else None
+        self._update_tool_filament_status()
 
     def _set_active_tool(self, active_tool):
         try:
@@ -267,7 +349,6 @@ class Panel(ScreenPanel):
     def _apply_multi_material_text_limit(self):
         """为横屏模式下的multi_material按钮设置文本限制"""
         if not self._screen.vertical_mode and 'multi_material' in self.buttons:
-            from ks_includes.KlippyGtk import find_widget
             label = find_widget(self.buttons['multi_material'], Gtk.Label)
             if label:
                 # 对所有语言统一限制为12字符，确保界面一致性
@@ -276,7 +357,6 @@ class Panel(ScreenPanel):
     
     def _update_multi_material_icon(self, enabled):
         """更新多材料按钮的图标，不破坏按钮结构"""
-        from ks_includes.KlippyGtk import find_widget
         image = find_widget(self.buttons['multi_material'], Gtk.Image)
         if image:
             icon_name = "multi_material_enabled" if enabled else "multi_material_disable"
@@ -294,6 +374,7 @@ class Panel(ScreenPanel):
 
     def activate(self):
         self._set_active_tool(get_active_channel(self._printer, default=self.current_tool))
+        self._set_filament_mask(get_filament_mask(self._printer, self.filament_mask))
         if self._printer.state == "printing":
             self.enable_buttons(False)
             for tool_num in self.available_tools:
@@ -318,7 +399,13 @@ class Panel(ScreenPanel):
                 )
 
         if SWITCH_DATA_OBJECT in data:
-            self._set_active_tool(data[SWITCH_DATA_OBJECT].get("active_tools"))
+            switch_data = data[SWITCH_DATA_OBJECT]
+            if "active_tools" in switch_data:
+                self._set_active_tool(switch_data["active_tools"])
+            if "filament_index" in switch_data:
+                self._set_filament_mask(switch_data["filament_index"])
+        if any(sensor in data for sensor in self.feeder_sensors.values()):
+            self._update_tool_filament_status()
         if "save_variables" in data:
             variables = data["save_variables"].get("variables", {})
             if "feed_system_active_tool" in variables:

@@ -927,6 +927,28 @@ trough progress {
     background-color: @error;
 }
 
+button.extrude-tool-loaded label,
+button.extrude-tool-loaded:active label,
+button.extrude-tool-loaded.button_active label,
+button.extrude-tool-loaded:disabled label {
+    color: @echo;
+}
+
+button.extrude-tool-empty label,
+button.extrude-tool-empty:active label,
+button.extrude-tool-empty.button_active label,
+button.extrude-tool-empty:disabled label {
+    color: @error;
+}
+
+button.extrude-tool-status:disabled {
+    opacity: 1;
+}
+
+button.extrude-tool-status:disabled image {
+    opacity: .2;
+}
+
 .buttons_slim,
 .buttons_slim label {
     margin-top: 0;
