@@ -8,6 +8,33 @@ from jinja2 import Template
 from ks_includes.screen_panel import ScreenPanel
 
 
+def get_grid_attachments(item_count, columns, expand_last=False):
+    """Return (column, row, width, height) tuples for visible menu items."""
+    if item_count == 5 and columns in (3, 4):
+        # Use six half-width tracks to center a 3 + 2 card layout.
+        return [
+            (0, 0, 2, 1),
+            (2, 0, 2, 1),
+            (4, 0, 2, 1),
+            (1, 1, 2, 1),
+            (3, 1, 2, 1),
+        ]
+
+    if columns == 4:
+        if item_count <= 4:
+            columns = 2
+        elif item_count <= 6:
+            columns = 3
+
+    attachments = []
+    for index in range(item_count):
+        column = index % columns
+        row = index // columns
+        width = 2 if expand_last and index + 1 == item_count and item_count % 2 == 1 else 1
+        attachments.append((column, row, width, 1))
+    return attachments
+
+
 class Panel(ScreenPanel):
 
     def __init__(self, screen, title, items=None):
@@ -36,31 +63,18 @@ class Panel(ScreenPanel):
     def arrangeMenuItems(self, items, columns, expand_last=False):
         for child in self.grid.get_children():
             self.grid.remove(child)
-        length = len(items)
-        i = 0
+
+        visible_items = []
         for item in items:
             key = list(item)[0]
             if not self.evaluate_enable(item[key]['enable']):
                 logging.debug(f"X > {key}")
                 continue
+            visible_items.append(key)
 
-            if columns == 4:
-                if length <= 4:
-                    # Arrange 2 x 2
-                    columns = 2
-                elif 4 < length <= 6:
-                    # Arrange 3 x 2
-                    columns = 3
-
-            col = i % columns
-            row = int(i / columns)
-
-            width = height = 1
-            if expand_last is True and i + 1 == length and length % 2 == 1:
-                width = 2
-
-            self.grid.attach(self.labels[key], col, row, width, height)
-            i += 1
+        attachments = get_grid_attachments(len(visible_items), columns, expand_last)
+        for key, (column, row, width, height) in zip(visible_items, attachments):
+            self.grid.attach(self.labels[key], column, row, width, height)
         return self.grid
 
     def create_menu_items(self):
