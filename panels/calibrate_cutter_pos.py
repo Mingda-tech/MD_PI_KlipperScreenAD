@@ -410,7 +410,7 @@ class Panel(ScreenPanel):
             self._screen._ws.klippy.gcode_script(save_cmd)
             self.saved_cutter_position = position
             self.cutter_retreat_x = position["x"] - RETREAT_DISTANCE
-            self._screen.show_popup_message(_("Saved successfully!"))
+            self._screen.show_popup_message(_("Saved successfully!"), level=1)
         except (AttributeError, KeyError, TypeError, ValueError) as error:
             logging.error("Error saving cutter variables: %s", error)
             self._screen.show_popup_message(_("Error writing configuration"))
