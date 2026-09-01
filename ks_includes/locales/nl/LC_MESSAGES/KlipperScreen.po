@@ -337,13 +337,13 @@ msgid "Invalid password"
 msgstr "Ongeldig wachtwoord"
 
 msgid "Invert X"
-msgstr "Invert X"
+msgstr "X omkeren"
 
 msgid "Invert Y"
-msgstr "Invert Y"
+msgstr "Y omkeren"
 
 msgid "Invert Z"
-msgstr "Invert Z"
+msgstr "Z omkeren"
 
 msgid "It may take more than 5 minutes depending on the heater power."
 msgstr "Het kan meer dan 5 minuten duren op basis van de heater power."
@@ -686,7 +686,7 @@ msgid "Standby"
 msgstr "Standby"
 
 msgid "Start"
-msgstr "Start"
+msgstr "Begin"
 
 msgid "Starting WiFi Association"
 msgstr "WiFi Association starten"
@@ -1013,7 +1013,7 @@ msgid "Dangerous nozzle height difference: "
 msgstr "Gevaarlijk hoogteverschil spuitmond: "
 
 msgid "Saved successfully!"
-msgstr "Zapisano pomyślnie!"
+msgstr "Succesvol opgeslagen!"
 
 # Feed Filament Box
 msgid "Edit"
@@ -1062,10 +1062,10 @@ msgid "Backing up configuration files."
 msgstr "Configuratiebestanden back-uppen."
 
 msgid "Calibrate Cutter Pos"
-msgstr "Schermpositie kalibreren"
+msgstr "Snijderpositie kalibreren"
 
 msgid "Couldn't get the calibration cutter position."
-msgstr "Kon de schermpositie voor kalibratie niet ophalen."
+msgstr "Kon de kalibratiepositie van de snijder niet ophalen."
 
 msgid "Current filament indexes are:%s, active tool:%s"
 msgstr "Huidige filamentindexen zijn: %s, actief gereedschap: %s"
@@ -1077,7 +1077,7 @@ msgid "Current value is %s"
 msgstr "Huidige waarde is %s"
 
 msgid "Cut Filament Test"
-msgstr "Filamentknip test"
+msgstr "Filamentsnijtest"
 
 msgid "Do you want to enable multi-material box?"
 msgstr "Wilt u de meervoudig materiaalbak inschakelen?"

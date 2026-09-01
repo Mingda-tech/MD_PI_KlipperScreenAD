@@ -1318,7 +1318,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "Options"
-msgstr "Options"
+msgstr "Choix"
 
 msgid "Pause. The \"extruder\" extrude error!"
 msgstr "Pause. Erreur d'extrusion de l'\"extrudeur\" !"

@@ -337,7 +337,7 @@ msgid "Invert Y"
 msgstr "Y軸を反対にする"
 
 msgid "Invert Z"
-msgstr "X軸を反対にする"
+msgstr "Z軸を反対にする"
 
 msgid "It may take more than 5 minutes depending on the heater power."
 msgstr ""
@@ -745,7 +745,7 @@ msgid "Z Move Speed (mm/s)"
 msgstr "X軸 移動速度 (mm/s)"
 
 msgid "Z Speed (mm/s)"
-msgstr ""
+msgstr "Z軸速度 (mm/s)"
 
 msgid "Z Tilt"
 msgstr ""

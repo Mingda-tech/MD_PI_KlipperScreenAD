@@ -1878,3 +1878,9 @@ msgstr "لا تزال معايرة الموضع قيد التهيئة. انتظ�
 
 msgid "Position Calibration"
 msgstr "معايرة الموضع"
+
+msgid "Couldn't get the calibration cutter position."
+msgstr "تعذر الحصول على موضع معايرة القاطع."
+
+msgid "Please select how you would like to proceed."
+msgstr "يرجى اختيار الطريقة التي ترغب في المتابعة بها."

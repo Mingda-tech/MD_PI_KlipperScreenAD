@@ -682,7 +682,7 @@ msgid "Standby"
 msgstr "Pohotovostní režim"
 
 msgid "Start"
-msgstr "Start"
+msgstr "Spustit"
 
 msgid "Starting WiFi Association"
 msgstr "Připojování k WiFi"

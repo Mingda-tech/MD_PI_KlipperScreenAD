@@ -683,7 +683,7 @@ msgid "Standby"
 msgstr "Tryb gotowości"
 
 msgid "Start"
-msgstr "Start"
+msgstr "Rozpocznij"
 
 msgid "Starting WiFi Association"
 msgstr "Rozpoczęcie stowarzyszenia WiFi"

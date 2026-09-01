@@ -1219,3 +1219,27 @@ msgstr ""
 
 msgid "Position Calibration"
 msgstr ""
+
+msgid "Calibrate Cutter Pos"
+msgstr ""
+
+msgid "Confirm"
+msgstr ""
+
+msgid "Couldn't get the calibration cutter position."
+msgstr ""
+
+msgid "Cut Filament Test"
+msgstr ""
+
+msgid "Error writing configuration"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Please select how you would like to proceed."
+msgstr ""
+
+msgid "Saved successfully!"
+msgstr ""

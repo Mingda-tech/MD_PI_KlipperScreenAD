@@ -676,7 +676,7 @@ msgid "Standby"
 msgstr ""
 
 msgid "Start"
-msgstr "Start"
+msgstr "Begynd"
 
 msgid "Starting WiFi Association"
 msgstr "Starter WiFi Association"

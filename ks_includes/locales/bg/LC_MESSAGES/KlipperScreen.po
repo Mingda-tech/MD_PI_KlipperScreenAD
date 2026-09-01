@@ -477,3 +477,45 @@ msgstr "Запазване"
 
 msgid "Position Calibration"
 msgstr "Калибриране на позицията"
+
+msgid "Calibrate Cutter Pos"
+msgstr "Калибриране на позицията на ножа"
+
+msgid "Confirm"
+msgstr "Потвърди"
+
+msgid "Couldn't get the calibration cutter position."
+msgstr "Не можа да се получи позицията за калибриране на ножа."
+
+msgid "Cut Filament Test"
+msgstr "Тест за рязане на филамента"
+
+msgid "Error writing configuration"
+msgstr "Грешка при запис на конфигурацията"
+
+msgid "Invert X"
+msgstr "Обръщане на X"
+
+msgid "Invert Y"
+msgstr "Обръщане на Y"
+
+msgid "Invert Z"
+msgstr "Обръщане на Z"
+
+msgid "Options"
+msgstr "Опции"
+
+msgid "Please select how you would like to proceed."
+msgstr "Моля, изберете как желаете да продължите."
+
+msgid "Saved successfully!"
+msgstr "Запазено успешно!"
+
+msgid "Start"
+msgstr "Стартиране"
+
+msgid "XY Speed (mm/s)"
+msgstr "Скорост по XY (мм/с)"
+
+msgid "Z Speed (mm/s)"
+msgstr "Скорост по Z (мм/с)"
