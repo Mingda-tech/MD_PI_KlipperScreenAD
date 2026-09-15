@@ -101,8 +101,12 @@ class Panel(ScreenPanel):
         self._apply_multi_material_text_limit()
 
         extgrid = self._gtk.HomogeneousGrid()
-        tool_columns = min(len(self.available_tools), 5)
-        for position, tool_num in enumerate(self.available_tools):
+        # Use at most six columns and keep row counts within one of each other.
+        tool_count = len(self.available_tools)
+        tool_rows = max(1, (tool_count + 5) // 6)
+        tools_per_row, extra_tools = divmod(tool_count, tool_rows)
+        tool_row = tool_column = 0
+        for tool_num in self.available_tools:
             extruder = f"extruder{tool_num}"
             self.labels[extruder] = self._gtk.Button(f"filament-{tool_num}", f"T{tool_num}")
             self.labels[extruder].get_style_context().add_class("extrude-tool-status")
@@ -112,11 +116,15 @@ class Panel(ScreenPanel):
             self.labels[extruder].connect("clicked", self.change_extruder, tool_num + 1)
             extgrid.attach(
                 self.labels[extruder],
-                position % tool_columns,
-                position // tool_columns,
+                tool_column,
+                tool_row,
                 1,
                 1,
             )
+            tool_column += 1
+            if tool_column == tools_per_row + (tool_row < extra_tools):
+                tool_row += 1
+                tool_column = 0
         
         distgrid = Gtk.Grid()
         for j, i in enumerate(self.distances):
