@@ -2056,3 +2056,297 @@ msgstr "Kalibracija položaja se še inicializira. Počakajte trenutek in poskus
 
 msgid "Position Calibration"
 msgstr "Kalibracija položaja"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Obstaja nedokončana posodobitev. Za nadaljevanje osvežite stanje."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "Poteka druga posodobitev. Počakajte, da se konča."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Prekličem to neuspešno posodobitev? Opravilo se bo končalo brez razveljavitve nameščenih sprememb. Obnovitvene datoteke bodo ohranjene. Pred uporabo preverite tiskalnik."
+
+msgid "Checking the signature and file integrity."
+msgstr "Preverjanje podpisa in celovitosti datotek."
+
+msgid "Choose an update package"
+msgstr "Izberite paket posodobitve"
+
+msgid "Component: %s"
+msgstr "Komponenta: %s"
+
+msgid "Configuration changes"
+msgstr "Spremembe nastavitev"
+
+msgid "Continue"
+msgstr "Nadaljuj"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "Kopiranje s pogona USB ni bilo dokončano."
+
+msgid "Copying update package"
+msgstr "Kopiranje paketa posodobitve"
+
+msgid "Could not read update status"
+msgstr "Stanja posodobitve ni bilo mogoče prebrati"
+
+msgid "Details"
+msgstr "Podrobnosti"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Ne izklopite tiskalnika. Po zapisu bo vdelana programska oprema preverjena."
+
+msgid "Error code: %s"
+msgstr "Koda napake: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Pred posodobitvijo končajte tiskanje, začasno ustavljeno opravilo ali umerjanje."
+
+msgid "Firmware"
+msgstr "Vdelana programska oprema"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Vstavite pogon USB in pritisnite »Preišči USB«."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Namestim to posodobitev? Programi in vdelana programska oprema, navedeni v paketu, bodo posodobljeni. Tiskalnik pustite vklopljen."
+
+msgid "Install update"
+msgstr "Namesti posodobitev"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "Namestitev je končana. Nadaljujte posodobitev, da dokončate shranjevanje rezultata."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "Nameščene spremembe niso bile razveljavljene. Obnovitvene datoteke so ohranjene. Pred uporabo preverite tiskalnik."
+
+msgid "Installing an older version is not allowed."
+msgstr "Namestitev starejše različice ni dovoljena."
+
+msgid "Installing update"
+msgstr "Nameščanje posodobitve"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Pogona USB ne odklopite, dokler kopiranje ni končano."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Tiskalnik pustite vklopljen in za nadaljevanje pritisnite »Obnovi posodobitev«."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Tiskalnik pustite vklopljen med preverjanjem posodobljenih programov."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Tiskalnik pustite vklopljen. Zaslon se lahko znova zažene."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "Iskanje datotek .mdu na priključenih pogonih USB."
+
+msgid "No update package found"
+msgstr "Paket posodobitve ni najden"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Datoteke ali imeniki posodobitve brez povezave imajo nevarno lastništvo ali dovoljenja."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Priprava posodobitve brez povezave ni uspela. Preverite namestitev in dovoljenja programa zaslona."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "Čas za pripravo posodobitve brez povezave je potekel. Zaslon bo poskusil znova."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Storitve posodobitve brez povezave ni bilo mogoče zagnati. Namestite pomožni program in preverite njegova dovoljenja za izvajanje."
+
+msgid "Offline update service failed; refresh the status"
+msgstr "Storitev posodobitve brez povezave je odpovedala. Osvežite stanje."
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "Storitev posodobitve brez povezave je vrnila neveljaven odgovor. Preverite namestitev."
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "Podpora za posodobitev brez povezave ni nameščena ali je ni mogoče zagnati."
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Pred ponovnim poskusom odprite Podrobnosti in preverite vzrok."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "Čas za preverjanje paketa je potekel. Preverite pomnilniški medij in poskusite znova."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Datoteko .mdu postavite v korenski imenik pogona USB ali mapo MINGDA-Update in ponovno preiščite."
+
+msgid "Please wait for the current task status."
+msgstr "Počakajte na branje stanja trenutnega opravila."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "Priprava ni končana. Za ponovni poskus pritisnite »Osveži stanje«."
+
+msgid "Preparation on hold"
+msgstr "Priprava čaka"
+
+msgid "Preparing USB update"
+msgstr "Priprava posodobitve z USB"
+
+msgid "Press Refresh status to retry."
+msgstr "Za ponovni poskus pritisnite »Osveži stanje«."
+
+msgid "Programs"
+msgstr "Programi"
+
+msgid "Reading update status"
+msgstr "Branje stanja posodobitve"
+
+msgid "Ready to install"
+msgstr "Paket posodobitve je preverjen"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Obnovim prekinjeno posodobitev? Tiskalnik pustite vklopljen do konca obnovitve."
+
+msgid "Recover update"
+msgstr "Obnovi posodobitev"
+
+msgid "Recovery required"
+msgstr "Potrebna je obnovitev"
+
+msgid "Refresh status"
+msgstr "Osveži stanje"
+
+msgid "Release: %s"
+msgstr "Izdaja: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "Programa SWUpdate ni bilo mogoče zagnati. Preverite namestitev posodobitvenega mehanizma."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate je zavrnil paket. Preverite podpis, protokol skripta in datoteke."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate je sporočil napako pri namestitvi. Preverite stanje obnovitve."
+
+msgid "Scan USB drive"
+msgstr "Preišči USB"
+
+msgid "Scan again to choose another update package."
+msgstr "Znova preiščite in izberite drug paket posodobitve."
+
+msgid "Scanning USB drives"
+msgstr "Preiskovanje pogonov USB"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Izberite datoteko, ki jo želite kopirati v tiskalnik in preveriti."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Podpis in datoteke so preverjeni. Sistem in plošče bodo preverjeni po potrditvi."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "Mehanizem SWUpdate ni združljiv ali je bil spremenjen. Znova namestite preverjeni mehanizem."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "Pogon USB je bil odstranjen pred koncem kopiranja."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "Paket na pogonu USB se je spremenil. Znova preiščite pogon."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "Priloženih virov za posodobitev brez povezave ni bilo mogoče preveriti."
+
+msgid "The installed version must be registered before updating."
+msgstr "Pred posodobitvijo morate registrirati nameščeno različico."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "Stanje tiskalnika se je po preverjanju spremenilo. Znova pripravite paket."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "Stanja tiskalnika ni mogoče potrditi. Preverite lokalno povezavo."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "Obnovitveni skript ni uspel. Potrebna je servisna pomoč."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "Zaslon samodejno pripravlja to funkcijo. Počakajte."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "Uporabnik programa zaslona potrebuje dovoljenja brez gesla za pripravo posodobitev brez povezave."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "Zaslon bo poskusil znova, ko bodo tiskalnik in obstoječa posodobitvena opravila pripravljeni."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "Posodobitev je preverjena. Tiskalnik lahko uporabljate."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "Postopek posodobitve se je ustavil. Preverite stanje obnovitve."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "Čas za posodobitev je potekel. Tiskalnika ne uporabljajte do konca obnovitve."
+
+msgid "The updated screen did not start correctly."
+msgstr "Posodobljeni program zaslona se ni pravilno zagnal."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Za to posodobitev ni dovolj notranjega prostora za shranjevanje."
+
+msgid "This package does not match the registered release."
+msgstr "Paket se ne ujema z registrirano izdajo."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Paket zahteva drugačno obliko posodobitve ali protokol skripta."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Paket zahteva ročno obnovitev. Obrnite se na servisno podporo."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Ta izdaja zaslona nima izvajalnega okolja za posodobitve za to arhitekturo CPU."
+
+msgid "This screen release is missing offline update resources."
+msgstr "V tej izdaji zaslona manjkajo viri za posodobitev brez povezave."
+
+msgid "This screen release is missing the update verification key."
+msgstr "V tej izdaji zaslona manjka ključ za preverjanje posodobitev."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Paket posodobitve zaslona nima veljavnega obnovitvenega skripta."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Posodobitve v trenutnem stanju ni mogoče preklicati. Osvežite stanje."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "To posodobitveno opravilo uporablja nepodprt mehanizem. Obrnite se na servisno podporo."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Pred posodobitvijo izklopite gretje in pustite tiskalnik, da se ohladi."
+
+msgid "USB Update"
+msgstr "Posodobitev z USB"
+
+msgid "USB update unavailable"
+msgstr "Posodobitev z USB ni na voljo"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Nepodprto stanje posodobitve. Zaslon in pomožni program posodobite skupaj."
+
+msgid "Update cancelled"
+msgstr "Posodobitev je preklicana"
+
+msgid "Update complete"
+msgstr "Posodobitev je končana"
+
+msgid "Update from a USB drive"
+msgstr "Posodobi s pogona USB"
+
+msgid "Update not completed"
+msgstr "Posodobitev ni dokončana"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "Poteka posodobitve ni mogoče potrditi. Pred ponovnim poskusom preverite stanje obnovitve."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "Čas za odgovor posodobitvene storitve je potekel. Pred ponovnim poskusom osvežite stanje."
+
+msgid "Updating firmware"
+msgstr "Posodabljanje vdelane programske opreme"
+
+msgid "Verifying the result"
+msgstr "Preverjanje rezultata"
+
+msgid "Verifying update package"
+msgstr "Preverjanje paketa posodobitve"

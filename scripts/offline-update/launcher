@@ -1,0 +1,70 @@
+#!/usr/bin/python3 -I
+import json
+from pathlib import Path
+import re
+import stat
+import sys
+from functools import lru_cache
+
+
+@lru_cache(maxsize=1)
+def root_group_only():
+    # Validate this before importing the runtime from its protected directory.
+    import grp
+    import pwd
+    try:
+        group = grp.getgrgid(0)
+        return (all(user.pw_uid == 0 for user in pwd.getpwall() if user.pw_gid == 0)
+                and all(pwd.getpwnam(name).pw_uid == 0 for name in group.gr_mem))
+    except (KeyError, OSError):
+        return False
+
+
+def checked(path):
+    for item in (path,) + tuple(path.parents):
+        info = item.lstat()
+        if item.is_symlink() or info.st_uid != 0 or info.st_mode & 0o002:
+            raise ValueError('untrusted runtime')
+        if info.st_mode & 0o020:
+            if not stat.S_ISDIR(info.st_mode) or info.st_gid != 0 or not root_group_only():
+                raise ValueError('untrusted runtime')
+    return path
+
+
+try:
+    directory = checked(Path(__file__).absolute().parent)
+    pointer = directory / 'current.json'
+    current = None
+    if pointer.exists():
+        checked(pointer)
+        if pointer.stat().st_size > 4096:
+            raise ValueError('invalid runtime pointer')
+        current = json.loads(pointer.read_text(encoding='utf-8'))
+        if not isinstance(current, dict):
+            raise ValueError('invalid runtime pointer')
+    elif not (directory / 'runtime.json').is_file():
+        # A power loss during the first pointer switch must not make the boot
+        # recovery unit depend on the screen starting first.  SWITCHING is
+        # persisted only after the complete version has passed native checks.
+        journal = Path('/var/lib/klipperscreen-updates/runtime-setup.json')
+        if journal.exists():
+            checked(journal)
+            if journal.stat().st_size > 1024 * 1024:
+                raise ValueError('invalid setup journal')
+            pending = json.loads(journal.read_text(encoding='utf-8'))
+            if pending.get('phase') == 'SWITCHING':
+                current = {'schemaVersion': 1, 'runtimeVersion': pending.get('runtimeVersion')}
+    if current is not None:
+        version = current.get('runtimeVersion', '')
+        if (type(current.get('schemaVersion')) is not int or current['schemaVersion'] != 1 or not isinstance(version, str)
+                or not re.fullmatch(r'[0-9a-f]{64}', version)):
+            raise ValueError('invalid runtime pointer')
+        directory = checked(directory / 'releases' / version)
+    # A frozen job runner and the previous flat layout have no current pointer.
+    checked(directory / 'offline_update/launcher.py')
+    sys.path.insert(0, str(directory))
+    from offline_update.launcher import main
+    main()
+except Exception:
+    print(json.dumps({'ok': False, 'error': 'UNTRUSTED_INSTALLATION'}))
+    raise SystemExit(1)

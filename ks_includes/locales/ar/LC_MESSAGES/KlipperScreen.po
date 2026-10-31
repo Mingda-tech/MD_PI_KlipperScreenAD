@@ -1884,3 +1884,297 @@ msgstr "تعذر الحصول على موضع معايرة القاطع."
 
 msgid "Please select how you would like to proceed."
 msgstr "يرجى اختيار الطريقة التي ترغب في المتابعة بها."
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "يوجد تحديث غير مكتمل. حدّث الحالة للمتابعة."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "جارٍ تنفيذ تحديث آخر. انتظر حتى ينتهي."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "هل تريد إلغاء هذا التحديث الفاشل؟ ستنتهي المهمة دون التراجع عن التغييرات المثبتة. سيتم الاحتفاظ بملفات الاسترداد. افحص الطابعة قبل استخدامها."
+
+msgid "Checking the signature and file integrity."
+msgstr "جارٍ فحص التوقيع وسلامة الملفات."
+
+msgid "Choose an update package"
+msgstr "اختر حزمة تحديث"
+
+msgid "Component: %s"
+msgstr "المكوّن: %s"
+
+msgid "Configuration changes"
+msgstr "تغييرات الإعدادات"
+
+msgid "Continue"
+msgstr "متابعة"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "لم يكتمل النسخ من وحدة USB."
+
+msgid "Copying update package"
+msgstr "جارٍ نسخ حزمة التحديث"
+
+msgid "Could not read update status"
+msgstr "تعذرت قراءة حالة التحديث"
+
+msgid "Details"
+msgstr "التفاصيل"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "لا تطفئ الطابعة. سيُفحص البرنامج الثابت بعد كتابته."
+
+msgid "Error code: %s"
+msgstr "رمز الخطأ: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "يجب ألا تكون الطابعة قيد الطباعة أو الإيقاف المؤقت أو المعايرة عند التحديث."
+
+msgid "Firmware"
+msgstr "البرنامج الثابت"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "أدخل وحدة USB، ثم اضغط «فحص وحدة USB»."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "هل تريد تثبيت هذا التحديث؟ ستُحدّث البرامج والبرامج الثابتة المدرجة في الحزمة. أبقِ الطابعة قيد التشغيل."
+
+msgid "Install update"
+msgstr "تثبيت التحديث"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "اكتمل التثبيت. استأنف استرداد التحديث لإكمال حفظ النتيجة."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "لم يتم التراجع عن التغييرات المثبتة. تم الاحتفاظ بملفات الاسترداد. افحص الطابعة قبل استخدامها."
+
+msgid "Installing an older version is not allowed."
+msgstr "لا يُسمح بتثبيت إصدار أقدم."
+
+msgid "Installing update"
+msgstr "جارٍ تثبيت التحديث"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "أبقِ وحدة USB متصلة حتى يكتمل النسخ."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "أبقِ الطابعة قيد التشغيل واضغط «استعادة التحديث» للمتابعة."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "أبقِ الطابعة قيد التشغيل أثناء فحص البرامج المحدّثة."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "أبقِ الطابعة قيد التشغيل. قد يُعاد تشغيل الشاشة."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "جارٍ البحث عن ملفات .mdu على وحدات USB المتصلة."
+
+msgid "No update package found"
+msgstr "لم يُعثر على حزمة تحديث"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "ملكية ملفات أو مجلدات التحديث دون اتصال أو أذوناتها غير آمنة."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "تعذر إكمال تجهيز التحديث دون اتصال. افحص تثبيت برنامج الشاشة وأذوناته."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "انتهت مهلة تجهيز التحديث دون اتصال. ستعيد الشاشة المحاولة."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "تعذر بدء خدمة التحديث دون اتصال؛ ثبّت البرنامج المساعد وافحص صلاحياته"
+
+msgid "Offline update service failed; refresh the status"
+msgstr "فشلت خدمة التحديث دون اتصال؛ حدّث الحالة"
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "أعادت خدمة التحديث دون اتصال استجابة غير صالحة؛ افحص تثبيتها"
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "دعم التحديث دون اتصال غير مثبت أو يتعذر تشغيله"
+
+msgid "Open Details to check the cause before trying again."
+msgstr "افتح «التفاصيل» لمعرفة السبب قبل المحاولة مجددًا."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "انتهت مهلة فحص الحزمة. افحص وحدة التخزين وحاول مجددًا."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "ضع ملف .mdu في جذر وحدة USB أو مجلد MINGDA-Update، ثم أعد الفحص."
+
+msgid "Please wait for the current task status."
+msgstr "انتظر قراءة حالة المهمة الحالية."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "لم يكتمل التجهيز. اضغط «تحديث الحالة» للمحاولة مجددًا."
+
+msgid "Preparation on hold"
+msgstr "التجهيز قيد الانتظار"
+
+msgid "Preparing USB update"
+msgstr "جارٍ تجهيز تحديث USB"
+
+msgid "Press Refresh status to retry."
+msgstr "اضغط «تحديث الحالة» للمحاولة مجددًا."
+
+msgid "Programs"
+msgstr "البرامج"
+
+msgid "Reading update status"
+msgstr "جارٍ قراءة حالة التحديث"
+
+msgid "Ready to install"
+msgstr "جاهز للتثبيت"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "هل تريد استعادة التحديث المنقطع؟ أبقِ الطابعة قيد التشغيل حتى تكتمل الاستعادة."
+
+msgid "Recover update"
+msgstr "استعادة التحديث"
+
+msgid "Recovery required"
+msgstr "الاستعادة مطلوبة"
+
+msgid "Refresh status"
+msgstr "تحديث الحالة"
+
+msgid "Release: %s"
+msgstr "الإصدار: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "تعذر تشغيل SWUpdate. افحص تثبيت محرك التحديث."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "رفض SWUpdate هذه الحزمة. افحص توقيعها وبروتوكول السكربت وملفاتها."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "أبلغ SWUpdate عن فشل التثبيت. راجع حالة الاستعادة."
+
+msgid "Scan USB drive"
+msgstr "فحص وحدة USB"
+
+msgid "Scan again to choose another update package."
+msgstr "أعد الفحص لاختيار حزمة تحديث أخرى."
+
+msgid "Scanning USB drives"
+msgstr "جارٍ فحص وحدات USB"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "اختر ملفًا لنسخه إلى الطابعة وفحصه."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "تم التحقق من التوقيع والملفات. سيُفحص النظام واللوحات بعد التأكيد."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "محرك SWUpdate غير متوافق أو جرى تغييره. أعد تثبيت المحرك المعتمد."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "أُزيلت وحدة USB قبل اكتمال النسخ."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "تغيّرت الحزمة على وحدة USB. أعد فحص الوحدة."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "فشل التحقق من موارد التحديث دون اتصال المرفقة."
+
+msgid "The installed version must be registered before updating."
+msgstr "يجب تسجيل الإصدار المثبت قبل التحديث."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "تغيّرت حالة الطابعة بعد الفحص. جهّز الحزمة مجددًا."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "تعذر التأكد من حالة الطابعة. افحص الاتصال المحلي."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "فشل سكربت الاستعادة. يلزم التواصل مع الدعم الفني."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "تجهّز الشاشة هذه الميزة تلقائيًا. يرجى الانتظار."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "يحتاج مستخدم الشاشة إلى صلاحية دون كلمة مرور لتجهيز التحديثات دون اتصال."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "ستعيد الشاشة المحاولة عندما تكون الطابعة ومهام التحديث الحالية جاهزة."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "تم التحقق من التحديث. يمكنك استخدام الطابعة."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "توقفت عملية التحديث. راجع حالة الاستعادة."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "انتهت مهلة التحديث. لا تستخدم الطابعة حتى تكتمل الاستعادة."
+
+msgid "The updated screen did not start correctly."
+msgstr "لم يبدأ برنامج الشاشة المحدّث بصورة صحيحة."
+
+msgid "There is not enough internal storage for this update."
+msgstr "لا توجد مساحة تخزين داخلية كافية لهذا التحديث."
+
+msgid "This package does not match the registered release."
+msgstr "لا تطابق هذه الحزمة الإصدار المسجّل."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "تتطلب هذه الحزمة تنسيق تحديث أو بروتوكول سكربت مختلفًا."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "تتطلب هذه الحزمة استعادة يدوية. تواصل مع الدعم الفني."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "لا يتضمن إصدار الشاشة هذا بيئة تحديث لمعمارية المعالج هذه."
+
+msgid "This screen release is missing offline update resources."
+msgstr "يفتقد إصدار الشاشة هذا موارد التحديث دون اتصال."
+
+msgid "This screen release is missing the update verification key."
+msgstr "يفتقد إصدار الشاشة هذا مفتاح التحقق من التحديث."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "لا تتضمن حزمة تحديث الشاشة هذه سكربت استعادة صالحًا."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "لا يمكن إلغاء هذا التحديث في حالته الحالية. حدّث الحالة."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "تستخدم مهمة التحديث هذه محركًا غير مدعوم. تواصل مع الدعم الفني."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "أوقف التسخين واترك الطابعة تبرد قبل التحديث."
+
+msgid "USB Update"
+msgstr "تحديث USB"
+
+msgid "USB update unavailable"
+msgstr "تحديث USB غير متاح"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "حالة التحديث غير مدعومة؛ حدّث برنامج الشاشة والبرنامج المساعد معًا"
+
+msgid "Update cancelled"
+msgstr "أُلغي التحديث"
+
+msgid "Update complete"
+msgstr "اكتمل التحديث"
+
+msgid "Update from a USB drive"
+msgstr "التحديث من وحدة USB"
+
+msgid "Update not completed"
+msgstr "لم يكتمل التحديث"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "تعذر التأكد من تقدم التحديث. راجع حالة الاستعادة قبل المحاولة مجددًا."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "انتهت مهلة خدمة التحديث؛ حدّث الحالة قبل المحاولة مجددًا"
+
+msgid "Updating firmware"
+msgstr "جارٍ تحديث البرنامج الثابت"
+
+msgid "Verifying the result"
+msgstr "جارٍ التحقق من النتيجة"
+
+msgid "Verifying update package"
+msgstr "جارٍ التحقق من حزمة التحديث"

@@ -1929,3 +1929,294 @@ msgstr "Калібрування положення ще ініціалізує�
 
 msgid "Position Calibration"
 msgstr "Калібрування положення"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Є незавершене оновлення. Оновіть стан, щоб продовжити."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "Виконується інше оновлення. Дочекайтеся його завершення."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Скасувати невдале оновлення? Завдання буде завершено без скасування встановлених змін. Файли відновлення буде збережено. Перевірте принтер перед використанням."
+
+msgid "Checking the signature and file integrity."
+msgstr "Перевірка підпису та цілісності файлів."
+
+msgid "Choose an update package"
+msgstr "Виберіть пакет оновлення"
+
+msgid "Component: %s"
+msgstr "Компонент: %s"
+
+msgid "Configuration changes"
+msgstr "Зміни конфігурації"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "Копіювання з USB-накопичувача не завершено."
+
+msgid "Copying update package"
+msgstr "Копіювання пакета оновлення"
+
+msgid "Could not read update status"
+msgstr "Не вдалося прочитати стан оновлення"
+
+msgid "Details"
+msgstr "Подробиці"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Не вимикайте принтер. Після запису мікропрограму буде перевірено."
+
+msgid "Error code: %s"
+msgstr "Код помилки: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Перед оновленням завершіть друк, призупинене завдання або калібрування."
+
+msgid "Firmware"
+msgstr "Мікропрограма"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Вставте USB-накопичувач і натисніть «Сканувати USB»."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Установити це оновлення? Програми та мікропрограми, зазначені в пакеті, будуть оновлені. Залиште принтер увімкненим."
+
+msgid "Install update"
+msgstr "Установити оновлення"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "Встановлення завершено. Відновіть оновлення, щоб завершити збереження результату."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "Встановлені зміни не скасовано. Файли відновлення збережено. Перевірте принтер перед використанням."
+
+msgid "Installing an older version is not allowed."
+msgstr "Установлення старішої версії заборонено."
+
+msgid "Installing update"
+msgstr "Установлення оновлення"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Не від'єднуйте USB-накопичувач до завершення копіювання."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Залиште принтер увімкненим і натисніть «Відновити оновлення», щоб продовжити."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Залиште принтер увімкненим під час перевірки оновлених програм."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Залиште принтер увімкненим. Екран може перезапуститися."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "Пошук файлів .mdu на підключених USB-накопичувачах."
+
+msgid "No update package found"
+msgstr "Пакет оновлення не знайдено"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Файли або каталоги автономного оновлення мають небезпечні права доступу чи налаштування власника."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Не вдалося підготувати автономне оновлення. Перевірте встановлення програми екрана та права доступу."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "Час підготовки автономного оновлення вичерпано. Екран повторить спробу."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Не вдалося запустити службу автономного оновлення. Установіть допоміжну програму та перевірте її права запуску."
+
+msgid "Offline update service failed; refresh the status"
+msgstr "Помилка служби автономного оновлення. Оновіть стан."
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "Служба автономного оновлення повернула неприпустиму відповідь. Перевірте її встановлення."
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "Підтримку автономного оновлення не встановлено або не вдається запустити."
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Перед повторною спробою відкрийте подробиці та перевірте причину."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "Час перевірки пакета вичерпано. Перевірте накопичувач і повторіть спробу."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Помістіть файл .mdu в кореневий каталог USB-накопичувача або папку MINGDA-Update й повторіть сканування."
+
+msgid "Please wait for the current task status."
+msgstr "Дочекайтеся читання стану поточного завдання."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "Підготовку не завершено. Натисніть «Оновити стан», щоб повторити спробу."
+
+msgid "Preparation on hold"
+msgstr "Підготовка очікує"
+
+msgid "Preparing USB update"
+msgstr "Підготовка оновлення з USB"
+
+msgid "Press Refresh status to retry."
+msgstr "Натисніть «Оновити стан», щоб повторити спробу."
+
+msgid "Programs"
+msgstr "Програми"
+
+msgid "Reading update status"
+msgstr "Читання стану оновлення"
+
+msgid "Ready to install"
+msgstr "Пакет оновлення перевірено"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Відновити перерване оновлення? Залиште принтер увімкненим до завершення відновлення."
+
+msgid "Recover update"
+msgstr "Відновити оновлення"
+
+msgid "Recovery required"
+msgstr "Потрібне відновлення"
+
+msgid "Refresh status"
+msgstr "Оновити стан"
+
+msgid "Release: %s"
+msgstr "Випуск: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "Не вдалося запустити SWUpdate. Перевірте встановлення механізму оновлення."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate відхилив пакет. Перевірте підпис, протокол скрипту та файли."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate повідомив про помилку встановлення. Перевірте стан відновлення."
+
+msgid "Scan USB drive"
+msgstr "Сканувати USB"
+
+msgid "Scan again to choose another update package."
+msgstr "Повторіть сканування, щоб вибрати інший пакет оновлення."
+
+msgid "Scanning USB drives"
+msgstr "Сканування USB-накопичувачів"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Виберіть файл для копіювання на принтер і перевірки."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Підпис і файли перевірено. Систему та плати буде перевірено після підтвердження."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "Механізм SWUpdate несумісний або змінений. Перевстановіть перевірений механізм."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "USB-накопичувач від'єднано до завершення копіювання."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "Пакет на USB-накопичувачі змінився. Повторіть сканування."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "Не вдалося перевірити надані ресурси автономного оновлення."
+
+msgid "The installed version must be registered before updating."
+msgstr "Перед оновленням необхідно зареєструвати встановлену версію."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "Стан принтера змінився після перевірки. Підготуйте пакет знову."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "Не вдається підтвердити стан принтера. Перевірте локальне з'єднання."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "Помилка скрипту відновлення. Потрібна сервісна допомога."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "Екран автоматично готує цю функцію. Зачекайте."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "Користувачу програми екрана потрібні права без пароля для підготовки автономних оновлень."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "Екран повторить спробу, коли принтер і наявні завдання оновлення будуть готові."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "Оновлення перевірено. Можна користуватися принтером."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "Процес оновлення зупинився. Перевірте стан відновлення."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "Час оновлення вичерпано. Не використовуйте принтер до завершення відновлення."
+
+msgid "The updated screen did not start correctly."
+msgstr "Оновлена програма екрана запустилася неправильно."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Недостатньо місця у внутрішньому сховищі для цього оновлення."
+
+msgid "This package does not match the registered release."
+msgstr "Цей пакет не відповідає зареєстрованому випуску."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Для пакета потрібен інший формат оновлення або протокол скрипту."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Цей пакет потребує ручного відновлення. Зверніться до сервісної підтримки."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Ця версія екрана не містить середовища виконання оновлень для цієї архітектури CPU."
+
+msgid "This screen release is missing offline update resources."
+msgstr "У цій версії екрана відсутні ресурси автономного оновлення."
+
+msgid "This screen release is missing the update verification key."
+msgstr "У цій версії екрана відсутній ключ перевірки оновлень."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Пакет оновлення екрана не містить належного скрипту відновлення."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Оновлення неможливо скасувати в поточному стані. Оновіть статус."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "Це завдання оновлення використовує непідтримуваний механізм. Зверніться до сервісної підтримки."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Перед оновленням вимкніть нагрів і дайте принтеру охолонути."
+
+msgid "USB Update"
+msgstr "Оновлення з USB"
+
+msgid "USB update unavailable"
+msgstr "Оновлення з USB недоступне"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Непідтримуваний стан оновлення. Оновіть екран і допоміжну програму разом."
+
+msgid "Update cancelled"
+msgstr "Оновлення скасовано"
+
+msgid "Update complete"
+msgstr "Оновлення завершено"
+
+msgid "Update from a USB drive"
+msgstr "Оновити з USB-накопичувача"
+
+msgid "Update not completed"
+msgstr "Оновлення не завершено"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "Не вдалося підтвердити перебіг оновлення. Перед повторною спробою перевірте стан відновлення."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "Час відповіді служби оновлення вичерпано. Перед повторною спробою оновіть стан."
+
+msgid "Updating firmware"
+msgstr "Оновлення мікропрограми"
+
+msgid "Verifying the result"
+msgstr "Перевірка результату"
+
+msgid "Verifying update package"
+msgstr "Перевірка пакета оновлення"

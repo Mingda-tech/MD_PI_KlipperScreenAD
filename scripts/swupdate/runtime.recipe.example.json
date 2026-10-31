@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "target": {
+    "arch": "aarch64"
+  },
+  "engineDirectory": "/release/arm64-swupdate",
+  "publicKey": "/release/keys/production-public.pem",
+  "profiles": [
+    {
+      "device": {
+        "arch": "aarch64"
+      },
+      "policy": "/release/profiles/generic/policy.json",
+      "baseline": "/release/profiles/generic/baseline.json"
+    }
+  ],
+  "libraries": []
+}

@@ -1748,3 +1748,294 @@ msgstr "Kalibrace polohy se stále inicializuje. Chvíli počkejte a zkuste to z
 
 msgid "Position Calibration"
 msgstr "Kalibrace polohy"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Existuje nedokončená aktualizace. Obnovte stav a pokračujte."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "Probíhá jiná aktualizace. Počkejte na její dokončení."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Zrušit tuto neúspěšnou aktualizaci? Úloha skončí bez vrácení nainstalovaných změn. Soubory pro obnovení budou zachovány. Před použitím tiskárnu zkontrolujte."
+
+msgid "Checking the signature and file integrity."
+msgstr "Kontroluje se podpis a integrita souborů."
+
+msgid "Choose an update package"
+msgstr "Vyberte aktualizační balíček"
+
+msgid "Component: %s"
+msgstr "Komponenta: %s"
+
+msgid "Configuration changes"
+msgstr "Změny konfigurace"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "Kopírování z USB disku nebylo dokončeno."
+
+msgid "Copying update package"
+msgstr "Kopírování aktualizačního balíčku"
+
+msgid "Could not read update status"
+msgstr "Stav aktualizace nelze načíst"
+
+msgid "Details"
+msgstr "Podrobnosti"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Nevypínejte tiskárnu. Firmware bude po zápisu ověřen."
+
+msgid "Error code: %s"
+msgstr "Kód chyby: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Aktualizaci nelze provést během tisku, pozastavení tisku ani kalibrace."
+
+msgid "Firmware"
+msgstr "Firmware"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Vložte USB disk a stiskněte „Prohledat USB disk“."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Nainstalovat tuto aktualizaci? Programy a firmware uvedené v balíčku budou aktualizovány. Nechte tiskárnu zapnutou."
+
+msgid "Install update"
+msgstr "Nainstalovat aktualizaci"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "Instalace byla dokončena. Obnovte aktualizaci pro dokončení uložení výsledku."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "Nainstalované změny nebyly vráceny. Soubory pro obnovení byly zachovány. Před použitím tiskárnu zkontrolujte."
+
+msgid "Installing an older version is not allowed."
+msgstr "Instalace starší verze není povolena."
+
+msgid "Installing update"
+msgstr "Instalace aktualizace"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Nechte USB disk připojený až do dokončení kopírování."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Nechte tiskárnu zapnutou a pokračujte stisknutím „Obnovit aktualizaci“."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Nechte tiskárnu zapnutou, dokud se kontrolují aktualizované programy."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Nechte tiskárnu zapnutou. Obrazovka se může restartovat."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "Vyhledávají se soubory .mdu na připojených USB discích."
+
+msgid "No update package found"
+msgstr "Aktualizační balíček nenalezen"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Soubory nebo složky offline aktualizace mají nebezpečné vlastnictví nebo oprávnění."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Přípravu offline aktualizace nelze dokončit. Zkontrolujte instalaci obrazovky a oprávnění."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "Čas pro přípravu offline aktualizace vypršel. Obrazovka pokus zopakuje."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Službu offline aktualizace nelze spustit; nainstalujte pomocný program a zkontrolujte jeho oprávnění"
+
+msgid "Offline update service failed; refresh the status"
+msgstr "Služba offline aktualizace selhala; obnovte stav"
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "Služba offline aktualizace vrátila neplatnou odpověď; zkontrolujte její instalaci"
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "Podpora offline aktualizací není nainstalovaná nebo ji nelze spustit"
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Před dalším pokusem otevřete „Podrobnosti“ a zjistěte příčinu."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "Čas pro ověření balíčku vypršel. Zkontrolujte úložiště a zkuste to znovu."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Umístěte soubor .mdu do kořenové složky USB disku nebo do složky MINGDA-Update a opakujte hledání."
+
+msgid "Please wait for the current task status."
+msgstr "Počkejte na načtení stavu aktuální úlohy."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "Příprava není dokončena. Další pokus spusťte tlačítkem „Obnovit stav“."
+
+msgid "Preparation on hold"
+msgstr "Příprava čeká"
+
+msgid "Preparing USB update"
+msgstr "Příprava aktualizace z USB"
+
+msgid "Press Refresh status to retry."
+msgstr "Další pokus spusťte tlačítkem „Obnovit stav“."
+
+msgid "Programs"
+msgstr "Programy"
+
+msgid "Reading update status"
+msgstr "Načítání stavu aktualizace"
+
+msgid "Ready to install"
+msgstr "Připraveno k instalaci"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Obnovit přerušenou aktualizaci? Nechte tiskárnu zapnutou až do dokončení obnovy."
+
+msgid "Recover update"
+msgstr "Obnovit aktualizaci"
+
+msgid "Recovery required"
+msgstr "Je nutná obnova"
+
+msgid "Refresh status"
+msgstr "Obnovit stav"
+
+msgid "Release: %s"
+msgstr "Vydání: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "SWUpdate nelze spustit. Zkontrolujte instalaci aktualizačního modulu."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate tento balíček odmítl. Zkontrolujte podpis, protokol skriptu a soubory."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate ohlásil neúspěšnou instalaci. Zkontrolujte stav obnovy."
+
+msgid "Scan USB drive"
+msgstr "Prohledat USB disk"
+
+msgid "Scan again to choose another update package."
+msgstr "Opakujte hledání a vyberte jiný aktualizační balíček."
+
+msgid "Scanning USB drives"
+msgstr "Prohledávání USB disků"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Vyberte soubor, který se zkopíruje do tiskárny a ověří."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Podpis a soubory byly ověřeny. Kontrola systému a desek proběhne po potvrzení."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "Modul SWUpdate není kompatibilní nebo byl změněn. Nainstalujte znovu ověřený modul."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "USB disk byl vyjmut před dokončením kopírování."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "Balíček na USB disku se změnil. Prohledejte disk znovu."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "Přibalené prostředky offline aktualizace neprošly ověřením."
+
+msgid "The installed version must be registered before updating."
+msgstr "Před aktualizací je nutné zaregistrovat nainstalovanou verzi."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "Tiskárna se po ověření změnila. Připravte balíček znovu."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "Stav tiskárny nelze potvrdit. Zkontrolujte místní připojení."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "Skript obnovy selhal. Je nutná pomoc servisu."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "Obrazovka tuto funkci připravuje automaticky. Počkejte prosím."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "Uživatel obrazovky potřebuje pro přípravu offline aktualizací oprávnění bez hesla."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "Obrazovka pokus zopakuje, až budou tiskárna a stávající aktualizační úlohy připravené."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "Aktualizace byla ověřena. Tiskárnu můžete používat."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "Proces aktualizace se zastavil. Zkontrolujte stav obnovy."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "Čas aktualizace vypršel. Tiskárnu nepoužívejte, dokud obnova neskončí."
+
+msgid "The updated screen did not start correctly."
+msgstr "Aktualizovaná obrazovka se nespustila správně."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Pro tuto aktualizaci není dostatek místa ve vnitřním úložišti."
+
+msgid "This package does not match the registered release."
+msgstr "Balíček neodpovídá zaregistrovanému vydání."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Balíček vyžaduje jiný formát aktualizace nebo protokol skriptu."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Balíček vyžaduje ruční obnovu. Kontaktujte servisní podporu."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Toto vydání obrazovky nemá aktualizační prostředí pro tuto architekturu CPU."
+
+msgid "This screen release is missing offline update resources."
+msgstr "V tomto vydání obrazovky chybí prostředky pro offline aktualizace."
+
+msgid "This screen release is missing the update verification key."
+msgstr "V tomto vydání obrazovky chybí klíč pro ověření aktualizací."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Balíček aktualizace obrazovky nemá platný skript obnovy."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Aktualizaci nelze v aktuálním stavu zrušit. Obnovte stav."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "Tato aktualizační úloha používá nepodporovaný modul. Kontaktujte servisní podporu."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Před aktualizací vypněte ohřev a nechte tiskárnu vychladnout."
+
+msgid "USB Update"
+msgstr "Aktualizace z USB"
+
+msgid "USB update unavailable"
+msgstr "Aktualizace z USB není dostupná"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Nepodporovaný stav aktualizace; aktualizujte obrazovku i pomocný program společně"
+
+msgid "Update cancelled"
+msgstr "Aktualizace zrušena"
+
+msgid "Update complete"
+msgstr "Aktualizace dokončena"
+
+msgid "Update from a USB drive"
+msgstr "Aktualizovat z USB disku"
+
+msgid "Update not completed"
+msgstr "Aktualizace nebyla dokončena"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "Průběh aktualizace nelze potvrdit. Před dalším pokusem zkontrolujte stav obnovy."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "Čas služby aktualizace vypršel; před dalším pokusem obnovte stav"
+
+msgid "Updating firmware"
+msgstr "Aktualizace firmwaru"
+
+msgid "Verifying the result"
+msgstr "Ověřování výsledku"
+
+msgid "Verifying update package"
+msgstr "Ověřování aktualizačního balíčku"

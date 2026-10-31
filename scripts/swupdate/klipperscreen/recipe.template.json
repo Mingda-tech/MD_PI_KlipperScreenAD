@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "schemaVersion": 2,
+    "scriptApi": 1,
+    "releaseId": "klipperscreen-2026.10.26.1",
+    "version": "2026.10.26.1",
+    "description": "KlipperScreen application update with verified offline Git release and screen-only rescue",
+    "components": [{"id": "klipperscreen", "version": "2026.10.26.1", "sequence": 2026102601}],
+    "firmware": [],
+    "configChanges": [],
+    "touchesFirmware": false,
+    "touchesScreen": true,
+    "bootRescue": true,
+    "recoveryMode": "replay"
+  },
+  "script": "update.sh",
+  "rescueScript": "rescue.sh",
+  "sources": {
+    "installer.py": "installer.py",
+    "screen-release.json": "/release/screen-release.json",
+    "screen.bundle": "/release/screen.bundle"
+  }
+}

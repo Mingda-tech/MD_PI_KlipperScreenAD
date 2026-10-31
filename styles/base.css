@@ -958,3 +958,119 @@ button.extrude-tool-status:disabled image {
 }
 
 .graph_label {border-left-width: .4em; border-left-style: solid;}
+
+/* USB update: one status hierarchy, compact tools and task-specific actions. */
+.usb-update {
+    padding: .3em .5em .4em;
+}
+
+.usb-update button.usb-tool,
+.usb-update button.usb-action,
+.usb-update button.usb-package {
+    margin: 0;
+    border: 1px solid alpha(@text, .18);
+    border-radius: .45em;
+    background-color: alpha(@text, .04);
+    padding: .45em .7em;
+}
+
+.usb-update button.usb-tool {
+    min-height: 1.6em;
+    min-width: 7em;
+}
+
+.usb-update button.usb-tool label,
+.usb-update button.usb-action label {
+    margin: 0;
+    font-size: .9em;
+}
+
+.usb-update button.usb-scan {
+    border-color: alpha(@color3, .7);
+    background-color: alpha(@color3, .12);
+}
+
+.usb-update button.usb-primary {
+    background-color: mix(@bg, @color3, .65);
+    border-color: @color3;
+}
+
+.usb-update button.usb-action {
+    min-height: 1.8em;
+}
+
+.usb-update button:focus {
+    outline: 2px solid @text;
+    outline-offset: -4px;
+}
+
+.usb-update button.usb-tool:active,
+.usb-update button.usb-action:active,
+.usb-update button.usb-package:active {
+    background-color: @active;
+}
+
+.usb-update button:disabled {
+    opacity: .45;
+}
+
+.usb-summary {
+    border: 1px solid alpha(@text, .12);
+    border-left: .2em solid alpha(@text, .35);
+    border-radius: .5em;
+    background-color: alpha(@text, .035);
+    padding: .75em .9em;
+}
+
+.usb-summary.usb-busy {border-left-color: @color3;}
+.usb-summary.usb-success {border-left-color: @echo;}
+.usb-summary.usb-warning {border-left-color: @warning;}
+.usb-summary.usb-error {border-left-color: @error;}
+
+.usb-title {
+    font-size: 1.12em;
+    font-weight: bold;
+}
+
+.usb-description {
+    color: alpha(@text, .85);
+    font-size: .88em;
+}
+
+.usb-update .usb-diagnostics label {
+    padding: 0;
+    margin: 0;
+    font-size: .78em;
+}
+
+.usb-update .usb-diagnostics title {
+    min-height: 2em;
+}
+
+.usb-update .usb-diagnostic-text {
+    color: alpha(@text, .8);
+    padding-top: .5em;
+}
+
+.usb-update .usb-progress trough {
+    min-height: .35em;
+    border-radius: .3em;
+    background-color: alpha(@text, .1);
+}
+
+.usb-update .usb-progress progress {
+    min-height: .35em;
+    border-radius: .3em;
+    background-color: @color3;
+}
+
+.usb-update .usb-progress text {
+    font-size: .8em;
+}
+
+.usb-package-name {font-weight: bold;}
+.usb-muted {color: alpha(@text, .7); font-size: .78em;}
+.usb-release-title {font-size: .9em; font-weight: bold;}
+.usb-section-title {font-size: .78em; color: alpha(@text, .8); padding-top: .4em;}
+.usb-component-row {border-bottom: 1px solid alpha(@text, .1); padding: .15em .2em;}
+.usb-component-name, .usb-version {font-size: .85em;}

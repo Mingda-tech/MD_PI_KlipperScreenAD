@@ -1914,3 +1914,294 @@ msgstr "위치 보정을 초기화하는 중입니다. 잠시 기다렸다가 �
 
 msgid "Position Calibration"
 msgstr "위치 보정"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "완료되지 않은 업데이트가 있습니다. 상태를 새로 고쳐 계속하세요."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "다른 업데이트가 진행 중입니다. 완료될 때까지 기다리세요."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "실패한 업데이트를 취소할까요? 설치된 변경 사항을 되돌리지 않고 작업을 종료합니다. 복구 파일은 보관됩니다. 사용 전에 프린터를 확인하세요."
+
+msgid "Checking the signature and file integrity."
+msgstr "서명과 파일 무결성을 확인하고 있습니다."
+
+msgid "Choose an update package"
+msgstr "업데이트 패키지 선택"
+
+msgid "Component: %s"
+msgstr "구성 요소: %s"
+
+msgid "Configuration changes"
+msgstr "설정 변경 사항"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "USB 드라이브에서 파일 복사를 완료하지 못했습니다."
+
+msgid "Copying update package"
+msgstr "업데이트 패키지 복사 중"
+
+msgid "Could not read update status"
+msgstr "업데이트 상태를 읽을 수 없습니다"
+
+msgid "Details"
+msgstr "상세 정보"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "프린터 전원을 끄지 마세요. 기록 후 펌웨어를 검증합니다."
+
+msgid "Error code: %s"
+msgstr "오류 코드: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "인쇄, 일시 정지 또는 보정을 마친 후 업데이트하세요."
+
+msgid "Firmware"
+msgstr "펌웨어"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "USB 드라이브를 삽입한 후 USB 드라이브 검색을 누르세요."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "이 업데이트를 설치할까요? 패키지에 나열된 프로그램과 펌웨어를 업데이트합니다. 프린터 전원을 켜 두세요."
+
+msgid "Install update"
+msgstr "업데이트 설치"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "설치가 완료되었습니다. 업데이트 복구를 실행하여 결과 저장을 마치세요."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "설치된 변경 사항은 되돌려지지 않았습니다. 복구 파일이 보관되었습니다. 사용 전에 프린터를 확인하세요."
+
+msgid "Installing an older version is not allowed."
+msgstr "이전 버전은 설치할 수 없습니다."
+
+msgid "Installing update"
+msgstr "업데이트 설치 중"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "복사가 끝날 때까지 USB 드라이브를 연결해 두세요."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "프린터 전원을 켜 둔 상태에서 업데이트 복구를 눌러 계속하세요."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "업데이트된 프로그램을 확인하는 동안 프린터 전원을 켜 두세요."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "프린터 전원을 켜 두세요. 화면이 다시 시작될 수 있습니다."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "연결된 USB 드라이브에서 .mdu 파일을 찾고 있습니다."
+
+msgid "No update package found"
+msgstr "업데이트 패키지를 찾지 못했습니다"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "오프라인 업데이트 파일 또는 디렉터리의 소유권이나 권한이 안전하지 않습니다."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "오프라인 업데이트 준비를 완료하지 못했습니다. 화면 프로그램 설치와 권한을 확인하세요."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "오프라인 업데이트 준비 시간이 초과되었습니다. 화면에서 다시 시도합니다."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "오프라인 업데이트 서비스를 시작하지 못했습니다. 실행 도우미를 설치하고 실행 권한을 확인하세요."
+
+msgid "Offline update service failed; refresh the status"
+msgstr "오프라인 업데이트 서비스에 오류가 발생했습니다. 상태를 새로 고치세요."
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "오프라인 업데이트 서비스가 잘못된 응답을 반환했습니다. 설치 상태를 확인하세요."
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "오프라인 업데이트 기능이 설치되지 않았거나 시작할 수 없습니다."
+
+msgid "Open Details to check the cause before trying again."
+msgstr "다시 시도하기 전에 상세 정보에서 원인을 확인하세요."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "패키지 검증 시간이 초과되었습니다. 저장 장치를 확인하고 다시 시도하세요."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "USB 루트 또는 MINGDA-Update 폴더에 .mdu 파일을 넣고 다시 검색하세요."
+
+msgid "Please wait for the current task status."
+msgstr "현재 작업 상태를 읽을 때까지 기다리세요."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "준비가 완료되지 않았습니다. 상태 새로 고침을 눌러 다시 시도하세요."
+
+msgid "Preparation on hold"
+msgstr "준비 대기 중"
+
+msgid "Preparing USB update"
+msgstr "USB 업데이트 준비 중"
+
+msgid "Press Refresh status to retry."
+msgstr "상태 새로 고침을 눌러 다시 시도하세요."
+
+msgid "Programs"
+msgstr "프로그램"
+
+msgid "Reading update status"
+msgstr "업데이트 상태 읽는 중"
+
+msgid "Ready to install"
+msgstr "업데이트 패키지 검증 완료"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "중단된 업데이트를 복구할까요? 복구가 끝날 때까지 프린터 전원을 켜 두세요."
+
+msgid "Recover update"
+msgstr "업데이트 복구"
+
+msgid "Recovery required"
+msgstr "복구 필요"
+
+msgid "Refresh status"
+msgstr "상태 새로 고침"
+
+msgid "Release: %s"
+msgstr "릴리스: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "SWUpdate를 시작하지 못했습니다. 엔진 설치 상태를 확인하세요."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate가 이 패키지를 거부했습니다. 서명, 스크립트 프로토콜 및 파일을 확인하세요."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate에서 설치 실패를 보고했습니다. 복구 상태를 확인하세요."
+
+msgid "Scan USB drive"
+msgstr "USB 드라이브 검색"
+
+msgid "Scan again to choose another update package."
+msgstr "다른 업데이트 패키지를 선택하려면 다시 검색하세요."
+
+msgid "Scanning USB drives"
+msgstr "USB 드라이브 검색 중"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "파일을 선택하면 프린터로 복사한 후 검증합니다."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "서명과 파일 검증을 마쳤습니다. 확인 후 시스템과 보드를 검사합니다."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "SWUpdate 엔진이 호환되지 않거나 변경되었습니다. 검증된 엔진을 다시 설치하세요."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "복사가 끝나기 전에 USB 드라이브를 분리했습니다."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "USB의 패키지가 변경되었습니다. 드라이브를 다시 검색하세요."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "포함된 오프라인 업데이트 리소스를 검증하지 못했습니다."
+
+msgid "The installed version must be registered before updating."
+msgstr "업데이트 전에 설치된 버전을 등록해야 합니다."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "검증 이후 프린터 상태가 변경되었습니다. 패키지를 다시 준비하세요."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "프린터 상태를 확인할 수 없습니다. 로컬 연결을 확인하세요."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "복구 스크립트가 실패했습니다. 서비스 지원이 필요합니다."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "화면에서 이 기능을 자동으로 준비하고 있습니다. 잠시 기다리세요."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "화면 실행 사용자에게 오프라인 업데이트 준비를 위한 암호 없는 실행 권한이 필요합니다."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "프린터와 기존 업데이트 작업이 준비되면 화면에서 다시 시도합니다."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "업데이트 검증을 마쳤습니다. 프린터를 사용할 수 있습니다."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "업데이트 프로세스가 중지되었습니다. 복구 상태를 확인하세요."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "업데이트 시간이 초과되었습니다. 복구가 완료될 때까지 프린터를 사용하지 마세요."
+
+msgid "The updated screen did not start correctly."
+msgstr "업데이트된 화면 프로그램이 정상적으로 시작되지 않았습니다."
+
+msgid "There is not enough internal storage for this update."
+msgstr "이 업데이트를 위한 내부 저장 공간이 부족합니다."
+
+msgid "This package does not match the registered release."
+msgstr "이 패키지는 등록된 릴리스와 일치하지 않습니다."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "이 패키지에는 다른 업데이트 형식 또는 스크립트 프로토콜이 필요합니다."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "이 패키지는 수동 복구가 필요합니다. 서비스 지원에 문의하세요."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "이 화면 버전에는 해당 CPU 아키텍처용 업데이트 실행 환경이 없습니다."
+
+msgid "This screen release is missing offline update resources."
+msgstr "이 화면 버전에 오프라인 업데이트 리소스가 없습니다."
+
+msgid "This screen release is missing the update verification key."
+msgstr "이 화면 버전에 업데이트 검증 키가 없습니다."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "이 화면 업데이트 패키지에 유효한 복구 스크립트가 없습니다."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "현재 상태에서는 업데이트를 취소할 수 없습니다. 상태를 새로 고치세요."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "이 업데이트 작업은 지원되지 않는 엔진을 사용합니다. 서비스 지원에 문의하세요."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "업데이트 전에 가열을 끄고 프린터를 식히세요."
+
+msgid "USB Update"
+msgstr "USB 업데이트"
+
+msgid "USB update unavailable"
+msgstr "USB 업데이트 사용 불가"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "지원되지 않는 업데이트 상태입니다. 화면 프로그램과 실행 도우미를 함께 업데이트하세요."
+
+msgid "Update cancelled"
+msgstr "업데이트 취소됨"
+
+msgid "Update complete"
+msgstr "업데이트 완료"
+
+msgid "Update from a USB drive"
+msgstr "USB 드라이브로 업데이트"
+
+msgid "Update not completed"
+msgstr "업데이트 미완료"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "업데이트 진행 상태를 확인할 수 없습니다. 다시 시도하기 전에 복구 상태를 확인하세요."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "업데이트 서비스 응답 시간이 초과되었습니다. 다시 시도하기 전에 상태를 새로 고치세요."
+
+msgid "Updating firmware"
+msgstr "펌웨어 업데이트 중"
+
+msgid "Verifying the result"
+msgstr "결과 검증 중"
+
+msgid "Verifying update package"
+msgstr "업데이트 패키지 검증 중"

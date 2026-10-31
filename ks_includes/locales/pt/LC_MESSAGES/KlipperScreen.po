@@ -1870,3 +1870,294 @@ msgstr "A calibração de posição ainda está a inicializar. Aguarde um moment
 
 msgid "Position Calibration"
 msgstr "Calibração de posição"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Existe uma atualização por concluir. Atualize o estado para continuar."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "Está em curso outra atualização. Aguarde que termine."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Cancelar esta atualização falhada? A tarefa terminará sem reverter as alterações instaladas. Os ficheiros de recuperação serão mantidos. Verifique a impressora antes de a utilizar."
+
+msgid "Checking the signature and file integrity."
+msgstr "A verificar a assinatura e a integridade dos ficheiros."
+
+msgid "Choose an update package"
+msgstr "Escolha um pacote de atualização"
+
+msgid "Component: %s"
+msgstr "Componente: %s"
+
+msgid "Configuration changes"
+msgstr "Alterações de configuração"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "A cópia a partir da unidade USB não foi concluída."
+
+msgid "Copying update package"
+msgstr "A copiar o pacote de atualização"
+
+msgid "Could not read update status"
+msgstr "Não foi possível ler o estado da atualização"
+
+msgid "Details"
+msgstr "Detalhes"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Não desligue a impressora. O firmware será verificado após a gravação."
+
+msgid "Error code: %s"
+msgstr "Código de erro: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Conclua a impressão, a tarefa em pausa ou a calibração antes de atualizar."
+
+msgid "Firmware"
+msgstr "Firmware"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Insira uma unidade USB e prima Pesquisar unidade USB."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Instalar esta atualização? Os programas e o firmware indicados neste pacote serão atualizados. Mantenha a impressora ligada."
+
+msgid "Install update"
+msgstr "Instalar atualização"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "A instalação terminou. Recupere a atualização para terminar de guardar o resultado."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "As alterações instaladas não foram revertidas. Os ficheiros de recuperação foram mantidos. Verifique a impressora antes de a utilizar."
+
+msgid "Installing an older version is not allowed."
+msgstr "Não é permitida a instalação de uma versão anterior."
+
+msgid "Installing update"
+msgstr "A instalar a atualização"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Mantenha a unidade USB ligada até a cópia terminar."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Mantenha a impressora ligada e prima Recuperar atualização para continuar."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Mantenha a impressora ligada enquanto os programas atualizados são verificados."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Mantenha a impressora ligada. O ecrã poderá reiniciar."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "A procurar ficheiros .mdu nas unidades USB ligadas."
+
+msgid "No update package found"
+msgstr "Nenhum pacote de atualização encontrado"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Os ficheiros ou diretórios de atualização offline têm proprietário ou permissões inseguros."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Não foi possível preparar a atualização offline. Verifique a instalação e as permissões do programa do ecrã."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "O tempo de preparação da atualização offline esgotou-se. O ecrã tentará novamente."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Não foi possível iniciar o serviço de atualização offline. Instale o programa auxiliar e verifique as suas permissões de execução."
+
+msgid "Offline update service failed; refresh the status"
+msgstr "O serviço de atualização offline falhou. Atualize o estado."
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "O serviço de atualização offline devolveu uma resposta inválida. Verifique a instalação."
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "O suporte de atualização offline não está instalado ou não pode ser iniciado."
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Abra Detalhes para verificar a causa antes de tentar novamente."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "O tempo de verificação do pacote esgotou-se. Verifique o dispositivo de armazenamento e tente novamente."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Coloque um ficheiro .mdu na raiz da unidade USB ou na pasta MINGDA-Update e pesquise novamente."
+
+msgid "Please wait for the current task status."
+msgstr "Aguarde a leitura do estado da tarefa atual."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "A preparação não está concluída. Prima Atualizar estado para tentar novamente."
+
+msgid "Preparation on hold"
+msgstr "Preparação em espera"
+
+msgid "Preparing USB update"
+msgstr "A preparar a atualização por USB"
+
+msgid "Press Refresh status to retry."
+msgstr "Prima Atualizar estado para tentar novamente."
+
+msgid "Programs"
+msgstr "Programas"
+
+msgid "Reading update status"
+msgstr "A ler o estado da atualização"
+
+msgid "Ready to install"
+msgstr "Pacote de atualização verificado"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Recuperar a atualização interrompida? Mantenha a impressora ligada até a recuperação terminar."
+
+msgid "Recover update"
+msgstr "Recuperar atualização"
+
+msgid "Recovery required"
+msgstr "Recuperação necessária"
+
+msgid "Refresh status"
+msgstr "Atualizar estado"
+
+msgid "Release: %s"
+msgstr "Versão: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "Não foi possível iniciar o SWUpdate. Verifique a instalação do motor de atualização."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "O SWUpdate rejeitou este pacote. Verifique a assinatura, o protocolo do script e os ficheiros."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "O SWUpdate comunicou uma falha de instalação. Verifique o estado da recuperação."
+
+msgid "Scan USB drive"
+msgstr "Pesquisar unidade USB"
+
+msgid "Scan again to choose another update package."
+msgstr "Pesquise novamente para escolher outro pacote de atualização."
+
+msgid "Scanning USB drives"
+msgstr "A pesquisar unidades USB"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Selecione um ficheiro para o copiar para a impressora e verificar."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Assinatura e ficheiros verificados. O sistema e as placas serão verificados após a confirmação."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "O motor SWUpdate é incompatível ou foi alterado. Reinstale o motor verificado."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "A unidade USB foi removida antes de a cópia terminar."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "O pacote na unidade USB foi alterado. Pesquise a unidade novamente."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "A verificação dos recursos de atualização offline incluídos falhou."
+
+msgid "The installed version must be registered before updating."
+msgstr "A versão instalada tem de ser registada antes da atualização."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "O estado da impressora mudou após a verificação. Prepare o pacote novamente."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "Não é possível confirmar o estado da impressora. Verifique a ligação local."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "O script de recuperação falhou. É necessária assistência técnica."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "O ecrã está a preparar esta função automaticamente. Aguarde."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "A conta do programa do ecrã precisa de permissão sem palavra-passe para preparar atualizações offline."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "O ecrã tentará novamente quando a impressora e as tarefas de atualização existentes estiverem prontas."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "A atualização foi verificada. Pode utilizar a impressora."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "O processo de atualização parou. Verifique o estado da recuperação."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "O tempo da atualização esgotou-se. Não utilize a impressora até a recuperação terminar."
+
+msgid "The updated screen did not start correctly."
+msgstr "O programa do ecrã atualizado não iniciou corretamente."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Não existe espaço suficiente no armazenamento interno para esta atualização."
+
+msgid "This package does not match the registered release."
+msgstr "Este pacote não corresponde à versão registada."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Este pacote requer outro formato de atualização ou protocolo de script."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Este pacote requer recuperação manual. Contacte a assistência técnica."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Esta versão do ecrã não inclui um ambiente de execução de atualizações para esta arquitetura de CPU."
+
+msgid "This screen release is missing offline update resources."
+msgstr "Faltam recursos de atualização offline nesta versão do ecrã."
+
+msgid "This screen release is missing the update verification key."
+msgstr "Falta a chave de verificação de atualizações nesta versão do ecrã."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Este pacote de atualização do ecrã não tem um script de recuperação válido."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Não é possível cancelar esta atualização no estado atual. Atualize o estado."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "Esta tarefa de atualização utiliza um motor não suportado. Contacte a assistência técnica."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Desligue o aquecimento e deixe a impressora arrefecer antes de atualizar."
+
+msgid "USB Update"
+msgstr "Atualização por USB"
+
+msgid "USB update unavailable"
+msgstr "Atualização por USB indisponível"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Estado de atualização não suportado. Atualize o ecrã e o programa auxiliar em conjunto."
+
+msgid "Update cancelled"
+msgstr "Atualização cancelada"
+
+msgid "Update complete"
+msgstr "Atualização concluída"
+
+msgid "Update from a USB drive"
+msgstr "Atualizar a partir de USB"
+
+msgid "Update not completed"
+msgstr "Atualização não concluída"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "Não foi possível confirmar o progresso da atualização. Verifique o estado da recuperação antes de tentar novamente."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "O tempo de resposta do serviço de atualização esgotou-se. Atualize o estado antes de tentar novamente."
+
+msgid "Updating firmware"
+msgstr "A atualizar o firmware"
+
+msgid "Verifying the result"
+msgstr "A verificar o resultado"
+
+msgid "Verifying update package"
+msgstr "A verificar o pacote de atualização"

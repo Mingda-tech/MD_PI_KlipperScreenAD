@@ -1851,3 +1851,294 @@ msgstr "De positiekalibratie wordt nog geïnitialiseerd. Wacht even en probeer o
 
 msgid "Position Calibration"
 msgstr "Positiekalibratie"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Er is een onvoltooide update. Vernieuw de status om door te gaan."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "Er wordt een andere update uitgevoerd. Wacht tot deze klaar is."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Deze mislukte update annuleren? De taak wordt beëindigd zonder geïnstalleerde wijzigingen terug te draaien. Herstelbestanden blijven bewaard. Controleer de printer voor gebruik."
+
+msgid "Checking the signature and file integrity."
+msgstr "De handtekening en bestandsintegriteit worden gecontroleerd."
+
+msgid "Choose an update package"
+msgstr "Kies een updatepakket"
+
+msgid "Component: %s"
+msgstr "Onderdeel: %s"
+
+msgid "Configuration changes"
+msgstr "Configuratiewijzigingen"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "Het kopiëren vanaf de USB-stick is niet voltooid."
+
+msgid "Copying update package"
+msgstr "Updatepakket kopiëren"
+
+msgid "Could not read update status"
+msgstr "Updatestatus kon niet worden gelezen"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Schakel de printer niet uit. Na het schrijven wordt de firmware gecontroleerd."
+
+msgid "Error code: %s"
+msgstr "Foutcode: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Rond afdrukken, een onderbroken afdruk of kalibratie af voordat u bijwerkt."
+
+msgid "Firmware"
+msgstr "Firmware"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Plaats een USB-stick en druk op USB-stick doorzoeken."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Deze update installeren? De programma's en firmware in dit pakket worden bijgewerkt. Laat de printer ingeschakeld."
+
+msgid "Install update"
+msgstr "Update installeren"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "De installatie is voltooid. Hervat de update om het resultaat volledig op te slaan."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "Geïnstalleerde wijzigingen zijn niet teruggedraaid. Herstelbestanden zijn bewaard. Controleer de printer voor gebruik."
+
+msgid "Installing an older version is not allowed."
+msgstr "Het installeren van een oudere versie is niet toegestaan."
+
+msgid "Installing update"
+msgstr "Update installeren"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Laat de USB-stick aangesloten tot het kopiëren klaar is."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Laat de printer ingeschakeld en druk op Update herstellen om door te gaan."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Laat de printer ingeschakeld terwijl de bijgewerkte programma's worden gecontroleerd."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Laat de printer ingeschakeld. Het scherm kan opnieuw opstarten."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "Zoeken naar .mdu-bestanden op aangesloten USB-sticks."
+
+msgid "No update package found"
+msgstr "Geen updatepakket gevonden"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "De eigenaar of toegangsrechten van offline-updatebestanden of -mappen zijn onveilig."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "De offline-update kon niet worden voorbereid. Controleer de installatie en rechten van de schermsoftware."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "De voorbereiding van de offline-update duurde te lang. Het scherm probeert het opnieuw."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "De offline-updateservice kon niet starten. Installeer het hulpprogramma en controleer de uitvoerrechten."
+
+msgid "Offline update service failed; refresh the status"
+msgstr "De offline-updateservice is mislukt. Vernieuw de status."
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "De offline-updateservice gaf een ongeldig antwoord. Controleer de installatie."
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "De offline-updatefunctie is niet geïnstalleerd of kan niet worden gestart."
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Open Details om de oorzaak te controleren voordat u het opnieuw probeert."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "De pakketcontrole duurde te lang. Controleer het opslagmedium en probeer het opnieuw."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Plaats een .mdu-bestand in de hoofdmap van de USB-stick of in MINGDA-Update en zoek opnieuw."
+
+msgid "Please wait for the current task status."
+msgstr "Wacht op de status van de huidige taak."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "De voorbereiding is niet klaar. Druk op Status vernieuwen om het opnieuw te proberen."
+
+msgid "Preparation on hold"
+msgstr "Voorbereiding wacht"
+
+msgid "Preparing USB update"
+msgstr "USB-update voorbereiden"
+
+msgid "Press Refresh status to retry."
+msgstr "Druk op Status vernieuwen om het opnieuw te proberen."
+
+msgid "Programs"
+msgstr "Programma's"
+
+msgid "Reading update status"
+msgstr "Updatestatus lezen"
+
+msgid "Ready to install"
+msgstr "Updatepakket gecontroleerd"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "De onderbroken update herstellen? Laat de printer ingeschakeld tot het herstel klaar is."
+
+msgid "Recover update"
+msgstr "Update herstellen"
+
+msgid "Recovery required"
+msgstr "Herstel nodig"
+
+msgid "Refresh status"
+msgstr "Status vernieuwen"
+
+msgid "Release: %s"
+msgstr "Uitgave: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "SWUpdate kon niet starten. Controleer de installatie van de update-engine."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate heeft dit pakket geweigerd. Controleer de handtekening, het scriptprotocol en de bestanden."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate meldt een installatiefout. Controleer de herstelstatus."
+
+msgid "Scan USB drive"
+msgstr "USB-stick doorzoeken"
+
+msgid "Scan again to choose another update package."
+msgstr "Zoek opnieuw om een ander updatepakket te kiezen."
+
+msgid "Scanning USB drives"
+msgstr "USB-sticks doorzoeken"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Kies een bestand om het naar de printer te kopiëren en te controleren."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Handtekening en bestanden zijn gecontroleerd. Systeem en printplaten worden na bevestiging gecontroleerd."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "De SWUpdate-engine is niet compatibel of is gewijzigd. Installeer de gecontroleerde engine opnieuw."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "De USB-stick is verwijderd voordat het kopiëren klaar was."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "Het pakket op de USB-stick is gewijzigd. Doorzoek de stick opnieuw."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "De meegeleverde offline-updatebestanden konden niet worden geverifieerd."
+
+msgid "The installed version must be registered before updating."
+msgstr "De geïnstalleerde versie moet vóór het bijwerken worden geregistreerd."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "De printer is na de controle gewijzigd. Bereid het pakket opnieuw voor."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "De printerstatus kan niet worden vastgesteld. Controleer de lokale verbinding."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "Het herstelscript is mislukt. Technische ondersteuning is nodig."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "Het scherm bereidt deze functie automatisch voor. Even geduld."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "De schermgebruiker heeft rechten zonder wachtwoord nodig om offline-updates voor te bereiden."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "Het scherm probeert het opnieuw zodra de printer en bestaande updatetaken gereed zijn."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "De update is gecontroleerd. U kunt de printer gebruiken."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "Het updateproces is gestopt. Controleer de herstelstatus."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "De update duurde te lang. Gebruik de printer niet totdat het herstel voltooid is."
+
+msgid "The updated screen did not start correctly."
+msgstr "De bijgewerkte schermsoftware is niet goed gestart."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Er is onvoldoende interne opslagruimte voor deze update."
+
+msgid "This package does not match the registered release."
+msgstr "Dit pakket komt niet overeen met de geregistreerde uitgave."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Dit pakket vereist een ander updateformaat of scriptprotocol."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Dit pakket moet handmatig worden hersteld. Neem contact op met technische ondersteuning."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Deze schermversie bevat geen update-uitvoeromgeving voor deze CPU-architectuur."
+
+msgid "This screen release is missing offline update resources."
+msgstr "Deze schermversie mist offline-updatebestanden."
+
+msgid "This screen release is missing the update verification key."
+msgstr "Deze schermversie mist de verificatiesleutel voor updates."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Dit schermupdatepakket bevat geen geldig herstelscript."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Deze update kan in de huidige staat niet worden geannuleerd. Vernieuw de status."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "Deze updatetaak gebruikt een niet-ondersteunde engine. Neem contact op met technische ondersteuning."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Schakel de verwarming uit en laat de printer afkoelen voordat u bijwerkt."
+
+msgid "USB Update"
+msgstr "USB-update"
+
+msgid "USB update unavailable"
+msgstr "USB-update niet beschikbaar"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Niet-ondersteunde updatestatus. Werk de schermsoftware en het hulpprogramma samen bij."
+
+msgid "Update cancelled"
+msgstr "Update geannuleerd"
+
+msgid "Update complete"
+msgstr "Update voltooid"
+
+msgid "Update from a USB drive"
+msgstr "Bijwerken vanaf USB"
+
+msgid "Update not completed"
+msgstr "Update niet voltooid"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "De voortgang van de update kan niet worden bevestigd. Controleer de herstelstatus voordat u het opnieuw probeert."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "De updateservice reageerde niet op tijd. Vernieuw de status voordat u het opnieuw probeert."
+
+msgid "Updating firmware"
+msgstr "Firmware bijwerken"
+
+msgid "Verifying the result"
+msgstr "Resultaat controleren"
+
+msgid "Verifying update package"
+msgstr "Updatepakket controleren"

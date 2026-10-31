@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "COPYING.swupdate",
+      "sha256": "dcc100d4161cc0b7177545ab6e47216f84857cda3843847c792a25289852dcaa",
+      "bytes": 18007
+    },
+    {
+      "path": "LICENSES/BSD-1-Clause.txt",
+      "sha256": "4cf04ed34ff0ebbf5c71345b56e6af5093fc17206364cca0ebbae92ef3940683",
+      "bytes": 1034
+    },
+    {
+      "path": "LICENSES/BSD-3-Clause.txt",
+      "sha256": "e27a3e87706b3aa5ff2e50eaafe2e6ed5397fbf2d7679eaf444a6d000518a3a6",
+      "bytes": 1442
+    },
+    {
+      "path": "LICENSES/CC-BY-SA-4.0.txt",
+      "sha256": "cde7883b9050a1104f4ac19a1572aafd6e5d7323b68351aaf51fbf4beba54966",
+      "bytes": 18375
+    },
+    {
+      "path": "LICENSES/CC0-1.0.txt",
+      "sha256": "0558101984550fa84d1d13c2af11d116c20079d2be58711e8d99cadce7009192",
+      "bytes": 6854
+    },
+    {
+      "path": "LICENSES/GPL-2.0-only.txt",
+      "sha256": "5d51b52a40391a26cbb2accf5dc5d1c165de49a022d9d5efb50b22204d2682ec",
+      "bytes": 15394
+    },
+    {
+      "path": "LICENSES/GPL-2.0-or-later.txt",
+      "sha256": "43fd695e9b198a9a4997cc2d02e10d26cae937e2c4930b9eff9c6d349c85cd32",
+      "bytes": 17621
+    },
+    {
+      "path": "LICENSES/ISC.txt",
+      "sha256": "f8f41f38133176a6db6c1bd8d7bd1a9c910e3563f1cb7bbe32b05e8b8d3a9c61",
+      "bytes": 836
+    },
+    {
+      "path": "LICENSES/LGPL-2.1-or-later.txt",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "bytes": 26530
+    },
+    {
+      "path": "LICENSES/MIT.txt",
+      "sha256": "89807acf2309bd285f033404ee78581602f3cd9b819a16ac2f0e5f60ff4a473e",
+      "bytes": 1023
+    },
+    {
+      "path": "LICENSES/OFL-1.1.txt",
+      "sha256": "8f2368a292194be10b1223a8875815240a9208bb30785cb13d8849eb6a750fe9",
+      "bytes": 4011
+    },
+    {
+      "path": "README.release.txt",
+      "sha256": "b7a562b17f6dc221e640713be9b38cd1ac18ed0242f8b90fb1a2ad38a9f67753",
+      "bytes": 1521
+    },
+    {
+      "path": "abi-validation.json",
+      "sha256": "ce9c1cd01849c5a71307d18d85197acd9c7f447982572e81afe0d66b65ff2e81",
+      "bytes": 1856
+    },
+    {
+      "path": "build-info.json",
+      "sha256": "9b8165e69544d4c7ddc64006758b6133671e65946a77e9ddd2ce1a2fe5cf3e01",
+      "bytes": 2266
+    },
+    {
+      "path": "build-inputs.json",
+      "sha256": "98c38e8cae5a0380af3b3adb73cbef03964fc22a53488d9fec7a115d8483ec9b",
+      "bytes": 21519
+    },
+    {
+      "path": "dependency-licenses/common/Apache-2.0",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "dependency-licenses/common/Artistic",
+      "sha256": "b7fd9b73ea99602016a326e0b62e6646060d18febdd065ceca8bb482208c3d88",
+      "bytes": 6111
+    },
+    {
+      "path": "dependency-licenses/common/GPL-1",
+      "sha256": "d77d235e41d54594865151f4751e835c5a82322b0e87ace266567c3391a4b912",
+      "bytes": 12632
+    },
+    {
+      "path": "dependency-licenses/common/GPL-2",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "bytes": 18092
+    },
+    {
+      "path": "dependency-licenses/common/GPL-3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147
+    },
+    {
+      "path": "dependency-licenses/common/LGPL-2.1",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "bytes": 26530
+    },
+    {
+      "path": "dependency-licenses/gcc-runtime.copyright",
+      "sha256": "c2ff6bea4ff8eb81e93a10878e3a03db5015051b32272b363a6f23d3b86b11a2",
+      "bytes": 70612
+    },
+    {
+      "path": "dependency-licenses/json-c.copyright",
+      "sha256": "28b7d201a7af411c0517ae4f2e50084e86c4850e409b1a5e69539ba78af87d7f",
+      "bytes": 1961
+    },
+    {
+      "path": "dependency-licenses/libconfig.copyright",
+      "sha256": "df14a10fb44e0524295dd66110a121c751ac2a13ec847137cff92f67bd08618d",
+      "bytes": 1349
+    },
+    {
+      "path": "dependency-licenses/libubootenv/CC0-1.0.txt",
+      "sha256": "0558101984550fa84d1d13c2af11d116c20079d2be58711e8d99cadce7009192",
+      "bytes": 6854
+    },
+    {
+      "path": "dependency-licenses/libubootenv/LGPL-2.1-or-later.txt",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "bytes": 26530
+    },
+    {
+      "path": "dependency-licenses/libubootenv/MIT.txt",
+      "sha256": "89807acf2309bd285f033404ee78581602f3cd9b819a16ac2f0e5f60ff4a473e",
+      "bytes": 1023
+    },
+    {
+      "path": "dependency-licenses/libyaml.copyright",
+      "sha256": "b2f626a4faf08634e446920cf8dd703e5cfd76d1cd2bcb81efe198b2faa26954",
+      "bytes": 1586
+    },
+    {
+      "path": "dependency-licenses/openssl.copyright",
+      "sha256": "6a7da622fe0637a334d2a8fc470852d2ffb77d9a2b2f930f854e32a41ad6ef35",
+      "bytes": 2543
+    },
+    {
+      "path": "dependency-sources/json-c/json-c_0.15-3~ubuntu1.22.04.2.debian.tar.xz",
+      "sha256": "c3a20d986ab56e0c453a1a4cab1cfc6750b155ce9bb82546897070e6c6991a01",
+      "bytes": 11764
+    },
+    {
+      "path": "dependency-sources/json-c/json-c_0.15-3~ubuntu1.22.04.2.dsc",
+      "sha256": "61051e5f5400168799b5155befe2db34bfecd0950fa41eaa52db39eb67f18952",
+      "bytes": 2227
+    },
+    {
+      "path": "dependency-sources/json-c/json-c_0.15.orig.tar.gz",
+      "sha256": "4ba9a090a42cf1e12b84c64e4464bb6fb893666841d5843cc5bef90774028882",
+      "bytes": 348261
+    },
+    {
+      "path": "dependency-sources/libconfig/libconfig_1.5-0.4build1.debian.tar.xz",
+      "sha256": "ab5a7b6f2bdd19a3cd06a2ee79accb7c443064d10e17e10db6ec5e045c6d4dfe",
+      "bytes": 5152
+    },
+    {
+      "path": "dependency-sources/libconfig/libconfig_1.5-0.4build1.dsc",
+      "sha256": "6dd4c4213e58085ec8ed396a392947e198e5c49af17d40ca08cb2ace7de41d0d",
+      "bytes": 2090
+    },
+    {
+      "path": "dependency-sources/libconfig/libconfig_1.5.orig.tar.gz",
+      "sha256": "e31daa390d8e4461c8830512fe2e13ba1a3d6a02a2305a02429eec61e68703f6",
+      "bytes": 644432
+    },
+    {
+      "path": "dependency-sources/libubootenv/libubootenv.dsc",
+      "sha256": "0a7da70f83e0f5d240b53269aa10a13c7e7556ff6fd7fd5f52c5e4d21276ba9c",
+      "bytes": 2324
+    },
+    {
+      "path": "dependency-sources/libubootenv/libubootenv_0.3.5.orig.tar.xz",
+      "sha256": "95b747e37661bd2e71a1ef34ecddf62af7a42a71459381e2599e8c7aac52770c",
+      "bytes": 51700
+    },
+    {
+      "path": "dependency-sources/libyaml/libyaml_0.2.2-1build2.debian.tar.xz",
+      "sha256": "ff6e1e630dc8620d6cabfd9f6dd78826ee13261c925626f9ff36941604387680",
+      "bytes": 4284
+    },
+    {
+      "path": "dependency-sources/libyaml/libyaml_0.2.2-1build2.dsc",
+      "sha256": "69924ec5e8d7bc2b4a0e5d530c437af0b069b40a65527c6e587723f34da93d40",
+      "bytes": 2139
+    },
+    {
+      "path": "dependency-sources/libyaml/libyaml_0.2.2.orig.tar.gz",
+      "sha256": "689ef3ebdecfa81f3789ccd2481acc81fc0f22f3f5c947eed95c4c0802e356b8",
+      "bytes": 602509
+    },
+    {
+      "path": "dependency-sources/openssl/openssl_3.0.2-0ubuntu1.30.debian.tar.xz",
+      "sha256": "b2f4d75e1eba248397d8e4f4a029195ec3bb0e971b2e975594115a1c79b31c47",
+      "bytes": 319128
+    },
+    {
+      "path": "dependency-sources/openssl/openssl_3.0.2-0ubuntu1.30.dsc",
+      "sha256": "22b1c851fb5c229b27f497b1867e994ab2ad2f90d288d2dc3bd6eef15f6307bc",
+      "bytes": 2486
+    },
+    {
+      "path": "dependency-sources/openssl/openssl_3.0.2.orig.tar.gz",
+      "sha256": "98e91ccead4d4756ae3c9cde5e09191a8e586d9f4d50838e7ec09d6411dfdb63",
+      "bytes": 15038141
+    },
+    {
+      "path": "dependency-sources.json",
+      "sha256": "877dff40357a61d56e1860af4286e07b178b1cb815fe0d623bcc3196764c897f",
+      "bytes": 3499
+    },
+    {
+      "path": "lib/libconfig.so.9",
+      "sha256": "4f310138fb73e141da48dfa517e4fd4b28165f332371fa28c7ae1c72d06f2178",
+      "bytes": 43168
+    },
+    {
+      "path": "lib/libcrypto.so.3",
+      "sha256": "6df6c9ca3eb2a0ecded968b7aafb9e97d0942ffeebdcf916a35d3be2bf6a5810",
+      "bytes": 4143256
+    },
+    {
+      "path": "lib/libjson-c.so.5",
+      "sha256": "b7dc786865f83a3feb7a3c2dab8b3d82980ce81254afb059d33b135f0f42ba3d",
+      "bytes": 67736
+    },
+    {
+      "path": "lib/libubootenv.so.0",
+      "sha256": "34dba9d4172e2844e443387ef302e8049ab22d33d7b45e32e8260cf1fbbd18e0",
+      "bytes": 73744
+    },
+    {
+      "path": "lib/libyaml-0.so.2",
+      "sha256": "11a1bd83b278c3a64fc6afa4878bf96c5e8645e3b2b77332821300c995da51e9",
+      "bytes": 112672
+    },
+    {
+      "path": "reproducibility/README.txt",
+      "sha256": "7ec833045bfcb899a8ef15611b8113f86e4fdacc7d6ca089d7a2e0a3fd096989",
+      "bytes": 362
+    },
+    {
+      "path": "reproducibility/assemble.py",
+      "sha256": "f8b28175def6c9185bd05dd987b7bf9b77c42d93d0ef17de98d0d41e471fb533",
+      "bytes": 1873
+    },
+    {
+      "path": "reproducibility/build-engine.sh",
+      "sha256": "1e62dfced37154485b310f332c02ca31b6cd652bfab98c70b72319cd555e1f44",
+      "bytes": 4853
+    },
+    {
+      "path": "reproducibility/cc-cross",
+      "sha256": "30ae35ace74f027782e28bd27aeb6b6d1a98de79396fb8b6a9e951db2f2f1363",
+      "bytes": 500
+    },
+    {
+      "path": "reproducibility/cross-candidate.sh",
+      "sha256": "e07c71e90677214b5d64d6131deabc1c92d81b18881c4317837d1dbd13605e91",
+      "bytes": 2083
+    },
+    {
+      "path": "reproducibility/cross-receipt.py",
+      "sha256": "9170344011c6f2a971ef253d22fb94e105d1b412fc8931d552a2f6fb8f2a6c6c",
+      "bytes": 4128
+    },
+    {
+      "path": "reproducibility/engine-receipt.py",
+      "sha256": "3954a1329d10776cb5660fb4fa01254f9684e22f402ab68b13e367db2c283aae",
+      "bytes": 4212
+    },
+    {
+      "path": "reproducibility/licenses-sources.py",
+      "sha256": "31635a26c16f046cfc1923210492999a1a0fc8606b8c835dce074116a48ae0f2",
+      "bytes": 2588
+    },
+    {
+      "path": "reproducibility/swupdate.config",
+      "sha256": "606107c0fa1ab0b5bc76fd7caad7c530df5f79da53cc3d895d3ec040adf07159",
+      "bytes": 1855
+    },
+    {
+      "path": "reproducibility/validate-cross.py",
+      "sha256": "c29d7c1463108df26fb51ea1fe37297664508fffb35685d165f62bc40773e3fc",
+      "bytes": 3492
+    },
+    {
+      "path": "runtime-libraries.txt",
+      "sha256": "e5ee1faf9aa1a88287ca44d72acbcfdbecac416f23fb8533b770330b7ea79df2",
+      "bytes": 622
+    },
+    {
+      "path": "swupdate",
+      "sha256": "d388ac370d5f2fbb537ef10cb0d39b1d8c03b3732e4a929987fa65b303786c34",
+      "bytes": 199704
+    },
+    {
+      "path": "swupdate-source-2026.05.tar.gz",
+      "sha256": "a455bc3c0f4a6ab14748bef3b9db7a9e077c3ed8e4cf680d5b23f1bdb7e57b32",
+      "bytes": 6804243
+    },
+    {
+      "path": "swupdate.config",
+      "sha256": "ab7a75557bd894211f0eb7ed7bfd9f97e3766d2ce1774b2c01f9f9690ffc205b",
+      "bytes": 2767
+    },
+    {
+      "path": "validation/bad-signature.log",
+      "sha256": "a407c7ce6d42c412b8885f75a5b178c8c245d963bf6a90a0b806efd009ddfdb8",
+      "bytes": 1757
+    },
+    {
+      "path": "validation/checks.json",
+      "sha256": "a16c9151ac2576df80e300afe773addb237c763f384ada6d7b56985a74daed4e",
+      "bytes": 930
+    },
+    {
+      "path": "validation/help.txt",
+      "sha256": "82e5238eb6b45c3fcc99cd47877ba311927700789939c674e0f9310619aaada3",
+      "bytes": 2616
+    },
+    {
+      "path": "validation/missing-signature.log",
+      "sha256": "b51d7143283016f79c962f868d771b9b9a960b17eaa71d5d52084de877089a0c",
+      "bytes": 1609
+    },
+    {
+      "path": "validation/signed-standard.log",
+      "sha256": "15222f3532984a54c826e0fdd0da81fdf4344fd81ad5832eafd5b256b7839756",
+      "bytes": 1653
+    },
+    {
+      "path": "validation/signed-ultra.log",
+      "sha256": "ba404b7a19d3b0449a7c412443f542cb2a1d2af833c57fa975addc969ee6dea4",
+      "bytes": 1650
+    },
+    {
+      "path": "validation/tampered-payload.log",
+      "sha256": "b4aa1d096a4d33d14cafe4f67978129f1d0b1ee2aa04786e916cce52a786d2d4",
+      "bytes": 1798
+    },
+    {
+      "path": "validation/version.txt",
+      "sha256": "b39bf4148fb46abc7258b9d05d348057311923a004b10c050d2a793822b7c855",
+      "bytes": 18
+    },
+    {
+      "path": "validation/wrong-hardware.log",
+      "sha256": "cb203f38ba3103034b91ebf9676caf381e238732bbc48064fafc0e40171f17b9",
+      "bytes": 1678
+    },
+    {
+      "path": "version.txt",
+      "sha256": "b39bf4148fb46abc7258b9d05d348057311923a004b10c050d2a793822b7c855",
+      "bytes": 18
+    }
+  ]
+}

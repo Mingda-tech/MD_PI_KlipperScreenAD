@@ -1243,3 +1243,299 @@ msgstr ""
 
 msgid "Saved successfully!"
 msgstr ""
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr ""
+
+msgid "Another update is running. Wait for it to finish."
+msgstr ""
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr ""
+
+msgid "Checking the signature and file integrity."
+msgstr ""
+
+msgid "Choose an update package"
+msgstr ""
+
+#, python-format
+msgid "Component: %s"
+msgstr ""
+
+msgid "Configuration changes"
+msgstr ""
+
+msgid "Continue"
+msgstr ""
+
+msgid "Copying from the USB drive did not finish."
+msgstr ""
+
+msgid "Copying update package"
+msgstr ""
+
+msgid "Could not read update status"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr ""
+
+#, python-format
+msgid "Error code: %s"
+msgstr ""
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr ""
+
+msgid "Firmware"
+msgstr ""
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr ""
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr ""
+
+msgid "Install update"
+msgstr ""
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr ""
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr ""
+
+msgid "Installing an older version is not allowed."
+msgstr ""
+
+msgid "Installing update"
+msgstr ""
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr ""
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr ""
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr ""
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr ""
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr ""
+
+msgid "No update package found"
+msgstr ""
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr ""
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr ""
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr ""
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr ""
+
+msgid "Offline update service failed; refresh the status"
+msgstr ""
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr ""
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr ""
+
+msgid "Open Details to check the cause before trying again."
+msgstr ""
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr ""
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr ""
+
+msgid "Please wait for the current task status."
+msgstr ""
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr ""
+
+msgid "Preparation on hold"
+msgstr ""
+
+msgid "Preparing USB update"
+msgstr ""
+
+msgid "Press Refresh status to retry."
+msgstr ""
+
+msgid "Programs"
+msgstr ""
+
+msgid "Reading update status"
+msgstr ""
+
+msgid "Ready to install"
+msgstr ""
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr ""
+
+msgid "Recover update"
+msgstr ""
+
+msgid "Recovery required"
+msgstr ""
+
+msgid "Refresh status"
+msgstr ""
+
+msgid "Release: %s"
+msgstr ""
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr ""
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr ""
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr ""
+
+msgid "Scan USB drive"
+msgstr ""
+
+msgid "Scan again to choose another update package."
+msgstr ""
+
+msgid "Scanning USB drives"
+msgstr ""
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr ""
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr ""
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr ""
+
+msgid "The USB drive was removed before copying finished."
+msgstr ""
+
+msgid "The USB package changed. Scan the drive again."
+msgstr ""
+
+msgid "The bundled offline update resources failed verification."
+msgstr ""
+
+msgid "The installed version must be registered before updating."
+msgstr ""
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr ""
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr ""
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr ""
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr ""
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr ""
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr ""
+
+msgid "The update has been verified. You can use the printer."
+msgstr ""
+
+msgid "The update process stopped. Review the recovery status."
+msgstr ""
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr ""
+
+msgid "The updated screen did not start correctly."
+msgstr ""
+
+msgid "There is not enough internal storage for this update."
+msgstr ""
+
+msgid "This package does not match the registered release."
+msgstr ""
+
+msgid "This package requires a different update format or script protocol."
+msgstr ""
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr ""
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr ""
+
+msgid "This screen release is missing offline update resources."
+msgstr ""
+
+msgid "This screen release is missing the update verification key."
+msgstr ""
+
+msgid "This screen update package has no valid recovery script."
+msgstr ""
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr ""
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr ""
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr ""
+
+msgid "USB Update"
+msgstr ""
+
+msgid "USB update unavailable"
+msgstr ""
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr ""
+
+msgid "Update cancelled"
+msgstr ""
+
+msgid "Update complete"
+msgstr ""
+
+msgid "Update from a USB drive"
+msgstr ""
+
+msgid "Update not completed"
+msgstr ""
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr ""
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr ""
+
+msgid "Updating firmware"
+msgstr ""
+
+msgid "Verifying the result"
+msgstr ""
+
+msgid "Verifying update package"
+msgstr ""

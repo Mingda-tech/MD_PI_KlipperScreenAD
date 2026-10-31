@@ -1897,3 +1897,294 @@ msgstr "Positionskalibreringen initieras fortfarande. Vänta en stund och förs�
 
 msgid "Position Calibration"
 msgstr "Positionskalibrering"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Det finns en ofullständig uppdatering. Uppdatera status för att fortsätta."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "En annan uppdatering pågår. Vänta tills den är klar."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Avbryta den misslyckade uppdateringen? Uppgiften avslutas utan att installerade ändringar återställs. Återställningsfiler sparas. Kontrollera skrivaren före användning."
+
+msgid "Checking the signature and file integrity."
+msgstr "Kontrollerar signaturen och filernas integritet."
+
+msgid "Choose an update package"
+msgstr "Välj ett uppdateringspaket"
+
+msgid "Component: %s"
+msgstr "Komponent: %s"
+
+msgid "Configuration changes"
+msgstr "Konfigurationsändringar"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "Kopieringen från USB-enheten slutfördes inte."
+
+msgid "Copying update package"
+msgstr "Kopierar uppdateringspaketet"
+
+msgid "Could not read update status"
+msgstr "Kunde inte läsa uppdateringsstatus"
+
+msgid "Details"
+msgstr "Detaljer"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Stäng inte av skrivaren. Den inbyggda programvaran kontrolleras efter skrivningen."
+
+msgid "Error code: %s"
+msgstr "Felkod: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Slutför utskriften, det pausade jobbet eller kalibreringen före uppdateringen."
+
+msgid "Firmware"
+msgstr "Inbyggd programvara"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Anslut en USB-enhet och tryck på Sök på USB-enhet."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Installera uppdateringen? Programmen och den inbyggda programvaran i paketet uppdateras. Låt skrivaren vara påslagen."
+
+msgid "Install update"
+msgstr "Installera uppdatering"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "Installationen är klar. Återuppta uppdateringen för att spara resultatet färdigt."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "Installerade ändringar har inte återställts. Återställningsfiler har sparats. Kontrollera skrivaren före användning."
+
+msgid "Installing an older version is not allowed."
+msgstr "Det är inte tillåtet att installera en äldre version."
+
+msgid "Installing update"
+msgstr "Installerar uppdateringen"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Låt USB-enheten vara ansluten tills kopieringen är klar."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Låt skrivaren vara påslagen och tryck på Återställ uppdatering för att fortsätta."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Låt skrivaren vara påslagen medan de uppdaterade programmen kontrolleras."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Låt skrivaren vara påslagen. Skärmen kan starta om."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "Söker efter .mdu-filer på anslutna USB-enheter."
+
+msgid "No update package found"
+msgstr "Inget uppdateringspaket hittades"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Filer eller mappar för offlineuppdatering har osäkert ägarskap eller osäkra behörigheter."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Förberedelsen av offlineuppdateringen misslyckades. Kontrollera skärmprogrammets installation och behörigheter."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "Förberedelsen av offlineuppdateringen tog för lång tid. Skärmen försöker igen."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Tjänsten för offlineuppdatering kunde inte starta. Installera hjälpprogrammet och kontrollera dess körbehörigheter."
+
+msgid "Offline update service failed; refresh the status"
+msgstr "Tjänsten för offlineuppdatering misslyckades. Uppdatera status."
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "Tjänsten för offlineuppdatering gav ett ogiltigt svar. Kontrollera installationen."
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "Stöd för offlineuppdatering saknas eller kan inte startas."
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Öppna Detaljer och kontrollera orsaken innan du försöker igen."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "Paketkontrollen tog för lång tid. Kontrollera lagringsenheten och försök igen."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Lägg en .mdu-fil i USB-enhetens rotmapp eller i mappen MINGDA-Update och sök igen."
+
+msgid "Please wait for the current task status."
+msgstr "Vänta tills status för den aktuella uppgiften har lästs."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "Förberedelsen är inte klar. Tryck på Uppdatera status för att försöka igen."
+
+msgid "Preparation on hold"
+msgstr "Förberedelsen väntar"
+
+msgid "Preparing USB update"
+msgstr "Förbereder USB-uppdatering"
+
+msgid "Press Refresh status to retry."
+msgstr "Tryck på Uppdatera status för att försöka igen."
+
+msgid "Programs"
+msgstr "Program"
+
+msgid "Reading update status"
+msgstr "Läser uppdateringsstatus"
+
+msgid "Ready to install"
+msgstr "Uppdateringspaketet är verifierat"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Återställa den avbrutna uppdateringen? Låt skrivaren vara påslagen tills återställningen är klar."
+
+msgid "Recover update"
+msgstr "Återställ uppdatering"
+
+msgid "Recovery required"
+msgstr "Återställning krävs"
+
+msgid "Refresh status"
+msgstr "Uppdatera status"
+
+msgid "Release: %s"
+msgstr "Utgåva: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "SWUpdate kunde inte starta. Kontrollera uppdateringsmotorns installation."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate avvisade paketet. Kontrollera signaturen, skriptprotokollet och filerna."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate rapporterade ett installationsfel. Kontrollera återställningsstatus."
+
+msgid "Scan USB drive"
+msgstr "Sök på USB-enhet"
+
+msgid "Scan again to choose another update package."
+msgstr "Sök igen för att välja ett annat uppdateringspaket."
+
+msgid "Scanning USB drives"
+msgstr "Söker på USB-enheter"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Välj en fil för att kopiera den till skrivaren och verifiera den."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Signaturen och filerna är verifierade. Systemet och kretskorten kontrolleras efter bekräftelsen."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "SWUpdate-motorn är inte kompatibel eller har ändrats. Installera om den verifierade motorn."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "USB-enheten togs bort innan kopieringen var klar."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "Paketet på USB-enheten har ändrats. Sök på enheten igen."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "De medföljande resurserna för offlineuppdatering kunde inte verifieras."
+
+msgid "The installed version must be registered before updating."
+msgstr "Den installerade versionen måste registreras före uppdateringen."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "Skrivarens tillstånd ändrades efter kontrollen. Förbered paketet igen."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "Skrivarens tillstånd kan inte bekräftas. Kontrollera den lokala anslutningen."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "Återställningsskriptet misslyckades. Servicehjälp krävs."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "Skärmen förbereder funktionen automatiskt. Vänta."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "Skärmens användarkonto behöver lösenordsfri behörighet för att förbereda offlineuppdateringar."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "Skärmen försöker igen när skrivaren och befintliga uppdateringsuppgifter är redo."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "Uppdateringen har verifierats. Du kan använda skrivaren."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "Uppdateringsprocessen har stannat. Kontrollera återställningsstatus."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "Uppdateringen tog för lång tid. Använd inte skrivaren förrän återställningen är klar."
+
+msgid "The updated screen did not start correctly."
+msgstr "Det uppdaterade skärmprogrammet startade inte korrekt."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Det finns inte tillräckligt med internt lagringsutrymme för uppdateringen."
+
+msgid "This package does not match the registered release."
+msgstr "Paketet stämmer inte med den registrerade utgåvan."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Paketet kräver ett annat uppdateringsformat eller skriptprotokoll."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Paketet kräver manuell återställning. Kontakta service."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Den här skärmversionen saknar en körmiljö för uppdatering på denna CPU-arkitektur."
+
+msgid "This screen release is missing offline update resources."
+msgstr "Den här skärmversionen saknar resurser för offlineuppdatering."
+
+msgid "This screen release is missing the update verification key."
+msgstr "Den här skärmversionen saknar verifieringsnyckeln för uppdateringar."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Skärmens uppdateringspaket saknar ett giltigt återställningsskript."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Uppdateringen kan inte avbrytas i nuvarande tillstånd. Uppdatera statusen."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "Uppdateringsuppgiften använder en motor som inte stöds. Kontakta service."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Stäng av uppvärmningen och låt skrivaren svalna före uppdateringen."
+
+msgid "USB Update"
+msgstr "USB-uppdatering"
+
+msgid "USB update unavailable"
+msgstr "USB-uppdatering är inte tillgänglig"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Uppdateringsstatus stöds inte. Uppdatera skärmprogrammet och hjälpprogrammet tillsammans."
+
+msgid "Update cancelled"
+msgstr "Uppdateringen avbröts"
+
+msgid "Update complete"
+msgstr "Uppdateringen är klar"
+
+msgid "Update from a USB drive"
+msgstr "Uppdatera från USB"
+
+msgid "Update not completed"
+msgstr "Uppdateringen slutfördes inte"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "Uppdateringens förlopp kan inte bekräftas. Kontrollera återställningsstatus innan du försöker igen."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "Uppdateringstjänsten svarade inte i tid. Uppdatera status innan du försöker igen."
+
+msgid "Updating firmware"
+msgstr "Uppdaterar inbyggd programvara"
+
+msgid "Verifying the result"
+msgstr "Verifierar resultatet"
+
+msgid "Verifying update package"
+msgstr "Verifierar uppdateringspaketet"

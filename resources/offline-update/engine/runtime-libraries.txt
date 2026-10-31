@@ -1,0 +1,6 @@
+Target baseline: Ubuntu 22.04 ARM64, system libc/ld-linux (not bundled).
+libubootenv.so.0 => lib/libubootenv.so.0 SHA256=34dba9d4172e2844e443387ef302e8049ab22d33d7b45e32e8260cf1fbbd18e0
+libjson-c.so.5 => lib/libjson-c.so.5 SHA256=b7dc786865f83a3feb7a3c2dab8b3d82980ce81254afb059d33b135f0f42ba3d
+libconfig.so.9 => lib/libconfig.so.9 SHA256=4f310138fb73e141da48dfa517e4fd4b28165f332371fa28c7ae1c72d06f2178
+libcrypto.so.3 => lib/libcrypto.so.3 SHA256=6df6c9ca3eb2a0ecded968b7aafb9e97d0942ffeebdcf916a35d3be2bf6a5810
+libyaml-0.so.2 => lib/libyaml-0.so.2 SHA256=11a1bd83b278c3a64fc6afa4878bf96c5e8645e3b2b77332821300c995da51e9

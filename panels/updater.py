@@ -32,15 +32,28 @@ class Panel(ScreenPanel):
                 position=Gtk.PositionType.LEFT,
                 lines=1,
             ),
+            "usb": self._gtk.Button(
+                image_name="usb-update",
+                label=_("USB Update"),
+                style="color2",
+                scale=self.bts,
+                position=Gtk.PositionType.LEFT,
+                lines=1,
+            ),
         }
         self.buttons["update_all"].connect("clicked", self.show_update_info, "full")
         self.buttons["update_all"].set_vexpand(False)
         self.buttons["refresh"].connect("clicked", self.refresh_updates)
         self.buttons["refresh"].set_vexpand(False)
+        self.buttons["usb"].connect(
+            "clicked", lambda widget: self._screen.show_panel("usb_update", _("USB Update"))
+        )
+        self.buttons["usb"].set_vexpand(False)
 
         top_box = Gtk.Box(vexpand=False)
         top_box.pack_start(self.buttons["update_all"], True, True, 0)
         top_box.pack_start(self.buttons["refresh"], True, True, 0)
+        top_box.pack_start(self.buttons["usb"], True, True, 0)
 
         self.update_msg = Gtk.Label(
             label=_("Checking for updates, please wait..."), vexpand=True

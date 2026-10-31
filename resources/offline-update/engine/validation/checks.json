@@ -1,0 +1,40 @@
+{
+  "architecture": "aarch64",
+  "targetOs": "ubuntu22.04",
+  "execution": "QEMU8.2.2 user mode",
+  "packageSha256": "c7cb5ea65fad9fa9607ae9af81b1cf8dc957c94af6361bd16cd257a0b7058e18",
+  "publicKeySha256": "b6fd40aa830469fe9a616b44f1dd7bb064765db29097782701912b4a7ebf7db4",
+  "tests": {
+    "signed-standard": {
+      "passed": true,
+      "returncode": 0,
+      "checkOnly": true
+    },
+    "signed-ultra": {
+      "passed": true,
+      "returncode": 0,
+      "checkOnly": true
+    },
+    "wrong-hardware": {
+      "passed": true,
+      "returncode": 1,
+      "checkOnly": true
+    },
+    "tampered-payload": {
+      "passed": true,
+      "returncode": 1,
+      "checkOnly": true
+    },
+    "bad-signature": {
+      "passed": true,
+      "returncode": 1,
+      "checkOnly": true
+    },
+    "missing-signature": {
+      "passed": true,
+      "returncode": 1,
+      "checkOnly": true
+    }
+  },
+  "physicalHardwareTested": false
+}

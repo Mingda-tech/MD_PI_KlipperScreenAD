@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "file": "dependency-sources/openssl/openssl_3.0.2-0ubuntu1.30.dsc",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.30.dsc",
+      "sha256": "22b1c851fb5c229b27f497b1867e994ab2ad2f90d288d2dc3bd6eef15f6307bc"
+    },
+    {
+      "file": "dependency-sources/openssl/openssl_3.0.2.orig.tar.gz",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/o/openssl/openssl_3.0.2.orig.tar.gz",
+      "sha256": "98e91ccead4d4756ae3c9cde5e09191a8e586d9f4d50838e7ec09d6411dfdb63"
+    },
+    {
+      "file": "dependency-sources/openssl/openssl_3.0.2-0ubuntu1.30.debian.tar.xz",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.30.debian.tar.xz",
+      "sha256": "b2f4d75e1eba248397d8e4f4a029195ec3bb0e971b2e975594115a1c79b31c47"
+    },
+    {
+      "file": "dependency-sources/json-c/json-c_0.15-3~ubuntu1.22.04.2.dsc",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/j/json-c/json-c_0.15-3~ubuntu1.22.04.2.dsc",
+      "sha256": "61051e5f5400168799b5155befe2db34bfecd0950fa41eaa52db39eb67f18952"
+    },
+    {
+      "file": "dependency-sources/json-c/json-c_0.15.orig.tar.gz",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/j/json-c/json-c_0.15.orig.tar.gz",
+      "sha256": "4ba9a090a42cf1e12b84c64e4464bb6fb893666841d5843cc5bef90774028882"
+    },
+    {
+      "file": "dependency-sources/json-c/json-c_0.15-3~ubuntu1.22.04.2.debian.tar.xz",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/j/json-c/json-c_0.15-3~ubuntu1.22.04.2.debian.tar.xz",
+      "sha256": "c3a20d986ab56e0c453a1a4cab1cfc6750b155ce9bb82546897070e6c6991a01"
+    },
+    {
+      "file": "dependency-sources/libconfig/libconfig_1.5-0.4build1.dsc",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/universe/libc/libconfig/libconfig_1.5-0.4build1.dsc",
+      "sha256": "6dd4c4213e58085ec8ed396a392947e198e5c49af17d40ca08cb2ace7de41d0d"
+    },
+    {
+      "file": "dependency-sources/libconfig/libconfig_1.5.orig.tar.gz",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/universe/libc/libconfig/libconfig_1.5.orig.tar.gz",
+      "sha256": "e31daa390d8e4461c8830512fe2e13ba1a3d6a02a2305a02429eec61e68703f6"
+    },
+    {
+      "file": "dependency-sources/libconfig/libconfig_1.5-0.4build1.debian.tar.xz",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/universe/libc/libconfig/libconfig_1.5-0.4build1.debian.tar.xz",
+      "sha256": "ab5a7b6f2bdd19a3cd06a2ee79accb7c443064d10e17e10db6ec5e045c6d4dfe"
+    },
+    {
+      "file": "dependency-sources/libyaml/libyaml_0.2.2-1build2.dsc",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/liby/libyaml/libyaml_0.2.2-1build2.dsc",
+      "sha256": "69924ec5e8d7bc2b4a0e5d530c437af0b069b40a65527c6e587723f34da93d40"
+    },
+    {
+      "file": "dependency-sources/libyaml/libyaml_0.2.2.orig.tar.gz",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/liby/libyaml/libyaml_0.2.2.orig.tar.gz",
+      "sha256": "689ef3ebdecfa81f3789ccd2481acc81fc0f22f3f5c947eed95c4c0802e356b8"
+    },
+    {
+      "file": "dependency-sources/libyaml/libyaml_0.2.2-1build2.debian.tar.xz",
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/liby/libyaml/libyaml_0.2.2-1build2.debian.tar.xz",
+      "sha256": "ff6e1e630dc8620d6cabfd9f6dd78826ee13261c925626f9ff36941604387680"
+    }
+  ],
+  "libubootenvSourceSha256": "95b747e37661bd2e71a1ef34ecddf62af7a42a71459381e2599e8c7aac52770c"
+}

@@ -1992,3 +1992,297 @@ msgstr "Asendi kalibreerimine alles käivitub. Oota hetk ja proovi uuesti."
 
 msgid "Position Calibration"
 msgstr "Asendi kalibreerimine"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Leiti lõpetamata uuendus. Jätkamiseks värskenda olekut."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "Teine uuendus on käimas. Oota selle lõppemiseni."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Kas tühistada ebaõnnestunud uuendus? Ülesanne lõpetatakse paigaldatud muudatusi tagasi võtmata. Taastefailid säilitatakse. Kontrollige printerit enne kasutamist."
+
+msgid "Checking the signature and file integrity."
+msgstr "Kontrollitakse allkirja ja failide terviklust."
+
+msgid "Choose an update package"
+msgstr "Vali uuenduspakett"
+
+msgid "Component: %s"
+msgstr "Komponent: %s"
+
+msgid "Configuration changes"
+msgstr "Seadistuse muudatused"
+
+msgid "Continue"
+msgstr "Jätka"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "USB-mäluseadmelt kopeerimine ei lõppenud."
+
+msgid "Copying update package"
+msgstr "Uuenduspaketi kopeerimine"
+
+msgid "Could not read update status"
+msgstr "Uuenduse olekut ei saanud lugeda"
+
+msgid "Details"
+msgstr "Üksikasjad"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Ära lülita printerit välja. Püsivara kontrollitakse pärast kirjutamist."
+
+msgid "Error code: %s"
+msgstr "Veakood: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Uuendamise ajal ei tohi printer printida, olla pausil ega kalibreerida."
+
+msgid "Firmware"
+msgstr "Püsivara"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Sisesta USB-mäluseade ja vajuta „Skanni USB-mäluseadet“."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Kas paigaldada see uuendus? Paketti kuuluvad programmid ja püsivara uuendatakse. Hoia printer sisselülitatuna."
+
+msgid "Install update"
+msgstr "Paigalda uuendus"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "Paigaldamine on lõpetatud. Jätkake uuenduse taastamist, et lõpetada tulemuse salvestamine."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "Paigaldatud muudatusi ei võetud tagasi. Taastefailid säilitati. Kontrollige printerit enne kasutamist."
+
+msgid "Installing an older version is not allowed."
+msgstr "Vanema versiooni paigaldamine ei ole lubatud."
+
+msgid "Installing update"
+msgstr "Uuenduse paigaldamine"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Hoia USB-mäluseade ühendatuna kuni kopeerimise lõpuni."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Hoia printer sisselülitatuna ja vajuta jätkamiseks „Taasta uuendus“."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Hoia printer sisselülitatuna, kuni uuendatud programme kontrollitakse."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Hoia printer sisselülitatuna. Ekraan võib taaskäivituda."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "Ühendatud USB-mäluseadmetelt otsitakse .mdu-faile."
+
+msgid "No update package found"
+msgstr "Uuenduspaketti ei leitud"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Võrguühenduseta uuenduse failidel või kaustadel on ebaturvaline omanik või õigused."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Võrguühenduseta uuenduse ettevalmistus ei lõppenud. Kontrolli ekraanitarkvara paigaldust ja õigusi."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "Võrguühenduseta uuenduse ettevalmistus aegus. Ekraan proovib uuesti."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Võrguühenduseta uuenduse teenust ei saanud käivitada; paigalda abiprogramm ja kontrolli selle õigusi"
+
+msgid "Offline update service failed; refresh the status"
+msgstr "Võrguühenduseta uuenduse teenus nurjus; värskenda olekut"
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "Võrguühenduseta uuenduse teenus andis vigase vastuse; kontrolli selle paigaldust"
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "Võrguühenduseta uuendamise tugi puudub või ei käivitu"
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Enne uut katset ava põhjuse kontrollimiseks „Üksikasjad“."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "Paketi kontroll aegus. Kontrolli mäluseadet ja proovi uuesti."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Pane .mdu-fail USB-mäluseadme juurkausta või kausta MINGDA-Update ja skanni uuesti."
+
+msgid "Please wait for the current task status."
+msgstr "Oota praeguse ülesande oleku lugemist."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "Ettevalmistus pole lõppenud. Uuesti proovimiseks vajuta „Värskenda olekut“."
+
+msgid "Preparation on hold"
+msgstr "Ettevalmistus ootel"
+
+msgid "Preparing USB update"
+msgstr "USB-uuenduse ettevalmistamine"
+
+msgid "Press Refresh status to retry."
+msgstr "Uuesti proovimiseks vajuta „Värskenda olekut“."
+
+msgid "Programs"
+msgstr "Programmid"
+
+msgid "Reading update status"
+msgstr "Uuenduse oleku lugemine"
+
+msgid "Ready to install"
+msgstr "Paigaldamiseks valmis"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Kas taastada katkestatud uuendus? Hoia printer sisselülitatuna kuni taastamise lõpuni."
+
+msgid "Recover update"
+msgstr "Taasta uuendus"
+
+msgid "Recovery required"
+msgstr "Taastamine vajalik"
+
+msgid "Refresh status"
+msgstr "Värskenda olekut"
+
+msgid "Release: %s"
+msgstr "Väljalase: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "SWUpdate ei käivitunud. Kontrolli uuendusmootori paigaldust."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate lükkas paketi tagasi. Kontrolli allkirja, skriptiprotokolli ja faile."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate teatas paigaldusveast. Kontrolli taastamise olekut."
+
+msgid "Scan USB drive"
+msgstr "Skanni USB-mäluseadet"
+
+msgid "Scan again to choose another update package."
+msgstr "Teise uuenduspaketi valimiseks skanni uuesti."
+
+msgid "Scanning USB drives"
+msgstr "USB-mäluseadmete skannimine"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Vali printerisse kopeeritav ja kontrollitav fail."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Allkiri ja failid on kontrollitud. Süsteemi ja juhtplaate kontrollitakse pärast kinnitamist."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "SWUpdate'i mootor on ühildumatu või muutunud. Paigalda kontrollitud mootor uuesti."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "USB-mäluseade eemaldati enne kopeerimise lõppu."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "USB-mäluseadmel olev pakett on muutunud. Skanni seadet uuesti."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "Kaasasolevad võrguühenduseta uuenduse ressursid ei läbinud kontrolli."
+
+msgid "The installed version must be registered before updating."
+msgstr "Enne uuendamist tuleb paigaldatud versioon registreerida."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "Printer on pärast kontrollimist muutunud. Valmista pakett uuesti ette."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "Printeri olekut ei saa kinnitada. Kontrolli kohalikku ühendust."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "Taastamisskript nurjus. Vaja on hooldustoe abi."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "Ekraan valmistab selle funktsiooni automaatselt ette. Palun oota."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "Ekraani kasutaja vajab võrguühenduseta uuenduste ettevalmistamiseks paroolita õigusi."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "Ekraan proovib uuesti, kui printer ja olemasolevad uuendusülesanded on valmis."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "Uuendus on kontrollitud. Võid printerit kasutada."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "Uuendusprotsess peatus. Kontrolli taastamise olekut."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "Uuendus aegus. Ära kasuta printerit enne taastamise lõppu."
+
+msgid "The updated screen did not start correctly."
+msgstr "Uuendatud ekraanitarkvara ei käivitunud õigesti."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Selle uuenduse jaoks ei ole piisavalt sisemist salvestusruumi."
+
+msgid "This package does not match the registered release."
+msgstr "Pakett ei vasta registreeritud väljalaskele."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Pakett vajab teist uuendusvormingut või skriptiprotokolli."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Pakett vajab käsitsi taastamist. Võta ühendust hooldustoega."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Selle ekraanitarkvara väljalaskega pole selle CPU arhitektuuri uuenduskeskkonda kaasas."
+
+msgid "This screen release is missing offline update resources."
+msgstr "Sellest ekraanitarkvara väljalaskest puuduvad võrguühenduseta uuenduse ressursid."
+
+msgid "This screen release is missing the update verification key."
+msgstr "Sellest ekraanitarkvara väljalaskest puudub uuenduse kontrollvõti."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Ekraani uuenduspaketil puudub kehtiv taastamisskript."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Praeguses olekus ei saa uuendust tühistada. Värskendage olekut."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "Uuendusülesanne kasutab toetamata mootorit. Võta ühendust hooldustoega."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Lülita kuumutus välja ja lase printeril enne uuendamist jahtuda."
+
+msgid "USB Update"
+msgstr "USB-uuendus"
+
+msgid "USB update unavailable"
+msgstr "USB-uuendus pole saadaval"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Toetamata uuendusolek; uuenda ekraanitarkvara ja abiprogrammi koos"
+
+msgid "Update cancelled"
+msgstr "Uuendus tühistatud"
+
+msgid "Update complete"
+msgstr "Uuendus lõpetatud"
+
+msgid "Update from a USB drive"
+msgstr "Uuenda USB-mäluseadmelt"
+
+msgid "Update not completed"
+msgstr "Uuendus ei lõppenud"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "Uuenduse edenemist ei saanud kinnitada. Enne uut katset kontrolli taastamise olekut."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "Uuendusteenus aegus; enne uut katset värskenda olekut"
+
+msgid "Updating firmware"
+msgstr "Püsivara uuendamine"
+
+msgid "Verifying the result"
+msgstr "Tulemuse kontrollimine"
+
+msgid "Verifying update package"
+msgstr "Uuenduspaketi kontrollimine"

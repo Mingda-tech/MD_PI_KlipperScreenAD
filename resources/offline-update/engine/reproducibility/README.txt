@@ -1,0 +1,1 @@
+These scripts record the exact isolated developer build paths used on 2026-10-23. They are audit/reproduction evidence, not a printer installer. The existing production native-build guard is unchanged. This release uses cross-validated build metadata and has not been tested on physical printer hardware. The QEMU package checks execute no installation scripts.

@@ -1926,3 +1926,294 @@ msgstr "Konum kalibrasyonu hâlâ başlatılıyor. Biraz bekleyip tekrar deneyin
 
 msgid "Position Calibration"
 msgstr "Konum kalibrasyonu"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Tamamlanmamış bir güncelleme var. Devam etmek için durumu yenileyin."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "Başka bir güncelleme çalışıyor. Tamamlanmasını bekleyin."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Başarısız güncelleme iptal edilsin mi? Yüklenen değişiklikler geri alınmadan görev sonlandırılır. Kurtarma dosyaları saklanır. Kullanmadan önce yazıcıyı kontrol edin."
+
+msgid "Checking the signature and file integrity."
+msgstr "İmza ve dosya bütünlüğü kontrol ediliyor."
+
+msgid "Choose an update package"
+msgstr "Bir güncelleme paketi seçin"
+
+msgid "Component: %s"
+msgstr "Bileşen: %s"
+
+msgid "Configuration changes"
+msgstr "Yapılandırma değişiklikleri"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "USB sürücüsünden kopyalama tamamlanmadı."
+
+msgid "Copying update package"
+msgstr "Güncelleme paketi kopyalanıyor"
+
+msgid "Could not read update status"
+msgstr "Güncelleme durumu okunamadı"
+
+msgid "Details"
+msgstr "Ayrıntılar"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Yazıcıyı kapatmayın. Ürün yazılımı, yazma işleminden sonra doğrulanacaktır."
+
+msgid "Error code: %s"
+msgstr "Hata kodu: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Güncellemeden önce yazdırmayı, duraklatılmış işi veya kalibrasyonu tamamlayın."
+
+msgid "Firmware"
+msgstr "Ürün yazılımı"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Bir USB sürücüsü takın, ardından USB sürücüsünü tara düğmesine basın."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Bu güncelleme yüklensin mi? Pakette listelenen programlar ve ürün yazılımı güncellenecek. Yazıcıyı açık tutun."
+
+msgid "Install update"
+msgstr "Güncellemeyi yükle"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "Kurulum tamamlandı. Sonucu kaydetmeyi tamamlamak için güncellemeyi kurtarın."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "Yüklenen değişiklikler geri alınmadı. Kurtarma dosyaları saklandı. Kullanmadan önce yazıcıyı kontrol edin."
+
+msgid "Installing an older version is not allowed."
+msgstr "Daha eski bir sürümün yüklenmesine izin verilmiyor."
+
+msgid "Installing update"
+msgstr "Güncelleme yükleniyor"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Kopyalama bitene kadar USB sürücüsünü bağlı tutun."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Yazıcıyı açık tutun ve devam etmek için Güncellemeyi kurtar düğmesine basın."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Güncellenen programlar kontrol edilirken yazıcıyı açık tutun."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Yazıcıyı açık tutun. Ekran yeniden başlayabilir."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "Bağlı USB sürücülerinde .mdu dosyaları aranıyor."
+
+msgid "No update package found"
+msgstr "Güncelleme paketi bulunamadı"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Çevrimdışı güncelleme dosya veya dizinlerinin sahiplik ya da erişim izinleri güvenli değil."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Çevrimdışı güncelleme hazırlığı tamamlanamadı. Ekran programının kurulumunu ve izinlerini kontrol edin."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "Çevrimdışı güncelleme hazırlığı zaman aşımına uğradı. Ekran yeniden deneyecek."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Çevrimdışı güncelleme hizmeti başlatılamadı. Yardımcı programı yükleyin ve çalıştırma izinlerini kontrol edin."
+
+msgid "Offline update service failed; refresh the status"
+msgstr "Çevrimdışı güncelleme hizmeti başarısız oldu. Durumu yenileyin."
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "Çevrimdışı güncelleme hizmeti geçersiz bir yanıt döndürdü. Kurulumunu kontrol edin."
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "Çevrimdışı güncelleme desteği yüklü değil veya başlatılamıyor."
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Yeniden denemeden önce Ayrıntılar bölümünden nedeni kontrol edin."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "Paket doğrulaması zaman aşımına uğradı. Depolama aygıtını kontrol edip yeniden deneyin."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr ".mdu dosyasını USB sürücüsünün kök dizinine veya MINGDA-Update klasörüne koyup yeniden tarayın."
+
+msgid "Please wait for the current task status."
+msgstr "Geçerli işin durumunun okunmasını bekleyin."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "Hazırlık tamamlanmadı. Yeniden denemek için Durumu yenile düğmesine basın."
+
+msgid "Preparation on hold"
+msgstr "Hazırlık beklemede"
+
+msgid "Preparing USB update"
+msgstr "USB güncellemesi hazırlanıyor"
+
+msgid "Press Refresh status to retry."
+msgstr "Yeniden denemek için Durumu yenile düğmesine basın."
+
+msgid "Programs"
+msgstr "Programlar"
+
+msgid "Reading update status"
+msgstr "Güncelleme durumu okunuyor"
+
+msgid "Ready to install"
+msgstr "Güncelleme paketi doğrulandı"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Kesilen güncelleme kurtarılsın mı? Kurtarma tamamlanana kadar yazıcıyı açık tutun."
+
+msgid "Recover update"
+msgstr "Güncellemeyi kurtar"
+
+msgid "Recovery required"
+msgstr "Kurtarma gerekli"
+
+msgid "Refresh status"
+msgstr "Durumu yenile"
+
+msgid "Release: %s"
+msgstr "Sürüm: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "SWUpdate başlatılamadı. Güncelleme motorunun kurulumunu kontrol edin."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate bu paketi reddetti. İmzayı, betik protokolünü ve dosyaları kontrol edin."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate bir kurulum hatası bildirdi. Kurtarma durumunu inceleyin."
+
+msgid "Scan USB drive"
+msgstr "USB sürücüsünü tara"
+
+msgid "Scan again to choose another update package."
+msgstr "Başka bir güncelleme paketi seçmek için yeniden tarayın."
+
+msgid "Scanning USB drives"
+msgstr "USB sürücüleri taranıyor"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Dosyayı yazıcıya kopyalayıp doğrulamak için seçin."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "İmza ve dosyalar doğrulandı. Sistem ve kartlar onaydan sonra kontrol edilir."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "SWUpdate motoru uyumsuz veya değiştirilmiş. Doğrulanmış motoru yeniden yükleyin."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "Kopyalama tamamlanmadan USB sürücüsü çıkarıldı."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "USB sürücüsündeki paket değişti. Sürücüyü yeniden tarayın."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "Paketle gelen çevrimdışı güncelleme kaynakları doğrulanamadı."
+
+msgid "The installed version must be registered before updating."
+msgstr "Güncellemeden önce kurulu sürüm kaydedilmelidir."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "Doğrulamadan sonra yazıcının durumu değişti. Paketi yeniden hazırlayın."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "Yazıcının durumu doğrulanamıyor. Yerel bağlantıyı kontrol edin."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "Kurtarma betiği başarısız oldu. Servis desteği gerekiyor."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "Ekran bu özelliği otomatik olarak hazırlıyor. Lütfen bekleyin."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "Ekran kullanıcısının çevrimdışı güncellemeleri hazırlamak için parolasız yetkiye ihtiyacı var."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "Yazıcı ve mevcut güncelleme işleri hazır olduğunda ekran yeniden deneyecek."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "Güncelleme doğrulandı. Yazıcıyı kullanabilirsiniz."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "Güncelleme işlemi durdu. Kurtarma durumunu inceleyin."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "Güncelleme zaman aşımına uğradı. Kurtarma tamamlanana kadar yazıcıyı kullanmayın."
+
+msgid "The updated screen did not start correctly."
+msgstr "Güncellenen ekran programı düzgün başlamadı."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Bu güncelleme için yeterli dahili depolama alanı yok."
+
+msgid "This package does not match the registered release."
+msgstr "Bu paket kayıtlı sürümle eşleşmiyor."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Bu paket farklı bir güncelleme biçimi veya betik protokolü gerektiriyor."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Bu paket elle kurtarma gerektiriyor. Servis desteğiyle iletişime geçin."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Bu ekran sürümünde bu CPU mimarisi için güncelleme çalışma ortamı yok."
+
+msgid "This screen release is missing offline update resources."
+msgstr "Bu ekran sürümünde çevrimdışı güncelleme kaynakları eksik."
+
+msgid "This screen release is missing the update verification key."
+msgstr "Bu ekran sürümünde güncelleme doğrulama anahtarı eksik."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Bu ekran güncelleme paketinde geçerli bir kurtarma betiği yok."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Güncelleme mevcut durumda iptal edilemiyor. Durumu yenileyin."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "Bu güncelleme işi desteklenmeyen bir motor kullanıyor. Servis desteğiyle iletişime geçin."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Güncellemeden önce ısıtmayı kapatın ve yazıcının soğumasını bekleyin."
+
+msgid "USB Update"
+msgstr "USB güncellemesi"
+
+msgid "USB update unavailable"
+msgstr "USB güncellemesi kullanılamıyor"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Desteklenmeyen güncelleme durumu. Ekran ve yardımcı programı birlikte güncelleyin."
+
+msgid "Update cancelled"
+msgstr "Güncelleme iptal edildi"
+
+msgid "Update complete"
+msgstr "Güncelleme tamamlandı"
+
+msgid "Update from a USB drive"
+msgstr "USB sürücüsünden güncelle"
+
+msgid "Update not completed"
+msgstr "Güncelleme tamamlanmadı"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "Güncelleme ilerlemesi doğrulanamadı. Yeniden denemeden önce kurtarma durumunu kontrol edin."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "Güncelleme hizmeti zaman aşımına uğradı. Yeniden denemeden önce durumu yenileyin."
+
+msgid "Updating firmware"
+msgstr "Ürün yazılımı güncelleniyor"
+
+msgid "Verifying the result"
+msgstr "Sonuç doğrulanıyor"
+
+msgid "Verifying update package"
+msgstr "Güncelleme paketi doğrulanıyor"

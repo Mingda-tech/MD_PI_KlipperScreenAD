@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "schemaVersion": 2,
+    "scriptApi": 1,
+    "releaseId": "swupdate-demo-1",
+    "version": "1.0.0",
+    "description": "Package-owned script demonstration; writes only inside its task directory",
+    "components": [{"id": "demo", "version": "1.0.0", "sequence": 1, "installIfAbsent": true}],
+    "firmware": [],
+    "configChanges": [],
+    "touchesFirmware": false,
+    "touchesScreen": false,
+    "bootRescue": false,
+    "recoveryMode": "replay"
+  },
+  "script": "update.sh",
+  "sources": {"installer.py": "installer.py", "demo.txt": "demo.txt"}
+}

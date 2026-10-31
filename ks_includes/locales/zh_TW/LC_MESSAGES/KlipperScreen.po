@@ -1986,3 +1986,294 @@ msgstr "位置校準仍在初始化。請稍候片刻再重試。"
 
 msgid "Position Calibration"
 msgstr "位置校準"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "有尚未完成的更新。請重新整理狀態後繼續。"
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "另一項更新正在執行。請等候完成。"
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "取消此次失敗的更新？這會結束工作，但不會撤銷已安裝的變更。復原檔案將保留，使用前請檢查印表機。"
+
+msgid "Checking the signature and file integrity."
+msgstr "正在檢查簽章及檔案完整性。"
+
+msgid "Choose an update package"
+msgstr "選擇更新套件"
+
+msgid "Component: %s"
+msgstr "元件：%s"
+
+msgid "Configuration changes"
+msgstr "設定變更"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "未能完成從 USB 隨身碟複製檔案。"
+
+msgid "Copying update package"
+msgstr "正在複製更新套件"
+
+msgid "Could not read update status"
+msgstr "無法讀取更新狀態"
+
+msgid "Details"
+msgstr "詳細資訊"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "請勿關閉印表機電源。寫入後將驗證韌體。"
+
+msgid "Error code: %s"
+msgstr "錯誤代碼：%s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "請先結束列印、暫停的工作或校準，再進行更新。"
+
+msgid "Firmware"
+msgstr "韌體"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "插入 USB 隨身碟後，請點選「掃描 USB 隨身碟」。"
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "要安裝這項更新嗎？套件內列出的程式及韌體都將更新。請保持印表機電源開啟。"
+
+msgid "Install update"
+msgstr "安裝更新"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "安裝已經完成，請恢復更新以完成結果登記。"
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "已安裝的變更未被撤銷，復原檔案已保留。使用前請檢查印表機。"
+
+msgid "Installing an older version is not allowed."
+msgstr "不允許安裝較舊的版本。"
+
+msgid "Installing update"
+msgstr "正在安裝更新"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "複製完成前，請保持 USB 隨身碟連接。"
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "請保持印表機電源開啟，並點選「復原更新」繼續。"
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "檢查更新後的程式時，請保持印表機電源開啟。"
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "請保持印表機電源開啟。螢幕程式可能會重新啟動。"
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "正在搜尋已連接 USB 隨身碟中的 .mdu 檔案。"
+
+msgid "No update package found"
+msgstr "找不到更新套件"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "離線更新檔案或目錄的擁有者或權限設定不安全。"
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "無法完成離線更新準備。請檢查螢幕程式的安裝及權限。"
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "離線更新準備逾時。螢幕程式將重試。"
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "無法啟動離線更新服務。請安裝輔助程式並檢查其執行權限。"
+
+msgid "Offline update service failed; refresh the status"
+msgstr "離線更新服務失敗，請重新整理狀態。"
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "離線更新服務傳回無效回應，請檢查安裝是否正確。"
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "離線更新功能尚未安裝，或無法啟動。"
+
+msgid "Open Details to check the cause before trying again."
+msgstr "重試前，請開啟詳細資訊確認原因。"
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "更新套件驗證逾時。請檢查儲存裝置後重試。"
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "請將 .mdu 檔案放在 USB 隨身碟根目錄或 MINGDA-Update 資料夾，再重新掃描。"
+
+msgid "Please wait for the current task status."
+msgstr "請稍候，正在讀取目前工作狀態。"
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "準備尚未完成。請點選「重新整理狀態」重試。"
+
+msgid "Preparation on hold"
+msgstr "等候準備條件"
+
+msgid "Preparing USB update"
+msgstr "正在準備 USB 更新"
+
+msgid "Press Refresh status to retry."
+msgstr "請點選「重新整理狀態」重試。"
+
+msgid "Programs"
+msgstr "程式"
+
+msgid "Reading update status"
+msgstr "正在讀取更新狀態"
+
+msgid "Ready to install"
+msgstr "更新套件已驗證"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "要復原中斷的更新嗎？復原完成前，請保持印表機電源開啟。"
+
+msgid "Recover update"
+msgstr "復原更新"
+
+msgid "Recovery required"
+msgstr "需要復原"
+
+msgid "Refresh status"
+msgstr "重新整理狀態"
+
+msgid "Release: %s"
+msgstr "發行版本：%s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "無法啟動 SWUpdate。請檢查更新引擎的安裝。"
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate 拒絕此套件。請檢查簽章、指令碼協定及檔案。"
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate 回報安裝失敗。請檢查復原狀態。"
+
+msgid "Scan USB drive"
+msgstr "掃描 USB 隨身碟"
+
+msgid "Scan again to choose another update package."
+msgstr "請重新掃描，選擇其他更新套件。"
+
+msgid "Scanning USB drives"
+msgstr "正在掃描 USB 隨身碟"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "選擇檔案後，將複製到印表機並進行驗證。"
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "簽章及檔案驗證通過，確認安裝後將檢查系統與電路板。"
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "SWUpdate 引擎不相容或已遭修改。請重新安裝經驗證的引擎。"
+
+msgid "The USB drive was removed before copying finished."
+msgstr "複製尚未完成，USB 隨身碟便已拔除。"
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "USB 隨身碟中的套件已變更。請重新掃描。"
+
+msgid "The bundled offline update resources failed verification."
+msgstr "隨附的離線更新資源未通過驗證。"
+
+msgid "The installed version must be registered before updating."
+msgstr "更新前必須先登記已安裝的版本。"
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "驗證後，印表機狀態已變更。請重新準備套件。"
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "無法確認印表機狀態。請檢查本機連線。"
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "復原指令碼執行失敗，需要維修支援。"
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "螢幕程式正在自動準備此功能，請稍候。"
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "螢幕程式的執行帳號需要免密碼權限，才能準備離線更新。"
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "當印表機及現有更新工作準備就緒後，螢幕程式將重試。"
+
+msgid "The update has been verified. You can use the printer."
+msgstr "更新已通過驗證，可以使用印表機。"
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "更新程序已停止。請檢查復原狀態。"
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "更新逾時。復原完成前，請勿使用印表機。"
+
+msgid "The updated screen did not start correctly."
+msgstr "更新後的螢幕程式未正常啟動。"
+
+msgid "There is not enough internal storage for this update."
+msgstr "內部儲存空間不足，無法進行此更新。"
+
+msgid "This package does not match the registered release."
+msgstr "此套件與已登記的發行版本不符。"
+
+msgid "This package requires a different update format or script protocol."
+msgstr "此套件需要不同的更新格式或指令碼協定。"
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "此套件需要手動復原，請聯絡維修支援。"
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "此螢幕版本未提供適用於此 CPU 架構的更新執行環境。"
+
+msgid "This screen release is missing offline update resources."
+msgstr "此螢幕版本缺少離線更新資源。"
+
+msgid "This screen release is missing the update verification key."
+msgstr "此螢幕版本缺少更新驗證金鑰。"
+
+msgid "This screen update package has no valid recovery script."
+msgstr "此螢幕更新套件沒有有效的復原指令碼。"
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "目前狀態無法取消更新，請重新整理狀態。"
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "此更新工作使用不支援的引擎，請聯絡維修支援。"
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "請先關閉加熱，並待印表機冷卻後再更新。"
+
+msgid "USB Update"
+msgstr "USB 更新"
+
+msgid "USB update unavailable"
+msgstr "USB 更新暫時無法使用"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "不支援的更新狀態，請一併更新螢幕程式及輔助程式。"
+
+msgid "Update cancelled"
+msgstr "更新已取消"
+
+msgid "Update complete"
+msgstr "更新完成"
+
+msgid "Update from a USB drive"
+msgstr "從 USB 隨身碟安裝更新"
+
+msgid "Update not completed"
+msgstr "更新未完成"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "無法確認更新進度。重試前，請檢查復原狀態。"
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "更新服務回應逾時，請重新整理狀態後再試。"
+
+msgid "Updating firmware"
+msgstr "正在更新韌體"
+
+msgid "Verifying the result"
+msgstr "正在驗證結果"
+
+msgid "Verifying update package"
+msgstr "正在驗證更新套件"

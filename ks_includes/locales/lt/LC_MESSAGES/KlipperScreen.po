@@ -1832,3 +1832,297 @@ msgstr "Padėties kalibravimas vis dar inicijuojamas. Palaukite ir bandykite dar
 
 msgid "Position Calibration"
 msgstr "Padėties kalibravimas"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Yra neužbaigtas naujinimas. Atnaujinkite būseną, kad tęstumėte."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "Vykdomas kitas naujinimas. Palaukite, kol jis bus baigtas."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Atšaukti šį nepavykusį naujinimą? Užduotis bus baigta neatšaukiant įdiegtų pakeitimų. Atkūrimo failai bus išsaugoti. Prieš naudodami patikrinkite spausdintuvą."
+
+msgid "Checking the signature and file integrity."
+msgstr "Tikrinamas parašas ir failų vientisumas."
+
+msgid "Choose an update package"
+msgstr "Pasirinkite naujinimo paketą"
+
+msgid "Component: %s"
+msgstr "Komponentas: %s"
+
+msgid "Configuration changes"
+msgstr "Konfigūracijos pakeitimai"
+
+msgid "Continue"
+msgstr "Tęsti"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "Kopijavimas iš USB laikmenos nebaigtas."
+
+msgid "Copying update package"
+msgstr "Kopijuojamas naujinimo paketas"
+
+msgid "Could not read update status"
+msgstr "Nepavyko perskaityti naujinimo būsenos"
+
+msgid "Details"
+msgstr "Išsamiau"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Neišjunkite spausdintuvo. Įrašius bus patikrinta mikroprograma."
+
+msgid "Error code: %s"
+msgstr "Klaidos kodas: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Prieš naujindami užbaikite spausdinimą, pristabdytą darbą ar kalibravimą."
+
+msgid "Firmware"
+msgstr "Mikroprograma"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Prijunkite USB laikmeną ir paspauskite „Ieškoti USB laikmenoje“."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Įdiegti šį naujinimą? Bus atnaujintos pakete nurodytos programos ir mikroprogramos. Neišjunkite spausdintuvo."
+
+msgid "Install update"
+msgstr "Įdiegti naujinimą"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "Diegimas baigtas. Tęskite naujinimo atkūrimą, kad baigtumėte išsaugoti rezultatą."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "Įdiegti pakeitimai neatšaukti. Atkūrimo failai išsaugoti. Prieš naudodami patikrinkite spausdintuvą."
+
+msgid "Installing an older version is not allowed."
+msgstr "Senesnės versijos įdiegti negalima."
+
+msgid "Installing update"
+msgstr "Diegiamas naujinimas"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Neatjunkite USB laikmenos, kol kopijavimas nesibaigs."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Neišjunkite spausdintuvo ir paspauskite „Atkurti naujinimą“, kad tęstumėte."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Neišjunkite spausdintuvo, kol tikrinamos atnaujintos programos."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Neišjunkite spausdintuvo. Ekranas gali būti paleistas iš naujo."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "Prijungtose USB laikmenose ieškoma .mdu failų."
+
+msgid "No update package found"
+msgstr "Naujinimo paketas nerastas"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Nesaugi neprisijungus vykdomo naujinimo failų ar katalogų nuosavybė arba prieigos teisės."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Nepavyko paruošti naujinimo neprisijungus. Patikrinkite ekrano programos diegimą ir prieigos teises."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "Naujinimo neprisijungus paruošimo laikas baigėsi. Ekranas bandys dar kartą."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Nepavyko paleisti naujinimo neprisijungus tarnybos. Įdiekite pagalbinę programą ir patikrinkite jos vykdymo teises."
+
+msgid "Offline update service failed; refresh the status"
+msgstr "Naujinimo neprisijungus tarnybos klaida. Atnaujinkite būseną."
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "Naujinimo neprisijungus tarnyba grąžino netinkamą atsakymą. Patikrinkite jos diegimą."
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "Naujinimo neprisijungus funkcija neįdiegta arba jos nepavyksta paleisti."
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Prieš bandydami dar kartą atverkite išsamią informaciją ir patikrinkite priežastį."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "Paketo tikrinimo laikas baigėsi. Patikrinkite laikmeną ir bandykite dar kartą."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Įdėkite .mdu failą į USB laikmenos šakninį katalogą arba MINGDA-Update aplanką ir ieškokite dar kartą."
+
+msgid "Please wait for the current task status."
+msgstr "Palaukite, kol bus perskaityta dabartinės užduoties būsena."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "Paruošimas nebaigtas. Paspauskite „Atnaujinti būseną“, kad bandytumėte dar kartą."
+
+msgid "Preparation on hold"
+msgstr "Paruošimas pristabdytas"
+
+msgid "Preparing USB update"
+msgstr "Ruošiamas naujinimas iš USB"
+
+msgid "Press Refresh status to retry."
+msgstr "Paspauskite „Atnaujinti būseną“, kad bandytumėte dar kartą."
+
+msgid "Programs"
+msgstr "Programos"
+
+msgid "Reading update status"
+msgstr "Skaitoma naujinimo būsena"
+
+msgid "Ready to install"
+msgstr "Naujinimo paketas patikrintas"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Atkurti nutrauktą naujinimą? Neišjunkite spausdintuvo, kol atkūrimas nesibaigs."
+
+msgid "Recover update"
+msgstr "Atkurti naujinimą"
+
+msgid "Recovery required"
+msgstr "Reikia atkurti"
+
+msgid "Refresh status"
+msgstr "Atnaujinti būseną"
+
+msgid "Release: %s"
+msgstr "Leidimas: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "Nepavyko paleisti SWUpdate. Patikrinkite naujinimo variklio diegimą."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate atmetė paketą. Patikrinkite jo parašą, scenarijaus protokolą ir failus."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate pranešė apie diegimo klaidą. Patikrinkite atkūrimo būseną."
+
+msgid "Scan USB drive"
+msgstr "Ieškoti USB laikmenoje"
+
+msgid "Scan again to choose another update package."
+msgstr "Ieškokite dar kartą, kad pasirinktumėte kitą naujinimo paketą."
+
+msgid "Scanning USB drives"
+msgstr "Ieškoma USB laikmenose"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Pasirinkite failą, kad jis būtų nukopijuotas į spausdintuvą ir patikrintas."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Parašas ir failai patikrinti. Sistema ir plokštės bus tikrinamos po patvirtinimo."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "SWUpdate variklis nesuderinamas arba pakeistas. Iš naujo įdiekite patikrintą variklį."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "USB laikmena atjungta dar nesibaigus kopijavimui."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "USB laikmenoje esantis paketas pasikeitė. Ieškokite laikmenoje dar kartą."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "Nepavyko patikrinti pridėtų naujinimo neprisijungus išteklių."
+
+msgid "The installed version must be registered before updating."
+msgstr "Prieš naujinant reikia užregistruoti įdiegtą versiją."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "Po patikrinimo spausdintuvo būsena pasikeitė. Paruoškite paketą dar kartą."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "Nepavyksta nustatyti spausdintuvo būsenos. Patikrinkite vietinį ryšį."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "Atkūrimo scenarijus nepavyko. Reikia techninės pagalbos."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "Ekranas automatiškai ruošia šią funkciją. Palaukite."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "Ekrano naudotojui reikia teisės be slaptažodžio paruošti naujinimus neprisijungus."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "Ekranas bandys dar kartą, kai spausdintuvas ir esamos naujinimo užduotys bus paruošti."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "Naujinimas patikrintas. Galite naudoti spausdintuvą."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "Naujinimo procesas sustojo. Patikrinkite atkūrimo būseną."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "Naujinimo laikas baigėsi. Nenaudokite spausdintuvo, kol atkūrimas nebus baigtas."
+
+msgid "The updated screen did not start correctly."
+msgstr "Atnaujinta ekrano programa nepasileido tinkamai."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Šiam naujinimui nepakanka vidinės atminties vietos."
+
+msgid "This package does not match the registered release."
+msgstr "Šis paketas neatitinka užregistruoto leidimo."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Šiam paketui reikia kito naujinimo formato arba scenarijaus protokolo."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Šį paketą reikia atkurti rankiniu būdu. Kreipkitės į techninę pagalbą."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Šiame ekrano leidime nėra šios CPU architektūros naujinimo vykdymo aplinkos."
+
+msgid "This screen release is missing offline update resources."
+msgstr "Šiame ekrano leidime trūksta naujinimo neprisijungus išteklių."
+
+msgid "This screen release is missing the update verification key."
+msgstr "Šiame ekrano leidime trūksta naujinimo patikros rakto."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Šis ekrano naujinimo paketas neturi tinkamo atkūrimo scenarijaus."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Dabartinės būsenos naujinimo atšaukti negalima. Atnaujinkite būseną."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "Ši naujinimo užduotis naudoja nepalaikomą variklį. Kreipkitės į techninę pagalbą."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Prieš naujindami išjunkite šildymą ir leiskite spausdintuvui atvėsti."
+
+msgid "USB Update"
+msgstr "Naujinimas iš USB"
+
+msgid "USB update unavailable"
+msgstr "Naujinimas iš USB nepasiekiamas"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Nepalaikoma naujinimo būsena. Atnaujinkite ekrano ir pagalbinę programas kartu."
+
+msgid "Update cancelled"
+msgstr "Naujinimas atšauktas"
+
+msgid "Update complete"
+msgstr "Naujinimas baigtas"
+
+msgid "Update from a USB drive"
+msgstr "Naujinti iš USB laikmenos"
+
+msgid "Update not completed"
+msgstr "Naujinimas nebaigtas"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "Nepavyksta nustatyti naujinimo eigos. Prieš bandydami dar kartą patikrinkite atkūrimo būseną."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "Naujinimo tarnybos atsakymo laikas baigėsi. Prieš bandydami dar kartą atnaujinkite būseną."
+
+msgid "Updating firmware"
+msgstr "Naujinama mikroprograma"
+
+msgid "Verifying the result"
+msgstr "Tikrinamas rezultatas"
+
+msgid "Verifying update package"
+msgstr "Tikrinamas naujinimo paketas"

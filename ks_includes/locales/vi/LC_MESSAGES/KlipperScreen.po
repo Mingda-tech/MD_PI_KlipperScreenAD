@@ -2059,3 +2059,297 @@ msgstr "Hiệu chuẩn vị trí vẫn đang khởi tạo. Hãy đợi một lá
 
 msgid "Position Calibration"
 msgstr "Hiệu chuẩn vị trí"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Có bản cập nhật chưa hoàn tất. Hãy làm mới trạng thái để tiếp tục."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "Đang có bản cập nhật khác chạy. Hãy chờ đến khi hoàn tất."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Hủy bản cập nhật bị lỗi này? Tác vụ sẽ kết thúc mà không hoàn tác các thay đổi đã cài đặt. Các tệp khôi phục sẽ được giữ lại. Kiểm tra máy in trước khi sử dụng."
+
+msgid "Checking the signature and file integrity."
+msgstr "Đang kiểm tra chữ ký và tính toàn vẹn của tệp."
+
+msgid "Choose an update package"
+msgstr "Chọn gói cập nhật"
+
+msgid "Component: %s"
+msgstr "Thành phần: %s"
+
+msgid "Configuration changes"
+msgstr "Thay đổi cấu hình"
+
+msgid "Continue"
+msgstr "Tiếp tục"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "Chưa sao chép xong từ ổ USB."
+
+msgid "Copying update package"
+msgstr "Đang sao chép gói cập nhật"
+
+msgid "Could not read update status"
+msgstr "Không đọc được trạng thái cập nhật"
+
+msgid "Details"
+msgstr "Chi tiết"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Không tắt máy in. Phần mềm điều khiển sẽ được xác minh sau khi ghi."
+
+msgid "Error code: %s"
+msgstr "Mã lỗi: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Hãy kết thúc việc in, tác vụ đang tạm dừng hoặc hiệu chuẩn trước khi cập nhật."
+
+msgid "Firmware"
+msgstr "Phần mềm điều khiển"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Cắm ổ USB rồi nhấn Quét ổ USB."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Cài đặt bản cập nhật này? Các chương trình và phần mềm điều khiển trong gói sẽ được cập nhật. Hãy giữ máy in bật nguồn."
+
+msgid "Install update"
+msgstr "Cài đặt bản cập nhật"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "Cài đặt đã hoàn tất. Hãy khôi phục cập nhật để hoàn tất việc lưu kết quả."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "Các thay đổi đã cài đặt chưa được hoàn tác. Các tệp khôi phục đã được giữ lại. Kiểm tra máy in trước khi sử dụng."
+
+msgid "Installing an older version is not allowed."
+msgstr "Không được phép cài đặt phiên bản cũ hơn."
+
+msgid "Installing update"
+msgstr "Đang cài đặt bản cập nhật"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Giữ ổ USB kết nối cho đến khi sao chép xong."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Giữ máy in bật nguồn rồi nhấn Khôi phục cập nhật để tiếp tục."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Giữ máy in bật nguồn trong khi kiểm tra các chương trình đã cập nhật."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Giữ máy in bật nguồn. Màn hình có thể khởi động lại."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "Đang tìm tệp .mdu trên các ổ USB đã kết nối."
+
+msgid "No update package found"
+msgstr "Không tìm thấy gói cập nhật"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Tệp hoặc thư mục cập nhật ngoại tuyến có chủ sở hữu hay quyền truy cập không an toàn."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Không chuẩn bị xong bản cập nhật ngoại tuyến. Hãy kiểm tra việc cài đặt và quyền truy cập của phần mềm màn hình."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "Đã hết thời gian chuẩn bị cập nhật ngoại tuyến. Màn hình sẽ thử lại."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Không khởi động được dịch vụ cập nhật ngoại tuyến. Hãy cài chương trình hỗ trợ và kiểm tra quyền thực thi."
+
+msgid "Offline update service failed; refresh the status"
+msgstr "Dịch vụ cập nhật ngoại tuyến gặp lỗi. Hãy làm mới trạng thái."
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "Dịch vụ cập nhật ngoại tuyến trả về phản hồi không hợp lệ. Hãy kiểm tra việc cài đặt."
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "Chức năng cập nhật ngoại tuyến chưa được cài đặt hoặc không khởi động được."
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Mở Chi tiết để kiểm tra nguyên nhân trước khi thử lại."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "Đã hết thời gian xác minh gói. Hãy kiểm tra thiết bị lưu trữ rồi thử lại."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Đặt tệp .mdu trong thư mục gốc của ổ USB hoặc thư mục MINGDA-Update rồi quét lại."
+
+msgid "Please wait for the current task status."
+msgstr "Hãy chờ đọc trạng thái tác vụ hiện tại."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "Chưa chuẩn bị xong. Nhấn Làm mới trạng thái để thử lại."
+
+msgid "Preparation on hold"
+msgstr "Đang chờ chuẩn bị"
+
+msgid "Preparing USB update"
+msgstr "Đang chuẩn bị cập nhật qua USB"
+
+msgid "Press Refresh status to retry."
+msgstr "Nhấn Làm mới trạng thái để thử lại."
+
+msgid "Programs"
+msgstr "Chương trình"
+
+msgid "Reading update status"
+msgstr "Đang đọc trạng thái cập nhật"
+
+msgid "Ready to install"
+msgstr "Đã xác minh gói cập nhật"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Khôi phục bản cập nhật bị gián đoạn? Hãy giữ máy in bật nguồn cho đến khi khôi phục xong."
+
+msgid "Recover update"
+msgstr "Khôi phục cập nhật"
+
+msgid "Recovery required"
+msgstr "Cần khôi phục"
+
+msgid "Refresh status"
+msgstr "Làm mới trạng thái"
+
+msgid "Release: %s"
+msgstr "Bản phát hành: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "Không khởi động được SWUpdate. Hãy kiểm tra việc cài đặt công cụ cập nhật."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate từ chối gói này. Hãy kiểm tra chữ ký, giao thức tập lệnh và các tệp."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate báo lỗi cài đặt. Hãy kiểm tra trạng thái khôi phục."
+
+msgid "Scan USB drive"
+msgstr "Quét ổ USB"
+
+msgid "Scan again to choose another update package."
+msgstr "Quét lại để chọn gói cập nhật khác."
+
+msgid "Scanning USB drives"
+msgstr "Đang quét các ổ USB"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Chọn tệp để sao chép vào máy in và xác minh."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Đã xác minh chữ ký và các tệp. Hệ thống và bo mạch sẽ được kiểm tra sau khi xác nhận."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "Công cụ SWUpdate không tương thích hoặc đã bị thay đổi. Hãy cài lại công cụ đã được xác minh."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "Ổ USB đã bị rút trước khi sao chép xong."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "Gói trên ổ USB đã thay đổi. Hãy quét lại ổ USB."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "Không xác minh được các tài nguyên cập nhật ngoại tuyến đi kèm."
+
+msgid "The installed version must be registered before updating."
+msgstr "Cần đăng ký phiên bản đang cài đặt trước khi cập nhật."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "Trạng thái máy in đã thay đổi sau khi xác minh. Hãy chuẩn bị lại gói."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "Không xác nhận được trạng thái máy in. Hãy kiểm tra kết nối cục bộ."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "Tập lệnh khôi phục gặp lỗi. Cần hỗ trợ kỹ thuật."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "Màn hình đang tự động chuẩn bị chức năng này. Vui lòng chờ."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "Tài khoản chạy màn hình cần quyền không yêu cầu mật khẩu để chuẩn bị cập nhật ngoại tuyến."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "Màn hình sẽ thử lại khi máy in và các tác vụ cập nhật hiện có sẵn sàng."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "Đã xác minh bản cập nhật. Bạn có thể sử dụng máy in."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "Tiến trình cập nhật đã dừng. Hãy kiểm tra trạng thái khôi phục."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "Đã hết thời gian cập nhật. Không sử dụng máy in cho đến khi khôi phục hoàn tất."
+
+msgid "The updated screen did not start correctly."
+msgstr "Phần mềm màn hình sau cập nhật không khởi động đúng cách."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Không đủ dung lượng lưu trữ bên trong cho bản cập nhật này."
+
+msgid "This package does not match the registered release."
+msgstr "Gói này không khớp với bản phát hành đã đăng ký."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Gói này cần định dạng cập nhật hoặc giao thức tập lệnh khác."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Gói này cần được khôi phục thủ công. Hãy liên hệ bộ phận hỗ trợ kỹ thuật."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Phiên bản phần mềm màn hình này không có môi trường thực thi cập nhật cho kiến trúc CPU này."
+
+msgid "This screen release is missing offline update resources."
+msgstr "Phiên bản phần mềm màn hình này thiếu tài nguyên cập nhật ngoại tuyến."
+
+msgid "This screen release is missing the update verification key."
+msgstr "Phiên bản phần mềm màn hình này thiếu khóa xác minh cập nhật."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Gói cập nhật màn hình này không có tập lệnh khôi phục hợp lệ."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Không thể hủy cập nhật ở trạng thái hiện tại. Hãy làm mới trạng thái."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "Tác vụ cập nhật này dùng công cụ không được hỗ trợ. Hãy liên hệ bộ phận hỗ trợ kỹ thuật."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Tắt gia nhiệt và để máy in nguội trước khi cập nhật."
+
+msgid "USB Update"
+msgstr "Cập nhật qua USB"
+
+msgid "USB update unavailable"
+msgstr "Không thể cập nhật qua USB"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Trạng thái cập nhật không được hỗ trợ. Hãy cập nhật phần mềm màn hình và chương trình hỗ trợ cùng lúc."
+
+msgid "Update cancelled"
+msgstr "Đã hủy cập nhật"
+
+msgid "Update complete"
+msgstr "Cập nhật hoàn tất"
+
+msgid "Update from a USB drive"
+msgstr "Cập nhật từ ổ USB"
+
+msgid "Update not completed"
+msgstr "Cập nhật chưa hoàn tất"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "Không xác nhận được tiến độ cập nhật. Hãy kiểm tra trạng thái khôi phục trước khi thử lại."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "Dịch vụ cập nhật phản hồi quá thời gian cho phép. Hãy làm mới trạng thái trước khi thử lại."
+
+msgid "Updating firmware"
+msgstr "Đang cập nhật phần mềm điều khiển"
+
+msgid "Verifying the result"
+msgstr "Đang xác minh kết quả"
+
+msgid "Verifying update package"
+msgstr "Đang xác minh gói cập nhật"

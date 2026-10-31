@@ -30,6 +30,8 @@ from ks_includes.multi_material import SWITCH_DATA_OBJECT, get_feeder_sensors
 from ks_includes.widgets.keyboard import Keyboard
 from ks_includes.config import KlipperScreenConfig
 from ks_includes.device_lock import DeviceLockSocketClient, DeviceLockStateReader
+from ks_includes.offline_update_client import OfflineUpdateClient, needs_attention
+from ks_includes.offline_update_runtime import get_offline_update_runtime
 from ks_includes.ai_detection_result import (
     canonical_defect_type,
     current_auto_pause_fault,
@@ -217,6 +219,80 @@ class KlipperScreen(Gtk.Window):
         self.klippy_config_path = None
         self.klippy_config = None
         self.is_show_manual = True
+        GLib.timeout_add_seconds(2, self._check_offline_update_status)
+
+    def _check_offline_update_status(self):
+        runtime = get_offline_update_runtime(self, GLib)
+        if not getattr(self, '_offline_update_startup_subscribed', False):
+            runtime.subscribe(self._offline_update_runtime_changed)
+            self._offline_update_startup_subscribed = True
+        runtime.ensure()
+        # Read unfinished tasks even when runtime synchronization is deferred.
+        # Installation and recovery always require confirmation in the panel.
+        self._read_offline_update_status()
+        return False
+
+    def _offline_update_runtime_changed(self, state):
+        if state['runtimeState'] != 'CHECKING':
+            self._read_offline_update_status()
+
+    def _read_offline_update_status(self):
+        runtime = get_offline_update_runtime(self, GLib)
+        if not runtime.helper_available() or getattr(self, '_offline_update_status_inflight', False):
+            return
+        self._offline_update_status_inflight = True
+
+        def request():
+            try:
+                status = OfflineUpdateClient().request('status')
+            except Exception:
+                logging.info('Offline update status is unavailable at startup')
+                status = None
+            GLib.idle_add(self._offline_update_status_received, status)
+        threading.Thread(target=request, daemon=True).start()
+
+    def _offline_update_status_received(self, status):
+        self._offline_update_status_inflight = False
+        if status is not None:
+            self._show_offline_update_status(status)
+        return False
+
+    def _show_offline_update_status(self, status):
+        if needs_attention(status) and not self._usb_update_open():
+            self.show_panel('usb_update', _('USB Update'))
+        return False
+
+    def _usb_update_open(self):
+        return bool(self._cur_panels and self._cur_panels[-1] == 'usb_update')
+
+    def _restore_printer_state_after_usb(self):
+        self._usb_update_restore_queued = False
+        if (not (getattr(self, '_usb_update_state_deferred', False)
+                 or getattr(self, '_usb_update_startup_deferred', False)) or self._usb_update_open()):
+            return False
+        if not getattr(self, '_usb_update_state_deferred', False):
+            update = self.panels.get('usb_update')
+            if needs_attention(getattr(update, 'status', {})) or getattr(self.printer, 'busy', False):
+                return False
+        self._usb_update_state_deferred = False
+        self._usb_update_startup_deferred = False
+        if not self.printer or not self._cur_panels or self._cur_panels[-1] == 'printer_select':
+            return False
+        # A restart or a print may have changed the state while this page was open.
+        state = self.printer.state
+        if state == 'ready':
+            self.state_ready(wait=False, run_startup_actions=not self.printer.busy)
+            if not self.initialized:
+                self._usb_update_state_deferred = True
+        elif state == 'not ready' and not self.initialized:
+            self._usb_update_state_deferred = True
+        elif state in self.printer.state_callbacks:
+            if state in ('printing', 'paused') and self._cur_panels[-1] in ('job_status', 'extrude'):
+                return False
+            callback = self.printer.state_callbacks[state]
+            if callback is not None:
+                callback()
+        return False
 
     def _poll_device_lock_state(self):
         try:
@@ -598,6 +674,11 @@ class KlipperScreen(Gtk.Window):
         if hasattr(self.panels[panel], "activate"):
             self.panels[panel].activate()
         self.show_all()
+        if (panel != 'usb_update' and not getattr(self, '_usb_update_restore_queued', False)
+                and (getattr(self, '_usb_update_state_deferred', False)
+                     or getattr(self, '_usb_update_startup_deferred', False))):
+            GLib.idle_add(self._restore_printer_state_after_usb)
+            self._usb_update_restore_queued = True
 
     def log_notification(self, message, level=0):
         time = datetime.now().strftime("%H:%M:%S")
@@ -1207,9 +1288,12 @@ class KlipperScreen(Gtk.Window):
         self._show_ai_detection_dialog(result)
         return False
 
-    def state_ready(self, wait=True):
+    def state_ready(self, wait=True, run_startup_actions=True):
         self._invalidate_ai_detection_status_request()
         self._close_ai_detection_dialog()
+        if self._usb_update_open():
+            self._usb_update_state_deferred = True
+            return
         # Do not return to main menu if completing a job, timeouts/user input will return
         if "job_status" in self._cur_panels and wait:
             return
@@ -1217,7 +1301,20 @@ class KlipperScreen(Gtk.Window):
             logging.debug("Printer not initialized yet")
             self.printer.state = "not ready"
             return
+        self._usb_update_state_deferred = False
+        self._usb_update_startup_deferred = False
         self.show_panel("main_menu", None, remove_all=True, items=self._config.get_menu_items("__main"))
+
+        self.load_klipper_config()
+        if self.klippy_config is not None and self.setup_init == 0:
+            self.setup_init = self.klippy_config.getint("Variables", "setup_step", fallback=0)
+        self.on_feed_filament_autofill = self._config.get_main_config().getboolean("feed_filament_autofill", fallback=False)
+
+        update = self.panels.get('usb_update')
+        if not run_startup_actions or needs_attention(getattr(update, 'status', {})):
+            # Keep startup heating, self-check and macros deferred during an update.
+            self._usb_update_startup_deferred = True
+            return
 
         #bed mesh
         bm = self.printer.get_stat("bed_mesh")
@@ -1227,10 +1324,6 @@ class KlipperScreen(Gtk.Window):
             if pn == "" and 'default' in ps:
                 script = 'BED_MESH_PROFILE LOAD="default"'
                 self._ws.klippy.gcode_script(script)
-
-        self.load_klipper_config()
-        if self.klippy_config is not None and self.setup_init == 0:
-            self.setup_init = self.klippy_config.getint("Variables", "setup_step", fallback=0)
 
         if self.setup_init == 1:
             if self.check_image_files():
@@ -1242,7 +1335,6 @@ class KlipperScreen(Gtk.Window):
             self.show_panel("self_check", _("Self-check"), remove_all=True)
         self.auto_check = False
 
-        self.on_feed_filament_autofill = self._config.get_main_config().getboolean("feed_filament_autofill", fallback=False)
         if (self.printer is not None) and ('AUTOFILL_FILAMENT' in self.printer.get_gcode_macros()):
             script  = 'AUTOFILL_FILAMENT S=0'
             if self.on_feed_filament_autofill:
@@ -1585,6 +1677,10 @@ class KlipperScreen(Gtk.Window):
                 GLib.timeout_add(150, self.gtk.Button_busy, x, False)
 
     def printer_initializing(self, msg, remove=False):
+        if self._usb_update_open():
+            # Installation and recovery stay visible through service restarts.
+            self._usb_update_state_deferred = True
+            return
         if 'splash_screen' not in self.panels or remove:
             self.show_panel("splash_screen", None, remove_all=True)
         self.panels['splash_screen'].update_text(msg)

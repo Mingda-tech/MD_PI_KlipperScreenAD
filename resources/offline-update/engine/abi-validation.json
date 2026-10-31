@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "baseline": "Ubuntu22.04 ARM64 glibc2.35",
+  "libraries": {
+    "swupdate": {
+      "machine": "AArch64",
+      "sha256": "d388ac370d5f2fbb537ef10cb0d39b1d8c03b3732e4a929987fa65b303786c34",
+      "maxGlibc": "2.34",
+      "needed": [
+        "libubootenv.so.0",
+        "libjson-c.so.5",
+        "libconfig.so.9",
+        "libcrypto.so.3",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ]
+    },
+    "libubootenv.so.0": {
+      "machine": "AArch64",
+      "sha256": "34dba9d4172e2844e443387ef302e8049ab22d33d7b45e32e8260cf1fbbd18e0",
+      "maxGlibc": "2.33",
+      "needed": [
+        "libyaml-0.so.2",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ]
+    },
+    "libjson-c.so.5": {
+      "machine": "AArch64",
+      "sha256": "b7dc786865f83a3feb7a3c2dab8b3d82980ce81254afb059d33b135f0f42ba3d",
+      "maxGlibc": "2.33",
+      "needed": [
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ]
+    },
+    "libconfig.so.9": {
+      "machine": "AArch64",
+      "sha256": "4f310138fb73e141da48dfa517e4fd4b28165f332371fa28c7ae1c72d06f2178",
+      "maxGlibc": "2.17",
+      "needed": [
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ]
+    },
+    "libcrypto.so.3": {
+      "machine": "AArch64",
+      "sha256": "6df6c9ca3eb2a0ecded968b7aafb9e97d0942ffeebdcf916a35d3be2bf6a5810",
+      "maxGlibc": "2.34",
+      "needed": [
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ]
+    },
+    "libyaml-0.so.2": {
+      "machine": "AArch64",
+      "sha256": "11a1bd83b278c3a64fc6afa4878bf96c5e8645e3b2b77332821300c995da51e9",
+      "maxGlibc": "2.17",
+      "needed": [
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ]
+    }
+  },
+  "systemLibraries": [
+    "ld-linux-aarch64.so.1",
+    "libc.so.6",
+    "libdl.so.2",
+    "libm.so.6",
+    "libpthread.so.0",
+    "librt.so.1"
+  ]
+}

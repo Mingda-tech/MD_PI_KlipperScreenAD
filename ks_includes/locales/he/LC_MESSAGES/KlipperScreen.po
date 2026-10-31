@@ -2037,3 +2037,294 @@ msgstr "כיול המיקום עדיין מאותחל. יש להמתין רגע 
 
 msgid "Position Calibration"
 msgstr "כיול מיקום"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "קיים עדכון שלא הושלם. יש לרענן את המצב כדי להמשיך."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "עדכון אחר מתבצע. יש להמתין לסיומו."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "לבטל את העדכון שנכשל? המשימה תסתיים ללא ביטול השינויים שהותקנו. קובצי השחזור יישמרו. יש לבדוק את המדפסת לפני השימוש."
+
+msgid "Checking the signature and file integrity."
+msgstr "בדיקת החתימה ושלמות הקבצים."
+
+msgid "Choose an update package"
+msgstr "בחירת חבילת עדכון"
+
+msgid "Component: %s"
+msgstr "רכיב: %s"
+
+msgid "Configuration changes"
+msgstr "שינויי תצורה"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "ההעתקה מכונן ה-USB לא הושלמה."
+
+msgid "Copying update package"
+msgstr "העתקת חבילת העדכון"
+
+msgid "Could not read update status"
+msgstr "לא ניתן לקרוא את מצב העדכון"
+
+msgid "Details"
+msgstr "פרטים"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "אין לכבות את המדפסת. הקושחה תיבדק לאחר הכתיבה."
+
+msgid "Error code: %s"
+msgstr "קוד שגיאה: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "אין לעדכן בזמן הדפסה, השהיית הדפסה או כיול."
+
+msgid "Firmware"
+msgstr "קושחה"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "יש לחבר כונן USB וללחוץ על „סריקת כונן USB”."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "להתקין עדכון זה? התוכנות והקושחה שבחבילה יעודכנו. יש להשאיר את המדפסת פועלת."
+
+msgid "Install update"
+msgstr "התקנת העדכון"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "ההתקנה הסתיימה. יש לחדש את שחזור העדכון כדי להשלים את שמירת התוצאה."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "השינויים שהותקנו לא בוטלו. קובצי השחזור נשמרו. יש לבדוק את המדפסת לפני השימוש."
+
+msgid "Installing an older version is not allowed."
+msgstr "התקנת גרסה ישנה יותר אינה מותרת."
+
+msgid "Installing update"
+msgstr "התקנת העדכון מתבצעת"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "יש להשאיר את כונן ה-USB מחובר עד לסיום ההעתקה."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "יש להשאיר את המדפסת פועלת וללחוץ על „שחזור העדכון” כדי להמשיך."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "יש להשאיר את המדפסת פועלת בזמן בדיקת התוכנות המעודכנות."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "יש להשאיר את המדפסת פועלת. ייתכן שהמסך יופעל מחדש."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "חיפוש קובצי .mdu בכונני USB מחוברים."
+
+msgid "No update package found"
+msgstr "לא נמצאה חבילת עדכון"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "הבעלות או הרשאות הגישה לקבצים או לתיקיות של העדכון הלא מקוון אינן בטוחות."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "לא ניתן להשלים את הכנת העדכון הלא מקוון. יש לבדוק את התקנת תוכנת המסך והרשאותיה."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "תם הזמן הקצוב להכנת העדכון הלא מקוון. המסך ינסה שוב."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "לא ניתן להפעיל את שירות העדכון הלא מקוון; יש להתקין את תוכנית העזר ולבדוק את הרשאותיה"
+
+msgid "Offline update service failed; refresh the status"
+msgstr "שירות העדכון הלא מקוון נכשל; יש לרענן את המצב"
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "שירות העדכון הלא מקוון החזיר תשובה לא תקינה; יש לבדוק את התקנתו"
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "התמיכה בעדכון לא מקוון אינה מותקנת או שלא ניתן להפעילה"
+
+msgid "Open Details to check the cause before trying again."
+msgstr "לפני ניסיון נוסף יש לפתוח את „פרטים” ולבדוק את הסיבה."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "תם הזמן הקצוב לבדיקת החבילה. יש לבדוק את התקן האחסון ולנסות שוב."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "יש לשים קובץ .mdu בתיקיית השורש של כונן ה-USB או בתיקיית MINGDA-Update ולסרוק שוב."
+
+msgid "Please wait for the current task status."
+msgstr "יש להמתין לקריאת מצב המשימה הנוכחית."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "ההכנה לא הושלמה. יש ללחוץ על „רענון מצב” כדי לנסות שוב."
+
+msgid "Preparation on hold"
+msgstr "ההכנה ממתינה"
+
+msgid "Preparing USB update"
+msgstr "הכנת עדכון מ-USB"
+
+msgid "Press Refresh status to retry."
+msgstr "יש ללחוץ על „רענון מצב” כדי לנסות שוב."
+
+msgid "Programs"
+msgstr "תוכנות"
+
+msgid "Reading update status"
+msgstr "קריאת מצב העדכון"
+
+msgid "Ready to install"
+msgstr "מוכן להתקנה"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "לשחזר את העדכון שנקטע? יש להשאיר את המדפסת פועלת עד לסיום השחזור."
+
+msgid "Recover update"
+msgstr "שחזור העדכון"
+
+msgid "Recovery required"
+msgstr "נדרש שחזור"
+
+msgid "Refresh status"
+msgstr "רענון מצב"
+
+msgid "Release: %s"
+msgstr "גרסה: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "לא ניתן להפעיל את SWUpdate. יש לבדוק את התקנת מנגנון העדכון."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate דחה חבילה זו. יש לבדוק את החתימה, פרוטוקול הסקריפט והקבצים."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate דיווח על כשל בהתקנה. יש לבדוק את מצב השחזור."
+
+msgid "Scan USB drive"
+msgstr "סריקת כונן USB"
+
+msgid "Scan again to choose another update package."
+msgstr "יש לסרוק שוב כדי לבחור חבילת עדכון אחרת."
+
+msgid "Scanning USB drives"
+msgstr "סריקת כונני USB"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "יש לבחור קובץ להעתקה למדפסת ולבדיקה."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "החתימה והקבצים נבדקו. המערכת והלוחות ייבדקו לאחר האישור."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "מנגנון SWUpdate אינו תואם או שהשתנה. יש להתקין מחדש את המנגנון המאומת."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "כונן ה-USB נותק לפני סיום ההעתקה."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "החבילה בכונן ה-USB השתנתה. יש לסרוק את הכונן שוב."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "המשאבים המצורפים לעדכון הלא מקוון לא עברו את הבדיקה."
+
+msgid "The installed version must be registered before updating."
+msgstr "יש לרשום את הגרסה המותקנת לפני העדכון."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "המדפסת השתנתה לאחר הבדיקה. יש להכין את החבילה שוב."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "לא ניתן לאשר את מצב המדפסת. יש לבדוק את החיבור המקומי."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "סקריפט השחזור נכשל. נדרש סיוע של התמיכה הטכנית."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "המסך מכין תכונה זו אוטומטית. יש להמתין."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "משתמש תוכנת המסך זקוק להרשאה ללא סיסמה כדי להכין עדכונים לא מקוונים."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "המסך ינסה שוב כשהמדפסת ומשימות העדכון הקיימות יהיו מוכנות."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "העדכון נבדק. ניתן להשתמש במדפסת."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "תהליך העדכון נעצר. יש לבדוק את מצב השחזור."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "תם הזמן הקצוב לעדכון. אין להשתמש במדפסת עד לסיום השחזור."
+
+msgid "The updated screen did not start correctly."
+msgstr "תוכנת המסך המעודכנת לא הופעלה כראוי."
+
+msgid "There is not enough internal storage for this update."
+msgstr "אין די שטח אחסון פנימי לעדכון זה."
+
+msgid "This package does not match the registered release."
+msgstr "חבילה זו אינה תואמת לגרסה הרשומה."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "חבילה זו דורשת פורמט עדכון או פרוטוקול סקריפט אחרים."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "חבילה זו דורשת שחזור ידני. יש לפנות לתמיכה הטכנית."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "גרסת תוכנת מסך זו אינה כוללת סביבת עדכון לארכיטקטורת מעבד זו."
+
+msgid "This screen release is missing offline update resources."
+msgstr "בגרסת תוכנת מסך זו חסרים משאבי עדכון לא מקוון."
+
+msgid "This screen release is missing the update verification key."
+msgstr "בגרסת תוכנת מסך זו חסר מפתח אימות העדכון."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "חבילת עדכון מסך זו אינה כוללת סקריפט שחזור תקין."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "לא ניתן לבטל את העדכון במצב הנוכחי. יש לרענן את המצב."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "משימת עדכון זו משתמשת במנגנון לא נתמך. יש לפנות לתמיכה הטכנית."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "יש לכבות את החימום ולתת למדפסת להתקרר לפני העדכון."
+
+msgid "USB Update"
+msgstr "עדכון מ-USB"
+
+msgid "USB update unavailable"
+msgstr "עדכון מ-USB אינו זמין"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "מצב עדכון לא נתמך; יש לעדכן יחד את תוכנת המסך ותוכנית העזר"
+
+msgid "Update cancelled"
+msgstr "העדכון בוטל"
+
+msgid "Update complete"
+msgstr "העדכון הושלם"
+
+msgid "Update from a USB drive"
+msgstr "עדכון מכונן USB"
+
+msgid "Update not completed"
+msgstr "העדכון לא הושלם"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "לא ניתן לאשר את התקדמות העדכון. יש לבדוק את מצב השחזור לפני ניסיון נוסף."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "תם הזמן הקצוב לשירות העדכון; יש לרענן את המצב לפני ניסיון נוסף"
+
+msgid "Updating firmware"
+msgstr "עדכון הקושחה"
+
+msgid "Verifying the result"
+msgstr "אימות התוצאה"
+
+msgid "Verifying update package"
+msgstr "אימות חבילת העדכון"

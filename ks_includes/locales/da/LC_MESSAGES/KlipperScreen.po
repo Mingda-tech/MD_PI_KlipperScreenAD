@@ -1850,3 +1850,294 @@ msgstr "Positionskalibreringen initialiseres stadig. Vent et øjeblik, og prøv 
 
 msgid "Position Calibration"
 msgstr "Positionskalibrering"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Der findes en uafsluttet opdatering. Opdater status for at fortsætte."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "En anden opdatering kører. Vent, til den er færdig."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Annuller denne mislykkede opdatering? Opgaven afsluttes uden at fortryde installerede ændringer. Gendannelsesfiler bevares. Kontrollér printeren før brug."
+
+msgid "Checking the signature and file integrity."
+msgstr "Kontrollerer signatur og filintegritet."
+
+msgid "Choose an update package"
+msgstr "Vælg en opdateringspakke"
+
+msgid "Component: %s"
+msgstr "Komponent: %s"
+
+msgid "Configuration changes"
+msgstr "Konfigurationsændringer"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "Kopiering fra USB-drevet blev ikke fuldført."
+
+msgid "Copying update package"
+msgstr "Kopierer opdateringspakke"
+
+msgid "Could not read update status"
+msgstr "Kunne ikke læse opdateringsstatus"
+
+msgid "Details"
+msgstr "Detaljer"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Sluk ikke printeren. Firmwaren kontrolleres efter skrivning."
+
+msgid "Error code: %s"
+msgstr "Fejlkode: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Opdater ikke under udskrivning, udskrivningspause eller kalibrering."
+
+msgid "Firmware"
+msgstr "Firmware"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Indsæt et USB-drev, og tryk på »Scan USB-drev«."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Installer denne opdatering? Programmer og firmware i pakken opdateres. Lad printeren være tændt."
+
+msgid "Install update"
+msgstr "Installer opdatering"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "Installationen er færdig. Genoptag opdateringen for at færdiggøre lagringen af resultatet."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "Installerede ændringer er ikke blevet fortrudt. Gendannelsesfiler er bevaret. Kontrollér printeren før brug."
+
+msgid "Installing an older version is not allowed."
+msgstr "Installation af en ældre version er ikke tilladt."
+
+msgid "Installing update"
+msgstr "Installerer opdatering"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Lad USB-drevet være tilsluttet, indtil kopieringen er færdig."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Lad printeren være tændt, og tryk på »Gendan opdatering« for at fortsætte."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Lad printeren være tændt, mens de opdaterede programmer kontrolleres."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Lad printeren være tændt. Skærmen kan genstarte."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "Søger efter .mdu-filer på tilsluttede USB-drev."
+
+msgid "No update package found"
+msgstr "Ingen opdateringspakke fundet"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Filer eller mapper til offlineopdatering har usikkert ejerskab eller usikre rettigheder."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Forberedelsen af offlineopdatering kunne ikke fuldføres. Kontroller skærmprogrammets installation og rettigheder."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "Forberedelsen af offlineopdatering fik timeout. Skærmen prøver igen."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Offlineopdateringstjenesten kunne ikke starte; installer hjælpeprogrammet, og kontroller dets rettigheder"
+
+msgid "Offline update service failed; refresh the status"
+msgstr "Offlineopdateringstjenesten fejlede; opdater status"
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "Offlineopdateringstjenesten returnerede et ugyldigt svar; kontroller installationen"
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "Understøttelse af offlineopdatering er ikke installeret eller kan ikke startes"
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Åbn »Detaljer« for at kontrollere årsagen, før du prøver igen."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "Kontrol af pakken fik timeout. Kontroller lagermediet, og prøv igen."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Placer en .mdu-fil i USB-drevets rodmappe eller i mappen MINGDA-Update, og scan igen."
+
+msgid "Please wait for the current task status."
+msgstr "Vent på status for den aktuelle opgave."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "Forberedelsen er ikke færdig. Tryk på »Opdater status« for at prøve igen."
+
+msgid "Preparation on hold"
+msgstr "Forberedelse afventer"
+
+msgid "Preparing USB update"
+msgstr "Forbereder USB-opdatering"
+
+msgid "Press Refresh status to retry."
+msgstr "Tryk på »Opdater status« for at prøve igen."
+
+msgid "Programs"
+msgstr "Programmer"
+
+msgid "Reading update status"
+msgstr "Læser opdateringsstatus"
+
+msgid "Ready to install"
+msgstr "Klar til installation"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Gendan den afbrudte opdatering? Lad printeren være tændt, indtil gendannelsen er færdig."
+
+msgid "Recover update"
+msgstr "Gendan opdatering"
+
+msgid "Recovery required"
+msgstr "Gendannelse påkrævet"
+
+msgid "Refresh status"
+msgstr "Opdater status"
+
+msgid "Release: %s"
+msgstr "Udgave: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "SWUpdate kunne ikke startes. Kontroller installationen af opdateringsmotoren."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate afviste pakken. Kontroller signaturen, scriptprotokollen og filerne."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate rapporterede en installationsfejl. Kontroller gendannelsesstatus."
+
+msgid "Scan USB drive"
+msgstr "Scan USB-drev"
+
+msgid "Scan again to choose another update package."
+msgstr "Scan igen for at vælge en anden opdateringspakke."
+
+msgid "Scanning USB drives"
+msgstr "Scanner USB-drev"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Vælg en fil, der skal kopieres til printeren og kontrolleres."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Signatur og filer er kontrolleret. System og printkort kontrolleres efter bekræftelse."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "SWUpdate-motoren er inkompatibel eller ændret. Geninstaller den verificerede motor."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "USB-drevet blev fjernet, før kopieringen var færdig."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "Pakken på USB-drevet er ændret. Scan drevet igen."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "De medfølgende ressourcer til offlineopdatering bestod ikke kontrollen."
+
+msgid "The installed version must be registered before updating."
+msgstr "Den installerede version skal registreres før opdatering."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "Printeren er ændret efter kontrollen. Forbered pakken igen."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "Printerens tilstand kan ikke bekræftes. Kontroller den lokale forbindelse."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "Gendannelsesscriptet fejlede. Der kræves hjælp fra service."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "Skærmen forbereder automatisk funktionen. Vent venligst."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "Skærmbrugeren skal have adgang uden adgangskode for at forberede offlineopdateringer."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "Skærmen prøver igen, når printeren og eksisterende opdateringsopgaver er klar."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "Opdateringen er kontrolleret. Du kan bruge printeren."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "Opdateringsprocessen stoppede. Kontroller gendannelsesstatus."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "Opdateringen fik timeout. Brug ikke printeren, før gendannelsen er færdig."
+
+msgid "The updated screen did not start correctly."
+msgstr "Det opdaterede skærmprogram startede ikke korrekt."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Der er ikke nok intern lagerplads til opdateringen."
+
+msgid "This package does not match the registered release."
+msgstr "Pakken svarer ikke til den registrerede udgave."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Pakken kræver et andet opdateringsformat eller en anden scriptprotokol."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Pakken kræver manuel gendannelse. Kontakt service."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Denne skærmudgave har intet opdateringsmiljø til denne CPU-arkitektur."
+
+msgid "This screen release is missing offline update resources."
+msgstr "Denne skærmudgave mangler ressourcer til offlineopdatering."
+
+msgid "This screen release is missing the update verification key."
+msgstr "Denne skærmudgave mangler nøglen til kontrol af opdateringer."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Denne skærmopdateringspakke har ikke et gyldigt gendannelsesscript."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Opdateringen kan ikke annulleres i den aktuelle tilstand. Opdater status."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "Opdateringsopgaven bruger en motor, der ikke understøttes. Kontakt service."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Slå varmen fra, og lad printeren køle ned før opdatering."
+
+msgid "USB Update"
+msgstr "USB-opdatering"
+
+msgid "USB update unavailable"
+msgstr "USB-opdatering er utilgængelig"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Opdateringsstatus understøttes ikke; opdater skærm og hjælpeprogram sammen"
+
+msgid "Update cancelled"
+msgstr "Opdatering annulleret"
+
+msgid "Update complete"
+msgstr "Opdatering fuldført"
+
+msgid "Update from a USB drive"
+msgstr "Opdater fra USB-drev"
+
+msgid "Update not completed"
+msgstr "Opdatering ikke fuldført"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "Opdateringsforløbet kunne ikke bekræftes. Kontroller gendannelsesstatus, før du prøver igen."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "Opdateringstjenesten fik timeout; opdater status, før du prøver igen"
+
+msgid "Updating firmware"
+msgstr "Opdaterer firmware"
+
+msgid "Verifying the result"
+msgstr "Kontrollerer resultatet"
+
+msgid "Verifying update package"
+msgstr "Kontrollerer opdateringspakke"

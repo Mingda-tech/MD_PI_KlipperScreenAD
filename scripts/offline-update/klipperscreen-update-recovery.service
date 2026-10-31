@@ -1,0 +1,15 @@
+[Unit]
+Description=KlipperScreen offline update recovery check
+After=local-fs.target
+Before=KlipperScreen.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/libexec/klipperscreen-update/launcher boot-recover
+User=root
+UMask=0077
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target

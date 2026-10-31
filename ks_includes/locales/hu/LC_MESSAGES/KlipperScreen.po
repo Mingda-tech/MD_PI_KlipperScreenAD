@@ -1817,3 +1817,297 @@ msgstr "A pozíciókalibrálás inicializálása még folyamatban van. Várjon e
 
 msgid "Position Calibration"
 msgstr "Pozíciókalibrálás"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Befejezetlen frissítés található. A folytatáshoz frissítse az állapotot."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "Egy másik frissítés fut. Várja meg a befejezését."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Megszakítja ezt a sikertelen frissítést? A feladat befejeződik a telepített módosítások visszavonása nélkül. A helyreállítási fájlok megmaradnak. Használat előtt ellenőrizze a nyomtatót."
+
+msgid "Checking the signature and file integrity."
+msgstr "Az aláírás és a fájlok épségének ellenőrzése."
+
+msgid "Choose an update package"
+msgstr "Frissítőcsomag kiválasztása"
+
+msgid "Component: %s"
+msgstr "Összetevő: %s"
+
+msgid "Configuration changes"
+msgstr "Konfigurációváltozások"
+
+msgid "Continue"
+msgstr "Folytatás"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "Az USB-meghajtóról történő másolás nem fejeződött be."
+
+msgid "Copying update package"
+msgstr "Frissítőcsomag másolása"
+
+msgid "Could not read update status"
+msgstr "A frissítés állapota nem olvasható"
+
+msgid "Details"
+msgstr "Részletek"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Ne kapcsolja ki a nyomtatót. A firmware ellenőrzése az írás után történik."
+
+msgid "Error code: %s"
+msgstr "Hibakód: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "A frissítéskor a nyomtató nem nyomtathat, nem lehet szüneteltetve, és nem végezhet kalibrálást."
+
+msgid "Firmware"
+msgstr "Firmware"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Csatlakoztasson egy USB-meghajtót, majd nyomja meg az „USB-meghajtó keresése” gombot."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Telepíti ezt a frissítést? A csomagban felsorolt programok és firmware frissülnek. Hagyja bekapcsolva a nyomtatót."
+
+msgid "Install update"
+msgstr "Frissítés telepítése"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "A telepítés befejeződött. Folytassa a frissítést az eredmény mentésének befejezéséhez."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "A telepített módosítások nem lettek visszavonva. A helyreállítási fájlok megmaradtak. Használat előtt ellenőrizze a nyomtatót."
+
+msgid "Installing an older version is not allowed."
+msgstr "Régebbi verzió telepítése nem engedélyezett."
+
+msgid "Installing update"
+msgstr "Frissítés telepítése folyamatban"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Hagyja csatlakoztatva az USB-meghajtót a másolás befejezéséig."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Hagyja bekapcsolva a nyomtatót, és a folytatáshoz nyomja meg a „Frissítés helyreállítása” gombot."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Hagyja bekapcsolva a nyomtatót a frissített programok ellenőrzése alatt."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Hagyja bekapcsolva a nyomtatót. A képernyő újraindulhat."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr ".mdu fájlok keresése a csatlakoztatott USB-meghajtókon."
+
+msgid "No update package found"
+msgstr "Nem található frissítőcsomag"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Az offline frissítés fájljainak vagy mappáinak tulajdonosa vagy jogosultságai nem biztonságosak."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Az offline frissítés előkészítése nem fejezhető be. Ellenőrizze a képernyőszoftver telepítését és jogosultságait."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "Az offline frissítés előkészítése túllépte az időkorlátot. A képernyő újrapróbálkozik."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Az offline frissítési szolgáltatás nem indult el; telepítse a segédprogramot, és ellenőrizze a jogosultságait"
+
+msgid "Offline update service failed; refresh the status"
+msgstr "Az offline frissítési szolgáltatás hibát jelzett; frissítse az állapotot"
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "Az offline frissítési szolgáltatás érvénytelen választ adott; ellenőrizze a telepítését"
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "Az offline frissítés támogatása nincs telepítve, vagy nem indítható"
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Újabb próbálkozás előtt nyissa meg a „Részletek” részt az ok ellenőrzéséhez."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "A csomagellenőrzés túllépte az időkorlátot. Ellenőrizze az adathordozót, és próbálja újra."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Helyezzen egy .mdu fájlt az USB-meghajtó gyökérkönyvtárába vagy a MINGDA-Update mappába, majd keressen újra."
+
+msgid "Please wait for the current task status."
+msgstr "Várjon az aktuális feladat állapotának beolvasására."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "Az előkészítés még nem fejeződött be. Az újrapróbáláshoz nyomja meg az „Állapot frissítése” gombot."
+
+msgid "Preparation on hold"
+msgstr "Előkészítés várakozik"
+
+msgid "Preparing USB update"
+msgstr "USB-frissítés előkészítése"
+
+msgid "Press Refresh status to retry."
+msgstr "Az újrapróbáláshoz nyomja meg az „Állapot frissítése” gombot."
+
+msgid "Programs"
+msgstr "Programok"
+
+msgid "Reading update status"
+msgstr "A frissítés állapotának beolvasása"
+
+msgid "Ready to install"
+msgstr "Telepítésre kész"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Helyreállítja a megszakított frissítést? Hagyja bekapcsolva a nyomtatót a helyreállítás végéig."
+
+msgid "Recover update"
+msgstr "Frissítés helyreállítása"
+
+msgid "Recovery required"
+msgstr "Helyreállítás szükséges"
+
+msgid "Refresh status"
+msgstr "Állapot frissítése"
+
+msgid "Release: %s"
+msgstr "Kiadás: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "Az SWUpdate nem indítható. Ellenőrizze a frissítési motor telepítését."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "Az SWUpdate elutasította a csomagot. Ellenőrizze az aláírást, a szkriptprotokollt és a fájlokat."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "Az SWUpdate telepítési hibát jelzett. Ellenőrizze a helyreállítás állapotát."
+
+msgid "Scan USB drive"
+msgstr "USB-meghajtó keresése"
+
+msgid "Scan again to choose another update package."
+msgstr "Keressen újra másik frissítőcsomag kiválasztásához."
+
+msgid "Scanning USB drives"
+msgstr "USB-meghajtók keresése"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Válasszon fájlt a nyomtatóra másoláshoz és ellenőrzéshez."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Az aláírás és a fájlok ellenőrizve. A rendszer és a vezérlőpanelek ellenőrzése a jóváhagyás után történik."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "Az SWUpdate motor nem kompatibilis vagy megváltozott. Telepítse újra az ellenőrzött motort."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "Az USB-meghajtót a másolás befejezése előtt eltávolították."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "Az USB-meghajtón lévő csomag megváltozott. Keressen újra a meghajtón."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "A mellékelt offline frissítési erőforrások ellenőrzése sikertelen."
+
+msgid "The installed version must be registered before updating."
+msgstr "Frissítés előtt regisztrálni kell a telepített verziót."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "A nyomtató megváltozott az ellenőrzés óta. Készítse elő újra a csomagot."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "A nyomtató állapota nem erősíthető meg. Ellenőrizze a helyi kapcsolatot."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "A helyreállítási szkript hibát jelzett. Szervizsegítség szükséges."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "A képernyő automatikusan előkészíti a funkciót. Kérjük, várjon."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "A képernyő felhasználójának jelszó nélküli jogosultság kell az offline frissítések előkészítéséhez."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "A képernyő újrapróbálkozik, amikor a nyomtató és a meglévő frissítési feladatok készen állnak."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "A frissítés ellenőrzése kész. A nyomtató használható."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "A frissítési folyamat leállt. Ellenőrizze a helyreállítás állapotát."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "A frissítés túllépte az időkorlátot. A helyreállítás végéig ne használja a nyomtatót."
+
+msgid "The updated screen did not start correctly."
+msgstr "A frissített képernyőszoftver nem indult el megfelelően."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Nincs elegendő belső tárhely ehhez a frissítéshez."
+
+msgid "This package does not match the registered release."
+msgstr "A csomag nem felel meg a regisztrált kiadásnak."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "A csomag más frissítési formátumot vagy szkriptprotokollt igényel."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "A csomag kézi helyreállítást igényel. Forduljon a szervizhez."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Ehhez a CPU-architektúrához nincs frissítési futtatókörnyezet ebben a képernyőkiadásban."
+
+msgid "This screen release is missing offline update resources."
+msgstr "Ebből a képernyőkiadásból hiányoznak az offline frissítés erőforrásai."
+
+msgid "This screen release is missing the update verification key."
+msgstr "Ebből a képernyőkiadásból hiányzik a frissítések ellenőrzőkulcsa."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "A képernyő frissítőcsomagja nem tartalmaz érvényes helyreállítási szkriptet."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "A frissítés a jelenlegi állapotban nem szakítható meg. Frissítse az állapotot."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "A frissítési feladat nem támogatott motort használ. Forduljon a szervizhez."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Frissítés előtt kapcsolja ki a fűtést, és hagyja lehűlni a nyomtatót."
+
+msgid "USB Update"
+msgstr "USB-frissítés"
+
+msgid "USB update unavailable"
+msgstr "USB-frissítés nem érhető el"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Nem támogatott frissítési állapot; együtt frissítse a képernyőt és a segédprogramot"
+
+msgid "Update cancelled"
+msgstr "Frissítés megszakítva"
+
+msgid "Update complete"
+msgstr "Frissítés befejezve"
+
+msgid "Update from a USB drive"
+msgstr "Frissítés USB-meghajtóról"
+
+msgid "Update not completed"
+msgstr "A frissítés nem fejeződött be"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "A frissítés előrehaladása nem erősíthető meg. Újabb próbálkozás előtt ellenőrizze a helyreállítás állapotát."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "A frissítési szolgáltatás túllépte az időkorlátot; újabb próbálkozás előtt frissítse az állapotot"
+
+msgid "Updating firmware"
+msgstr "Firmware frissítése"
+
+msgid "Verifying the result"
+msgstr "Eredmény ellenőrzése"
+
+msgid "Verifying update package"
+msgstr "Frissítőcsomag ellenőrzése"

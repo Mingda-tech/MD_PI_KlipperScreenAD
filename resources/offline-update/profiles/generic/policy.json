@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 2,
+  "device": {
+    "arch": "aarch64"
+  },
+  "maximumUpdateTemperature": 50,
+  "engine": "swupdate",
+  "swupdate": {
+    "version": "2026.05",
+    "checkTimeoutSeconds": 300,
+    "installTimeoutSeconds": 3600,
+    "rescueTimeoutSeconds": 300
+  }
+}

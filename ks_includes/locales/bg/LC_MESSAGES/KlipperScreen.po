@@ -519,3 +519,297 @@ msgstr "Скорост по XY (мм/с)"
 
 msgid "Z Speed (mm/s)"
 msgstr "Скорост по Z (мм/с)"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "Има незавършена актуализация. Обновете състоянието, за да продължите."
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "Изпълнява се друга актуализация. Изчакайте да завърши."
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "Да се отмени ли тази неуспешна актуализация? Задачата ще приключи, без да се отменят инсталираните промени. Файловете за възстановяване ще се запазят. Проверете принтера преди употреба."
+
+msgid "Checking the signature and file integrity."
+msgstr "Проверяват се подписът и целостта на файловете."
+
+msgid "Choose an update package"
+msgstr "Изберете пакет за актуализация"
+
+msgid "Component: %s"
+msgstr "Компонент: %s"
+
+msgid "Configuration changes"
+msgstr "Промени в конфигурацията"
+
+msgid "Continue"
+msgstr "Продължаване"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "Копирането от USB носителя не завърши."
+
+msgid "Copying update package"
+msgstr "Копиране на пакета за актуализация"
+
+msgid "Could not read update status"
+msgstr "Състоянието на актуализацията не може да се прочете"
+
+msgid "Details"
+msgstr "Подробности"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "Не изключвайте принтера. Фърмуерът ще бъде проверен след записа."
+
+msgid "Error code: %s"
+msgstr "Код на грешка: %s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "Преди актуализацията принтерът не трябва да печата, да е на пауза или да се калибрира."
+
+msgid "Firmware"
+msgstr "Фърмуер"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "Поставете USB носител и натиснете „Сканиране на USB“."
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "Да се инсталира ли тази актуализация? Програмите и фърмуерът в пакета ще бъдат актуализирани. Оставете принтера включен."
+
+msgid "Install update"
+msgstr "Инсталиране на актуализация"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "Инсталирането приключи. Възобновете актуализацията, за да завършите записването на резултата."
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "Инсталираните промени не са отменени. Файловете за възстановяване са запазени. Проверете принтера преди употреба."
+
+msgid "Installing an older version is not allowed."
+msgstr "Инсталирането на по-стара версия не е разрешено."
+
+msgid "Installing update"
+msgstr "Инсталиране на актуализацията"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "Оставете USB носителя свързан до края на копирането."
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "Оставете принтера включен и натиснете „Възстановяване на актуализация“, за да продължите."
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "Оставете принтера включен, докато се проверяват актуализираните програми."
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "Оставете принтера включен. Екранът може да се рестартира."
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "Търсят се .mdu файлове в свързаните USB носители."
+
+msgid "No update package found"
+msgstr "Не е намерен пакет за актуализация"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "Собствеността или правата на файловете или папките за офлайн актуализация не са безопасни."
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "Подготовката на офлайн актуализацията не завърши. Проверете инсталацията и правата на програмата за екрана."
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "Времето за подготовка на офлайн актуализацията изтече. Екранът ще опита отново."
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "Услугата за офлайн актуализация не стартира; инсталирайте помощната програма и проверете правата ѝ"
+
+msgid "Offline update service failed; refresh the status"
+msgstr "Услугата за офлайн актуализация отказа; обновете състоянието"
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "Услугата за офлайн актуализация върна невалиден отговор; проверете инсталацията ѝ"
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "Поддръжката за офлайн актуализация не е инсталирана или не може да стартира"
+
+msgid "Open Details to check the cause before trying again."
+msgstr "Отворете „Подробности“, за да проверите причината, преди да опитате отново."
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "Времето за проверка на пакета изтече. Проверете носителя и опитайте отново."
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "Поставете .mdu файл в основната папка на USB носителя или в MINGDA-Update и сканирайте отново."
+
+msgid "Please wait for the current task status."
+msgstr "Изчакайте състоянието на текущата задача."
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "Подготовката не е завършена. Натиснете „Обновяване на състоянието“, за да опитате отново."
+
+msgid "Preparation on hold"
+msgstr "Подготовката е отложена"
+
+msgid "Preparing USB update"
+msgstr "Подготовка на актуализация от USB"
+
+msgid "Press Refresh status to retry."
+msgstr "Натиснете „Обновяване на състоянието“, за да опитате отново."
+
+msgid "Programs"
+msgstr "Програми"
+
+msgid "Reading update status"
+msgstr "Прочитане на състоянието"
+
+msgid "Ready to install"
+msgstr "Готово за инсталиране"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "Да се възстанови ли прекъснатата актуализация? Оставете принтера включен до края на възстановяването."
+
+msgid "Recover update"
+msgstr "Възстановяване на актуализация"
+
+msgid "Recovery required"
+msgstr "Необходимо е възстановяване"
+
+msgid "Refresh status"
+msgstr "Обновяване на състоянието"
+
+msgid "Release: %s"
+msgstr "Версия: %s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "SWUpdate не може да стартира. Проверете инсталацията на модула."
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdate отхвърли пакета. Проверете подписа, протокола на скрипта и файловете."
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdate съобщи за неуспешна инсталация. Проверете състоянието на възстановяването."
+
+msgid "Scan USB drive"
+msgstr "Сканиране на USB"
+
+msgid "Scan again to choose another update package."
+msgstr "Сканирайте отново, за да изберете друг пакет."
+
+msgid "Scanning USB drives"
+msgstr "Сканиране на USB носители"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "Изберете файл за копиране в принтера и проверка."
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "Подписът и файловете са проверени. Системата и платките ще се проверят след потвърждение."
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "Модулът SWUpdate е несъвместим или е променен. Инсталирайте отново проверения модул."
+
+msgid "The USB drive was removed before copying finished."
+msgstr "USB носителят беше изваден преди края на копирането."
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "Пакетът на USB носителя е променен. Сканирайте носителя отново."
+
+msgid "The bundled offline update resources failed verification."
+msgstr "Проверката на включените ресурси за офлайн актуализация е неуспешна."
+
+msgid "The installed version must be registered before updating."
+msgstr "Инсталираната версия трябва да бъде регистрирана преди актуализацията."
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "Принтерът се е променил след проверката. Подгответе пакета отново."
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "Състоянието на принтера не може да се потвърди. Проверете локалната връзка."
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "Скриптът за възстановяване отказа. Необходима е сервизна помощ."
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "Екранът подготвя тази функция автоматично. Моля, изчакайте."
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "Потребителят на екрана се нуждае от права без парола за подготовка на офлайн актуализации."
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "Екранът ще опита отново, когато принтерът и съществуващите задачи за актуализация са готови."
+
+msgid "The update has been verified. You can use the printer."
+msgstr "Актуализацията е проверена. Можете да използвате принтера."
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "Процесът на актуализация спря. Проверете състоянието на възстановяването."
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "Времето за актуализация изтече. Не използвайте принтера, докато възстановяването не завърши."
+
+msgid "The updated screen did not start correctly."
+msgstr "Актуализираната програма за екрана не стартира правилно."
+
+msgid "There is not enough internal storage for this update."
+msgstr "Няма достатъчно място във вътрешното хранилище за тази актуализация."
+
+msgid "This package does not match the registered release."
+msgstr "Пакетът не съответства на регистрираната версия."
+
+msgid "This package requires a different update format or script protocol."
+msgstr "Пакетът изисква друг формат за актуализация или протокол на скрипта."
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "Пакетът изисква ръчно възстановяване. Свържете се със сервизната поддръжка."
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "Тази версия на екрана няма среда за актуализация за тази процесорна архитектура."
+
+msgid "This screen release is missing offline update resources."
+msgstr "В тази версия на екрана липсват ресурси за офлайн актуализация."
+
+msgid "This screen release is missing the update verification key."
+msgstr "В тази версия на екрана липсва ключът за проверка на актуализациите."
+
+msgid "This screen update package has no valid recovery script."
+msgstr "Пакетът за актуализация на екрана няма валиден скрипт за възстановяване."
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "Актуализацията не може да бъде отменена в текущото състояние. Обновете състоянието."
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "Тази задача използва неподдържан модул. Свържете се със сервизната поддръжка."
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "Изключете нагряването и оставете принтера да изстине преди актуализацията."
+
+msgid "USB Update"
+msgstr "Актуализация от USB"
+
+msgid "USB update unavailable"
+msgstr "Актуализацията от USB е недостъпна"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "Неподдържано състояние; актуализирайте заедно екрана и помощната програма"
+
+msgid "Update cancelled"
+msgstr "Актуализацията е отменена"
+
+msgid "Update complete"
+msgstr "Актуализацията завърши"
+
+msgid "Update from a USB drive"
+msgstr "Актуализиране от USB"
+
+msgid "Update not completed"
+msgstr "Актуализацията не завърши"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "Напредъкът не може да се потвърди. Проверете възстановяването, преди да опитате отново."
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "Времето за услугата изтече; обновете състоянието, преди да опитате отново"
+
+msgid "Updating firmware"
+msgstr "Актуализиране на фърмуера"
+
+msgid "Verifying the result"
+msgstr "Проверка на резултата"
+
+msgid "Verifying update package"
+msgstr "Проверка на пакета за актуализация"

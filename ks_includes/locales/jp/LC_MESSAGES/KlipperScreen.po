@@ -1848,3 +1848,294 @@ msgstr "位置キャリブレーションを初期化中です。しばらく待
 
 msgid "Position Calibration"
 msgstr "位置キャリブレーション"
+
+msgid "An unfinished update exists. Refresh the status to continue."
+msgstr "未完了の更新があります。状態を更新して続行してください。"
+
+msgid "Another update is running. Wait for it to finish."
+msgstr "別の更新が実行中です。完了するまでお待ちください。"
+
+msgid "Cancel this failed update? This ends the task without undoing installed changes. Recovery files will be kept. Check the printer before using it."
+msgstr "失敗した更新をキャンセルしますか？インストール済みの変更を元に戻さずにタスクを終了します。復旧用ファイルは保持されます。使用前にプリンターを確認してください。"
+
+msgid "Checking the signature and file integrity."
+msgstr "署名とファイルの整合性を確認しています。"
+
+msgid "Choose an update package"
+msgstr "更新パッケージを選択"
+
+msgid "Component: %s"
+msgstr "コンポーネント：%s"
+
+msgid "Configuration changes"
+msgstr "設定の変更"
+
+msgid "Copying from the USB drive did not finish."
+msgstr "USBドライブからのコピーが完了しませんでした。"
+
+msgid "Copying update package"
+msgstr "更新パッケージをコピー中"
+
+msgid "Could not read update status"
+msgstr "更新状態を読み取れません"
+
+msgid "Details"
+msgstr "詳細"
+
+msgid "Do not turn off the printer. Firmware will be verified after writing."
+msgstr "プリンターの電源を切らないでください。書き込み後にファームウェアを検証します。"
+
+msgid "Error code: %s"
+msgstr "エラーコード：%s"
+
+msgid "Finish printing, pausing or calibration before updating."
+msgstr "印刷中、一時停止中、キャリブレーション中は更新できません。"
+
+msgid "Firmware"
+msgstr "ファームウェア"
+
+msgid "Insert a USB drive, then press Scan USB drive."
+msgstr "USBドライブを挿入し、「USBドライブを検索」を押してください。"
+
+msgid "Install this update? Programs and firmware listed in this package will be updated. Keep the printer powered on."
+msgstr "この更新をインストールしますか？パッケージ内のプログラムとファームウェアを更新します。プリンターの電源を入れたままにしてください。"
+
+msgid "Install update"
+msgstr "更新をインストール"
+
+msgid "Installation has finished. Recover the update to finish saving its result."
+msgstr "インストールは完了しています。更新の復旧を実行し、結果の保存を完了してください。"
+
+msgid "Installed changes were not undone. Recovery files were kept. Check the printer before using it."
+msgstr "インストール済みの変更は元に戻されていません。復旧用ファイルは保持されています。使用前にプリンターを確認してください。"
+
+msgid "Installing an older version is not allowed."
+msgstr "古いバージョンのインストールは許可されていません。"
+
+msgid "Installing update"
+msgstr "更新をインストール中"
+
+msgid "Keep the USB drive connected until copying finishes."
+msgstr "コピーが完了するまでUSBドライブを接続したままにしてください。"
+
+msgid "Keep the printer powered on and press Recover update to continue."
+msgstr "プリンターの電源を入れたまま、「更新を復旧」を押して続行してください。"
+
+msgid "Keep the printer powered on while the updated programs are checked."
+msgstr "更新したプログラムの確認中はプリンターの電源を入れたままにしてください。"
+
+msgid "Keep the printer powered on. The screen may restart."
+msgstr "プリンターの電源を入れたままにしてください。画面が再起動する場合があります。"
+
+msgid "Looking for .mdu files on connected USB drives."
+msgstr "接続されたUSBドライブで.mduファイルを検索しています。"
+
+msgid "No update package found"
+msgstr "更新パッケージが見つかりません"
+
+msgid "Offline update files or directories have unsafe ownership or permissions."
+msgstr "オフライン更新のファイルまたはフォルダーの所有者やアクセス権が安全な設定ではありません。"
+
+msgid "Offline update preparation could not finish. Check the screen installation and permissions."
+msgstr "オフライン更新の準備を完了できません。画面ソフトウェアのインストール状態とアクセス権を確認してください。"
+
+msgid "Offline update preparation timed out. The screen will retry."
+msgstr "オフライン更新の準備がタイムアウトしました。画面側で再試行します。"
+
+msgid "Offline update service could not start; install the helper and check its authorization"
+msgstr "オフライン更新サービスを起動できません。補助プログラムをインストールし、権限を確認してください"
+
+msgid "Offline update service failed; refresh the status"
+msgstr "オフライン更新サービスが失敗しました。状態を更新してください"
+
+msgid "Offline update service returned an invalid response; check its installation"
+msgstr "オフライン更新サービスから無効な応答が返されました。インストール状態を確認してください"
+
+msgid "Offline update support is not installed or cannot be started"
+msgstr "オフライン更新機能がインストールされていないか、起動できません"
+
+msgid "Open Details to check the cause before trying again."
+msgstr "再試行する前に「詳細」を開いて原因を確認してください。"
+
+msgid "Package verification timed out. Check the storage device and retry."
+msgstr "パッケージの検証がタイムアウトしました。ストレージを確認して再試行してください。"
+
+msgid "Place a .mdu file in the USB root or MINGDA-Update folder, then scan again."
+msgstr "USBドライブのルートまたはMINGDA-Updateフォルダーに.mduファイルを置き、再度検索してください。"
+
+msgid "Please wait for the current task status."
+msgstr "現在のタスク状態が読み込まれるまでお待ちください。"
+
+msgid "Preparation is not complete. Press Refresh status to retry."
+msgstr "準備が完了していません。「状態を更新」を押して再試行してください。"
+
+msgid "Preparation on hold"
+msgstr "準備を待機中"
+
+msgid "Preparing USB update"
+msgstr "USB更新を準備中"
+
+msgid "Press Refresh status to retry."
+msgstr "「状態を更新」を押して再試行してください。"
+
+msgid "Programs"
+msgstr "プログラム"
+
+msgid "Reading update status"
+msgstr "更新状態を読み取り中"
+
+msgid "Ready to install"
+msgstr "インストール準備完了"
+
+msgid "Recover the interrupted update? Keep the printer powered on until recovery finishes."
+msgstr "中断した更新を復旧しますか？復旧が完了するまでプリンターの電源を入れたままにしてください。"
+
+msgid "Recover update"
+msgstr "更新を復旧"
+
+msgid "Recovery required"
+msgstr "復旧が必要です"
+
+msgid "Refresh status"
+msgstr "状態を更新"
+
+msgid "Release: %s"
+msgstr "リリース：%s"
+
+msgid "SWUpdate could not be started. Check the engine installation."
+msgstr "SWUpdateを起動できません。更新エンジンのインストール状態を確認してください。"
+
+msgid "SWUpdate rejected this package. Check its signature, script protocol and files."
+msgstr "SWUpdateがこのパッケージを拒否しました。署名、スクリプトのプロトコル、ファイルを確認してください。"
+
+msgid "SWUpdate reported an installation failure. Review the recovery status."
+msgstr "SWUpdateがインストール失敗を報告しました。復旧状態を確認してください。"
+
+msgid "Scan USB drive"
+msgstr "USBドライブを検索"
+
+msgid "Scan again to choose another update package."
+msgstr "再度検索して別の更新パッケージを選択してください。"
+
+msgid "Scanning USB drives"
+msgstr "USBドライブを検索中"
+
+msgid "Select a file to copy it to the printer and verify it."
+msgstr "プリンターにコピーして検証するファイルを選択してください。"
+
+msgid "Signature and files verified. System and board checks run after confirmation."
+msgstr "署名とファイルの検証が完了しました。確認後にシステムと基板を検査します。"
+
+msgid "The SWUpdate engine is incompatible or has changed. Reinstall the verified engine."
+msgstr "SWUpdateエンジンに互換性がないか、変更されています。検証済みのエンジンを再インストールしてください。"
+
+msgid "The USB drive was removed before copying finished."
+msgstr "コピーが完了する前にUSBドライブが取り外されました。"
+
+msgid "The USB package changed. Scan the drive again."
+msgstr "USBドライブ上のパッケージが変更されました。ドライブを再度検索してください。"
+
+msgid "The bundled offline update resources failed verification."
+msgstr "同梱のオフライン更新リソースは検証に失敗しました。"
+
+msgid "The installed version must be registered before updating."
+msgstr "更新する前に、インストール済みバージョンの登録が必要です。"
+
+msgid "The printer changed after verification. Prepare the package again."
+msgstr "検証後にプリンターの状態が変わりました。パッケージを再度準備してください。"
+
+msgid "The printer state cannot be confirmed. Check the local connection."
+msgstr "プリンターの状態を確認できません。ローカル接続を確認してください。"
+
+msgid "The recovery script failed. Service assistance is required."
+msgstr "復旧スクリプトが失敗しました。保守サポートが必要です。"
+
+msgid "The screen is preparing this feature automatically. Please wait."
+msgstr "画面側でこの機能を自動的に準備しています。お待ちください。"
+
+msgid "The screen user needs passwordless permission to prepare offline updates."
+msgstr "画面ソフトウェアのユーザーには、オフライン更新を準備するためのパスワードなしの実行権限が必要です。"
+
+msgid "The screen will retry when the printer and existing update tasks are ready."
+msgstr "プリンターと既存の更新タスクが準備できたら、画面側で再試行します。"
+
+msgid "The update has been verified. You can use the printer."
+msgstr "更新が検証されました。プリンターを使用できます。"
+
+msgid "The update process stopped. Review the recovery status."
+msgstr "更新処理が停止しました。復旧状態を確認してください。"
+
+msgid "The update timed out. Keep the printer out of service until recovery is complete."
+msgstr "更新がタイムアウトしました。復旧が完了するまでプリンターを使用しないでください。"
+
+msgid "The updated screen did not start correctly."
+msgstr "更新後の画面ソフトウェアが正常に起動しませんでした。"
+
+msgid "There is not enough internal storage for this update."
+msgstr "この更新に必要な内部ストレージ容量が不足しています。"
+
+msgid "This package does not match the registered release."
+msgstr "このパッケージは登録済みのリリースと一致しません。"
+
+msgid "This package requires a different update format or script protocol."
+msgstr "このパッケージには別の更新形式またはスクリプトプロトコルが必要です。"
+
+msgid "This package requires manual recovery. Contact service support."
+msgstr "このパッケージは手動での復旧が必要です。保守サポートに連絡してください。"
+
+msgid "This screen release has no update runtime for this CPU architecture."
+msgstr "この画面ソフトウェアには、このCPUアーキテクチャ用の更新実行環境がありません。"
+
+msgid "This screen release is missing offline update resources."
+msgstr "この画面ソフトウェアにはオフライン更新リソースが不足しています。"
+
+msgid "This screen release is missing the update verification key."
+msgstr "この画面ソフトウェアには更新検証キーがありません。"
+
+msgid "This screen update package has no valid recovery script."
+msgstr "この画面更新パッケージには有効な復旧スクリプトがありません。"
+
+msgid "This update cannot be cancelled in its current state. Refresh the status."
+msgstr "現在の状態では更新をキャンセルできません。状態を更新してください。"
+
+msgid "This update task uses an unsupported engine. Contact service support."
+msgstr "この更新タスクは未対応のエンジンを使用しています。保守サポートに連絡してください。"
+
+msgid "Turn off heating and let the printer cool before updating."
+msgstr "更新する前にヒーターを切り、プリンターを冷ましてください。"
+
+msgid "USB Update"
+msgstr "USB更新"
+
+msgid "USB update unavailable"
+msgstr "USB更新を利用できません"
+
+msgid "Unsupported update status; update the screen and helper together"
+msgstr "未対応の更新状態です。画面ソフトウェアと補助プログラムを一緒に更新してください"
+
+msgid "Update cancelled"
+msgstr "更新をキャンセルしました"
+
+msgid "Update complete"
+msgstr "更新が完了しました"
+
+msgid "Update from a USB drive"
+msgstr "USBドライブから更新"
+
+msgid "Update not completed"
+msgstr "更新は完了していません"
+
+msgid "Update progress could not be confirmed. Review the recovery status before retrying."
+msgstr "更新の進行状況を確認できません。再試行する前に復旧状態を確認してください。"
+
+msgid "Update service timed out; refresh the status before trying again"
+msgstr "更新サービスがタイムアウトしました。再試行する前に状態を更新してください"
+
+msgid "Updating firmware"
+msgstr "ファームウェアを更新中"
+
+msgid "Verifying the result"
+msgstr "結果を検証中"
+
+msgid "Verifying update package"
+msgstr "更新パッケージを検証中"

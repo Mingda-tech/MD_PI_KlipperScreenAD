@@ -1,0 +1,25 @@
+SWUpdate v2026.05
+
+Licensed under GPLv2. See source distribution for detailed copyright notices.
+
+[INFO ] : SWUPDATE running :  [main] : Using bootloader interface: none
+[INFO ] : SWUPDATE running :  [print_registered_updatetypes] : Registered : Update Types
+[INFO ] : SWUPDATE running :  [print_registered_updatetypes] : 	Name:	default
+[INFO ] : SWUPDATE running :  [print_registered_cryptolib] : Registered Crypto Providers:
+[INFO ] : SWUPDATE running :  [print_registered_cryptolib] : 	Provider for hash
+[INFO ] : SWUPDATE running :  [print_registered_cryptolib] : 		opensslSHA256*
+[INFO ] : SWUPDATE running :  [print_registered_cryptolib] : 	Provider for verify
+[INFO ] : SWUPDATE running :  [print_registered_cryptolib] : 		opensslRSA*
+[INFO ] : SWUPDATE running :  [main] : Running on MINGDA Revision M1D_STANDARD-X527-aarch64-ubuntu-22.04
+[INFO ] : SWUPDATE running :  [print_registered_handlers] : Registered global handlers:
+[INFO ] : SWUPDATE running :  [print_registered_handlers] : 	dummy
+[INFO ] : SWUPDATE running :  [print_registered_handlers] : 	executor
+[INFO ] : SWUPDATE running :  [print_registered_handlers] : 	shellscript
+[INFO ] : SWUPDATE running :  [print_registered_handlers] : 	preinstall
+[INFO ] : SWUPDATE running :  [print_registered_handlers] : 	postinstall
+[INFO ] : SWUPDATE running :  [main] : software set: stable mode: main
+[INFO ] : SWUPDATE started :  Software Update started !
+[INFO ] : SWUPDATE running :  Installation in progress
+[INFO ] : SWUPDATE successful ! SWUPDATE successful !
+[INFO ] : SWUPDATE running :  [endupdate] : SWUpdate was successful !
+[INFO ] : No SWUPDATE running :  Waiting for requests...
