@@ -813,3 +813,126 @@ msgstr "Проверка на резултата"
 
 msgid "Verifying update package"
 msgstr "Проверка на пакета за актуализация"
+
+msgid "Clear"
+msgstr "Изчисти"
+
+msgid "Never"
+msgstr "Никога"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 минута"
+
+msgid "15 minutes"
+msgstr "15 минути"
+
+msgid "2 minutes"
+msgstr "2 минути"
+
+msgid "30 minutes"
+msgstr "30 минути"
+
+msgid "4-6 digit PIN"
+msgstr "ПИН от 4–6 цифри"
+
+msgid "5 minutes"
+msgstr "5 минути"
+
+msgid "60 minutes"
+msgstr "60 минути"
+
+msgid "Automatic screen lock"
+msgstr "Автоматично заключване на екрана"
+
+msgid "Backspace"
+msgstr "Изтриване назад"
+
+msgid "Change PIN"
+msgstr "Промяна на ПИН"
+
+msgid "Disable PIN lock"
+msgstr "Изключване на заключването с ПИН"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Въведете нов ПИН от 4–6 цифри."
+
+msgid "Enter current PIN."
+msgstr "Въведете текущия ПИН."
+
+msgid "Enter the new PIN again."
+msgstr "Въведете новия ПИН отново."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Въведете своя ПИН от 4–6 цифри за отключване."
+
+msgid "Incorrect PIN."
+msgstr "Неправилен ПИН."
+
+msgid "Lock now"
+msgstr "Заключи сега"
+
+msgid "Lock settings saved."
+msgstr "Настройките за заключване са запазени."
+
+msgid "PIN"
+msgstr "ПИН"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "Конфигурацията на ПИН е невалидна. Свържете се с администратора, за да я нулира."
+
+msgid "PIN lock disabled."
+msgstr "Заключването с ПИН е изключено."
+
+msgid "PIN lock enabled."
+msgstr "Заключването с ПИН е включено."
+
+msgid "PIN settings changed. Start again."
+msgstr "Настройките на ПИН са променени. Започнете отначало."
+
+msgid "PINs do not match. Try again."
+msgstr "ПИН кодовете не съвпадат. Опитайте отново."
+
+msgid "Saving PIN..."
+msgstr "Запазване на ПИН..."
+
+msgid "Screen Lock"
+msgstr "Заключване на екрана"
+
+msgid "Screen locked"
+msgstr "Екранът е заключен"
+
+msgid "Set PIN"
+msgstr "Задаване на ПИН"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Опитайте отново след %d секунди."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Настройките за заключване не могат да бъдат запазени. Проверете правата за достъп до конфигурацията и опитайте отново."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "ПИН не може да бъде проверен. Опитайте отново."
+
+msgid "Unlock"
+msgstr "Отключване"
+
+msgid "Verifying PIN..."
+msgstr "Проверка на ПИН..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Когато е зададен ПИН, екранът се заключва при всяко стартиране."
+
+#: ks_includes/widgets/lockscreen.py
+msgid "Printing continues while the screen is locked."
+msgstr "Печатът продължава, докато екранът е заключен."
+
+#: panels/lock_settings.py
+msgid "Lock after inactivity."
+msgstr "Заключване при неактивност."
+
+#: panels/lock_settings.py
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Стъпка %(current)d от %(total)d"

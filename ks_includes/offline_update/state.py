@@ -10,6 +10,12 @@ from .common import UpdateError, atomic_json, identifier, read_json, sync_dir
 TERMINAL = {'COMPLETE', 'CANCELLED', 'FAILED'}
 
 
+def commit_recovery(tx):
+    return (type(tx.get('commitProtocol')) is int and tx['commitProtocol'] == 1
+            and tx.get('commitIntent') is True and tx.get('nativeSuccess') is True
+            and not tx.get('rescueCompleted'))
+
+
 class Store:
     def __init__(self, root='/var/lib/klipperscreen-updates'):
         self.root = Path(root)
@@ -28,10 +34,11 @@ class Store:
         existing = directory.exists()
         if existing:
             atomic_json(directory / 'journal.json', tx)
-        public = {key: tx.get(key) for key in ('jobId', 'phase', 'progress', 'component', 'message', 'error')}
+        public = {key: tx.get(key) for key in ('jobId', 'phase', 'progress', 'component', 'message', 'error',
+                                            'firstError', 'lastRecoveryError')}
         metadata = tx.get('manifest')
         if metadata:
-            public['manifest'] = {key: metadata.get(key, '') for key in ('releaseId', 'version')}
+            public['manifest'] = {key: metadata.get(key, '') for key in ('releaseId', 'version', 'recoveryMode')}
             for group in ('components', 'firmware'):
                 public['manifest'][group] = []
                 for row in metadata.get(group, []):
@@ -47,6 +54,9 @@ class Store:
                 {'path': row.get('path', ''), 'op': row.get('op', '')}
                 for row in metadata.get('configChanges', [])]
         public.update(ok=True, engine='SWUpdate',
+                      canRecover=tx['phase'] == 'RECOVERY_REQUIRED' and (
+                          commit_recovery(tx) or (metadata or {}).get('recoveryMode') == 'replay'),
+                      commitRecovery=tx['phase'] == 'RECOVERY_REQUIRED' and commit_recovery(tx),
                       canCancel=(not tx.get('sideEffectsMayHaveStarted') and
                                  tx['phase'] in ('IMPORTING', 'VERIFYING', 'PREPARED') or
                                  tx['phase'] in ('FAILED', 'RECOVERY_REQUIRED') and not tx.get('commitIntent')),

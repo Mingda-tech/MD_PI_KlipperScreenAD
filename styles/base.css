@@ -959,6 +959,328 @@ button.extrude-tool-status:disabled image {
 
 .graph_label {border-left-width: .4em; border-left-style: solid;}
 
+/* Local PIN surfaces share the current theme's canvas and text colors. */
+@define-color lock-accent #38bdf8;
+@define-color lock-accent-text #082f49;
+@define-color lock-surface mix(@bg, @text, .035);
+@define-color lock-key mix(@bg, @text, .075);
+@define-color lock-line mix(@bg, @text, .16);
+@define-color lock-muted mix(@bg, @text, .72);
+@define-color lock-caution #8d4e3b;
+@define-color lock-caution-text #ffffff;
+@define-color lock-caution-line #b97754;
+
+.local-lock-screen {
+    background-color: @bg;
+    padding: 1em;
+}
+
+.local-lock-context {
+    padding: .5em;
+}
+
+.local-lock-symbol {
+    background-color: alpha(@lock-accent, .12);
+    border: 1px solid alpha(@lock-accent, .3);
+    border-radius: 3em;
+    padding: 1.1em;
+}
+
+.local-lock-title {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.local-lock-note,
+.lock-section-copy {
+    color: @lock-muted;
+    font-size: .88em;
+}
+
+.local-lock-card,
+.lock-settings-card {
+    background-color: @lock-surface;
+    border: 1px solid @lock-line;
+    border-radius: 1em;
+    padding: .8em;
+}
+
+.local-lock-status {
+    color: @lock-muted;
+    font-size: .88em;
+    min-height: 2.4em;
+}
+
+.local-lock-status.lock-feedback-error {
+    color: @text;
+    background-color: alpha(@error, .18);
+    border-radius: .5em;
+}
+
+.pin-pad entry {
+    color: @text;
+    background-color: @bg;
+    border: 1px solid @lock-line;
+    border-radius: .6em;
+    min-height: 2em;
+    padding: .2em .4em;
+    font-size: 1.2em;
+    caret-color: transparent;
+}
+
+.pin-pad entry:focus {
+    border-color: @lock-accent;
+}
+
+.pin-pad button,
+button.lock-action {
+    background-image: none;
+    background-color: @lock-key;
+    color: @text;
+    border: 1px solid @lock-line;
+    border-radius: .6em;
+    min-height: 42px;
+    min-width: 0;
+    padding: .1em .35em;
+    margin: 0;
+}
+
+.pin-pad button label,
+button.lock-action label {
+    color: @text;
+    margin: 0;
+}
+
+.pin-pad button.pin-submit,
+button.lock-action {
+    min-height: 2.65em;
+}
+
+button.lock-action {
+    padding: .1em .8em;
+}
+
+.pin-pad .pin-digit label {
+    font-size: 1.35em;
+}
+
+.pin-pad .pin-edit label {
+    color: @lock-muted;
+    font-size: .8em;
+}
+
+.pin-pad button:hover,
+button.lock-action:hover {
+    background-color: mix(@bg, @text, .14);
+}
+
+.pin-pad button:active,
+button.lock-action:active {
+    background-color: mix(@bg, @lock-accent, .25);
+    border-color: @lock-accent;
+}
+
+.pin-pad button:focus,
+button.lock-action:focus {
+    outline: 2px solid @lock-accent;
+    outline-offset: -3px;
+}
+
+.pin-pad button.pin-submit,
+button.lock-primary {
+    background-color: @lock-accent;
+    border-color: @lock-accent;
+    font-weight: bold;
+}
+
+.pin-pad button.pin-submit label,
+button.lock-primary label {
+    color: @lock-accent-text;
+}
+
+.pin-pad button.pin-submit:hover,
+button.lock-primary:hover {
+    background-color: shade(@lock-accent, 1.12);
+}
+
+.pin-pad button.pin-submit:active,
+button.lock-primary:active {
+    background-color: shade(@lock-accent, .88);
+}
+
+.pin-pad button:disabled,
+button.lock-action:disabled {
+    opacity: .45;
+}
+
+.pin-pad button:disabled label,
+button.lock-action:disabled label {
+    color: @text;
+}
+
+.pin-pad button.pin-submit:disabled label,
+button.lock-primary:disabled label {
+    color: @lock-accent-text;
+}
+
+/* Hover and focus carry no input history; only a held press gives feedback. */
+.pin-pad button.pin-digit,
+.pin-pad button.pin-digit:hover,
+.pin-pad button.pin-digit:focus,
+.pin-pad button.pin-edit,
+.pin-pad button.pin-edit:hover,
+.pin-pad button.pin-edit:focus {
+    color: @text;
+    background-color: @lock-key;
+    background-image: none;
+    border-color: @lock-line;
+    outline: 0;
+    box-shadow: none;
+    -gtk-icon-shadow: none;
+    -gtk-icon-effect: none;
+    transition: none;
+}
+
+.pin-pad button.pin-digit:active,
+.pin-pad button.pin-edit:active {
+    background-color: mix(@lock-key, @lock-accent, .35);
+    border-color: @lock-accent;
+}
+
+.pin-pad button.pin-digit label {
+    color: @text;
+}
+
+.pin-pad button.pin-edit label {
+    color: @lock-muted;
+}
+
+.pin-pad button.pin-edit:active label {
+    color: @text;
+}
+
+.lock-portrait .local-lock-context {
+    padding: .2em;
+}
+
+.lock-portrait .local-lock-symbol {
+    padding: .7em;
+}
+
+.local-lock-screen.lock-compact {
+    padding: .5em;
+}
+
+.lock-compact .local-lock-card {
+    padding: .5em;
+}
+
+.lock-compact .local-lock-symbol {
+    padding: .5em;
+}
+
+.lock-compact .local-lock-title {
+    font-size: 1.4em;
+}
+
+.pin-pad-compact entry {
+    min-height: 32px;
+    padding: 0 .3em;
+}
+
+.pin-pad-compact button,
+.pin-pad-compact button.pin-submit {
+    min-height: 42px;
+    padding: 0 .3em;
+}
+
+.lock-settings {
+    padding: .65em;
+}
+
+.lock-settings-title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.lock-section-title {
+    font-weight: bold;
+}
+
+.lock-state-enabled {
+    color: mix(@text, @lock-accent, .35);
+}
+
+button.lock-danger {
+    background-color: @lock-caution;
+    border-color: @lock-caution-line;
+    font-weight: bold;
+}
+
+button.lock-danger label {
+    color: @lock-caution-text;
+}
+
+button.lock-danger:hover {
+    background-color: shade(@lock-caution, 1.12);
+}
+
+button.lock-danger:active {
+    background-color: shade(@lock-caution, .88);
+}
+
+.lock-timeout button {
+    min-height: 2.65em;
+    padding: .1em .6em;
+    margin: 0;
+    border: 1px solid @lock-line;
+    border-radius: .6em;
+    background-color: @lock-key;
+}
+
+.lock-timeout button label {
+    margin: 0;
+}
+
+.lock-timeout button:focus {
+    border-color: @lock-accent;
+}
+
+.lock-settings-feedback {
+    color: @text;
+    background-color: @lock-key;
+    border-radius: .6em;
+    padding: .6em;
+    font-size: .88em;
+}
+
+.lock-setup-context {
+    padding: .4em;
+}
+
+.lock-step {
+    color: @lock-muted;
+    font-size: .8em;
+}
+
+.lock-setup-compact {
+    padding: 1px;
+}
+
+.lock-setup-compact .lock-setup-context {
+    padding: 0;
+}
+
+.lock-setup-compact .local-lock-title {
+    font-size: 1.15em;
+}
+
+.lock-settings-compact button.lock-action,
+.lock-setup-compact button.lock-action,
+.lock-settings-compact .lock-timeout button {
+    min-height: 42px;
+}
+
 /* USB update: one status hierarchy, compact tools and task-specific actions. */
 .usb-update {
     padding: .3em .5em .4em;

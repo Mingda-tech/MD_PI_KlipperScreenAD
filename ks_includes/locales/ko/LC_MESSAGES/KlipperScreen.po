@@ -2205,3 +2205,117 @@ msgstr "결과 검증 중"
 
 msgid "Verifying update package"
 msgstr "업데이트 패키지 검증 중"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1분"
+
+msgid "15 minutes"
+msgstr "15분"
+
+msgid "2 minutes"
+msgstr "2분"
+
+msgid "30 minutes"
+msgstr "30분"
+
+msgid "4-6 digit PIN"
+msgstr "4~6자리 PIN"
+
+msgid "5 minutes"
+msgstr "5분"
+
+msgid "60 minutes"
+msgstr "60분"
+
+msgid "Automatic screen lock"
+msgstr "자동 화면 잠금"
+
+msgid "Backspace"
+msgstr "한 자리 지우기"
+
+msgid "Change PIN"
+msgstr "PIN 변경"
+
+msgid "Disable PIN lock"
+msgstr "PIN 잠금 끄기"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "새 4~6자리 PIN을 입력하세요."
+
+msgid "Enter current PIN."
+msgstr "현재 PIN을 입력하세요."
+
+msgid "Enter the new PIN again."
+msgstr "새 PIN을 다시 입력하세요."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "잠금을 해제하려면 4~6자리 PIN을 입력하세요."
+
+msgid "Incorrect PIN."
+msgstr "PIN이 올바르지 않습니다."
+
+msgid "Lock now"
+msgstr "지금 잠그기"
+
+msgid "Lock settings saved."
+msgstr "잠금 설정을 저장했습니다."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "PIN 설정이 잘못되었습니다. 관리자에게 초기화를 요청하세요."
+
+msgid "PIN lock disabled."
+msgstr "PIN 잠금이 꺼져 있습니다."
+
+msgid "PIN lock enabled."
+msgstr "PIN 잠금이 켜져 있습니다."
+
+msgid "PIN settings changed. Start again."
+msgstr "PIN 설정이 변경되었습니다. 처음부터 다시 시작하세요."
+
+msgid "PINs do not match. Try again."
+msgstr "PIN이 일치하지 않습니다. 다시 시도하세요."
+
+msgid "Saving PIN..."
+msgstr "PIN 저장 중..."
+
+msgid "Screen Lock"
+msgstr "화면 잠금"
+
+msgid "Screen locked"
+msgstr "화면이 잠겼습니다"
+
+msgid "Set PIN"
+msgstr "PIN 설정"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "%d초 후에 다시 시도하세요."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "잠금 설정을 저장할 수 없습니다. 설정 쓰기 권한을 확인하고 다시 시도하세요."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "PIN을 확인할 수 없습니다. 다시 시도하세요."
+
+msgid "Unlock"
+msgstr "잠금 해제"
+
+msgid "Verifying PIN..."
+msgstr "PIN 확인 중..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "PIN을 설정하면 시작할 때마다 화면이 잠깁니다."
+
+msgid "Printing continues while the screen is locked."
+msgstr "화면이 잠겨 있어도 출력은 계속됩니다."
+
+msgid "Lock after inactivity."
+msgstr "일정 시간 사용하지 않으면 잠깁니다."
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "%(total)d단계 중 %(current)d단계"

@@ -2352,3 +2352,117 @@ msgstr "Verificando resultado"
 
 msgid "Verifying update package"
 msgstr "Verificando pacote de atualização"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 minuto"
+
+msgid "15 minutes"
+msgstr "15 minutos"
+
+msgid "2 minutes"
+msgstr "2 minutos"
+
+msgid "30 minutes"
+msgstr "30 minutos"
+
+msgid "4-6 digit PIN"
+msgstr "PIN de 4 a 6 dígitos"
+
+msgid "5 minutes"
+msgstr "5 minutos"
+
+msgid "60 minutes"
+msgstr "60 minutos"
+
+msgid "Automatic screen lock"
+msgstr "Bloqueio automático da tela"
+
+msgid "Backspace"
+msgstr "Apagar último dígito"
+
+msgid "Change PIN"
+msgstr "Alterar PIN"
+
+msgid "Disable PIN lock"
+msgstr "Desativar bloqueio por PIN"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Digite um novo PIN de 4 a 6 dígitos."
+
+msgid "Enter current PIN."
+msgstr "Digite o PIN atual."
+
+msgid "Enter the new PIN again."
+msgstr "Digite o novo PIN novamente."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Digite seu PIN de 4 a 6 dígitos para desbloquear."
+
+msgid "Incorrect PIN."
+msgstr "PIN incorreto."
+
+msgid "Lock now"
+msgstr "Bloquear agora"
+
+msgid "Lock settings saved."
+msgstr "Configurações de bloqueio salvas."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "A configuração do PIN é inválida. Entre em contato com o administrador para redefini-la."
+
+msgid "PIN lock disabled."
+msgstr "Bloqueio por PIN desativado."
+
+msgid "PIN lock enabled."
+msgstr "Bloqueio por PIN ativado."
+
+msgid "PIN settings changed. Start again."
+msgstr "As configurações do PIN foram alteradas. Comece de novo."
+
+msgid "PINs do not match. Try again."
+msgstr "Os PINs não coincidem. Tente novamente."
+
+msgid "Saving PIN..."
+msgstr "Salvando PIN..."
+
+msgid "Screen Lock"
+msgstr "Bloqueio da tela"
+
+msgid "Screen locked"
+msgstr "Tela bloqueada"
+
+msgid "Set PIN"
+msgstr "Definir PIN"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Tente novamente em %d segundos."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Não foi possível salvar as configurações de bloqueio. Verifique as permissões de configuração e tente novamente."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "Não foi possível verificar o PIN. Tente novamente."
+
+msgid "Unlock"
+msgstr "Desbloquear"
+
+msgid "Verifying PIN..."
+msgstr "Verificando PIN..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Com um PIN definido, a tela é bloqueada a cada inicialização."
+
+msgid "Printing continues while the screen is locked."
+msgstr "A impressão continua enquanto a tela está bloqueada."
+
+msgid "Lock after inactivity."
+msgstr "Bloquear após inatividade."
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Etapa %(current)d de %(total)d"

@@ -7,8 +7,11 @@ import re
 import copy
 import pathlib
 import locale
+import stat
+import tempfile
 
 from io import StringIO
+from ks_includes.screen_lock import LOCK_TIMEOUT_OPTIONS, normalize_timeout
 
 SCREEN_BLANKING_OPTIONS = [
     60,     # 1 Minute
@@ -44,9 +47,10 @@ class KlipperScreenConfig:
         self.defined_config = None
         self.lang = None
         self.langs = {}
+        auto_gen = None
 
         try:
-            self.config.read(self.default_config_path)
+            self.config.read(self.default_config_path, encoding='utf-8')
             # In case a user altered defaults.conf
             self.validate_config(self.config)
             if self.config_path != self.default_config_path:
@@ -68,22 +72,30 @@ class KlipperScreenConfig:
                     auto_gen.read_string(saved_def)
                     if self.validate_config(auto_gen, string=saved_def, remove=True):
                         self.config.read_string(saved_def)
-                        logging.info(f"====== Saved Def ======\n{saved_def}\n=======================")
+                        logging.info("====== Saved Def ======\n%s\n=======================",
+                                     self._redact_config(saved_def))
             # This is the final config
             # self.log_config(self.config)
         except KeyError as Kerror:
-            msg = f"Error reading config: {self.config_path}\n{Kerror}"
-            logging.exception(msg)
+            msg = self._redact_config(f"Error reading config: {self.config_path}\n{Kerror}")
+            logging.error(msg)
             self.errors.append(msg)
             raise ConfigError(msg) from Kerror
         except ValueError as Verror:
-            msg = f"Invalid Value in the config:\n{Verror}"
-            logging.exception(msg)
+            msg = self._redact_config(f"Invalid Value in the config:\n{Verror}")
+            logging.error(msg)
             self.errors.append(msg)
         except Exception as e:
-            msg = f"Unknown error with the config:\n{e}"
-            logging.exception(msg)
+            msg = self._redact_config(f"Unknown error with the config:\n{e}")
+            logging.error(msg)
             self.errors.append(msg)
+
+        # Unrelated invalid settings must not silently remove an already configured lock.
+        self._preserve_screen_lock_credential(self.defined_config)
+        self._preserve_screen_lock_credential(auto_gen)
+        if self.config.has_option("main", "screen_lock_timeout"):
+            timeout = self.config.get("main", "screen_lock_timeout", raw=True)
+            self.config.set("main", "screen_lock_timeout", str(normalize_timeout(timeout)))
 
         printers = [i for i in self.config.sections() if i.startswith("printer ")]
         if len(printers) == 0:
@@ -106,6 +118,14 @@ class KlipperScreenConfig:
 
         self.create_translations()
         self._create_configurable_options(screen)
+
+    def _preserve_screen_lock_credential(self, source):
+        if source is not None and source.has_option("main", "screen_lock_pin_hash"):
+            if not self.config.has_section("main"):
+                self.config.add_section("main")
+            # Damaged hashes containing '%' still need to keep the screen locked.
+            value = source.get("main", "screen_lock_pin_hash", raw=True)
+            self.config.set("main", "screen_lock_pin_hash", value.replace('%', '%%'))
 
     def create_translations(self):
         lang_path = os.path.join(klipperscreendir, "ks_includes", "locales")
@@ -144,7 +164,7 @@ class KlipperScreenConfig:
             msg = "Section headers have extra information after brackets possible newline issue:"
             for line in string.split('\n'):
                 if re.match(r".+\].", line):
-                    logging.error(line)
+                    logging.error(self._redact_config(line))
                     self.errors.append(f'{msg}\n\n{line}')
                     return False
         for section in config:
@@ -160,11 +180,11 @@ class KlipperScreenConfig:
                 )
                 strs = (
                     'default_printer', 'language', 'print_sort_dir', 'screen_blanking', 
-                    'print_estimate_method', 'screen_blanking',  "screen_off_devices",
+                    'print_estimate_method', 'screen_blanking',  "screen_off_devices", 'screen_lock_pin_hash',
                 )
                 numbers = (
                     'job_complete_timeout', 'job_error_timeout', 'move_speed_xy', 'move_speed_z',
-                    'print_estimate_compensation', 'width', 'height',
+                    'print_estimate_compensation', 'width', 'height', 'screen_lock_timeout',
                 )
             elif section.startswith('printer '):
                 bools = (
@@ -192,6 +212,11 @@ class KlipperScreenConfig:
                 self.errors.append(f'Section [{section}] not recognized')
 
             for key in config[section]:
+                if section == 'main' and key == 'screen_lock_timeout':
+                    if config[section][key] not in tuple(str(value) for value in LOCK_TIMEOUT_OPTIONS):
+                        self.errors.append('Invalid screen_lock_timeout; using 0 (disabled).')
+                    # Normalize after merging, without discarding a PIN in the same section.
+                    continue
                 if key not in bools and key not in strs and key not in numbers:
                     msg = f'Option "{key}" not recognized for section "[{section}]"'
                     if key == "camera_url":
@@ -289,6 +314,8 @@ class KlipperScreenConfig:
 
         # Options that are in panels and shouldn't be added to the main settings
         panel_options = [
+            {"screen_lock_pin_hash": {"section": "main", "type": None, "value": ""}},
+            {"screen_lock_timeout": {"section": "main", "type": None, "value": "0"}},
             {"invert_x": {"section": "main", "name": _("Invert X"), "type": None, "value": "False"}},
             {"invert_y": {"section": "main", "name": _("Invert Y"), "type": None, "value": "False"}},
             {"invert_z": {"section": "main", "name": _("Invert Z"), "type": None, "value": "False"}},
@@ -364,16 +391,18 @@ class KlipperScreenConfig:
         logging.info(f"Parsing files: {parse_files}")
         for file in parse_files:
             config = configparser.ConfigParser()
-            config.read(file)
+            config.read(file, encoding='utf-8')
             includes = [i[8:] for i in config.sections() if i.startswith("include ")]
             for include in includes:
                 self._include_config("/".join(full_path.split("/")[:-1]), include)
+            # Keep include precedence even if an unrelated value prevents merging.
+            self._preserve_screen_lock_credential(config)
             self.exclude_from_config(config)
             self.log_config(config)
-            with open(file, 'r') as f:
+            with open(file, 'r', encoding='utf-8') as f:
                 string = f.read()
                 if self.validate_config(config, string=string):
-                    self.config.read(file)
+                    self.config.read(file, encoding='utf-8')
 
     def separate_saved_config(self, config_path):
         user_def = []
@@ -381,7 +410,7 @@ class KlipperScreenConfig:
         found_saved = False
         if not os.path.exists(config_path):
             return ["", None]
-        with open(config_path) as file:
+        with open(config_path, encoding='utf-8') as file:
             for line in file:
                 line = line.replace('\n', '')
                 if line == self.do_not_edit_line:
@@ -477,6 +506,14 @@ class KlipperScreenConfig:
         return self.printers
 
     def save_user_config_options(self):
+        try:
+            return self._save_user_config_options()
+        except Exception as error:
+            logging.error("Error saving configuration file in %s:\n%s", self.config_path,
+                          self._redact_config(str(error)))
+            return False
+
+    def _save_user_config_options(self):
         save_config = configparser.ConfigParser()
         for item in self.configurable_options:
             name = list(item)[0]
@@ -533,11 +570,29 @@ class KlipperScreenConfig:
                 filepath = os.path.join(filepath, self.configfile_name)
             logging.info(f'Creating a new config file in {filepath}')
 
+        # Replace the destination of a symbolic link rather than the link itself.
+        filepath = os.path.realpath(filepath)
+        original_stat = os.stat(filepath) if os.path.exists(filepath) else None
+        fd, temporary_path = tempfile.mkstemp(prefix='.KlipperScreen-', suffix='.tmp',
+                                              dir=os.path.dirname(filepath))
         try:
-            with open(filepath, 'w') as file:
+            with os.fdopen(fd, 'w', encoding='utf-8', newline='') as file:
+                if original_stat is not None:
+                    os.chmod(temporary_path, stat.S_IMODE(original_stat.st_mode))
+                    if hasattr(os, 'chown'):
+                        temporary_stat = os.stat(temporary_path)
+                        if (temporary_stat.st_uid, temporary_stat.st_gid) != \
+                                (original_stat.st_uid, original_stat.st_gid):
+                            os.chown(temporary_path, original_stat.st_uid, original_stat.st_gid)
                 file.write(contents)
-        except Exception as e:
-            logging.error(f"Error writing configuration file in {filepath}:\n{e}")
+                file.flush()
+                os.fsync(file.fileno())
+            os.replace(temporary_path, filepath)
+        finally:
+            if os.path.exists(temporary_path):
+                os.unlink(temporary_path)
+        self.config_path = filepath
+        return True
 
     def set(self, section, name, value):
         self.config.set(section, name, value)
@@ -546,14 +601,15 @@ class KlipperScreenConfig:
         lines = [
             " "
             "===== Config File =====",
-            re.sub(
-                r'(moonraker_api_key\s*=\s*\S+)',
-                'moonraker_api_key = [redacted]',
-                self._build_config_string(config)
-            ),
+            self._redact_config(self._build_config_string(config)),
             "======================="
         ]
         logging.info("\n".join(lines))
+
+    @staticmethod
+    def _redact_config(value):
+        return re.sub(r'(?im)((?:moonraker_api_key|screen_lock_pin_hash)\s*[=:])[^\r\n]*',
+                      r'\1 [redacted]', value)
 
     @staticmethod
     def _build_config_string(config):

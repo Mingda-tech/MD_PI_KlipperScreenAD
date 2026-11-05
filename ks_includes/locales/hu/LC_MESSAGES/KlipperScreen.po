@@ -2111,3 +2111,117 @@ msgstr "Eredmény ellenőrzése"
 
 msgid "Verifying update package"
 msgstr "Frissítőcsomag ellenőrzése"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 perc"
+
+msgid "15 minutes"
+msgstr "15 perc"
+
+msgid "2 minutes"
+msgstr "2 perc"
+
+msgid "30 minutes"
+msgstr "30 perc"
+
+msgid "4-6 digit PIN"
+msgstr "4–6 számjegyű PIN-kód"
+
+msgid "5 minutes"
+msgstr "5 perc"
+
+msgid "60 minutes"
+msgstr "60 perc"
+
+msgid "Automatic screen lock"
+msgstr "Automatikus képernyőzár"
+
+msgid "Backspace"
+msgstr "Karakter törlése"
+
+msgid "Change PIN"
+msgstr "PIN-kód módosítása"
+
+msgid "Disable PIN lock"
+msgstr "PIN-kódos zárolás kikapcsolása"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Adjon meg egy új, 4–6 számjegyű PIN-kódot."
+
+msgid "Enter current PIN."
+msgstr "Adja meg a jelenlegi PIN-kódot."
+
+msgid "Enter the new PIN again."
+msgstr "Adja meg újra az új PIN-kódot."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "A feloldáshoz adja meg a 4–6 számjegyű PIN-kódját."
+
+msgid "Incorrect PIN."
+msgstr "Helytelen PIN-kód."
+
+msgid "Lock now"
+msgstr "Zárolás most"
+
+msgid "Lock settings saved."
+msgstr "Zárolási beállítások mentve."
+
+msgid "PIN"
+msgstr "PIN-kód"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "A PIN-kód beállításai érvénytelenek. Kérje a rendszergazdától az alaphelyzetbe állítást."
+
+msgid "PIN lock disabled."
+msgstr "PIN-kódos zárolás kikapcsolva."
+
+msgid "PIN lock enabled."
+msgstr "PIN-kódos zárolás bekapcsolva."
+
+msgid "PIN settings changed. Start again."
+msgstr "A PIN-kód beállításai megváltoztak. Kezdje újra."
+
+msgid "PINs do not match. Try again."
+msgstr "A PIN-kódok nem egyeznek. Próbálja újra."
+
+msgid "Saving PIN..."
+msgstr "PIN-kód mentése..."
+
+msgid "Screen Lock"
+msgstr "Képernyőzár"
+
+msgid "Screen locked"
+msgstr "Képernyő zárolva"
+
+msgid "Set PIN"
+msgstr "PIN-kód beállítása"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Próbálja újra %d másodperc múlva."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "A zárolási beállítások nem menthetők. Ellenőrizze a konfiguráció hozzáférési jogosultságait, majd próbálja újra."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "A PIN-kód nem ellenőrizhető. Próbálja újra."
+
+msgid "Unlock"
+msgstr "Feloldás"
+
+msgid "Verifying PIN..."
+msgstr "PIN-kód ellenőrzése..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Ha be van állítva PIN-kód, a képernyő minden indításkor zárolódik."
+
+msgid "Printing continues while the screen is locked."
+msgstr "A nyomtatás zárolt képernyő mellett is folytatódik."
+
+msgid "Lock after inactivity."
+msgstr "Zárolás inaktivitás után."
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "%(current)d. lépés (összesen: %(total)d)"

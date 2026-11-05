@@ -2126,3 +2126,117 @@ msgstr "Tikrinamas rezultatas"
 
 msgid "Verifying update package"
 msgstr "Tikrinamas naujinimo paketas"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 minutė"
+
+msgid "15 minutes"
+msgstr "15 minučių"
+
+msgid "2 minutes"
+msgstr "2 minutės"
+
+msgid "30 minutes"
+msgstr "30 minučių"
+
+msgid "4-6 digit PIN"
+msgstr "4–6 skaitmenų PIN"
+
+msgid "5 minutes"
+msgstr "5 minutės"
+
+msgid "60 minutes"
+msgstr "60 minučių"
+
+msgid "Automatic screen lock"
+msgstr "Automatinis ekrano užrakinimas"
+
+msgid "Backspace"
+msgstr "Ištrinti simbolį"
+
+msgid "Change PIN"
+msgstr "Keisti PIN"
+
+msgid "Disable PIN lock"
+msgstr "Išjungti užraktą su PIN"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Įveskite naują 4–6 skaitmenų PIN."
+
+msgid "Enter current PIN."
+msgstr "Įveskite dabartinį PIN."
+
+msgid "Enter the new PIN again."
+msgstr "Dar kartą įveskite naują PIN."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Norėdami atrakinti, įveskite savo 4–6 skaitmenų PIN."
+
+msgid "Incorrect PIN."
+msgstr "Neteisingas PIN."
+
+msgid "Lock now"
+msgstr "Užrakinti dabar"
+
+msgid "Lock settings saved."
+msgstr "Užrakto nuostatos išsaugotos."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "PIN konfigūracija netinkama. Kreipkitės į administratorių, kad ją nustatytų iš naujo."
+
+msgid "PIN lock disabled."
+msgstr "Užraktas su PIN išjungtas."
+
+msgid "PIN lock enabled."
+msgstr "Užraktas su PIN įjungtas."
+
+msgid "PIN settings changed. Start again."
+msgstr "PIN nuostatos pasikeitė. Pradėkite iš naujo."
+
+msgid "PINs do not match. Try again."
+msgstr "PIN nesutampa. Bandykite dar kartą."
+
+msgid "Saving PIN..."
+msgstr "Išsaugomas PIN..."
+
+msgid "Screen Lock"
+msgstr "Ekrano užraktas"
+
+msgid "Screen locked"
+msgstr "Ekranas užrakintas"
+
+msgid "Set PIN"
+msgstr "Nustatyti PIN"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Bandykite dar kartą po %d sek."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Nepavyko išsaugoti užrakto nuostatų. Patikrinkite konfigūracijos prieigos teises ir bandykite dar kartą."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "Nepavyko patikrinti PIN. Bandykite dar kartą."
+
+msgid "Unlock"
+msgstr "Atrakinti"
+
+msgid "Verifying PIN..."
+msgstr "Tikrinamas PIN..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Nustačius PIN, ekranas užrakinamas kiekvieną kartą paleidžiant."
+
+msgid "Printing continues while the screen is locked."
+msgstr "Spausdinimas tęsiamas ir užrakinus ekraną."
+
+msgid "Lock after inactivity."
+msgstr "Užrakinti po neveiklos laikotarpio."
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "%(current)d žingsnis iš %(total)d"

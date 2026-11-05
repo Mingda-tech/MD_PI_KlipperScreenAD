@@ -22,6 +22,11 @@ class Panel(ScreenPanel):
             "type": "menu",
             "menu": "lang"
         }})
+        options.append({"screen_lock": {
+            "name": _("Screen Lock"),
+            "type": "panel",
+            "panel": "lock_settings"
+        }})
 
         self.labels['settings_menu'] = self._gtk.ScrolledWindow()
         self.labels['settings'] = Gtk.Grid()
@@ -187,6 +192,12 @@ class Panel(ScreenPanel):
             open_menu.set_hexpand(False)
             open_menu.set_halign(Gtk.Align.END)
             dev.add(open_menu)
+        elif option['type'] == "panel":
+            open_panel = self._gtk.Button("settings", style="color3")
+            open_panel.connect("clicked", self.menu_item_clicked, option)
+            open_panel.set_hexpand(False)
+            open_panel.set_halign(Gtk.Align.END)
+            dev.add(open_panel)
         elif option['type'] == "lang":
             select = self._gtk.Button("load", style="color3")
             select.connect("clicked", self._screen.change_language, option['code'])

@@ -2178,3 +2178,120 @@ msgstr "جارٍ التحقق من النتيجة"
 
 msgid "Verifying update package"
 msgstr "جارٍ التحقق من حزمة التحديث"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "دقيقة واحدة"
+
+msgid "15 minutes"
+msgstr "15 دقيقة"
+
+msgid "2 minutes"
+msgstr "دقيقتان"
+
+msgid "30 minutes"
+msgstr "30 دقيقة"
+
+msgid "4-6 digit PIN"
+msgstr "رمز PIN من 4 إلى 6 أرقام"
+
+msgid "5 minutes"
+msgstr "5 دقائق"
+
+msgid "60 minutes"
+msgstr "60 دقيقة"
+
+msgid "Automatic screen lock"
+msgstr "قفل الشاشة تلقائيًا"
+
+msgid "Backspace"
+msgstr "حذف رقم"
+
+msgid "Change PIN"
+msgstr "تغيير رمز PIN"
+
+msgid "Disable PIN lock"
+msgstr "تعطيل قفل PIN"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "أدخل رمز PIN جديدًا من 4 إلى 6 أرقام."
+
+msgid "Enter current PIN."
+msgstr "أدخل رمز PIN الحالي."
+
+msgid "Enter the new PIN again."
+msgstr "أدخل رمز PIN الجديد مرة أخرى."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "أدخل رمز PIN المكوّن من 4 إلى 6 أرقام لفتح القفل."
+
+msgid "Incorrect PIN."
+msgstr "رمز PIN غير صحيح."
+
+msgid "Lock now"
+msgstr "قفل الآن"
+
+msgid "Lock settings saved."
+msgstr "تم حفظ إعدادات القفل."
+
+msgid "PIN"
+msgstr "رمز PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "إعدادات PIN غير صالحة. اتصل بالمسؤول لإعادة ضبطها."
+
+msgid "PIN lock disabled."
+msgstr "قفل PIN معطّل."
+
+msgid "PIN lock enabled."
+msgstr "قفل PIN مفعّل."
+
+msgid "PIN settings changed. Start again."
+msgstr "تغيّرت إعدادات PIN. ابدأ من جديد."
+
+msgid "PINs do not match. Try again."
+msgstr "رمزا PIN غير متطابقين. حاول مجددًا."
+
+msgid "Saving PIN..."
+msgstr "جارٍ حفظ رمز PIN..."
+
+msgid "Screen Lock"
+msgstr "قفل الشاشة"
+
+msgid "Screen locked"
+msgstr "الشاشة مقفلة"
+
+msgid "Set PIN"
+msgstr "تعيين رمز PIN"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "حاول مجددًا بعد %d ثانية."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "تعذر حفظ إعدادات القفل. تحقق من أذونات التهيئة وحاول مجددًا."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "تعذر التحقق من رمز PIN. حاول مجددًا."
+
+msgid "Unlock"
+msgstr "فتح القفل"
+
+msgid "Verifying PIN..."
+msgstr "جارٍ التحقق من رمز PIN..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "عند تعيين رمز PIN، تُقفل الشاشة عند كل تشغيل."
+
+#: ks_includes/widgets/lockscreen.py
+msgid "Printing continues while the screen is locked."
+msgstr "تستمر الطباعة أثناء قفل الشاشة."
+
+#: panels/lock_settings.py
+msgid "Lock after inactivity."
+msgstr "قفل الشاشة بعد فترة من عدم النشاط."
+
+#: panels/lock_settings.py
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "الخطوة %(current)d من %(total)d"

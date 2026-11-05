@@ -27,6 +27,24 @@ def format_label(widget, lines=2):
         label.set_ellipsize(Pango.EllipsizeMode.END)
         label.set_lines(lines)
 
+
+class ScreenAwareDialog(Gtk.Dialog):
+    """Keep separate toplevel surfaces behind the screen's lock or blanker."""
+
+    def __init__(self, screen, title):
+        self._screen_owner = screen
+        super().__init__(title=title)
+
+    def do_show(self):
+        screen = self._screen_owner
+        if screen.is_ui_locked() or screen.screensaver is not None:
+            self._hidden_for_screen_overlay = True
+            if screen.device_lock_active:
+                self._created_while_device_locked = True
+            return
+        Gtk.Dialog.do_show(self)
+
+
 class KlippyGtk:
     labels = {}
 
@@ -209,7 +227,7 @@ class KlippyGtk:
             widget.set_sensitive(True)
 
     def Dialog(self, title, buttons, content, callback=None, *args):
-        dialog = Gtk.Dialog(title=title)
+        dialog = ScreenAwareDialog(self.screen, title)
         dialog.set_resizable(False)
         dialog.set_transient_for(self.screen)
         dialog.set_modal(True)
@@ -241,19 +259,16 @@ class KlippyGtk:
         content_area.add(content)
 
         dialog.show_all()
-        if getattr(self.screen, "device_lock_active", False):
-            # Dialogs are separate Wayland surfaces and could otherwise appear
-            # above the root lock overlay. Keep the object valid for callers,
-            # but never expose it while the administrative lock is active.
-            dialog.hide()
-            dialog._created_while_device_locked = True
         # Change cursor to blank
-        if self.cursor:
-            dialog.get_window().set_cursor(
-                Gdk.Cursor.new_for_display(Gdk.Display.get_default(), Gdk.CursorType.ARROW))
+
+        def set_dialog_cursor(widget):
+            cursor_type = Gdk.CursorType.ARROW if self.cursor else Gdk.CursorType.BLANK_CURSOR
+            widget.get_window().set_cursor(Gdk.Cursor.new_for_display(Gdk.Display.get_default(), cursor_type))
+
+        if dialog.get_realized():
+            set_dialog_cursor(dialog)
         else:
-            dialog.get_window().set_cursor(
-                Gdk.Cursor.new_for_display(Gdk.Display.get_default(), Gdk.CursorType.BLANK_CURSOR))
+            dialog.connect("realize", set_dialog_cursor)
 
         self.screen.dialogs.append(dialog)
         logging.info(f"Showing dialog {dialog.get_title()} {dialog.get_size()}")

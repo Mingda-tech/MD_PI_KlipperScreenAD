@@ -277,6 +277,15 @@ class Engine:
                 self.finish(tx)
             except Exception as exc:
                 code = exc.code if isinstance(exc, UpdateError) else 'SWUPDATE_EXECUTION_FAILED'
+                # Keep the original installation evidence separate from later
+                # recovery attempts. A refusal to replay is not its root cause.
+                original = tx.get('error') if recovering else code
+                if not tx.get('firstError') and original and original != 'MANUAL_RECOVERY_REQUIRED':
+                    tx['firstError'] = original
+                if recovering:
+                    tx['lastRecoveryError'] = code
+                    if code == 'MANUAL_RECOVERY_REQUIRED':
+                        code = tx.get('firstError') or tx.get('error') or code
                 if tx.get('sideEffectsMayHaveStarted'):
                     self.update(tx, 'RECOVERY_REQUIRED', tx.get('progress', 0), error=code, awaitingUiReady=False)
                     self.store.maintain(tx)

@@ -2039,3 +2039,120 @@ msgstr "Ověřování výsledku"
 
 msgid "Verifying update package"
 msgstr "Ověřování aktualizačního balíčku"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 minuta"
+
+msgid "15 minutes"
+msgstr "15 minut"
+
+msgid "2 minutes"
+msgstr "2 minuty"
+
+msgid "30 minutes"
+msgstr "30 minut"
+
+msgid "4-6 digit PIN"
+msgstr "4–6místný PIN"
+
+msgid "5 minutes"
+msgstr "5 minut"
+
+msgid "60 minutes"
+msgstr "60 minut"
+
+msgid "Automatic screen lock"
+msgstr "Automatické zamykání obrazovky"
+
+msgid "Backspace"
+msgstr "Smazat znak"
+
+msgid "Change PIN"
+msgstr "Změnit PIN"
+
+msgid "Disable PIN lock"
+msgstr "Vypnout zámek s PINem"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Zadejte nový 4–6místný PIN."
+
+msgid "Enter current PIN."
+msgstr "Zadejte aktuální PIN."
+
+msgid "Enter the new PIN again."
+msgstr "Zadejte nový PIN znovu."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Pro odemknutí zadejte svůj 4–6místný PIN."
+
+msgid "Incorrect PIN."
+msgstr "Nesprávný PIN."
+
+msgid "Lock now"
+msgstr "Zamknout nyní"
+
+msgid "Lock settings saved."
+msgstr "Nastavení zámku bylo uloženo."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "Konfigurace PINu je neplatná. Požádejte správce o její obnovení."
+
+msgid "PIN lock disabled."
+msgstr "Zámek s PINem je vypnutý."
+
+msgid "PIN lock enabled."
+msgstr "Zámek s PINem je zapnutý."
+
+msgid "PIN settings changed. Start again."
+msgstr "Nastavení PINu se změnilo. Začněte znovu."
+
+msgid "PINs do not match. Try again."
+msgstr "PINy se neshodují. Zkuste to znovu."
+
+msgid "Saving PIN..."
+msgstr "Ukládání PINu..."
+
+msgid "Screen Lock"
+msgstr "Zámek obrazovky"
+
+msgid "Screen locked"
+msgstr "Obrazovka je uzamčena"
+
+msgid "Set PIN"
+msgstr "Nastavit PIN"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Zkuste to znovu za %d sekund."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Nastavení zámku nelze uložit. Zkontrolujte oprávnění ke konfiguraci a zkuste to znovu."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "PIN nelze ověřit. Zkuste to znovu."
+
+msgid "Unlock"
+msgstr "Odemknout"
+
+msgid "Verifying PIN..."
+msgstr "Ověřování PINu..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Pokud je nastaven PIN, obrazovka se zamkne při každém spuštění."
+
+#: ks_includes/widgets/lockscreen.py
+msgid "Printing continues while the screen is locked."
+msgstr "Tisk pokračuje i při zamčené obrazovce."
+
+#: panels/lock_settings.py
+msgid "Lock after inactivity."
+msgstr "Zamknout při nečinnosti."
+
+#: panels/lock_settings.py
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Krok %(current)d z %(total)d"

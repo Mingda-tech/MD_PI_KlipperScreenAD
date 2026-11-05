@@ -2220,3 +2220,117 @@ msgstr "Перевірка результату"
 
 msgid "Verifying update package"
 msgstr "Перевірка пакета оновлення"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 хвилина"
+
+msgid "15 minutes"
+msgstr "15 хвилин"
+
+msgid "2 minutes"
+msgstr "2 хвилини"
+
+msgid "30 minutes"
+msgstr "30 хвилин"
+
+msgid "4-6 digit PIN"
+msgstr "ПІН-код із 4–6 цифр"
+
+msgid "5 minutes"
+msgstr "5 хвилин"
+
+msgid "60 minutes"
+msgstr "60 хвилин"
+
+msgid "Automatic screen lock"
+msgstr "Автоматичне блокування екрана"
+
+msgid "Backspace"
+msgstr "Видалити символ"
+
+msgid "Change PIN"
+msgstr "Змінити ПІН-код"
+
+msgid "Disable PIN lock"
+msgstr "Вимкнути блокування за ПІН-кодом"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Введіть новий ПІН-код із 4–6 цифр."
+
+msgid "Enter current PIN."
+msgstr "Введіть поточний ПІН-код."
+
+msgid "Enter the new PIN again."
+msgstr "Введіть новий ПІН-код ще раз."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Для розблокування введіть свій ПІН-код із 4–6 цифр."
+
+msgid "Incorrect PIN."
+msgstr "Неправильний ПІН-код."
+
+msgid "Lock now"
+msgstr "Заблокувати зараз"
+
+msgid "Lock settings saved."
+msgstr "Налаштування блокування збережено."
+
+msgid "PIN"
+msgstr "ПІН-код"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "Конфігурація ПІН-коду недійсна. Зверніться до адміністратора для її скидання."
+
+msgid "PIN lock disabled."
+msgstr "Блокування за ПІН-кодом вимкнено."
+
+msgid "PIN lock enabled."
+msgstr "Блокування за ПІН-кодом увімкнено."
+
+msgid "PIN settings changed. Start again."
+msgstr "Налаштування ПІН-коду змінилися. Почніть знову."
+
+msgid "PINs do not match. Try again."
+msgstr "ПІН-коди не збігаються. Спробуйте ще раз."
+
+msgid "Saving PIN..."
+msgstr "Збереження ПІН-коду..."
+
+msgid "Screen Lock"
+msgstr "Блокування екрана"
+
+msgid "Screen locked"
+msgstr "Екран заблоковано"
+
+msgid "Set PIN"
+msgstr "Задати ПІН-код"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Спробуйте ще раз через %d с."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Не вдалося зберегти налаштування блокування. Перевірте права доступу до конфігурації та спробуйте ще раз."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "Не вдалося перевірити ПІН-код. Спробуйте ще раз."
+
+msgid "Unlock"
+msgstr "Розблокувати"
+
+msgid "Verifying PIN..."
+msgstr "Перевірка ПІН-коду..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Якщо задано ПІН-код, екран блокується під час кожного запуску."
+
+msgid "Printing continues while the screen is locked."
+msgstr "Друк триває, поки екран заблоковано."
+
+msgid "Lock after inactivity."
+msgstr "Блокувати за відсутності дій."
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Крок %(current)d з %(total)d"

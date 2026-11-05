@@ -2277,3 +2277,117 @@ msgstr "正在驗證結果"
 
 msgid "Verifying update package"
 msgstr "正在驗證更新套件"
+
+# Local password screen lock
+msgid "Screen Lock"
+msgstr "鎖定螢幕設定"
+
+msgid "Screen locked"
+msgstr "螢幕已鎖定"
+
+msgid "PIN"
+msgstr "數字密碼"
+
+msgid "4-6 digit PIN"
+msgstr "4～6 位數字密碼"
+
+msgid "Set PIN"
+msgstr "設定密碼"
+
+msgid "Change PIN"
+msgstr "變更密碼"
+
+msgid "Disable PIN lock"
+msgstr "關閉密碼鎖"
+
+msgid "Lock now"
+msgstr "立即鎖定"
+
+msgid "Unlock"
+msgstr "解除鎖定"
+
+msgid "Backspace"
+msgstr "退格"
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "設定密碼後，每次啟動都會鎖定螢幕。"
+
+msgid "Automatic screen lock"
+msgstr "閒置自動鎖定"
+
+msgid "1 minute"
+msgstr "1 分鐘"
+
+msgid "2 minutes"
+msgstr "2 分鐘"
+
+msgid "5 minutes"
+msgstr "5 分鐘"
+
+msgid "15 minutes"
+msgstr "15 分鐘"
+
+msgid "30 minutes"
+msgstr "30 分鐘"
+
+msgid "60 minutes"
+msgstr "60 分鐘"
+
+msgid "Enter current PIN."
+msgstr "請輸入目前密碼。"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "請輸入新的 4～6 位數字密碼。"
+
+msgid "Enter the new PIN again."
+msgstr "請再次輸入新密碼。"
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "請輸入 4～6 位數字密碼以解除鎖定。"
+
+msgid "PINs do not match. Try again."
+msgstr "兩次密碼不一致，請重新輸入。"
+
+msgid "Incorrect PIN."
+msgstr "密碼錯誤。"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "請於 %d 秒後再試。"
+
+msgid "Verifying PIN..."
+msgstr "正在驗證密碼…"
+
+msgid "Saving PIN..."
+msgstr "正在儲存密碼…"
+
+msgid "Unable to verify PIN. Try again."
+msgstr "無法驗證密碼，請再試一次。"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "密碼設定無效，請聯絡管理員重設。"
+
+msgid "PIN settings changed. Start again."
+msgstr "密碼設定已變更，請重新操作。"
+
+msgid "Lock settings saved."
+msgstr "鎖定螢幕設定已儲存。"
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "無法儲存鎖定設定，請檢查設定檔權限後再試。"
+
+msgid "PIN lock enabled."
+msgstr "密碼鎖已開啟。"
+
+msgid "PIN lock disabled."
+msgstr "密碼鎖已關閉。"
+
+msgid "Printing continues while the screen is locked."
+msgstr "鎖定螢幕期間，列印仍會繼續。"
+
+msgid "Lock after inactivity."
+msgstr "一段時間未操作後自動鎖定螢幕。"
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "第 %(current)d 步，共 %(total)d 步"

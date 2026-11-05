@@ -140,7 +140,7 @@ msgid "Checking for updates, please wait..."
 msgstr ""
 
 msgid "Clear"
-msgstr ""
+msgstr "Clear"
 
 msgid "Close"
 msgstr "Close"
@@ -458,7 +458,7 @@ msgid "Network"
 msgstr ""
 
 msgid "Never"
-msgstr ""
+msgstr "Never"
 
 msgid "New"
 msgstr ""
@@ -594,7 +594,7 @@ msgid "Retrying"
 msgstr ""
 
 msgid "Save"
-msgstr ""
+msgstr "Save"
 
 msgid "Save Config"
 msgstr ""
@@ -2108,3 +2108,117 @@ msgstr "Verifying the result"
 
 msgid "Verifying update package"
 msgstr "Verifying update package"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 minute"
+
+msgid "15 minutes"
+msgstr "15 minutes"
+
+msgid "2 minutes"
+msgstr "2 minutes"
+
+msgid "30 minutes"
+msgstr "30 minutes"
+
+msgid "4-6 digit PIN"
+msgstr "4-6 digit PIN"
+
+msgid "5 minutes"
+msgstr "5 minutes"
+
+msgid "60 minutes"
+msgstr "60 minutes"
+
+msgid "Automatic screen lock"
+msgstr "Automatic screen lock"
+
+msgid "Backspace"
+msgstr "Backspace"
+
+msgid "Change PIN"
+msgstr "Change PIN"
+
+msgid "Disable PIN lock"
+msgstr "Disable PIN lock"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Enter a new 4-6 digit PIN."
+
+msgid "Enter current PIN."
+msgstr "Enter current PIN."
+
+msgid "Enter the new PIN again."
+msgstr "Enter the new PIN again."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Enter your 4-6 digit PIN to unlock."
+
+msgid "Incorrect PIN."
+msgstr "Incorrect PIN."
+
+msgid "Lock now"
+msgstr "Lock now"
+
+msgid "Lock settings saved."
+msgstr "Lock settings saved."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "PIN configuration is invalid. Contact the administrator to reset it."
+
+msgid "PIN lock disabled."
+msgstr "PIN lock disabled."
+
+msgid "PIN lock enabled."
+msgstr "PIN lock enabled."
+
+msgid "PIN settings changed. Start again."
+msgstr "PIN settings changed. Start again."
+
+msgid "PINs do not match. Try again."
+msgstr "PINs do not match. Try again."
+
+msgid "Saving PIN..."
+msgstr "Saving PIN..."
+
+msgid "Screen Lock"
+msgstr "Screen Lock"
+
+msgid "Screen locked"
+msgstr "Screen locked"
+
+msgid "Set PIN"
+msgstr "Set PIN"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Try again in %d seconds."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Unable to save lock settings. Check configuration permissions and try again."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "Unable to verify PIN. Try again."
+
+msgid "Unlock"
+msgstr "Unlock"
+
+msgid "Verifying PIN..."
+msgstr "Verifying PIN..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "With a PIN set, the screen locks at every startup."
+
+msgid "Printing continues while the screen is locked."
+msgstr "Printing continues while the screen is locked."
+
+msgid "Lock after inactivity."
+msgstr "Lock after inactivity."
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Step %(current)d of %(total)d"

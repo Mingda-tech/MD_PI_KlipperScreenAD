@@ -30,6 +30,8 @@ from ks_includes.multi_material import SWITCH_DATA_OBJECT, get_feeder_sensors
 from ks_includes.widgets.keyboard import Keyboard
 from ks_includes.config import KlipperScreenConfig
 from ks_includes.device_lock import DeviceLockSocketClient, DeviceLockStateReader
+from ks_includes.screen_lock import ScreenLockPolicy, is_valid_pin_hash
+from ks_includes.widgets.lockscreen import LockScreen
 from ks_includes.offline_update_client import OfflineUpdateClient, needs_attention
 from ks_includes.offline_update_runtime import get_offline_update_runtime
 from ks_includes.ai_detection_result import (
@@ -148,10 +150,17 @@ class KlipperScreen(Gtk.Window):
         self._device_lock_ack_inflight = None
         self._device_lock_reader = DeviceLockStateReader()
         self._device_lock_client = DeviceLockSocketClient()
+        self.lock_screen_view = None
+        self.screen_lock_timer = None
 
         configfile = os.path.normpath(os.path.expanduser(args.configfile))
 
         self._config = KlipperScreenConfig(configfile, self)
+        main_config = self._config.get_main_config()
+        self.screen_lock = ScreenLockPolicy(
+            main_config.get("screen_lock_pin_hash", "", raw=True),
+            main_config.get("screen_lock_timeout", "0"),
+        )
         self.lang_ltr = set_text_direction(self._config.get_main_config().get("language", None))
         self.env = Environment(extensions=["jinja2.ext.i18n"], autoescape=True)
         self.env.install_gettext_translations(self._config.get_lang())
@@ -192,7 +201,8 @@ class KlipperScreen(Gtk.Window):
         self.set_icon_from_file(os.path.join(klipperscreendir, "styles", "icon.svg"))
 
         self.base_panel = BasePanel(self, title="Base Panel")
-        self.add(self.base_panel.main_grid)
+        self.lock_screen_view = LockScreen(self)
+        self._refresh_root_content()
         self.show_all()
         if self.show_cursor:
             self.get_window().set_cursor(
@@ -207,6 +217,7 @@ class KlipperScreen(Gtk.Window):
         self.device_lock_poll_timer = GLib.timeout_add_seconds(
             1, self._poll_device_lock_state
         )
+        self.screen_lock_timer = GLib.timeout_add_seconds(1, self._check_screen_lock)
         if self._config.errors:
             self.show_error_modal("Invalid config file", self._config.get_errors())
             # Prevent this dialog from being destroyed
@@ -294,6 +305,124 @@ class KlipperScreen(Gtk.Window):
                 callback()
         return False
 
+    def is_ui_locked(self):
+        return self.device_lock_active or self.screen_lock.locked
+
+    def _sync_dialog_visibility(self):
+        hidden = self.is_ui_locked() or self.screensaver is not None
+        for dialog in list(self.dialogs):
+            if hidden:
+                if dialog.get_visible():
+                    dialog._hidden_for_screen_overlay = True
+                dialog.hide()
+            elif getattr(dialog, "_hidden_for_screen_overlay", False):
+                dialog._hidden_for_screen_overlay = False
+                dialog.show()
+
+    def _refresh_root_content(self):
+        # Blanking can cover a local lock, but waking never clears that lock.
+        if self.device_lock_active:
+            target = self.device_lock_overlay
+        elif self.screensaver is not None:
+            target = self.screensaver
+        elif self.screen_lock.locked:
+            target = self.lock_screen_view
+        else:
+            target = self.base_panel.main_grid
+        if target is None:
+            return
+        current = self.get_child()
+        if current is not target:
+            if current is not None:
+                self.remove(current)
+            self.add(target)
+        target.show_all()
+        self.set_keep_above(self.is_ui_locked())
+        self._sync_dialog_visibility()
+
+    def lock_screen(self, widget=None, wake=True):
+        if not self.screen_lock.enabled or self.device_lock_active:
+            return False
+        self.screen_lock.lock()
+        self._cancel_pin_edit()
+        self.remove_keyboard()
+        self.popup_queue = []
+        self.close_popup_message()
+        self._dismiss_panel_popovers()
+        self.lock_screen_view.reset()
+        if wake:
+            self.close_screensaver()
+            self.wake_screen()
+        self._refresh_root_content()
+        logging.info("Local screen locked")
+        return False
+
+    def _cancel_pin_edit(self):
+        for panel in self.panels.values():
+            if hasattr(panel, "cancel_edit"):
+                panel.cancel_edit()
+
+    def _dismiss_panel_popovers(self):
+        # Popovers can have separate native surfaces, including on Wayland.
+        for panel in (self.base_panel, *self.panels.values()):
+            timeout = getattr(panel, "popover_timeout", None)
+            if timeout is not None:
+                GLib.source_remove(timeout)
+                panel.popover_timeout = None
+            for widget in getattr(panel, "labels", {}).values():
+                if isinstance(widget, Gtk.Popover):
+                    widget.popdown()
+
+    def unlock_screen(self):
+        if self.device_lock_active:
+            return False
+        self.screen_lock.unlock()
+        self.lock_screen_view.reset()
+        self._refresh_root_content()
+        self.reset_screensaver_timeout()
+        logging.info("Local screen unlocked")
+        return True
+
+    def set_screen_lock_config(self, pin_hash, timeout):
+        if self.is_ui_locked() or (pin_hash and not is_valid_pin_hash(pin_hash)):
+            return False
+        if timeout not in (0, 60, 120, 300, 900, 1800, 3600):
+            return False
+        if not pin_hash:
+            timeout = 0
+        config = self._config.get_main_config()
+        previous_hash = config.get("screen_lock_pin_hash", "", raw=True)
+        previous_timeout = config.get("screen_lock_timeout", "0")
+        self._config.set("main", "screen_lock_pin_hash", pin_hash)
+        self._config.set("main", "screen_lock_timeout", str(timeout))
+        if not self._config.save_user_config_options():
+            self._config.set("main", "screen_lock_pin_hash", previous_hash)
+            self._config.set("main", "screen_lock_timeout", previous_timeout)
+            return False
+        self.screen_lock.configure(pin_hash, timeout)
+        self.base_panel.show_screen_lock(self.screen_lock.enabled)
+        return True
+
+    def _check_screen_lock(self):
+        if not self.device_lock_active and self.screen_lock.should_autolock():
+            self.lock_screen(wake=False)
+        self.lock_screen_view.refresh()
+        self._sync_dialog_visibility()
+        return True
+
+    def _dispatch_gdk_event(self, event, *args):
+        try:
+            if event.type in (
+                Gdk.EventType.BUTTON_PRESS, Gdk.EventType.BUTTON_RELEASE,
+                Gdk.EventType.KEY_PRESS, Gdk.EventType.KEY_RELEASE,
+                Gdk.EventType.SCROLL, Gdk.EventType.MOTION_NOTIFY,
+                Gdk.EventType.TOUCH_BEGIN, Gdk.EventType.TOUCH_UPDATE,
+                Gdk.EventType.TOUCH_END,
+            ):
+                self.screen_lock.note_activity()
+        finally:
+            Gtk.main_do_event(event)
+
     def _poll_device_lock_state(self):
         try:
             state = self._device_lock_reader.read()
@@ -316,9 +445,7 @@ class KlipperScreen(Gtk.Window):
             self._acknowledge_device_lock_ui(state)
         except Exception as e:
             logging.warning(f"Unable to refresh administrative lock state: {e}")
-        if self.device_lock_active:
-            for dialog in list(self.dialogs):
-                dialog.hide()
+        self._sync_dialog_visibility()
         return True
 
     def _show_device_lock_overlay(self):
@@ -332,12 +459,14 @@ class KlipperScreen(Gtk.Window):
         self._close_ai_detection_dialog()
         self.ai_detection_last_signature = None
         self.device_lock_active = True
+        self._cancel_pin_edit()
         self.remove_keyboard()
         self.popup_queue = []
         self.close_popup_message()
         if self.popup_process_timeout is not None:
             GLib.source_remove(self.popup_process_timeout)
             self.popup_process_timeout = None
+        self._dismiss_panel_popovers()
         for dialog in list(self.dialogs):
             try:
                 dialog.destroy()
@@ -375,12 +504,9 @@ class KlipperScreen(Gtk.Window):
         content.pack_start(message, False, False, 0)
         event_box.add(content)
 
-        current = self.get_child()
-        if current is not None:
-            self.remove(current)
-        self.add(event_box)
         self.device_lock_overlay = event_box
-        self.set_keep_above(True)
+        self.lock_screen_view.reset()
+        self._refresh_root_content()
         self.fullscreen()
         self.wake_screen()
         event_box.show_all()
@@ -392,19 +518,14 @@ class KlipperScreen(Gtk.Window):
     def _hide_device_lock_overlay(self):
         if not self.device_lock_active and self.device_lock_overlay is None:
             return
-        overlay = self.device_lock_overlay
         self.device_lock_active = False
         self.device_lock_overlay = None
-        if overlay is not None and overlay.get_parent() is self:
-            self.remove(overlay)
-        if self.base_panel.main_grid.get_parent() is None:
-            self.add(self.base_panel.main_grid)
         for dialog in list(self.dialogs):
             if getattr(dialog, "_created_while_device_locked", False):
                 self.dialogs.remove(dialog)
                 dialog.destroy()
-        self.set_keep_above(False)
-        self.show_all()
+        self.screen_lock.note_activity()
+        self._refresh_root_content()
         self.reset_screensaver_timeout()
         if self._ai_pause_signal_active():
             self._schedule_ai_detection_status_request(reset=True)
@@ -642,6 +763,9 @@ class KlipperScreen(Gtk.Window):
         return import_module(f"panels.{panel}")
 
     def show_panel(self, panel, title, remove_all=False, panel_name=None, preserve_dialogs=None, **kwargs):
+        if panel == "lock_screen":
+            self.lock_screen()
+            return
         if panel_name is None:
             panel_name = panel
         try:
@@ -673,6 +797,7 @@ class KlipperScreen(Gtk.Window):
             self.process_update("notify_busy", self.printer.busy)
         if hasattr(self.panels[panel], "activate"):
             self.panels[panel].activate()
+        self._refresh_root_content()
         self.show_all()
         if (panel != 'usb_update' and not getattr(self, '_usb_update_restore_queued', False)
                 and (getattr(self, '_usb_update_state_deferred', False)
@@ -689,9 +814,9 @@ class KlipperScreen(Gtk.Window):
         self.process_update("notify_log", log_entry)
 
     def show_popup_message(self, message, level=3):
-        if self.device_lock_active:
+        if self.is_ui_locked():
             self.log_notification(message, level)
-            logging.info("Suppressing popup while administratively locked")
+            logging.info("Suppressing popup while screen is locked")
             return False
         import time
         current_time = time.time()
@@ -733,7 +858,7 @@ class KlipperScreen(Gtk.Window):
             GLib.source_remove(self.popup_process_timeout)
             self.popup_process_timeout = None
 
-        if self.device_lock_active:
+        if self.is_ui_locked():
             self.popup_queue = []
             return False
         
@@ -843,9 +968,9 @@ class KlipperScreen(Gtk.Window):
 
     def show_error_modal(self, err, e=""):
         logging.error(f"Showing error modal: {err} {e}")
-        if self.device_lock_active:
+        if self.is_ui_locked():
             self.log_notification(f"{err}: {e}", level=3)
-            logging.info("Suppressing error modal while administratively locked")
+            logging.info("Suppressing error modal while screen is locked")
             return
 
         title = Gtk.Label()
@@ -1014,11 +1139,13 @@ class KlipperScreen(Gtk.Window):
             return False
         logging.debug("Showing Screensaver")
         if self.screensaver is not None:
-            self.close_screensaver()
+            return False
         self.remove_keyboard()
         self.close_popup_message()
         for dialog in self.dialogs:
             logging.debug("Hiding dialog")
+            if dialog.get_visible():
+                dialog._hidden_for_screen_overlay = True
             dialog.hide()
 
         close = Gtk.Button()
@@ -1029,13 +1156,11 @@ class KlipperScreen(Gtk.Window):
         box.pack_start(close, True, True, 0)
         box.set_halign(Gtk.Align.CENTER)
         box.get_style_context().add_class("screensaver")
-        self.remove(self.base_panel.main_grid)
-        self.add(box)
-
-        # Avoid leaving a cursor-handle
-        close.grab_focus()
         self.screensaver = box
-        self.screensaver.show_all()
+        self.lock_screen_view.reset()
+        self._refresh_root_content()
+        # Avoid leaving a cursor-handle.
+        close.grab_focus()
         self.power_devices(None, self._config.get_main_config().get("screen_off_devices", ""), on=False)
         if self.screensaver_timeout is not None:
             GLib.source_remove(self.screensaver_timeout)
@@ -1046,18 +1171,15 @@ class KlipperScreen(Gtk.Window):
         if self.screensaver is None:
             return False
         logging.debug("Closing Screensaver")
-        self.remove(self.screensaver)
         self.screensaver = None
-        self.add(self.base_panel.main_grid)
+        self.lock_screen_view.reset()
+        self._refresh_root_content()
         if self.use_dpms:
             self.wake_screen()
         else:
             self.reset_screensaver_timeout()
-        for dialog in self.dialogs:
-            logging.info(f"Restoring Dialog {dialog}")
-            dialog.show()
-        self.show_all()
         self.power_devices(None, self._config.get_main_config().get("screen_on_devices", ""), on=True)
+        return False
 
     def check_dpms_state(self):
         if not self.use_dpms:
@@ -1412,6 +1534,14 @@ class KlipperScreen(Gtk.Window):
         
         # 调用 set_language 更新手册语言
         self.set_language(lang)
+
+        # Rebuild the persistent lock view with the selected language.
+        previous_lock = self.lock_screen_view
+        if previous_lock is not None:
+            previous_lock.reset()
+            self.lock_screen_view = LockScreen(self)
+            self._refresh_root_content()
+            previous_lock.destroy()
         
         if force_reload:
             self.reload_panels()
@@ -1831,6 +1961,8 @@ class KlipperScreen(Gtk.Window):
         return False
 
     def show_keyboard(self, entry=None, event=None):
+        if self.is_ui_locked():
+            return
         if self.keyboard is not None:
             return
 
@@ -1888,6 +2020,16 @@ class KlipperScreen(Gtk.Window):
     def _key_press_event(self, widget, event):
         if self.device_lock_active:
             return True
+        if self.screensaver is not None:
+            self.close_screensaver()
+            return True
+        if self.screen_lock.locked:
+            self.lock_screen_view.handle_key(event)
+            return True
+        if self._cur_panels:
+            panel = self.panels.get(self._cur_panels[-1])
+            if hasattr(panel, "handle_key") and panel.handle_key(event):
+                return True
         keyval_name = Gdk.keyval_name(event.keyval)
         if keyval_name == "Escape":
             self._menu_go_back(home=True)
@@ -1969,6 +2111,7 @@ def main():
         logging.exception(f"Failed to initialize window\n{e}\n\n{traceback.format_exc()}")
         raise RuntimeError from e
     win.connect("destroy", Gtk.main_quit)
+    Gdk.event_handler_set(win._dispatch_gdk_event)
     win.show_all()
     Gtk.main()
 

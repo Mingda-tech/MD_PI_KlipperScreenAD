@@ -2323,3 +2323,120 @@ msgstr "Vérification du résultat"
 
 msgid "Verifying update package"
 msgstr "Vérification du paquet de mise à jour"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 minute"
+
+msgid "15 minutes"
+msgstr "15 minutes"
+
+msgid "2 minutes"
+msgstr "2 minutes"
+
+msgid "30 minutes"
+msgstr "30 minutes"
+
+msgid "4-6 digit PIN"
+msgstr "Code PIN de 4 à 6 chiffres"
+
+msgid "5 minutes"
+msgstr "5 minutes"
+
+msgid "60 minutes"
+msgstr "60 minutes"
+
+msgid "Automatic screen lock"
+msgstr "Verrouillage automatique de l'écran"
+
+msgid "Backspace"
+msgstr "Retour arrière"
+
+msgid "Change PIN"
+msgstr "Modifier le code PIN"
+
+msgid "Disable PIN lock"
+msgstr "Désactiver le verrouillage par code PIN"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Saisissez un nouveau code PIN de 4 à 6 chiffres."
+
+msgid "Enter current PIN."
+msgstr "Saisissez le code PIN actuel."
+
+msgid "Enter the new PIN again."
+msgstr "Saisissez à nouveau le nouveau code PIN."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Saisissez votre code PIN de 4 à 6 chiffres pour déverrouiller."
+
+msgid "Incorrect PIN."
+msgstr "Code PIN incorrect."
+
+msgid "Lock now"
+msgstr "Verrouiller maintenant"
+
+msgid "Lock settings saved."
+msgstr "Paramètres de verrouillage enregistrés."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "La configuration du code PIN est invalide. Contactez l'administrateur pour la réinitialiser."
+
+msgid "PIN lock disabled."
+msgstr "Verrouillage par code PIN désactivé."
+
+msgid "PIN lock enabled."
+msgstr "Verrouillage par code PIN activé."
+
+msgid "PIN settings changed. Start again."
+msgstr "Les paramètres du code PIN ont changé. Recommencez."
+
+msgid "PINs do not match. Try again."
+msgstr "Les codes PIN ne correspondent pas. Réessayez."
+
+msgid "Saving PIN..."
+msgstr "Enregistrement du code PIN..."
+
+msgid "Screen Lock"
+msgstr "Verrouillage de l'écran"
+
+msgid "Screen locked"
+msgstr "Écran verrouillé"
+
+msgid "Set PIN"
+msgstr "Définir un code PIN"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Réessayez dans %d secondes."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Impossible d'enregistrer les paramètres de verrouillage. Vérifiez les autorisations de configuration et réessayez."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "Impossible de vérifier le code PIN. Réessayez."
+
+msgid "Unlock"
+msgstr "Déverrouiller"
+
+msgid "Verifying PIN..."
+msgstr "Vérification du code PIN..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Lorsqu'un code PIN est défini, l'écran se verrouille à chaque démarrage."
+
+#: ks_includes/widgets/lockscreen.py
+msgid "Printing continues while the screen is locked."
+msgstr "L'impression continue lorsque l'écran est verrouillé."
+
+#: panels/lock_settings.py
+msgid "Lock after inactivity."
+msgstr "Verrouiller après une période d'inactivité."
+
+#: panels/lock_settings.py
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Étape %(current)d sur %(total)d"

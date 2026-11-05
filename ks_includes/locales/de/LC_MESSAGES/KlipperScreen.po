@@ -2179,3 +2179,120 @@ msgstr "Ergebnis wird geprüft"
 
 msgid "Verifying update package"
 msgstr "Updatepaket wird geprüft"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 Minute"
+
+msgid "15 minutes"
+msgstr "15 Minuten"
+
+msgid "2 minutes"
+msgstr "2 Minuten"
+
+msgid "30 minutes"
+msgstr "30 Minuten"
+
+msgid "4-6 digit PIN"
+msgstr "4- bis 6-stellige PIN"
+
+msgid "5 minutes"
+msgstr "5 Minuten"
+
+msgid "60 minutes"
+msgstr "60 Minuten"
+
+msgid "Automatic screen lock"
+msgstr "Automatische Bildschirmsperre"
+
+msgid "Backspace"
+msgstr "Letzte Ziffer löschen"
+
+msgid "Change PIN"
+msgstr "PIN ändern"
+
+msgid "Disable PIN lock"
+msgstr "PIN-Sperre deaktivieren"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Gib eine neue 4- bis 6-stellige PIN ein."
+
+msgid "Enter current PIN."
+msgstr "Gib die aktuelle PIN ein."
+
+msgid "Enter the new PIN again."
+msgstr "Gib die neue PIN erneut ein."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Gib deine 4- bis 6-stellige PIN zum Entsperren ein."
+
+msgid "Incorrect PIN."
+msgstr "Falsche PIN."
+
+msgid "Lock now"
+msgstr "Jetzt sperren"
+
+msgid "Lock settings saved."
+msgstr "Sperreinstellungen gespeichert."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "Die PIN-Konfiguration ist ungültig. Wende dich zum Zurücksetzen an den Administrator."
+
+msgid "PIN lock disabled."
+msgstr "PIN-Sperre deaktiviert."
+
+msgid "PIN lock enabled."
+msgstr "PIN-Sperre aktiviert."
+
+msgid "PIN settings changed. Start again."
+msgstr "Die PIN-Einstellungen wurden geändert. Beginne erneut."
+
+msgid "PINs do not match. Try again."
+msgstr "Die PINs stimmen nicht überein. Versuche es erneut."
+
+msgid "Saving PIN..."
+msgstr "PIN wird gespeichert..."
+
+msgid "Screen Lock"
+msgstr "Bildschirmsperre"
+
+msgid "Screen locked"
+msgstr "Bildschirm gesperrt"
+
+msgid "Set PIN"
+msgstr "PIN festlegen"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Versuche es in %d Sekunden erneut."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Die Sperreinstellungen konnten nicht gespeichert werden. Prüfe die Zugriffsrechte der Konfigurationsdatei und versuche es erneut."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "Die PIN konnte nicht überprüft werden. Versuche es erneut."
+
+msgid "Unlock"
+msgstr "Entsperren"
+
+msgid "Verifying PIN..."
+msgstr "PIN wird überprüft..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Wenn eine PIN festgelegt ist, wird der Bildschirm bei jedem Start gesperrt."
+
+#: ks_includes/widgets/lockscreen.py
+msgid "Printing continues while the screen is locked."
+msgstr "Der Druck läuft bei gesperrtem Bildschirm weiter."
+
+#: panels/lock_settings.py
+msgid "Lock after inactivity."
+msgstr "Bei Inaktivität sperren."
+
+#: panels/lock_settings.py
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Schritt %(current)d von %(total)d"

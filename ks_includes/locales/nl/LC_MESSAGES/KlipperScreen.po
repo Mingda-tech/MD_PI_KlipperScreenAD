@@ -2142,3 +2142,117 @@ msgstr "Resultaat controleren"
 
 msgid "Verifying update package"
 msgstr "Updatepakket controleren"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 minuut"
+
+msgid "15 minutes"
+msgstr "15 minuten"
+
+msgid "2 minutes"
+msgstr "2 minuten"
+
+msgid "30 minutes"
+msgstr "30 minuten"
+
+msgid "4-6 digit PIN"
+msgstr "Pincode van 4-6 cijfers"
+
+msgid "5 minutes"
+msgstr "5 minuten"
+
+msgid "60 minutes"
+msgstr "60 minuten"
+
+msgid "Automatic screen lock"
+msgstr "Automatische schermvergrendeling"
+
+msgid "Backspace"
+msgstr "Laatste cijfer wissen"
+
+msgid "Change PIN"
+msgstr "Pincode wijzigen"
+
+msgid "Disable PIN lock"
+msgstr "Pincodevergrendeling uitschakelen"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Voer een nieuwe pincode van 4-6 cijfers in."
+
+msgid "Enter current PIN."
+msgstr "Voer de huidige pincode in."
+
+msgid "Enter the new PIN again."
+msgstr "Voer de nieuwe pincode opnieuw in."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Voer uw pincode van 4-6 cijfers in om te ontgrendelen."
+
+msgid "Incorrect PIN."
+msgstr "Onjuiste pincode."
+
+msgid "Lock now"
+msgstr "Nu vergrendelen"
+
+msgid "Lock settings saved."
+msgstr "Vergrendelingsinstellingen opgeslagen."
+
+msgid "PIN"
+msgstr "Pincode"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "De pincodeconfiguratie is ongeldig. Neem contact op met de beheerder om deze te herstellen."
+
+msgid "PIN lock disabled."
+msgstr "Pincodevergrendeling uitgeschakeld."
+
+msgid "PIN lock enabled."
+msgstr "Pincodevergrendeling ingeschakeld."
+
+msgid "PIN settings changed. Start again."
+msgstr "De pincode-instellingen zijn gewijzigd. Begin opnieuw."
+
+msgid "PINs do not match. Try again."
+msgstr "De pincodes komen niet overeen. Probeer het opnieuw."
+
+msgid "Saving PIN..."
+msgstr "Pincode opslaan..."
+
+msgid "Screen Lock"
+msgstr "Schermvergrendeling"
+
+msgid "Screen locked"
+msgstr "Scherm vergrendeld"
+
+msgid "Set PIN"
+msgstr "Pincode instellen"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Probeer het over %d seconden opnieuw."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "De vergrendelingsinstellingen konden niet worden opgeslagen. Controleer de rechten voor het configuratiebestand en probeer het opnieuw."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "De pincode kon niet worden gecontroleerd. Probeer het opnieuw."
+
+msgid "Unlock"
+msgstr "Ontgrendelen"
+
+msgid "Verifying PIN..."
+msgstr "Pincode controleren..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Als er een pincode is ingesteld, wordt het scherm bij elke start vergrendeld."
+
+msgid "Printing continues while the screen is locked."
+msgstr "Het printen gaat door terwijl het scherm vergrendeld is."
+
+msgid "Lock after inactivity."
+msgstr "Vergrendelen bij inactiviteit."
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Stap %(current)d van %(total)d"

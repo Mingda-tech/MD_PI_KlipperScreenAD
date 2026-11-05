@@ -6,6 +6,7 @@ restore the source package's disabled per-file/model digest gates.
 """
 from collections import Counter
 from decimal import Decimal
+import hashlib
 import json
 import os
 from pathlib import Path, PurePosixPath
@@ -15,7 +16,9 @@ import shutil
 import tarfile
 import gzip
 import selectors
+import stat
 import subprocess
+import sys
 import tempfile
 import time
 
@@ -24,6 +27,7 @@ MAX_REGULAR_BYTES = 8 * 1024 ** 3
 MAX_EXPANDED_BYTES = 32 * 1024 ** 3
 MAX_MEMBER_BYTES = 2 * 1024 ** 3
 MAX_JSON_BYTES = 2 * 1024 ** 2
+MAX_METADATA_CACHE = 64 * 1024 ** 2
 MODEL_NAMES = {'spaghetti', 'nozzle_blob', 'foreign_object', 'under_extrusion',
                'over_extrusion', 'warping'}
 
@@ -73,12 +77,13 @@ def _row(member):
                   'mtimeNs': _mtime(member), 'link': member.linkname if kind in ('hardlink', 'symlink') else ''}
 
 
-def _scan(path):
+def _scan(path, *, progress=None, expected_entries=None, single_pass=False, stream_bytes=False):
     path = no_links(path)
     if not path.is_file():
         raise ArchiveError('The source archive is missing')
     nodes, payloads, kinds, roots = {}, {}, Counter(), set()
-    regular_bytes = 0
+    regular_bytes = metadata_bytes = tar_bytes = 0
+    last_report = time.monotonic()
     with tarfile.open(path, 'r|gz') as archive:
         for member in archive:
             name, row = _row(member)
@@ -93,11 +98,55 @@ def _scan(path):
                 regular_bytes += row['bytes']
                 if regular_bytes > MAX_REGULAR_BYTES:
                     raise ArchiveError('The expanded SDK archive exceeds the limit')
-                if name.endswith(('/deployment-catalog.json', '/component.json',
-                                  '/model-manifest.json', '/version.json')):
+                required_metadata = name.endswith(('/deployment-catalog.json', '/component.json',
+                                                   '/model-manifest.json', '/version.json'))
+                if required_metadata:
                     if row['bytes'] > MAX_JSON_BYTES:
                         raise ArchiveError('Release metadata exceeds the limit')
                     payloads[name] = archive.extractfile(member).read()
+                    metadata_bytes += len(payloads[name])
+                elif single_pass and row['bytes'] <= MAX_JSON_BYTES:
+                    # A required JSON file can be a hardlink to a differently
+                    # named regular member. Retain small JSON metadata during
+                    # this pass instead of reopening the gzip archive later.
+                    with archive.extractfile(member) as stream:
+                        prefix = stream.read(min(4096, row['bytes']))
+                        if prefix.lstrip(b' \t\r\n\xef\xbb\xbf').startswith(b'{'):
+                            raw = prefix + stream.read()
+                            try:
+                                value = json.loads(raw)
+                            except (ValueError, UnicodeError):
+                                value = None
+                            if isinstance(value, dict) and any(key in value for key in (
+                                    'version', 'componentId', 'models', 'bundles')):
+                                payloads[name] = raw
+                                metadata_bytes += len(raw)
+                if single_pass and metadata_bytes > MAX_METADATA_CACHE:
+                    raise ArchiveError('Release metadata cache exceeds the limit')
+            if expected_entries is not None and len(nodes) > expected_entries:
+                raise ArchiveError('The source archive exceeds its declared entry count')
+            if progress and expected_entries and time.monotonic() - last_report >= 1:
+                progress(min(len(nodes), expected_entries - 1), expected_entries)
+                last_report = time.monotonic()
+            if single_pass:
+                # tarfile's stream mode still caches every TarInfo on Python
+                # 3.10. We own the compact index and never resolve members by
+                # TarFile.getmember, so release that duplicate object cache.
+                archive.members.clear()
+        if stream_bytes:
+            # Publication records the complete decompressed tar stream, including
+            # its zero trailer/record padding, without reopening the gzip file.
+            while True:
+                tail = archive.fileobj.read(1024 * 1024)
+                if not tail:
+                    break
+                if any(tail):
+                    raise ArchiveError('Unexpected data after the archive trailer')
+                if archive.fileobj.tell() > MAX_EXPANDED_BYTES:
+                    raise ArchiveError('The tar stream exceeds the publication limit')
+            tar_bytes = archive.fileobj.tell()
+            if tar_bytes % 512 or tar_bytes > MAX_EXPANDED_BYTES:
+                raise ArchiveError('Invalid complete tar stream size')
     if len(roots) != 1:
         raise ArchiveError('The SDK archive must contain one top-level directory')
     root = next(iter(roots))
@@ -152,6 +201,8 @@ def _scan(path):
         if nodes[canonical]['bytes'] > MAX_JSON_BYTES:
             raise ArchiveError('Release metadata exceeds the limit')
         if canonical not in payloads:
+            if single_pass:
+                raise ArchiveError('Required release JSON was not available in the single archive audit')
             with tarfile.open(path, 'r|gz') as archive:
                 for member in archive:
                     if member.name == canonical:
@@ -209,6 +260,8 @@ def _scan(path):
               'sdkDescriptor': metadata('releases/sdk-common/component.json'),
               'variantDescriptors': {row['sourcePath']: metadata(row['sourcePath'] + '/component.json')
                                      for row in variants}}
+    if stream_bytes:
+        public['tarBytes'] = tar_bytes
     return public, nodes, resolved
 
 
@@ -262,6 +315,520 @@ def extract_archive(path, destination):
         os.chmod(target, row['mode'])
         os.utime(target, ns=(row['mtimeNs'], row['mtimeNs']))
     return destination / audit['root']
+
+
+_PREPARED_TOKEN = object()
+
+
+def _archive_identity(path):
+    path = no_links(path)
+    value = path.lstat()
+    if not path.is_file() or not stat.S_ISREG(value.st_mode):
+        raise ArchiveError('The source archive is not a regular file')
+    return (value.st_dev, value.st_ino, value.st_size, value.st_mtime_ns,
+            value.st_ctime_ns, value.st_mode, value.st_uid, value.st_gid)
+
+
+def _archive_digest(path):
+    value = hashlib.sha256()
+    with path.open('rb') as source:
+        for block in iter(lambda: source.read(1024 * 1024), b''):
+            value.update(block)
+    return value.hexdigest()
+
+
+class PreparedArchive:
+    """Immutable, process-local proof of a complete archive safety audit."""
+    __slots__ = ('_path', '_identity', '_sha256', '_facts_json', '_names', '_deferred', '_directories', '_token')
+
+    def __init__(self, token, path, identity, checksum, facts, nodes, resolved):
+        if token is not _PREPARED_TOKEN:
+            raise ArchiveError('Prepared archives must be created by the archive auditor')
+        available, deferred = set(), []
+        for name, row in nodes.items():
+            if row['kind'] == 'file':
+                available.add(name)
+            elif row['kind'] == 'hardlink':
+                if row['link'] in available:
+                    available.add(name)
+                else:
+                    deferred.append((name, resolved[name]))
+        fields = {
+            '_path': path, '_identity': identity, '_sha256': checksum,
+            '_facts_json': json.dumps(facts, sort_keys=True), '_names': tuple(nodes),
+            '_deferred': tuple(deferred),
+            '_directories': tuple((name, row['mode'], row['mtimeNs']) for name, row in nodes.items()
+                                  if row['kind'] == 'directory'),
+            '_token': token,
+        }
+        for name, value in fields.items():
+            object.__setattr__(self, name, value)
+
+    def __setattr__(self, name, value):
+        raise AttributeError('Prepared archive snapshots are immutable')
+
+    @property
+    def facts(self):
+        # Callers may inspect/edit their own copy without changing the proof
+        # subsequently consumed by native extraction.
+        return json.loads(self._facts_json)
+
+
+def prepare_archive(path, expected_sha256=None, expected_entries=None, progress=None):
+    """Audit gzip members exactly once and retain a bound native extraction plan."""
+    path = no_links(path)
+    if expected_sha256 is not None and not re.fullmatch(r'[0-9a-f]{64}', str(expected_sha256)):
+        raise ArchiveError('Invalid source archive digest')
+    if expected_entries is not None and (type(expected_entries) is not int
+                                         or not 0 < expected_entries <= MAX_ENTRIES):
+        raise ArchiveError('Invalid source archive entry count')
+    identity = _archive_identity(path)
+    checksum = _archive_digest(path)
+    if expected_sha256 is not None and checksum != expected_sha256:
+        raise ArchiveError('The source archive digest differs from its signed declaration')
+    if progress:
+        progress(0, expected_entries or 0)
+    facts, nodes, resolved = _scan(path, progress=progress, expected_entries=expected_entries, single_pass=True)
+    if expected_entries is not None and facts['entryCount'] != expected_entries:
+        raise ArchiveError('The source archive entry count differs from its signed declaration')
+    if _archive_identity(path) != identity:
+        raise ArchiveError('The source archive changed during its safety audit')
+    snapshot = PreparedArchive(_PREPARED_TOKEN, path, identity, checksum, facts, nodes, resolved)
+    if progress:
+        progress(facts['entryCount'], facts['entryCount'])
+    return snapshot
+
+
+def _check_prepared(snapshot):
+    if type(snapshot) is not PreparedArchive or snapshot._token is not _PREPARED_TOKEN:
+        raise ArchiveError('A complete prepared archive audit is required')
+    if (_archive_identity(snapshot._path) != snapshot._identity
+            or _archive_digest(snapshot._path) != snapshot._sha256
+            or _archive_identity(snapshot._path) != snapshot._identity):
+        raise ArchiveError('The source archive changed after its safety audit')
+
+
+def _native_environment():
+    value = dict(os.environ)
+    for name in ('TAR_OPTIONS', 'GZIP', 'GZIP_OPT', 'POSIXLY_CORRECT', 'TAPE',
+                 'ENV', 'BASH_ENV', 'SHELLOPTS'):
+        value.pop(name, None)
+    value.update(PATH='/usr/sbin:/usr/bin:/sbin:/bin', LC_ALL='C')
+    return value
+
+
+def _stop_tar(process):
+    if process.poll() is None:
+        process.terminate()
+        try:
+            process.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            process.kill()
+            process.wait(timeout=5)
+
+
+def _native_archive_extract(snapshot, destination, included, report):
+    executable = shutil.which('tar', path='/usr/sbin:/usr/bin:/sbin:/bin')
+    if not executable:
+        raise ArchiveError('GNU tar is required for platform extraction')
+    environment = _native_environment()
+    version = subprocess.run([executable, '--version'], stdin=subprocess.DEVNULL,
+                             capture_output=True, env=environment, timeout=10, check=False)
+    if version.returncode or b'GNU tar' not in version.stdout[:512]:
+        raise ArchiveError('GNU tar is required for platform extraction')
+    expected = len(included) if included is not None else len(snapshot._names)
+    with tempfile.TemporaryDirectory(prefix='.mdu-tar-list-', dir=destination.parent) as temporary:
+        command = [executable, '--extract', '--gzip', '--file', str(snapshot._path),
+                   '--directory', str(destination), '--no-same-owner', '--same-permissions',
+                   '--delay-directory-restore', '--overwrite-dir',
+                   '--verbose', '--quoting-style=escape']
+        if included is not None:
+            names = Path(temporary) / 'members.list'
+            with names.open('wb') as output:
+                for name in included:
+                    output.write(os.fsencode(name) + b'\0')
+            command.extend(['--no-recursion', '--null', '--verbatim-files-from', '--files-from', str(names)])
+        process = subprocess.Popen(command, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE,
+                                   stderr=subprocess.PIPE, env=environment)
+        announced, output_buffer, errors = 0, b'', b''
+        try:
+            with selectors.DefaultSelector() as selector:
+                for stream, kind in ((process.stdout, 'output'), (process.stderr, 'error')):
+                    os.set_blocking(stream.fileno(), False)
+                    selector.register(stream, selectors.EVENT_READ, kind)
+                deadline = time.monotonic() + 3600
+                while selector.get_map():
+                    if time.monotonic() >= deadline:
+                        raise ArchiveError('Native tar extraction timed out')
+                    for key, _ in selector.select(timeout=.5):
+                        block = os.read(key.fileobj.fileno(), 65536)
+                        if not block:
+                            selector.unregister(key.fileobj)
+                            continue
+                        if key.data == 'error':
+                            errors = (errors + block)[-8192:]
+                            continue
+                        output_buffer += block
+                        while b'\n' in output_buffer:
+                            row, output_buffer = output_buffer.split(b'\n', 1)
+                            if row:
+                                announced += 1
+                                if announced > expected:
+                                    raise ArchiveError('Native tar reported an unexpected member count')
+                                # tar prints a name before writing its data.
+                                # The preceding member is the completed one.
+                                report(max(0, announced - 1))
+                        if len(output_buffer) > 128 * 1024:
+                            raise ArchiveError('Native tar produced an oversized progress record')
+            code = process.wait(timeout=30)
+            if output_buffer.strip():
+                raise ArchiveError('Native tar progress stream is incomplete')
+            if code:
+                detail = errors.decode('utf-8', errors='replace')[-2048:]
+                raise ArchiveError('Native tar extraction failed: ' + detail)
+            if announced != expected:
+                raise ArchiveError('Native tar did not process the complete audited member set')
+        except BaseException:
+            _stop_tar(process)
+            raise
+        finally:
+            process.stdout.close()
+            process.stderr.close()
+    return expected
+
+
+def extract_prepared_archive(snapshot, destination, progress=None):
+    """Use GNU tar for an already audited original archive, without rescanning it."""
+    if os.name != 'posix':
+        raise ArchiveError('Native extraction requires Linux filesystem semantics')
+    _check_prepared(snapshot)
+    destination = no_links(destination)
+    if (not destination.is_dir() or destination.stat().st_uid != os.geteuid()
+            or destination.stat().st_mode & 0o077 or any(destination.iterdir())):
+        raise ArchiveError('Native extraction requires an owned, empty private directory')
+    total, last_report = len(snapshot._names), [float('-inf'), -1]
+
+    def report(completed, force=False):
+        now = time.monotonic()
+        if progress and (force or completed != last_report[1] and now - last_report[0] >= 1):
+            progress(completed, total)
+            last_report[:] = [now, completed]
+
+    report(0, force=True)
+    deferred_names = {name for name, _ in snapshot._deferred}
+    included = tuple(name for name in snapshot._names if name not in deferred_names) if deferred_names else None
+    completed = _native_archive_extract(snapshot, destination, included, report)
+    # The normal publisher archive uses backward hardlinks, all handled in C.
+    # Only rare forward references or chains need a delayed canonical link.
+    affected_directories = set()
+    for name, _ in snapshot._deferred:
+        parent = posixpath.dirname(name)
+        while parent:
+            affected_directories.add(parent)
+            parent = posixpath.dirname(parent)
+    declared = {name: (mode, timestamp) for name, mode, timestamp in snapshot._directories}
+    original_modes = {}
+    try:
+        # Native tar has already restored directory permissions. Temporarily
+        # permit the owner to traverse/write the few parents needed by rare
+        # forward links, then restore their declared modes and ns timestamps.
+        for name in sorted(affected_directories, key=lambda value: len(value.split('/'))):
+            path = destination / name
+            if path.exists():
+                info = path.lstat()
+                if not stat.S_ISDIR(info.st_mode):
+                    raise ArchiveError('A delayed archive hardlink parent changed')
+                original_modes[name] = stat.S_IMODE(info.st_mode)
+                os.chmod(path, original_modes[name] | 0o300)
+        for name, canonical in snapshot._deferred:
+            target, source = destination / name, destination / canonical
+            target.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+            if target.exists() or target.is_symlink() or not stat.S_ISREG(source.lstat().st_mode):
+                raise ArchiveError('A delayed archive hardlink target changed')
+            os.link(source, target, follow_symlinks=False)
+            completed += 1
+            report(min(completed, total - 1))
+    finally:
+        for name in sorted(affected_directories, key=lambda value: len(value.split('/')), reverse=True):
+            path = destination / name
+            if name in declared and path.is_dir():
+                mode, timestamp = declared[name]
+                os.chmod(path, mode)
+                os.utime(path, ns=(timestamp, timestamp))
+            elif name in original_modes:
+                os.chmod(path, original_modes[name])
+    _check_prepared(snapshot)
+    result = destination / snapshot.facts['root']
+    if result.is_symlink() or not result.is_dir():
+        raise ArchiveError('Native tar did not create the audited source root')
+    report(total, force=True)
+    return result
+
+
+PUBLISHED_POLICY = 'sdk-platform-audit-v2'
+PUBLISHED_FIELDS = {'schemaVersion', 'policy', 'archiveSha256', 'archiveBytes', 'root',
+                    'entryCount', 'regularBytes', 'expandedBytes', 'tarBytes', 'kinds',
+                    'sdkVersion', 'forwardHardlinkCount', 'hasScreenPatch', 'entrypoints',
+                    'runtimeVariants', 'allDirectoriesTraversable'}
+PUBLISHED_ENTRYPOINTS = ('install.sh', 'scripts/platform-install.sh')
+_PUBLISHED_TOKEN = object()
+
+
+def create_archive_certificate(path):
+    """Publish the result of one complete safety audit, bound to exact bytes.
+
+    The caller must include this certificate and the original archive in the
+    authenticated MDU. It is an attestation by the already trusted publisher,
+    not an independently signed assertion or a substitute for the MDU signature.
+    """
+    path = no_links(path)
+    identity = _archive_identity(path)
+    checksum = _archive_digest(path)
+    facts, nodes, _ = _scan(path, single_pass=True, stream_bytes=True)
+    if _archive_identity(path) != identity:
+        raise ArchiveError('The source archive changed during its publication audit')
+    available, forward = set(), 0
+    for name, row in nodes.items():
+        if row['kind'] == 'file':
+            available.add(name)
+        elif row['kind'] == 'hardlink':
+            if row['link'] in available:
+                available.add(name)
+            else:
+                forward += 1
+    entrypoints = {}
+    for relative in PUBLISHED_ENTRYPOINTS:
+        value = nodes.get(facts['root'] + '/' + relative)
+        if not value or value['kind'] != 'file' or value['bytes'] < 1:
+            raise ArchiveError('The complete platform archive needs regular nonempty installer entry points')
+        entrypoints[relative] = {'kind': 'file', 'bytes': value['bytes']}
+    certificate = {
+        'schemaVersion': 2, 'policy': PUBLISHED_POLICY,
+        'archiveSha256': checksum, 'archiveBytes': identity[2], 'root': facts['root'],
+        'entryCount': facts['entryCount'], 'regularBytes': facts['regularBytes'],
+        'expandedBytes': facts['expandedBytes'], 'tarBytes': facts['tarBytes'],
+        'kinds': {name: facts['kinds'].get(name, 0)
+                  for name in ('directory', 'file', 'hardlink', 'symlink')},
+        'sdkVersion': facts['sdkVersion'], 'forwardHardlinkCount': forward,
+        'hasScreenPatch': facts['root'] + '/lock-screen/manifest.json' in nodes,
+        'entrypoints': entrypoints, 'runtimeVariants': facts['runtimeVariants'],
+        'allDirectoriesTraversable': all(row['mode'] & 0o555 == 0o555
+                                        for row in nodes.values() if row['kind'] == 'directory'),
+    }
+    _validate_published_certificate(certificate, allow_unsupported=True)
+    return certificate
+
+
+def _validate_published_certificate(value, allow_unsupported=False):
+    if (not isinstance(value, dict) or set(value) != PUBLISHED_FIELDS
+            or type(value.get('schemaVersion')) is not int or value['schemaVersion'] != 2
+            or value.get('policy') != PUBLISHED_POLICY):
+        raise ArchiveError('Unsupported published platform audit certificate')
+    try:
+        encoded = json.dumps(value, ensure_ascii=False).encode('utf-8')
+    except (TypeError, ValueError, RecursionError) as error:
+        raise ArchiveError('Invalid published platform audit certificate') from error
+    if len(encoded) > MAX_JSON_BYTES:
+        raise ArchiveError('Published platform audit certificate exceeds its size limit')
+    if (not isinstance(value.get('archiveSha256'), str)
+            or not re.fullmatch(r'[0-9a-f]{64}', value['archiveSha256'])
+            or not isinstance(value.get('root'), str)
+            or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]{0,127}', value['root'])
+            or not isinstance(value.get('sdkVersion'), str)
+            or not re.fullmatch(r'\d+\.\d+\.\d+', value['sdkVersion'])):
+        raise ArchiveError('Invalid published platform archive identity')
+    for name, maximum in (('archiveBytes', MAX_REGULAR_BYTES), ('entryCount', MAX_ENTRIES),
+                          ('regularBytes', MAX_REGULAR_BYTES), ('expandedBytes', MAX_EXPANDED_BYTES),
+                          ('tarBytes', MAX_EXPANDED_BYTES)):
+        if type(value.get(name)) is not int or not 0 < value[name] <= maximum:
+            raise ArchiveError('Invalid published platform archive bounds')
+    if (value['expandedBytes'] < value['regularBytes'] or value['tarBytes'] % 512
+            or value['tarBytes'] < value['regularBytes'] + value['entryCount'] * 512 + 1024):
+        raise ArchiveError('Inconsistent published platform archive bounds')
+    kinds = value.get('kinds')
+    if not isinstance(kinds, dict) or set(kinds) != {'directory', 'file', 'hardlink', 'symlink'}:
+        raise ArchiveError('Invalid published platform member types')
+    if (any(type(number) is not int or not 0 <= number <= MAX_ENTRIES for number in kinds.values())
+            or sum(kinds.values()) != value['entryCount'] or kinds['directory'] < 1
+            or kinds['file'] < 2 or kinds['symlink'] > 1):
+        raise ArchiveError('Inconsistent published platform member counts')
+    forward = value.get('forwardHardlinkCount')
+    if (type(forward) is not int or not 0 <= forward <= kinds['hardlink']
+            or type(value.get('hasScreenPatch')) is not bool):
+        raise ArchiveError('Invalid published platform extraction policy')
+    if not allow_unsupported and (forward or value['hasScreenPatch']):
+        raise ArchiveError('This platform archive requires the full-audit or dedicated rescue path')
+    if type(value.get('allDirectoriesTraversable')) is not bool:
+        raise ArchiveError('Invalid published platform directory permission policy')
+    entrypoints = value.get('entrypoints')
+    if not isinstance(entrypoints, dict) or set(entrypoints) != set(PUBLISHED_ENTRYPOINTS):
+        raise ArchiveError('Missing published platform installer entry points')
+    for row in entrypoints.values():
+        if (not isinstance(row, dict) or set(row) != {'kind', 'bytes'} or row.get('kind') != 'file'
+                or type(row.get('bytes')) is not int or not 0 < row['bytes'] <= MAX_MEMBER_BYTES):
+            raise ArchiveError('Invalid published platform installer entry point')
+    variants = value.get('runtimeVariants')
+    if (not isinstance(variants, list) or not 1 <= len(variants) <= 128
+            or any(not isinstance(row, dict) for row in variants)):
+        raise ArchiveError('Invalid published runtime variant summary')
+
+
+class PreparedPublishedArchive:
+    """Process-local proof of a signed publication certificate and source hash."""
+    __slots__ = ('_path', '_identity', '_sha256', '_facts_json', '_token')
+    progress_unit = 'bytes'
+
+    def __init__(self, token, path, identity, certificate):
+        if token is not _PUBLISHED_TOKEN:
+            raise ArchiveError('Published archives must be loaded from an authenticated certificate')
+        facts = {key: certificate[key] for key in ('root', 'entryCount', 'regularBytes',
+                                                  'expandedBytes', 'tarBytes', 'kinds',
+                                                  'sdkVersion', 'runtimeVariants')}
+        facts['entries'] = facts['entryCount']
+        facts['requiresDirectoryPermissionFixes'] = not certificate['allDirectoriesTraversable']
+        for name, value in {
+                '_path': path, '_identity': identity, '_sha256': certificate['archiveSha256'],
+                '_facts_json': json.dumps(facts, sort_keys=True), '_token': token}.items():
+            object.__setattr__(self, name, value)
+
+    def __setattr__(self, name, value):
+        raise AttributeError('Published archive snapshots are immutable')
+
+    @property
+    def facts(self):
+        return json.loads(self._facts_json)
+
+
+def load_published_archive(path, certificate, expected_sha256, expected_entries):
+    """Load an MDU-authenticated certificate without a device-side tar scan.
+
+    The wrapper must first verify the certificate file against the hash in its
+    authenticated platform-release.json. All supplied archive bytes are still
+    hashed here; extraction also checks their identity and final digest.
+    """
+    _validate_published_certificate(certificate)
+    if (not isinstance(expected_sha256, str) or not re.fullmatch(r'[0-9a-f]{64}', expected_sha256)
+            or type(expected_entries) is not int or not 0 < expected_entries <= MAX_ENTRIES
+            or certificate['archiveSha256'] != expected_sha256
+            or certificate['entryCount'] != expected_entries):
+        raise ArchiveError('Published audit differs from the signed platform declaration')
+    path = no_links(path)
+    identity = _archive_identity(path)
+    if (identity[2] != certificate['archiveBytes'] or _archive_digest(path) != expected_sha256
+            or _archive_identity(path) != identity):
+        raise ArchiveError('The original platform archive differs from its published audit')
+    return PreparedPublishedArchive(_PUBLISHED_TOKEN, path, identity, certificate)
+
+
+def _check_published(snapshot, verify_digest=False):
+    if type(snapshot) is not PreparedPublishedArchive or snapshot._token is not _PUBLISHED_TOKEN:
+        raise ArchiveError('A verified published archive certificate is required')
+    if (_archive_identity(snapshot._path) != snapshot._identity
+            or verify_digest and _archive_digest(snapshot._path) != snapshot._sha256
+            or _archive_identity(snapshot._path) != snapshot._identity):
+        raise ArchiveError('The source archive changed after publication verification')
+
+
+def _native_published_extract(snapshot, destination, report):
+    executable = shutil.which('tar', path='/usr/sbin:/usr/bin:/sbin:/bin')
+    if not executable:
+        raise ArchiveError('GNU tar is required for platform extraction')
+    environment = _native_environment()
+    version = subprocess.run([executable, '--version'], stdin=subprocess.DEVNULL,
+                             capture_output=True, env=environment, timeout=10, check=False)
+    if version.returncode or b'GNU tar' not in version.stdout[:512]:
+        raise ArchiveError('GNU tar is required for platform extraction')
+    command = [executable, '--extract', '--gzip', '--file', str(snapshot._path),
+               '--directory', str(destination), '--no-same-owner', '--no-same-permissions',
+               '--overwrite-dir', '--blocking-factor=20', '--checkpoint=64',
+               '--checkpoint-action=echo=MDU_TAR_BYTES:%u', '--quoting-style=escape']
+    process_options = {}
+    if _child_umask_supported():
+        # Popen performs this in its child without unsafe Python preexec_fn
+        # callbacks while the wrapper's progress heartbeat thread is running.
+        process_options['umask'] = 0o022
+    else:
+        # Python 3.8 has no Popen umask keyword. A fixed shell program receives
+        # every archive/target argument positionally; none is interpolated.
+        command = ['/bin/sh', '-c', 'umask 022; exec "$@"', 'mdu-native-tar', *command]
+    process = subprocess.Popen(command, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
+                               stderr=subprocess.PIPE, env=environment, **process_options)
+    output_buffer, errors, previous_record = b'', b'', 0
+    total = snapshot.facts['tarBytes']
+    try:
+        with selectors.DefaultSelector() as selector:
+            os.set_blocking(process.stderr.fileno(), False)
+            selector.register(process.stderr, selectors.EVENT_READ)
+            deadline = time.monotonic() + 3600
+            while selector.get_map():
+                if time.monotonic() >= deadline:
+                    raise ArchiveError('Native tar extraction timed out')
+                for key, _ in selector.select(timeout=.5):
+                    block = os.read(key.fileobj.fileno(), 65536)
+                    if not block:
+                        selector.unregister(key.fileobj)
+                        continue
+                    output_buffer += block
+                    while b'\n' in output_buffer:
+                        row, output_buffer = output_buffer.split(b'\n', 1)
+                        match = re.search(rb'(?:^|: )MDU_TAR_BYTES:([0-9]+)$', row)
+                        if match:
+                            record = int(match.group(1))
+                            if record < previous_record or record > (total + 10239) // 10240 + 1:
+                                raise ArchiveError('Native tar reported an invalid byte checkpoint')
+                            previous_record = record
+                            # GNU tar emits before processing this record.
+                            report(min(total - 1, max(0, (record - 1) * 10240)))
+                        else:
+                            errors = (errors + row + b'\n')[-8192:]
+                    if len(output_buffer) > 128 * 1024:
+                        raise ArchiveError('Native tar produced an oversized diagnostic record')
+        code = process.wait(timeout=30)
+        if output_buffer:
+            errors = (errors + output_buffer)[-8192:]
+        if code:
+            raise ArchiveError('Native tar extraction failed: '
+                               + errors.decode('utf-8', errors='replace')[-2048:])
+    except BaseException:
+        _stop_tar(process)
+        raise
+    finally:
+        process.stderr.close()
+
+
+def _child_umask_supported():
+    return sys.version_info >= (3, 9)
+
+
+def extract_published_archive(snapshot, destination, progress=None):
+    """Direct GNU tar extraction after signed publication and byte verification."""
+    if os.name != 'posix':
+        raise ArchiveError('Native extraction requires Linux filesystem semantics')
+    _check_published(snapshot)
+    destination = no_links(destination)
+    if (not destination.is_dir() or destination.stat().st_uid != os.geteuid()
+            or destination.stat().st_mode & 0o077 or any(destination.iterdir())):
+        raise ArchiveError('Native extraction requires an owned, empty private directory')
+    total, last_report = snapshot.facts['tarBytes'], [float('-inf'), -1]
+
+    def report(completed, force=False):
+        now = time.monotonic()
+        if progress and (force or completed != last_report[1] and now - last_report[0] >= 1):
+            progress(completed, total)
+            last_report[:] = [now, completed]
+
+    report(0, force=True)
+    _native_published_extract(snapshot, destination, report)
+    _check_published(snapshot, verify_digest=True)
+    root = destination / snapshot.facts['root']
+    if root.is_symlink() or not root.is_dir():
+        raise ArchiveError('Native tar did not create the published platform root')
+    for relative in PUBLISHED_ENTRYPOINTS:
+        path = no_links(root / relative)
+        if not path.is_file() or not stat.S_ISREG(path.stat().st_mode) or path.stat().st_size < 1:
+            raise ArchiveError('The published platform installation entry is missing')
+    report(total, force=True)
+    return root
 
 
 def _relative_tree(nodes, resolved, prefix):

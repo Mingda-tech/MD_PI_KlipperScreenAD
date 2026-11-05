@@ -2350,3 +2350,117 @@ msgstr "Preverjanje rezultata"
 
 msgid "Verifying update package"
 msgstr "Preverjanje paketa posodobitve"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 minuta"
+
+msgid "15 minutes"
+msgstr "15 minut"
+
+msgid "2 minutes"
+msgstr "2 minuti"
+
+msgid "30 minutes"
+msgstr "30 minut"
+
+msgid "4-6 digit PIN"
+msgstr "4–6-mestni PIN"
+
+msgid "5 minutes"
+msgstr "5 minut"
+
+msgid "60 minutes"
+msgstr "60 minut"
+
+msgid "Automatic screen lock"
+msgstr "Samodejno zaklepanje zaslona"
+
+msgid "Backspace"
+msgstr "Izbriši znak"
+
+msgid "Change PIN"
+msgstr "Spremeni PIN"
+
+msgid "Disable PIN lock"
+msgstr "Onemogoči zaklepanje s PIN-om"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Vnesite nov 4–6-mestni PIN."
+
+msgid "Enter current PIN."
+msgstr "Vnesite trenutni PIN."
+
+msgid "Enter the new PIN again."
+msgstr "Znova vnesite novi PIN."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Za odklepanje vnesite svoj 4–6-mestni PIN."
+
+msgid "Incorrect PIN."
+msgstr "Napačen PIN."
+
+msgid "Lock now"
+msgstr "Zakleni zdaj"
+
+msgid "Lock settings saved."
+msgstr "Nastavitve zaklepanja so shranjene."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "Konfiguracija PIN-a ni veljavna. Za ponastavitev se obrnite na skrbnika."
+
+msgid "PIN lock disabled."
+msgstr "Zaklepanje s PIN-om je onemogočeno."
+
+msgid "PIN lock enabled."
+msgstr "Zaklepanje s PIN-om je omogočeno."
+
+msgid "PIN settings changed. Start again."
+msgstr "Nastavitve PIN-a so se spremenile. Začnite znova."
+
+msgid "PINs do not match. Try again."
+msgstr "PIN-a se ne ujemata. Poskusite znova."
+
+msgid "Saving PIN..."
+msgstr "Shranjevanje PIN-a..."
+
+msgid "Screen Lock"
+msgstr "Zaklepanje zaslona"
+
+msgid "Screen locked"
+msgstr "Zaslon je zaklenjen"
+
+msgid "Set PIN"
+msgstr "Nastavi PIN"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Poskusite znova čez %d s."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Nastavitev zaklepanja ni mogoče shraniti. Preverite dovoljenja za dostop do konfiguracije in poskusite znova."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "PIN-a ni mogoče preveriti. Poskusite znova."
+
+msgid "Unlock"
+msgstr "Odkleni"
+
+msgid "Verifying PIN..."
+msgstr "Preverjanje PIN-a..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Če je nastavljen PIN, se zaslon zaklene ob vsakem zagonu."
+
+msgid "Printing continues while the screen is locked."
+msgstr "Tiskanje se nadaljuje, ko je zaslon zaklenjen."
+
+msgid "Lock after inactivity."
+msgstr "Zakleni ob nedejavnosti."
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Korak %(current)d od %(total)d"

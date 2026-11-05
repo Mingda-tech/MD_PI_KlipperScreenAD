@@ -2353,3 +2353,117 @@ msgstr "Đang xác minh kết quả"
 
 msgid "Verifying update package"
 msgstr "Đang xác minh gói cập nhật"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 phút"
+
+msgid "15 minutes"
+msgstr "15 phút"
+
+msgid "2 minutes"
+msgstr "2 phút"
+
+msgid "30 minutes"
+msgstr "30 phút"
+
+msgid "4-6 digit PIN"
+msgstr "PIN gồm 4–6 chữ số"
+
+msgid "5 minutes"
+msgstr "5 phút"
+
+msgid "60 minutes"
+msgstr "60 phút"
+
+msgid "Automatic screen lock"
+msgstr "Tự động khóa màn hình"
+
+msgid "Backspace"
+msgstr "Xóa một số"
+
+msgid "Change PIN"
+msgstr "Đổi PIN"
+
+msgid "Disable PIN lock"
+msgstr "Tắt khóa PIN"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Nhập PIN mới gồm 4–6 chữ số."
+
+msgid "Enter current PIN."
+msgstr "Nhập PIN hiện tại."
+
+msgid "Enter the new PIN again."
+msgstr "Nhập lại PIN mới."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Nhập PIN gồm 4–6 chữ số để mở khóa."
+
+msgid "Incorrect PIN."
+msgstr "PIN không đúng."
+
+msgid "Lock now"
+msgstr "Khóa ngay"
+
+msgid "Lock settings saved."
+msgstr "Đã lưu cài đặt khóa."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "Cấu hình PIN không hợp lệ. Hãy liên hệ quản trị viên để đặt lại."
+
+msgid "PIN lock disabled."
+msgstr "Khóa PIN đã tắt."
+
+msgid "PIN lock enabled."
+msgstr "Khóa PIN đã bật."
+
+msgid "PIN settings changed. Start again."
+msgstr "Cài đặt PIN đã thay đổi. Hãy bắt đầu lại."
+
+msgid "PINs do not match. Try again."
+msgstr "PIN không khớp. Hãy thử lại."
+
+msgid "Saving PIN..."
+msgstr "Đang lưu PIN..."
+
+msgid "Screen Lock"
+msgstr "Khóa màn hình"
+
+msgid "Screen locked"
+msgstr "Màn hình đã khóa"
+
+msgid "Set PIN"
+msgstr "Đặt PIN"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Hãy thử lại sau %d giây."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Không thể lưu cài đặt khóa. Hãy kiểm tra quyền cấu hình và thử lại."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "Không thể xác minh PIN. Hãy thử lại."
+
+msgid "Unlock"
+msgstr "Mở khóa"
+
+msgid "Verifying PIN..."
+msgstr "Đang xác minh PIN..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Khi đã đặt PIN, màn hình sẽ khóa sau mỗi lần khởi động."
+
+msgid "Printing continues while the screen is locked."
+msgstr "Quá trình in vẫn tiếp tục khi màn hình bị khóa."
+
+msgid "Lock after inactivity."
+msgstr "Khóa khi không có thao tác."
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Bước %(current)d trên %(total)d"

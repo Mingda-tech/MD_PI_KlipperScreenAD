@@ -465,7 +465,7 @@ msgid "Network"
 msgstr "רשת"
 
 msgid "Never"
-msgstr ""
+msgstr "לעולם לא"
 
 msgid "New"
 msgstr "חדש"
@@ -2328,3 +2328,117 @@ msgstr "אימות התוצאה"
 
 msgid "Verifying update package"
 msgstr "אימות חבילת העדכון"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "דקה אחת"
+
+msgid "15 minutes"
+msgstr "15 דקות"
+
+msgid "2 minutes"
+msgstr "2 דקות"
+
+msgid "30 minutes"
+msgstr "30 דקות"
+
+msgid "4-6 digit PIN"
+msgstr "קוד PIN בן 4–6 ספרות"
+
+msgid "5 minutes"
+msgstr "5 דקות"
+
+msgid "60 minutes"
+msgstr "60 דקות"
+
+msgid "Automatic screen lock"
+msgstr "נעילת מסך אוטומטית"
+
+msgid "Backspace"
+msgstr "מחיקת ספרה"
+
+msgid "Change PIN"
+msgstr "שינוי PIN"
+
+msgid "Disable PIN lock"
+msgstr "השבתת נעילת PIN"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "יש להזין קוד PIN חדש בן 4–6 ספרות."
+
+msgid "Enter current PIN."
+msgstr "יש להזין את קוד ה-PIN הנוכחי."
+
+msgid "Enter the new PIN again."
+msgstr "יש להזין שוב את קוד ה-PIN החדש."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "לביטול הנעילה, יש להזין קוד PIN בן 4–6 ספרות."
+
+msgid "Incorrect PIN."
+msgstr "קוד ה-PIN שגוי."
+
+msgid "Lock now"
+msgstr "נעילה כעת"
+
+msgid "Lock settings saved."
+msgstr "הגדרות הנעילה נשמרו."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "הגדרות ה-PIN אינן תקינות. יש לפנות למנהל המערכת לאיפוס."
+
+msgid "PIN lock disabled."
+msgstr "נעילת PIN מושבתת."
+
+msgid "PIN lock enabled."
+msgstr "נעילת PIN מופעלת."
+
+msgid "PIN settings changed. Start again."
+msgstr "הגדרות ה-PIN השתנו. יש להתחיל מחדש."
+
+msgid "PINs do not match. Try again."
+msgstr "קודי ה-PIN אינם תואמים. יש לנסות שוב."
+
+msgid "Saving PIN..."
+msgstr "קוד ה-PIN נשמר..."
+
+msgid "Screen Lock"
+msgstr "נעילת מסך"
+
+msgid "Screen locked"
+msgstr "המסך נעול"
+
+msgid "Set PIN"
+msgstr "הגדרת PIN"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "יש לנסות שוב בעוד %d שניות."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "לא ניתן לשמור את הגדרות הנעילה. יש לבדוק את הרשאות התצורה ולנסות שוב."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "לא ניתן לאמת את קוד ה-PIN. יש לנסות שוב."
+
+msgid "Unlock"
+msgstr "ביטול נעילה"
+
+msgid "Verifying PIN..."
+msgstr "קוד ה-PIN נבדק..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "לאחר הגדרת PIN, המסך יינעל בכל הפעלה."
+
+msgid "Printing continues while the screen is locked."
+msgstr "ההדפסה נמשכת גם כשהמסך נעול."
+
+msgid "Lock after inactivity."
+msgstr "נעילה לאחר חוסר פעילות."
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "שלב %(current)d מתוך %(total)d"

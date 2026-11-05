@@ -2217,3 +2217,117 @@ msgstr "Sonuç doğrulanıyor"
 
 msgid "Verifying update package"
 msgstr "Güncelleme paketi doğrulanıyor"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 dakika"
+
+msgid "15 minutes"
+msgstr "15 dakika"
+
+msgid "2 minutes"
+msgstr "2 dakika"
+
+msgid "30 minutes"
+msgstr "30 dakika"
+
+msgid "4-6 digit PIN"
+msgstr "4-6 haneli PIN"
+
+msgid "5 minutes"
+msgstr "5 dakika"
+
+msgid "60 minutes"
+msgstr "60 dakika"
+
+msgid "Automatic screen lock"
+msgstr "Otomatik ekran kilidi"
+
+msgid "Backspace"
+msgstr "Son haneyi sil"
+
+msgid "Change PIN"
+msgstr "PIN'i değiştir"
+
+msgid "Disable PIN lock"
+msgstr "PIN kilidini devre dışı bırak"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "4-6 haneli yeni bir PIN girin."
+
+msgid "Enter current PIN."
+msgstr "Mevcut PIN'i girin."
+
+msgid "Enter the new PIN again."
+msgstr "Yeni PIN'i tekrar girin."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Kilidi açmak için 4-6 haneli PIN'inizi girin."
+
+msgid "Incorrect PIN."
+msgstr "Yanlış PIN."
+
+msgid "Lock now"
+msgstr "Şimdi kilitle"
+
+msgid "Lock settings saved."
+msgstr "Kilit ayarları kaydedildi."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "PIN yapılandırması geçersiz. Sıfırlamak için yöneticiyle iletişime geçin."
+
+msgid "PIN lock disabled."
+msgstr "PIN kilidi devre dışı."
+
+msgid "PIN lock enabled."
+msgstr "PIN kilidi etkin."
+
+msgid "PIN settings changed. Start again."
+msgstr "PIN ayarları değişti. Baştan başlayın."
+
+msgid "PINs do not match. Try again."
+msgstr "PIN'ler eşleşmiyor. Tekrar deneyin."
+
+msgid "Saving PIN..."
+msgstr "PIN kaydediliyor..."
+
+msgid "Screen Lock"
+msgstr "Ekran kilidi"
+
+msgid "Screen locked"
+msgstr "Ekran kilitli"
+
+msgid "Set PIN"
+msgstr "PIN belirle"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "%d saniye sonra tekrar deneyin."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Kilit ayarları kaydedilemedi. Yapılandırma izinlerini kontrol edip tekrar deneyin."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "PIN doğrulanamadı. Tekrar deneyin."
+
+msgid "Unlock"
+msgstr "Kilidi aç"
+
+msgid "Verifying PIN..."
+msgstr "PIN doğrulanıyor..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "PIN ayarlandığında ekran her açılışta kilitlenir."
+
+msgid "Printing continues while the screen is locked."
+msgstr "Ekran kilitliyken yazdırma devam eder."
+
+msgid "Lock after inactivity."
+msgstr "İşlem yapılmadığında kilitle."
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Adım %(current)d / %(total)d"

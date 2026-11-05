@@ -2311,3 +2311,117 @@ msgstr "正在验证更新结果"
 
 msgid "Verifying update package"
 msgstr "正在校验更新包"
+
+# Local password screen lock
+msgid "Screen Lock"
+msgstr "锁屏设置"
+
+msgid "Screen locked"
+msgstr "屏幕已锁定"
+
+msgid "PIN"
+msgstr "数字密码"
+
+msgid "4-6 digit PIN"
+msgstr "4～6 位数字密码"
+
+msgid "Set PIN"
+msgstr "设置密码"
+
+msgid "Change PIN"
+msgstr "修改密码"
+
+msgid "Disable PIN lock"
+msgstr "关闭密码锁"
+
+msgid "Lock now"
+msgstr "立即锁屏"
+
+msgid "Unlock"
+msgstr "解锁"
+
+msgid "Backspace"
+msgstr "退格"
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "设置密码后，每次启动都会锁屏。"
+
+msgid "Automatic screen lock"
+msgstr "空闲自动锁屏"
+
+msgid "1 minute"
+msgstr "1 分钟"
+
+msgid "2 minutes"
+msgstr "2 分钟"
+
+msgid "5 minutes"
+msgstr "5 分钟"
+
+msgid "15 minutes"
+msgstr "15 分钟"
+
+msgid "30 minutes"
+msgstr "30 分钟"
+
+msgid "60 minutes"
+msgstr "60 分钟"
+
+msgid "Enter current PIN."
+msgstr "请输入当前密码。"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "请输入新的 4～6 位数字密码。"
+
+msgid "Enter the new PIN again."
+msgstr "请再次输入新密码。"
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "请输入 4～6 位数字密码解锁。"
+
+msgid "PINs do not match. Try again."
+msgstr "两次密码不一致，请重新输入。"
+
+msgid "Incorrect PIN."
+msgstr "密码错误。"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "请在 %d 秒后重试。"
+
+msgid "Verifying PIN..."
+msgstr "正在验证密码…"
+
+msgid "Saving PIN..."
+msgstr "正在保存密码…"
+
+msgid "Unable to verify PIN. Try again."
+msgstr "无法验证密码，请重试。"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "密码配置无效，请联系管理员重置。"
+
+msgid "PIN settings changed. Start again."
+msgstr "密码设置已变更，请重新操作。"
+
+msgid "Lock settings saved."
+msgstr "锁屏设置已保存。"
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "无法保存锁屏设置，请检查配置文件权限后重试。"
+
+msgid "PIN lock enabled."
+msgstr "密码锁已开启。"
+
+msgid "PIN lock disabled."
+msgstr "密码锁已关闭。"
+
+msgid "Printing continues while the screen is locked."
+msgstr "锁屏期间，打印仍会继续。"
+
+msgid "Lock after inactivity."
+msgstr "一段时间未操作后自动锁屏。"
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "第 %(current)d 步，共 %(total)d 步"

@@ -140,7 +140,7 @@ msgid "Checking for updates, please wait..."
 msgstr ""
 
 msgid "Clear"
-msgstr ""
+msgstr "Ryd"
 
 msgid "Close"
 msgstr "Luk"
@@ -458,7 +458,7 @@ msgid "Network"
 msgstr "Netværk"
 
 msgid "Never"
-msgstr ""
+msgstr "Aldrig"
 
 msgid "New"
 msgstr "Ny"
@@ -2141,3 +2141,120 @@ msgstr "Kontrollerer resultatet"
 
 msgid "Verifying update package"
 msgstr "Kontrollerer opdateringspakke"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 minut"
+
+msgid "15 minutes"
+msgstr "15 minutter"
+
+msgid "2 minutes"
+msgstr "2 minutter"
+
+msgid "30 minutes"
+msgstr "30 minutter"
+
+msgid "4-6 digit PIN"
+msgstr "PIN-kode på 4-6 cifre"
+
+msgid "5 minutes"
+msgstr "5 minutter"
+
+msgid "60 minutes"
+msgstr "60 minutter"
+
+msgid "Automatic screen lock"
+msgstr "Automatisk skærmlås"
+
+msgid "Backspace"
+msgstr "Slet sidste ciffer"
+
+msgid "Change PIN"
+msgstr "Skift PIN-kode"
+
+msgid "Disable PIN lock"
+msgstr "Deaktiver PIN-lås"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Indtast en ny PIN-kode på 4-6 cifre."
+
+msgid "Enter current PIN."
+msgstr "Indtast den nuværende PIN-kode."
+
+msgid "Enter the new PIN again."
+msgstr "Indtast den nye PIN-kode igen."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Indtast din PIN-kode på 4-6 cifre for at låse op."
+
+msgid "Incorrect PIN."
+msgstr "Forkert PIN-kode."
+
+msgid "Lock now"
+msgstr "Lås nu"
+
+msgid "Lock settings saved."
+msgstr "Låseindstillingerne er gemt."
+
+msgid "PIN"
+msgstr "PIN-kode"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "PIN-konfigurationen er ugyldig. Kontakt administratoren for at nulstille den."
+
+msgid "PIN lock disabled."
+msgstr "PIN-lås er deaktiveret."
+
+msgid "PIN lock enabled."
+msgstr "PIN-lås er aktiveret."
+
+msgid "PIN settings changed. Start again."
+msgstr "PIN-indstillingerne er ændret. Start forfra."
+
+msgid "PINs do not match. Try again."
+msgstr "PIN-koderne er ikke ens. Prøv igen."
+
+msgid "Saving PIN..."
+msgstr "Gemmer PIN-kode..."
+
+msgid "Screen Lock"
+msgstr "Skærmlås"
+
+msgid "Screen locked"
+msgstr "Skærmen er låst"
+
+msgid "Set PIN"
+msgstr "Indstil PIN-kode"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Prøv igen om %d sekunder."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Låseindstillingerne kunne ikke gemmes. Kontroller konfigurationsfilens tilladelser, og prøv igen."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "PIN-koden kunne ikke bekræftes. Prøv igen."
+
+msgid "Unlock"
+msgstr "Lås op"
+
+msgid "Verifying PIN..."
+msgstr "Kontrollerer PIN-kode..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Når en PIN-kode er indstillet, låses skærmen ved hver opstart."
+
+#: ks_includes/widgets/lockscreen.py
+msgid "Printing continues while the screen is locked."
+msgstr "Udskrivningen fortsætter, mens skærmen er låst."
+
+#: panels/lock_settings.py
+msgid "Lock after inactivity."
+msgstr "Lås efter inaktivitet."
+
+#: panels/lock_settings.py
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Trin %(current)d af %(total)d"

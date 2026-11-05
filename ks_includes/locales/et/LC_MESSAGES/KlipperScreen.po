@@ -2286,3 +2286,120 @@ msgstr "Tulemuse kontrollimine"
 
 msgid "Verifying update package"
 msgstr "Uuenduspaketi kontrollimine"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1 minut"
+
+msgid "15 minutes"
+msgstr "15 minutit"
+
+msgid "2 minutes"
+msgstr "2 minutit"
+
+msgid "30 minutes"
+msgstr "30 minutit"
+
+msgid "4-6 digit PIN"
+msgstr "4–6-kohaline PIN"
+
+msgid "5 minutes"
+msgstr "5 minutit"
+
+msgid "60 minutes"
+msgstr "60 minutit"
+
+msgid "Automatic screen lock"
+msgstr "Ekraani automaatne lukustamine"
+
+msgid "Backspace"
+msgstr "Kustuta märk"
+
+msgid "Change PIN"
+msgstr "Muuda PIN-i"
+
+msgid "Disable PIN lock"
+msgstr "Keela PIN-lukk"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "Sisestage uus 4–6-kohaline PIN."
+
+msgid "Enter current PIN."
+msgstr "Sisestage praegune PIN."
+
+msgid "Enter the new PIN again."
+msgstr "Sisestage uus PIN uuesti."
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "Avamiseks sisestage oma 4–6-kohaline PIN."
+
+msgid "Incorrect PIN."
+msgstr "Vale PIN."
+
+msgid "Lock now"
+msgstr "Lukusta kohe"
+
+msgid "Lock settings saved."
+msgstr "Lukustuse seaded on salvestatud."
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "PIN-i konfiguratsioon on vigane. Lähtestamiseks võtke ühendust administraatoriga."
+
+msgid "PIN lock disabled."
+msgstr "PIN-lukk on keelatud."
+
+msgid "PIN lock enabled."
+msgstr "PIN-lukk on lubatud."
+
+msgid "PIN settings changed. Start again."
+msgstr "PIN-i seaded on muutunud. Alustage uuesti."
+
+msgid "PINs do not match. Try again."
+msgstr "PIN-id ei ühti. Proovige uuesti."
+
+msgid "Saving PIN..."
+msgstr "PIN-i salvestamine..."
+
+msgid "Screen Lock"
+msgstr "Ekraanilukk"
+
+msgid "Screen locked"
+msgstr "Ekraan on lukustatud"
+
+msgid "Set PIN"
+msgstr "Määra PIN"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "Proovige uuesti %d sekundi pärast."
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "Lukustuse seadeid ei saa salvestada. Kontrollige konfiguratsiooni juurdepääsuõigusi ja proovige uuesti."
+
+msgid "Unable to verify PIN. Try again."
+msgstr "PIN-i ei saa kontrollida. Proovige uuesti."
+
+msgid "Unlock"
+msgstr "Ava lukk"
+
+msgid "Verifying PIN..."
+msgstr "PIN-i kontrollimine..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "Kui PIN on määratud, lukustub ekraan igal käivitamisel."
+
+#: ks_includes/widgets/lockscreen.py
+msgid "Printing continues while the screen is locked."
+msgstr "Printimine jätkub ka lukustatud ekraaniga."
+
+#: panels/lock_settings.py
+msgid "Lock after inactivity."
+msgstr "Lukusta tegevusetuse korral."
+
+#: panels/lock_settings.py
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "Samm %(current)d / %(total)d"

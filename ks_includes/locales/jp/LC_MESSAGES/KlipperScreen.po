@@ -2139,3 +2139,117 @@ msgstr "結果を検証中"
 
 msgid "Verifying update package"
 msgstr "更新パッケージを検証中"
+
+# Local password screen lock
+msgid "1 minute"
+msgstr "1分"
+
+msgid "15 minutes"
+msgstr "15分"
+
+msgid "2 minutes"
+msgstr "2分"
+
+msgid "30 minutes"
+msgstr "30分"
+
+msgid "4-6 digit PIN"
+msgstr "4～6桁のPIN"
+
+msgid "5 minutes"
+msgstr "5分"
+
+msgid "60 minutes"
+msgstr "60分"
+
+msgid "Automatic screen lock"
+msgstr "画面の自動ロック"
+
+msgid "Backspace"
+msgstr "1桁削除"
+
+msgid "Change PIN"
+msgstr "PINを変更"
+
+msgid "Disable PIN lock"
+msgstr "PINロックを無効化"
+
+msgid "Enter a new 4-6 digit PIN."
+msgstr "新しい4～6桁のPINを入力してください。"
+
+msgid "Enter current PIN."
+msgstr "現在のPINを入力してください。"
+
+msgid "Enter the new PIN again."
+msgstr "新しいPINをもう一度入力してください。"
+
+msgid "Enter your 4-6 digit PIN to unlock."
+msgstr "4～6桁のPINを入力してロックを解除してください。"
+
+msgid "Incorrect PIN."
+msgstr "PINが正しくありません。"
+
+msgid "Lock now"
+msgstr "今すぐロック"
+
+msgid "Lock settings saved."
+msgstr "ロック設定を保存しました。"
+
+msgid "PIN"
+msgstr "PIN"
+
+msgid "PIN configuration is invalid. Contact the administrator to reset it."
+msgstr "PINの設定が無効です。管理者にリセットを依頼してください。"
+
+msgid "PIN lock disabled."
+msgstr "PINロックは無効です。"
+
+msgid "PIN lock enabled."
+msgstr "PINロックは有効です。"
+
+msgid "PIN settings changed. Start again."
+msgstr "PINの設定が変更されました。最初からやり直してください。"
+
+msgid "PINs do not match. Try again."
+msgstr "PINが一致しません。もう一度入力してください。"
+
+msgid "Saving PIN..."
+msgstr "PINを保存中..."
+
+msgid "Screen Lock"
+msgstr "画面ロック"
+
+msgid "Screen locked"
+msgstr "画面はロックされています"
+
+msgid "Set PIN"
+msgstr "PINを設定"
+
+#, python-format
+msgid "Try again in %d seconds."
+msgstr "%d秒後に再試行してください。"
+
+msgid "Unable to save lock settings. Check configuration permissions and try again."
+msgstr "ロック設定を保存できません。設定の書き込み権限を確認して再試行してください。"
+
+msgid "Unable to verify PIN. Try again."
+msgstr "PINを確認できません。再試行してください。"
+
+msgid "Unlock"
+msgstr "ロック解除"
+
+msgid "Verifying PIN..."
+msgstr "PINを確認中..."
+
+msgid "With a PIN set, the screen locks at every startup."
+msgstr "PINを設定すると、起動するたびに画面がロックされます。"
+
+msgid "Printing continues while the screen is locked."
+msgstr "画面のロック中も印刷は続行されます。"
+
+msgid "Lock after inactivity."
+msgstr "操作がない場合はロックします。"
+
+#, python-format
+msgid "Step %(current)d of %(total)d"
+msgstr "ステップ %(current)d / %(total)d"

@@ -40,6 +40,10 @@ class BasePanel(ScreenPanel):
         self.control['shutdown'] = self._gtk.Button('shutdown', scale=self.abscale)
         self.control['shutdown'].connect("clicked", self.menu_item_clicked, self.shutdown)
         self.control['shutdown'].set_no_show_all(True)
+        self.control['screen_lock'] = self._gtk.Button('lock', scale=self.abscale)
+        self.control['screen_lock'].set_tooltip_text(_("Lock Screen"))
+        self.control['screen_lock'].connect("clicked", self._screen.lock_screen)
+        self.show_screen_lock(self._screen.screen_lock.enabled)
         self.control['printer_select'] = self._gtk.Button('shuffle', scale=self.abscale)
         self.control['printer_select'].connect("clicked", self._screen.show_printer_select)
         self.control['printer_select'].set_no_show_all(True)
@@ -69,6 +73,7 @@ class BasePanel(ScreenPanel):
         self.action_bar.set_size_request(self._gtk.action_bar_width, self._gtk.action_bar_height)
         self.action_bar.add(self.control['back'])
         self.action_bar.add(self.control['home'])
+        self.action_bar.add(self.control['screen_lock'])
         self.action_bar.add(self.control['printer_select'])
         self.action_bar.add(self.control['shortcut'])
         self.action_bar.add(self.control['estop'])
@@ -113,6 +118,11 @@ class BasePanel(ScreenPanel):
             self.main_grid.attach(self.content, 1, 1, 1, 1)
 
         self.update_ipaddr()
+
+    def show_screen_lock(self, enabled):
+        button = self.control['screen_lock']
+        button.set_no_show_all(not enabled)
+        button.set_visible(enabled)
 
     def show_heaters(self, show=True):
         try:

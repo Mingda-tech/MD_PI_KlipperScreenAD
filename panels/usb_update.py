@@ -112,6 +112,20 @@ def localized_error(value):
 ACTIVE_PHASES = frozenset(('IMPORTING', 'VERIFYING', 'INSTALLING', 'FLASHING', 'HEALTH_CHECK'))
 
 
+def recovery_available(status):
+    # New helpers distinguish durable commit recovery from package replay.
+    # Old frozen helpers may omit these fields; preserve their replay behavior
+    # unless an explicit mode or prior manual-recovery refusal rules it out.
+    if 'canRecover' in status:
+        return status['canRecover'] is True
+    if status.get('commitRecovery') is True:
+        return True
+    mode = (status.get('manifest') or {}).get('recoveryMode')
+    if mode:
+        return mode == 'replay'
+    return status.get('error') != 'MANUAL_RECOVERY_REQUIRED' and status.get('lastRecoveryError') != 'MANUAL_RECOVERY_REQUIRED'
+
+
 def status_summary(status, runtime):
     """One operator-facing title and next step; diagnostic details live separately."""
     phase = status.get('phase', 'IDLE')
@@ -124,6 +138,8 @@ def status_summary(status, runtime):
                 _('Installed changes were not undone. Recovery files were kept. '
                   'Check the printer before using it.'), 'warning')
     if status.get('jobId') and phase != 'IDLE':
+        if phase == 'RECOVERY_REQUIRED' and not recovery_available(status):
+            return (_('Recovery required'), _('This package requires manual recovery. Contact service support.'), 'warning')
         summaries = {
             'IMPORTING': (_('Copying update package'),
                           _('Keep the USB drive connected until copying finishes.'), 'busy'),
@@ -278,11 +294,18 @@ class Panel(ScreenPanel):
         context.add_class('usb-' + tone)
         details = []
         error = status.get('error')
+        failed = status.get('phase') in ('FAILED', 'RECOVERY_REQUIRED') or status.get('recoveryRequired')
+        if failed and status.get('firstError'):
+            error = status['firstError']
         if self._notice and len(self._notice) > 3:
             error = self._notice[3]
         if error:
             details.append(localized_error(error))
             details.append(_('Error code: %s') % error_message(error))
+        recovery_error = status.get('lastRecoveryError')
+        if failed and recovery_error and recovery_error != error:
+            details.append(_('Recover update') + ': ' + localized_error(recovery_error))
+            details.append(_('Error code: %s') % error_message(recovery_error))
         if self._ui_ack_error and self._ui_ack_state_job == self.job_id:
             details.append(localized_error('SCREEN_NOT_READY'))
             details.append(_('Error code: %s') % self._ui_ack_error)
@@ -368,6 +391,11 @@ class Panel(ScreenPanel):
             return not self._worker_busy()
         return bool(self.status.get('canCancel') and phase in ('IMPORTING', 'VERIFYING', 'PREPARED')
                     and (phase != 'PREPARED' or not self._worker_busy()))
+
+    def _can_recover(self):
+        return bool(not self._inflight and self._status_loaded and self.job_id and not self._worker_busy()
+                    and self.runtime.helper_available() and recovery_available(self.status)
+                    and (self.status.get('phase') == 'RECOVERY_REQUIRED' or self.status.get('recoveryRequired')))
 
     def _runtime_changed(self, generation, state):
         if not self._active or generation != self._generation:
@@ -685,13 +713,12 @@ class Panel(ScreenPanel):
         self.buttons['refresh'].set_sensitive(not self._inflight)
         self.buttons['start'].set_sensitive(self._can_start_prepared())
         self.buttons['cancel'].set_sensitive(helper and self._can_cancel())
-        self.buttons['recover'].set_sensitive(ready and helper and not self._worker_busy() and bool(self.job_id) and (
-            phase == 'RECOVERY_REQUIRED' or bool(self.status.get('recoveryRequired'))
-        ))
+        self.buttons['recover'].set_sensitive(self._can_recover())
         visible = {
             'start': phase == 'PREPARED' and not self.status.get('recoveryRequired'),
             'cancel': bool(self.job_id and (self.status.get('canCancel') or phase in ('FAILED', 'RECOVERY_REQUIRED'))),
-            'recover': bool(self.job_id and (phase == 'RECOVERY_REQUIRED' or self.status.get('recoveryRequired'))),
+            'recover': bool(self.job_id and recovery_available(self.status)
+                            and (phase == 'RECOVERY_REQUIRED' or self.status.get('recoveryRequired'))),
         }
         for name, show in visible.items():
             self.buttons[name].set_visible(show)
@@ -709,8 +736,7 @@ class Panel(ScreenPanel):
         ))
 
     def confirm_recovery(self, widget=None):
-        if self._inflight or self._worker_busy() or not self.job_id or not (
-                self.status.get('recoveryRequired') or self.status.get('phase') == 'RECOVERY_REQUIRED'):
+        if not self._can_recover():
             return
         self._confirm('recover', _(
             'Recover the interrupted update? Keep the printer powered on until recovery finishes.'
@@ -743,8 +769,7 @@ class Panel(ScreenPanel):
             return
         if action == 'start' and not self._can_start_prepared():
             return
-        if action == 'recover' and (self._worker_busy() or not (
-                self.status.get('phase') == 'RECOVERY_REQUIRED' or self.status.get('recoveryRequired'))):
+        if action == 'recover' and not self._can_recover():
             return
         if action == 'cancel' and not self._can_cancel():
             return
